@@ -50,7 +50,7 @@ Game Design Document v0.0:
     - 
 
 
-- ## TECNICAL DETAILS IMPLEMENTED:
+- ## TECHNICAL DETAILS IMPLEMENTED:
     - TODO decide: 16x16 pixels tiles | OR | 32x32 pixels tiles? More seems excessive, less just no;
     - Screen resolution ? how many (n*n pixels) tiles should appear in the cam view? Prof used something around 24 horizontal tiles with 16:9 resolution which could be good for us too;
     - ...?
