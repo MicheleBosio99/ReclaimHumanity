@@ -51,9 +51,30 @@ Game Design Document v0.0:
 
 
 - ## TECHNICAL DETAILS IMPLEMENTED:
-    - TODO decide: 16x16 pixels tiles | OR | 32x32 pixels tiles? More seems excessive, less just no;
-    - Screen resolution ? how many (n*n pixels) tiles should appear in the cam view? Prof used something around 24 horizontal tiles with 16:9 resolution which could be good for us too;
-    - ...?
+    - SCENES DETAILS:
+        - World map I used 5 scenes: 1 for each biome (Overgrown Forest, Ruined City/Village, (Nuclear) Wastelands), 1 for the internal view of the laboratory and one for the external view of the laboratory that has then the paths which go in the other biomes;
+        - Main menu: 1 scene for the initial screen, others?;
+        - Inventory: 1 scene for the inventory?;
+        - Recipe tree: 1 scene for the recipe tree?;
+        - Combats: at least 1 scene for the combat system;
+
+    - GRAPHIC DETAILS:
+        - 32x32 tiles and items. The characters will be bigger (something around 48x48);
+        - Biomes Maps are 128x128 tiles (so 4096x4096 pixels), plus the internal lab one and the external lab one;
+        - Screen resolution: 16:9. (Still, how many (n*n pixels) tiles should appear in the cam view? Prof used something around 24 horizontal tiles with 16:9 resolution which could be good for us too);
+
+    - PLAYING CHARACTER DETAILS:
+        - Speed, Input method, Collider type, Size, (Animations details), ...?;
+    
+    - MAIN MANU DETAILS:
+        - How is it handled, where are buttons going, ...?;
+    
+    - ENEMIES DETAILS:
+        - ...?;
+    
+    - SOUND DETAILS:
+        - How is audio manager implemented, ...?;
+    
 
 ___
 
@@ -66,11 +87,11 @@ ___
 
 ## DEADLINES:
 - Before 20/10/23 > First Game Design Document Version: must contain most of the game main mechanics explained;
-- Before 24/10/23 > Initial game development divided among the group, must be finalized for what is possible (animations and other are impopssible without final sprite). Splitting as follows:
+- Before 22/10/23 > Initial game development divided among the group, must be finalized for what is possible (animations and other are impopssible without final sprite). Splitting as follows:
     - Michele: Finding tilesets, first map of biomes drawn, with collisions correctly set;
     - Iacopo: first main character implementation, his movements and collisions. Animations not possible until we don't have the final sprites to deal with;
     - Anastasia: first implementation of the prefab that will generate enemies, with main stats which are health, actions set and damage. Also enemies spawn rules could be defined;
     - ?: Starting menu' implementation, with its scene. It should have a play button, an options one and a quit one. Those buttons must lead to the required scene/place they are designed for;
-    - ?: Turn-based combat scene. It must have a menu where to choose the selected action (attack, run away, others ?) and a scene where it can be seen our character and the enemy found; TODO decide with the team how to deisgn this (main aspect I can think of: how to handle multiple enemies?, are there others things the player can do other that run or attack??); It will almost surely take more time to do this, since a lot of thinking must be done about it, since, starting make the scene for it and some UI is a good idea;
+    - ?: Turn-based combat scene. It must have a menu where to choose the selected action (attack, run away, others ?) and a scene where it can be seen our character and the enemy found; TODO decide with the team how to deisgn this (main aspect I can think of: how to handle multiple enemies?, are there others things the player can do other that run away or attack??); It will almost surely take more time to do this, since a lot of thinking must be done about it, still, starting make the scene for it and some UI is a good idea;
 
 - LATER DL: Before 06/11/23: Game Design Document first version MUST BE FINALIZED and shared with the prof. IT WILL BE EVALUATED (I think so)?
