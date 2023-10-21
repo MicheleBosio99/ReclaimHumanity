@@ -66,11 +66,12 @@ Game Design Document v0.0:
     - PLAYING CHARACTER DETAILS:
         - Speed, Input method, Collider type, Size, (Animations details), ...?;
     
-    - MAIN MANU DETAILS:
+    - MAIN MENU DETAILS:
         - How is it handled, where are buttons going, ...?;
     
     - ENEMIES DETAILS:
-        - ...?;
+        - Base characteristics: type of enemy, level (?), health points (max and current), damage, speed of movement;
+        - Chasing method: when player is detected (now it is still when player is close), enemy starts following him to fight;
     
     - SOUND DETAILS:
         - How is audio manager implemented, ...?;
