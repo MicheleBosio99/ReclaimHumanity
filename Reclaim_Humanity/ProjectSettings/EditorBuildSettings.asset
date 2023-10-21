@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 113f78b4dd411a741afb151d9f45c4e1
   - enabled: 1
-    path: Assets/Scenes/World Scenes/Laboratory.unity
+    path: Assets/Scenes/World Scenes/LaboratoryInside.unity
     guid: c412a78e60b6171459c4ad3e9e55ac47
   m_configObjects: {}
