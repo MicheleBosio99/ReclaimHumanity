@@ -6,6 +6,9 @@ public class SoundFXManager : MonoBehaviour
 {
    public static SoundFXManager instance;
 
+[SerializeField] private AudioSource soundFXObject;
+
+
    private void Awake()
    {
       if (instance == null)
@@ -29,7 +32,7 @@ public class SoundFXManager : MonoBehaviour
       audioSource.Play();
       
       //get lenght of FX sound clip
-      float clipLenght = audioSource.clip.lenght;
+      float clipLenght = audioSource.clip.length;
       
       //destroy object when sound terminate
       Destroy(audioSource.gameObject, clipLenght);
