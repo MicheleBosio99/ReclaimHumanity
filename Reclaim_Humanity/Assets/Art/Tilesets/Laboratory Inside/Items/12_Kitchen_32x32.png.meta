@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 87bee8f57a2dac84c9886e2872fca20d
+guid: c60766dc0cc1b2d4f92b07601263aa0e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 24
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,433 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Computer_0
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 408
-        width: 72
-        height: 87
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58d2bf607d0371147ba65c83ea768089
-      internalID: -296430789
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Clock_0
-      rect:
-        serializedVersion: 2
-        x: 150
-        y: 330
-        width: 33
-        height: 30
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c5eedd03b9ee7c0478d30e2d983a632e
-      internalID: -1902576171
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Clock_1
-      rect:
-        serializedVersion: 2
-        x: 198
-        y: 330
-        width: 33
-        height: 30
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4065566c86f870479872fbe1ee392cc
-      internalID: -978169856
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Clock_2
-      rect:
-        serializedVersion: 2
-        x: 246
-        y: 330
-        width: 33
-        height: 30
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9bed15c68dd6df34c90cf7adbb9885b4
-      internalID: -1618643078
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Clock_3
-      rect:
-        serializedVersion: 2
-        x: 291
-        y: 321
-        width: 39
-        height: 33
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ac05aa9becc34145b889cd9fcfd2cd0
-      internalID: -1870681017
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Clock_4
-      rect:
-        serializedVersion: 2
-        x: 339
-        y: 321
-        width: 39
-        height: 33
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 594985fbe4e3fef4bba4afc03700b175
-      internalID: 1687993787
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Machinery_0
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 576
-        width: 96
-        height: 123
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 74244a21c5551564d839a61bafc2131d
-      internalID: -2043813788
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Machinery_1
-      rect:
-        serializedVersion: 2
-        x: 195
-        y: 576
-        width: 93
-        height: 96
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a487fdfd9b83b1f44b4161f03bcbf969
-      internalID: 1832288700
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Machinery_2
-      rect:
-        serializedVersion: 2
-        x: 318
-        y: 594
-        width: 36
-        height: 57
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5631a31b2a086994187d9cf6ab3c113d
-      internalID: 1280161108
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Machinery_3
-      rect:
-        serializedVersion: 2
-        x: 318
-        y: 546
-        width: 36
-        height: 39
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9fe609d4865860242a6b142e41d2d45b
-      internalID: 1129113051
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Locker_0
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 510
-        width: 45
-        height: 87
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a350a83e246c5594c9825ab5f4298ba7
-      internalID: -2096940749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoubleLocker_0
-      rect:
-        serializedVersion: 2
-        x: 387
-        y: 654
-        width: 87
-        height: 87
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a2918f0351a67e45992e0f6bb523231
-      internalID: 957588008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wheelchair_0
-      rect:
-        serializedVersion: 2
-        x: 492
-        y: 636
-        width: 63
-        height: 81
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a5e862397accfc4d86d6009120c1263
-      internalID: 1522984724
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wheelchair_1
-      rect:
-        serializedVersion: 2
-        x: 579
-        y: 639
-        width: 54
-        height: 72
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3837128a2946b5e4c85e182fe6c8c61f
-      internalID: -1382168073
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Computer_1
-      rect:
-        serializedVersion: 2
-        x: 102
-        y: 390
-        width: 108
-        height: 113
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 636c9b178ebb858498879ba7569f0288
-      internalID: -1895692018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Computer_2
-      rect:
-        serializedVersion: 2
-        x: 246
-        y: 390
-        width: 108
-        height: 114
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9185f6e35341d29499a5b914f55d480d
-      internalID: 653236042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bed_0
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 195
-        width: 96
-        height: 72
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e9e88497e097fe9428206898447aa3dd
-      internalID: -130569818
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bed_1
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 99
-        width: 96
-        height: 72
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba8c9dd83b0e00641ad71017684dfd33
-      internalID: -1549985041
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Computer_0_Anim_RECIPE...
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 336
-        width: 72
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5f53abde04932ee4980e7dcac516db84
-      internalID: -1796308936
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Table_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 555
-        width: 48
-        height: 111
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fff276149092767478a5f81fc25f1a11
-      internalID: -1482405987
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Painting_0
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 720
-        width: 54
-        height: 27
+        x: 210
+        y: 1004
+        width: 60
+        height: 84
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -544,8 +124,491 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69856e2c2bff38847b1571cee90daf6c
-      internalID: 1359181073
+      spriteID: 2318a49e10bb56243ae15e3387e09de4
+      internalID: 732584004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChairRight_0
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1172
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ba0861674591d45be5f4d6e15e5201
+      internalID: -1588024683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChairLeft_0
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1108
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1321402f6a2ce1747a837d613310a8a5
+      internalID: 1236876395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChairUp_0
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1154
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31830146b9f5b946b1a8337c1cea96e
+      internalID: -331201641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChairDown_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1108
+        width: 28
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e26b6c5f65515bf46a0f4e1dbf9be20e
+      internalID: -1616144235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CookPlane_0
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1322
+        width: 96
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e5a4365a6384114ebabf593bcf876c2
+      internalID: 2035645127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CookPlane_1
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1314
+        width: 32
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b568af29d2fdd4499194cd1c5da335b
+      internalID: 2060667274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sink_0
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1314
+        width: 48
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ac5bde4b461814f96ee60e52e44727
+      internalID: 864796164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carpet_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1296
+        width: 58
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91dc007d1ae781a4ca92605f5f25cff2
+      internalID: 841582765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Utensils_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 982
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4094a4dbe5b38514c9e41f9b68620747
+      internalID: 243420512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Utensils_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 982
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfe6b79696bce794ea72db6cda943d2d
+      internalID: -693982674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_0
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 936
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4646f927df0d0f42b86dbe444445e4a
+      internalID: 1592713821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bowl_0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 902
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df78329451524f45b79b91d0862b88e
+      internalID: 7583950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glass_0
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 868
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cb232d5a2ec5924b89e6aa4fd19f206
+      internalID: 261364534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 866
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24177b5db8b6bf947b903f642ccd9121
+      internalID: -1452182432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fridge_0
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 746
+        width: 32
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ebb3146dabcf94a9d48ebb7da5ad2b
+      internalID: 322608859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lamp_0
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 430
+        width: 26
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ff900eb42d27c4393994aa274ad059
+      internalID: 569992652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boiler_0
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 358
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0229468ffab1f554692828aea036e2fc
+      internalID: 1862842459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fridge_1
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 288
+        width: 52
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a9228a94ef9004d8a4e6c16ab956b9
+      internalID: -778387503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChoppingBoard_0
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 420
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e675c49872df61c428fdbc0466725982
+      internalID: 609413909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pan_0
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 416
+        width: 36
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4061a028faa040f43b01b85d6c697424
+      internalID: -171287238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloth_0
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 116
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61ff09c26d07454290190fb3b1b9fc5
+      internalID: -358223911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bench_0
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 860
+        width: 60
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a2178ac3d74374c85586c85c7a0b13
+      internalID: -1113143466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlasTable_0
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 940
+        width: 60
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57834a7a228e8a14ea1e99875f400504
+      internalID: -122494416
       vertices: []
       indices: 
       edges: []
@@ -561,27 +624,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bed_0: -130569818
-      Bed_1: -1549985041
-      Clock_0: -1902576171
-      Clock_1: -978169856
-      Clock_2: -1618643078
-      Clock_3: -1870681017
-      Clock_4: 1687993787
-      Computer_0: -296430789
-      Computer_0_Anim_RECIPE...: -1796308936
-      Computer_1: -1895692018
-      Computer_2: 653236042
-      DoubleLocker_0: 957588008
-      Locker_0: -2096940749
-      Machinery_0: -2043813788
-      Machinery_1: 1832288700
-      Machinery_2: 1280161108
-      Machinery_3: 1129113051
-      Painting_0: 1359181073
-      Table_0: -1482405987
-      Wheelchair_0: 1522984724
-      Wheelchair_1: -1382168073
+      Bench_0: -1113143466
+      Boiler_0: 1862842459
+      Bowl_0: 7583950
+      Carpet_0: 841582765
+      ChairDown_0: -1616144235
+      ChairLeft_0: 1236876395
+      ChairRight_0: -1588024683
+      ChairUp_0: -331201641
+      ChoppingBoard_0: 609413909
+      Cloth_0: -358223911
+      CookPlane_0: 2035645127
+      CookPlane_1: 2060667274
+      Fridge_0: 322608859
+      Fridge_1: -778387503
+      GlasTable_0: -122494416
+      Glass_0: 261364534
+      Lamp_0: 569992652
+      Pan_0: -171287238
+      Plate_0: 1592713821
+      Plate_1: -1452182432
+      Sink_0: 864796164
+      Table_0: 732584004
+      Utensils_0: 243420512
+      Utensils_1: -693982674
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

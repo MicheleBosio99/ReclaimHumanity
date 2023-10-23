@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d4b405125beb1b74c9ece054f115b32c
+guid: 82ccf948b31d06042817a46d2e2f2880
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LibrarySide_0
+      name: Closet_0
       rect:
         serializedVersion: 2
-        x: 396
-        y: 51
-        width: 33
-        height: 180
+        x: 375
+        y: 3334
+        width: 134
+        height: 76
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0be0bc67816730c4f9c50920e9d5d68e
-      internalID: 592234613
+      spriteID: ff83efd1ef9546e4eb015f3bea16364c
+      internalID: 125382149
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LibrarySide_1
+      name: ClosetBed_0
       rect:
         serializedVersion: 2
-        x: 447
-        y: 51
-        width: 33
-        height: 126
+        x: 288
+        y: 3302
+        width: 64
+        height: 108
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62723365bca616d43b396bee78355d65
-      internalID: -1762358483
+      spriteID: d52af26629ccb5a45931de88772ca3d1
+      internalID: -1176349179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LibrarySide_2
+      name: NIghtTable_0
       rect:
         serializedVersion: 2
-        x: 480
-        y: 51
-        width: 33
-        height: 126
+        x: 225
+        y: 3048
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1be33ce7a74181946a18916b6cbbeaad
-      internalID: 1924196127
+      spriteID: 4ea04d05f201d2944b069032e8eef8fb
+      internalID: -308755775
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LibrarySide_3
+      name: Carpet_0
       rect:
         serializedVersion: 2
-        x: 531
-        y: 51
-        width: 33
-        height: 180
+        x: 226
+        y: 1282
+        width: 60
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a9a07c7a8341ce45b97d9534e42163f
-      internalID: -809450378
+      spriteID: 5aa59cdaf86dee24184d7d9b26c74736
+      internalID: 1864170697
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LibrarySide_4
+      name: Elephant_0
       rect:
         serializedVersion: 2
-        x: 348
-        y: 147
-        width: 33
-        height: 180
+        x: 192
+        y: 1296
+        width: 32
+        height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7bfff4741036164aa5851965845db63
-      internalID: 1569860696
+      spriteID: 801b7d4d8a949f747b7957de14e4d34b
+      internalID: -724676406
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LibrarySingle_0
+      name: Lamp_0
       rect:
         serializedVersion: 2
-        x: 339
-        y: 354
-        width: 42
-        height: 120
+        x: 326
+        y: 1124
+        width: 20
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b55c2a53f87ca4a45b9cc12e20616f04
-      internalID: -1418360285
+      spriteID: 206337c05d6323545816e287bd623ff2
+      internalID: -107495915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LibrarySingle_1
+      name: Window_0
       rect:
         serializedVersion: 2
-        x: 339
-        y: 498
-        width: 42
-        height: 120
+        x: 4
+        y: 958
+        width: 88
+        height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab53efb0f4e64e8409a3e409318748b5
-      internalID: 1134019814
+      spriteID: 8ffebaef2ebac4d418ccad0fab395f3a
+      internalID: -190154451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LibrarySingle_2
+      name: Window_1
       rect:
         serializedVersion: 2
-        x: 339
-        y: 642
-        width: 42
-        height: 120
+        x: 100
+        y: 958
+        width: 88
+        height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e41f966145d84c4a894890ac79d9ca3
-      internalID: 625983721
+      spriteID: 551accae50d19464a864a0c9e1a1b901
+      internalID: -2129888792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LibrarySide_5
+      name: Light_0
       rect:
         serializedVersion: 2
-        x: 732
-        y: 579
-        width: 33
-        height: 180
+        x: 384
+        y: 696
+        width: 96
+        height: 71
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,20 +292,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 782e91d14a1d4214cb97e5eecc0f0f59
-      internalID: 1375725007
+      spriteID: b1c073da2c381074ab8b6c7ba4cc2964
+      internalID: 1507544493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LibraryBig_0
+      name: ClosetEnd_0
       rect:
         serializedVersion: 2
-        x: 495
-        y: 594
-        width: 213
-        height: 147
+        x: 384
+        y: 3334
+        width: 2
+        height: 78
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,92 +313,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe136819409a7784ea125836656c4972
-      internalID: -739686777
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LibraryBig_1
-      rect:
-        serializedVersion: 2
-        x: 399
-        y: 258
-        width: 213
-        height: 147
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 09a8d611fe9cca044876aa32f2b73304
-      internalID: -1532527132
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Library_0
-      rect:
-        serializedVersion: 2
-        x: 390
-        y: 450
-        width: 81
-        height: 93
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1191fb00ba5b0974081ea47b4d8cb527
-      internalID: 1735026482
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Library_1
-      rect:
-        serializedVersion: 2
-        x: 153
-        y: 498
-        width: 81
-        height: 120
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28a60b83a2322564399e644e235d3e47
-      internalID: -1139498059
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Library_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 498
-        width: 144
-        height: 120
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f30036bcd00baf4d93d170130769b5c
-      internalID: 376501811
+      spriteID: 4f486ccb9c8bee441b4a9a48f376ce7a
+      internalID: -523939417
       vertices: []
       indices: 
       edges: []
@@ -414,20 +330,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      LibraryBig_0: -739686777
-      LibraryBig_1: -1532527132
-      LibrarySide_0: 592234613
-      LibrarySide_1: -1762358483
-      LibrarySide_2: 1924196127
-      LibrarySide_3: -809450378
-      LibrarySide_4: 1569860696
-      LibrarySide_5: 1375725007
-      LibrarySingle_0: -1418360285
-      LibrarySingle_1: 1134019814
-      LibrarySingle_2: 625983721
-      Library_0: 1735026482
-      Library_1: -1139498059
-      Library_2: 376501811
+      Carpet_0: 1864170697
+      ClosetBed_0: -1176349179
+      ClosetEnd_0: -523939417
+      Closet_0: 125382149
+      Elephant_0: -724676406
+      Lamp_0: -107495915
+      Light_0: 1507544493
+      NIghtTable_0: -308755775
+      Window_0: -190154451
+      Window_1: -2129888792
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
