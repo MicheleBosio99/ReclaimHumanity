@@ -508,6 +508,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Table_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 555
+        width: 48
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff276149092767478a5f81fc25f1a11
+      internalID: -1482405987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -536,6 +557,7 @@ TextureImporter:
       Machinery_1: 1832288700
       Machinery_2: 1280161108
       Machinery_3: 1129113051
+      Table_0: -1482405987
       Wheelchair_0: 1522984724
       Wheelchair_1: -1382168073
   mipmapLimitGroupName: 

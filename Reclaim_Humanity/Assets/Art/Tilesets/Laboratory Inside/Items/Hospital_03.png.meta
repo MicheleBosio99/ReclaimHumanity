@@ -108,7 +108,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Machinery_0
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 639
+        width: 90
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 847f1c07e5f239b4c8b9368c5e719c44
+      internalID: 1703141295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassCabinet_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 504
+        width: 105
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 466899bd9f1c4654f916fc6abb2ada38
+      internalID: -1036229979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Machinery_1
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 255
+        width: 75
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef46718d34e2c04c897ec6b53694458
+      internalID: -1446988942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Machinery_2
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 402
+        width: 63
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14a2101644f45740aee7a9f5af7eb39
+      internalID: -1682759086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Radiator_0
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 378
+        width: 63
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74eecfdef5e56540abae00cfc15b5ea
+      internalID: 287044538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bin_0
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 501
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dec0eb66adb6c74c8862975b49cfce9
+      internalID: 1566962057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bin_1
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 501
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc96112cfb54cfa478fc904a00bc8e71
+      internalID: 1788233861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DangerSign_0
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 603
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08f6f9f1c709064382451ddf4b073c7
+      internalID: 830354176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DangerSign_1
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 702
+        width: 39
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 704974cb5daa2614dac8aa902d2e1727
+      internalID: -443930611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +308,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bin_0: 1566962057
+      Bin_1: 1788233861
+      DangerSign_0: 830354176
+      DangerSign_1: -443930611
+      GlassCabinet_0: -1036229979
+      Machinery_0: 1703141295
+      Machinery_1: -1446988942
+      Machinery_2: -1682759086
+      Radiator_0: 287044538
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
