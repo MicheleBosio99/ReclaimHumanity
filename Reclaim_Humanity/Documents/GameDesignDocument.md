@@ -52,7 +52,7 @@ Game Design Document v0.0:
 
 - ## TECHNICAL DETAILS IMPLEMENTED:
     - SCENES DETAILS:
-        - World map I used 5 scenes: 1 for each biome (Overgrown Forest, Ruined City/Village, (Nuclear) Wastelands), 1 for the internal view of the laboratory and one for the external view of the laboratory that has then the paths which go in the other biomes;
+        - World map I used 5 scenes: 1 for each biome (Overgrown Forest, Ruined City/Village, (Nuclear) Wastelands), 1 for the internal view of the laboratory and 1 for the external view of the laboratory that has then the paths which go in the other biomes;
         - Main menu: 1 scene for the initial screen, others?;
         - Inventory: 1 scene for the inventory?;
         - Recipe tree: 1 scene for the recipe tree?;
@@ -88,7 +88,7 @@ ___
 
 ## DEADLINES:
 - Before 20/10/23 > First Game Design Document Version: must contain most of the game main mechanics explained;
-- Before 22/10/23 > Initial game development divided among the group, must be finalized for what is possible (animations and other are impopssible without final sprite). Splitting as follows:
+- Before 24/10/23 > Initial game development divided among the group, must be finalized for what is possible (animations and other are not without final sprite). Splitting as follows:
     - Michele: Finding tilesets, first map of biomes drawn, with collisions correctly set;
     - Iacopo: first main character implementation, his movements and collisions. Animations not possible until we don't have the final sprites to deal with;
     - Anastasia: first implementation of the prefab that will generate enemies, with main stats which are health, actions set and damage. Also enemies spawn rules could be defined;
