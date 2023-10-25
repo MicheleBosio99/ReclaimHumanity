@@ -52,7 +52,7 @@ Game Design Document v0.0:
 
 - ## TECHNICAL DETAILS IMPLEMENTED:
     - SCENES DETAILS:
-        - World map I used 5 scenes: 1 for each biome (Overgrown Forest, Ruined City/Village, (Nuclear) Wastelands), 1 for the internal view of the laboratory and 1 for the external view of the laboratory that has then the paths which go in the other biomes;
+        - World map: 4 scenes: 1 for each biome (Overgrown Forest, Ruined City/Village, (Nuclear) Wastelands), 1 for the internal view of the laboratory;
         - Main menu: 1 scene for the initial screen, others?;
         - Inventory: 1 scene for the inventory?;
         - Recipe tree: 1 scene for the recipe tree?;
@@ -60,7 +60,7 @@ Game Design Document v0.0:
 
     - GRAPHIC DETAILS:
         - 32x32 tiles and items. The characters will be bigger (something around 48x48);
-        - Biomes Maps are 128x128 tiles (so 4096x4096 pixels), plus the internal lab one and the external lab one;
+        - Biomes Maps are no more than 128x128 tiles (so 4096x4096 pixels), the internal lab is much smaller, it's 40x48 tiles;
         - Screen resolution: 16:9. (Still, how many (n*n pixels) tiles should appear in the cam view? Prof used something around 24 horizontal tiles with 16:9 resolution which could be good for us too);
 
     - PLAYING CHARACTER DETAILS:
@@ -77,6 +77,11 @@ Game Design Document v0.0:
         - How is audio manager implemented, ...?;
     
 
+- ## POST GAME IDEAS:
+    - Add here ideas which could be included after the main game is complete...
+    - ?;
+
+
 ___
 
 ## GROUP MEMBERS: TODO COMPLETE
@@ -89,10 +94,17 @@ ___
 ## DEADLINES:
 - Before 20/10/23 > First Game Design Document Version: must contain most of the game main mechanics explained;
 - Before 24/10/23 > Initial game development divided among the group, must be finalized for what is possible (animations and other are not without final sprite). Splitting as follows:
-    - Michele: Finding tilesets, first map of biomes drawn, with collisions correctly set;
-    - Iacopo: first main character implementation, his movements and collisions. Animations not possible until we don't have the final sprites to deal with;
-    - Anastasia: first implementation of the prefab that will generate enemies, with main stats which are health, actions set and damage. Also enemies spawn rules could be defined;
-    - ?: Starting menu' implementation, with its scene. It should have a play button, an options one and a quit one. Those buttons must lead to the required scene/place they are designed for;
-    - ?: Turn-based combat scene. It must have a menu where to choose the selected action (attack, run away, others ?) and a scene where it can be seen our character and the enemy found; TODO decide with the team how to deisgn this (main aspect I can think of: how to handle multiple enemies?, are there others things the player can do other that run away or attack??); It will almost surely take more time to do this, since a lot of thinking must be done about it, still, starting make the scene for it and some UI is a good idea;
+    - Michele: Finding tilesets, first map of biomes drawn, with collisions correctly set; -> X
+    - Iacopo: first main character implementation, his movements and collisions. Animations not possible until we don't have the final sprites to deal with; -> X
+    - Anastasia: first implementation of the prefab that will generate enemies, with main stats which are health, actions set and damage. Also enemies spawn rules could be defined; -> X
+    - ?: Starting menu' implementation, with its scene. It should have a play button, an options one and a quit one. Those buttons must lead to the required scene/place they are designed for; -> O
+    - ?: Turn-based combat scene. It must have a menu where to choose the selected action (attack, run away, others ?) and a scene where it can be seen our character and the enemy found; TODO decide with the team how to deisgn this (main aspect I can think of: how to handle multiple enemies?, are there others things the player can do other that run away or attack??); It will almost surely take more time to do this, since a lot of thinking must be done about it, still, starting make the scene for it and some UI is a good idea; ->  X
+
+- Before 31/10/23 > New deadlines to complete:
+    - Michele: Finish loading sprites and tilesets we'll need, finish laboratory scene with details (but without animations for now), try to finish overgrown forest scene;
+    - Anastasia: Finish enemies prefab;
+    - Riccardo: Start (and possible finish) the scene used for combat;
+    - ?: Search/Start design of main character sprites and animations;
+    - ?: Complete GDD with all background decisions and structure it with the new discussed sections;
 
 - LATER DL: Before 06/11/23: Game Design Document first version MUST BE FINALIZED and shared with the prof. IT WILL BE EVALUATED (I think so)?
