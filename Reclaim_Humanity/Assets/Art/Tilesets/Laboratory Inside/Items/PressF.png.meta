@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 00a57e620de127346bca025a265e246c
+guid: 2f2ae4a14b0254646b10b493259d30ec
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,106 +110,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chair_0
+      name: PressF_0
       rect:
         serializedVersion: 2
-        x: 438
-        y: 642
-        width: 36
-        height: 60
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.50000167, y: 0.14945476}
+      pivot: {x: 0.25, y: 0.75}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c744689c2f891d49af602060289188e
-      internalID: -986144167
+      spriteID: a5277357301b31546b0ada0fb4fd3ca0
+      internalID: -32328028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chair_1
+      name: PressF_1
       rect:
         serializedVersion: 2
-        x: 390
-        y: 639
-        width: 36
-        height: 72
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.49336243, y: 0.13152906}
+      pivot: {x: 0.3, y: 0.65}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e57c1c5ba4258764fae9c21f2b37a23d
-      internalID: -1515802331
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ControlPanel_0
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 690
-        width: 45
-        height: 30
-      alignment: 9
-      pivot: {x: 0.5053121, y: 0.21319173}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2380558d2b8c9ce4ca4186a1740f4ddb
-      internalID: 1843839651
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ControlPanel_1
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 690
-        width: 45
-        height: 39
-      alignment: 9
-      pivot: {x: 0.50000066, y: 0.2609926}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bf0825d1f15da204792b3b9b6417f730
-      internalID: -1319576307
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Paper_0
-      rect:
-        serializedVersion: 2
-        x: 195
-        y: 735
-        width: 42
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b4be9c617a7750489daedfbde245724
-      internalID: -1668708136
+      spriteID: c6326304bf379734b86f1baa48ba8773
+      internalID: -1525127916
       vertices: []
       indices: 
       edges: []
@@ -225,11 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Chair_0: -986144167
-      Chair_1: -1515802331
-      ControlPanel_0: 1843839651
-      ControlPanel_1: -1319576307
-      Paper_0: -1668708136
+      PressF_0: -32328028
+      PressF_1: -1525127916
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

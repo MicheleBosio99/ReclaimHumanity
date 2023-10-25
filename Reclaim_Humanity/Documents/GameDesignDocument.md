@@ -59,6 +59,7 @@ Game Design Document v0.0:
         - Combats: at least 1 scene for the combat system;
 
     - GRAPHIC DETAILS:
+        - Using Unity 2D module URP;
         - 32x32 tiles and items. The characters will be bigger (something around 48x48);
         - Biomes Maps are no more than 128x128 tiles (so 4096x4096 pixels), the internal lab is much smaller, it's 40x48 tiles;
         - Screen resolution: 16:9. (Still, how many (n*n pixels) tiles should appear in the cam view? Prof used something around 24 horizontal tiles with 16:9 resolution which could be good for us too);
