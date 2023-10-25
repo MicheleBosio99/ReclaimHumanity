@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
@@ -8,38 +10,38 @@ public class Enemy : MonoBehaviour
     [SerializeField] private string enemyType;
     [SerializeField] private int enemyLevel; // ??
     [SerializeField] private int maxHP;
-    [SerializeField] private int currentHP;
-    
-    // damaging --for fights
-    private bool hit;
+    private int currentHP;
     
     // CHASING
     public GameObject player;
     public float speed;
     private float distance;
     private Vector2 direction;
-    [SerializeField] private float viewDistance; // useless when FieldOfView will be updated
-
-    // To be used
-    public GameObject FieldOfView;
-    private bool playerInSight;
     
-    // Start is called before the first frame update
+    // Field of View
+    [Range(0, 360)] public float angle;
+    public float radius;
+    private bool playerInSight;
+    private bool isChasing;
+    public LayerMask targetMask;
+    public LayerMask obstructionMask;
+    
+    // target == player
+    
     void Start()
     {
         currentHP = maxHP;
         //enemyHP.text = "HP: " + currentHP + " / " + maxHP;
-    }
 
-    // Update is called once per frame
+        player = GameObject.FindGameObjectWithTag("Player");
+        StartCoroutine(FOVRoutine());
+    }
+    
     void Update()
     {
         
-        AiChase();
-        
     }
-
-    // TODO - collision with field of view (red triangle) start chasing phase
+    
     void AiChase()
     {
         distance = Vector2.Distance(transform.position, player.transform.position);
@@ -49,7 +51,7 @@ public class Enemy : MonoBehaviour
         // Wish it worked...
         // playerInSightRange = Physics.CheckSphere(transform.position, viewDistance, thePlayer);
 
-        if (distance < 3f)
+        if (playerInSight)
         {
             // To mirror enemy sprite if it's moving right or left
             if (direction.x >= 0f)
@@ -60,9 +62,52 @@ public class Enemy : MonoBehaviour
             {
                 transform.localScale = new Vector2(-2, 2);
             }
-    
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position,
+                speed * Time.deltaTime);
+            distance = Vector2.Distance(transform.position, player.transform.position);
+            
         }
     }
+
+    // This is like: every 0.02 seconds it checks if the collider detects something
+    private IEnumerator FOVRoutine()
+    {
+        WaitForSeconds wait = new WaitForSeconds(0.02f);
+
+        while (true)
+        {
+            yield return wait;
+            FieldOfViewCheck();
+            AiChase();
+        }
+    }
+
+    private void FieldOfViewCheck()
+    {
+        Collider2D rangeChecks = Physics2D.OverlapCircle(transform.position, radius, targetMask);
+        
+        if (rangeChecks)
+        {
+            Transform target = rangeChecks.transform;
+            Vector2 directionToTarget = (target.position - transform.position).normalized;
+            
+
+            if (Vector2.Angle(transform.right, directionToTarget) < angle || Vector2.Angle(-transform.right, directionToTarget) < angle) // angle / 2 ??
+            {
+                distance = Vector2.Distance(transform.position, player.transform.position);
+
+                if (!Physics2D.Raycast(transform.position, directionToTarget, distance, obstructionMask))
+                    playerInSight = true;
+                else playerInSight = false;
+            }
+            else playerInSight = false;
+        }
+        else if (playerInSight)
+            playerInSight = false;
+    }
     
+    
+
+    // TODO enemies drops
 }
