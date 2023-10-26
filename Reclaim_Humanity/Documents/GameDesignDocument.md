@@ -49,6 +49,13 @@ Game Design Document v0.0:
     - If we have no time, but we manage to find sprites then we can add the "save robot friend" mission and have him either waiting for us in the lab or just following us around, which should be an easy task to implement even after the game is fully developed;
     - 
 
+- ## SCENES DETAILS:
+    - LABORATORY:
+        - Energy Circles Status: I used 5 circles to show the energy the lab has. The energy value is saved in a scriptable object called "LabEnergySO" which is under the "Scriptable Objects/General" folder. Every circle contains 100 energy points, and it is animated to change when the energy reaches 0/25/50/75/100 % of the circle. The animations for the 25/50/75 % are composed by 4 frames arranged in the Animation section, the animations for Full and Empty state are single sprites used as animation. I used for all an animation so that I could easily manage them in the Animator. In it I used a "AnimationToPlay" parameter to make the initial dispatcher (which has no animation) choose the right animation. Since energy can change when player is whithin the laboratory scene I put the parameter setter inside the Update function so that it is rightfully changed when needed. Last detail, there is a canvas near the energy circles which is not enabled until the player get close enough. This canvas shows the right amount of energy with a number which goes from 0 to 500.
+
+        - Recipe Inventory Show: in the lab, in the Laboratory scene, there is a platform that is animated to attract the player. This platform is where the player has to go to complete recipes. When the player stands on top of it an "animated" sprite show us to click the "F" button on the keyboard. If clicked the canvas with the recipes TODO: should show up and let the player see what recipes are already unlocked and which one are not, let the player get items from its inventory and let him cook those recipes. TODO: should recipes consume energy??;
+
+        - Everything else it's in the Laboratory scene is there just as furniture, nothing else does something (FOR NOW);
 
 - ## TECHNICAL DETAILS IMPLEMENTED:
     - SCENES DETAILS:
@@ -76,6 +83,10 @@ Game Design Document v0.0:
     
     - SOUND DETAILS:
         - How is audio manager implemented, ...?;
+    
+    - SCRIPTABLE OBJECTS:
+        - Energy of the lab is saved in the scriptable object called "LabEnergySO" which is under the "Scriptable Objects/General" folder;
+        - ?;
     
 
 - ## POST GAME IDEAS:

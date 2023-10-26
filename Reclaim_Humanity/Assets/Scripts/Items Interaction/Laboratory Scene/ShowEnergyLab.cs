@@ -1,22 +1,32 @@
+using System;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShowEnergyLab : MonoBehaviour {
+    
     // private bool isTriggered = false;
-    private SpriteRenderer _renderer;
+    private TextMeshProUGUI textEnergy;
+    private int energy;
+    [SerializeField] private LabEnergySO labEnergy;
+    [SerializeField] private Canvas canvas;
+    
     
     // Start is called before the first frame update
     void Awake() {
-        _renderer = gameObject.GetComponent<SpriteRenderer>();
-        _renderer.enabled = false;
+        energy = (int) labEnergy.totalEnergy;
+        textEnergy = GetComponent<TextMeshProUGUI>();
+        canvas.enabled = false;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+        textEnergy.text = energy.ToString();
         // isTriggered = true;
-        _renderer.enabled = true;
+        canvas.enabled = true;
     }
 
     private void OnTriggerExit2D(Collider2D other) {
         // isTriggered = false;
-        _renderer.enabled = false;
+        canvas.enabled = false;
     }
 }
