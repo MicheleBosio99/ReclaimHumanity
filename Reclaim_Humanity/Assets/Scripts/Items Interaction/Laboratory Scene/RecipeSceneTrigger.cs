@@ -6,13 +6,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class RecipeSceneTrigger : MonoBehaviour {
-    [SerializeField] private int sceneBuildIndex = 0;
+    [SerializeField] private int sceneBuildIndex = 2;
     private bool isTriggered = false;
+    
     private SpriteRenderer FButtonRenderer;
-    [SerializeField] private Sprite FButton;
+    [SerializeField] private GameObject FButtonSprite;
 
     private void Start() {
-        FButtonRenderer = FButton.GetComponent<SpriteRenderer>();
+        FButtonRenderer = FButtonSprite.GetComponent<SpriteRenderer>();
         FButtonRenderer.enabled = false;
     }
 
@@ -29,7 +30,6 @@ public class RecipeSceneTrigger : MonoBehaviour {
 
     private void Update() {
         if (isTriggered && Input.GetKeyDown(KeyCode.F)) {
-            print("Switching Scene");
             SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
         }
     }
