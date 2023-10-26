@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc5af1f0173fede4f8350dc60265f543, type: 3}
   m_Name: LabEnergySO
   m_EditorClassIdentifier: 
-  totalEnergy: 500
+  totalEnergy: 0
