@@ -109,7 +109,7 @@ ___
     - Michele: Finding tilesets, first map of biomes drawn, with collisions correctly set; -> X
     - Iacopo: first main character implementation, his movements and collisions. Animations not possible until we don't have the final sprites to deal with; -> X
     - Anastasia: first implementation of the prefab that will generate enemies, with main stats which are health, actions set and damage. Also enemies spawn rules could be defined; -> X
-    - ?: Starting menu' implementation, with its scene. It should have a play button, an options one and a quit one. Those buttons must lead to the required scene/place they are designed for; -> O
+    - Riccardo: Starting menu' implementation, with its scene. It should have a play button, an options one and a quit one. Those buttons must lead to the required scene/place they are designed for; -> X
     - ?: Turn-based combat scene. It must have a menu where to choose the selected action (attack, run away, others ?) and a scene where it can be seen our character and the enemy found; TODO decide with the team how to deisgn this (main aspect I can think of: how to handle multiple enemies?, are there others things the player can do other that run away or attack??); It will almost surely take more time to do this, since a lot of thinking must be done about it, still, starting make the scene for it and some UI is a good idea; ->  X
 
 - Before 31/10/23 > New deadlines to complete:
