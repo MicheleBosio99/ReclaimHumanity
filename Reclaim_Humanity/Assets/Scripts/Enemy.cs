@@ -6,30 +6,36 @@ using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
-    // Enemy Characteristics
+    [Header("Enemy Characteristics")]
     [SerializeField] private string enemyType;
     [SerializeField] private int enemyLevel; // ??
     [SerializeField] private int maxHP;
     private int currentHP;
-    
-    // CHASING
+
+    [Header("CHASING")]
     public GameObject player;
     public float speed;
     private float distance;
     private Vector2 direction;
-    
-    // Field of View
+
+    [Header("FIELD OF VIEW")]
     [Range(0, 360)] public float angle;
     public float radius;
     private bool playerInSight;
     private bool isChasing;
     public LayerMask targetMask;
     public LayerMask obstructionMask;
-    
+
+    [Header("SPAWN SETTINGS")]
+
+    [SerializeField] private GameObject enem;
+    [SerializeField] private GameObject spawn;
+    private SpawnHandler spawnHandler;
     // target == player
-    
+
     void Start()
     {
+        spawnHandler = FindObjectOfType<SpawnHandler>();
         currentHP = maxHP;
         //enemyHP.text = "HP: " + currentHP + " / " + maxHP;
 
@@ -41,7 +47,18 @@ public class Enemy : MonoBehaviour
     {
         
     }
-    
+
+    public void ActivateEnemy()
+    {
+        enem.SetActive(true);
+    }
+
+    public void SpawnPositionEnemy()
+    {
+        enem.transform.position = new Vector2(spawn.transform.position.x, spawn.transform.position.y);
+        enem.SetActive(true);
+    }
+
     void AiChase()
     {
         distance = Vector2.Distance(transform.position, player.transform.position);
@@ -71,7 +88,7 @@ public class Enemy : MonoBehaviour
     }
 
     // This is like: every 0.02 seconds it checks if the collider detects something
-    private IEnumerator FOVRoutine()
+    public IEnumerator FOVRoutine()
     {
         WaitForSeconds wait = new WaitForSeconds(0.02f);
 
@@ -106,8 +123,16 @@ public class Enemy : MonoBehaviour
         else if (playerInSight)
             playerInSight = false;
     }
-    
-    
+
+    private void OnTriggerEnter2D(Collider2D collision) //TEMPORANEO PER KILLARE IL NEMICO
+    {
+        if (collision.tag == "Player")
+        {
+            enem.SetActive(false);
+            spawn.SetActive(false);
+            spawnHandler.NumberOfSpawnsActiveDecrement();
+        }
+    }
 
     // TODO enemies drops
 }
