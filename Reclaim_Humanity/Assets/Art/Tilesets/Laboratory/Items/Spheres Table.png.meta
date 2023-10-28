@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4eaaac6ae77c789408b9d9b698ca269b
+guid: 7094fd6374cb36643a27e899ecd2e6f5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,13 +43,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.2}
   spritePixelsToUnits: 32
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 32, y: 0, z: 32, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -108,128 +108,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Table_0
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 31
-        width: 60
-        height: 36
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2679669}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e63562cf7fbde9743af46bb93c622851
-      internalID: 2134211765
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Canvas
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 102
-        width: 31
-        height: 58
-      alignment: 9
-      pivot: {x: 0.4639814, y: 0.14385447}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e6a9a4821c4ec3544957fca81a1b8fd8
-      internalID: -1761631662
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chair
-      rect:
-        serializedVersion: 2
-        x: 386
-        y: 0
-        width: 26
-        height: 26
-      alignment: 9
-      pivot: {x: 0.49999884, y: 0.17791444}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1bff31f2020ad014cafda11c6bd15726
-      internalID: 2001477799
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vase
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 40
-        width: 26
-        height: 34
-      alignment: 9
-      pivot: {x: 0.5214722, y: 0.18801835}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2972deb3842b0284fad5dedab6d629cc
-      internalID: 791498746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Plant
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 160
-        width: 32
-        height: 42
-      alignment: 9
-      pivot: {x: 0.48255253, y: 0.14110419}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 04836d470ccbcea4ba82f7146797a491
-      internalID: 22826713
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Canvas: -1761631662
-      Chair: 2001477799
-      Plant: 22826713
-      Table_0: 2134211765
-      Vase: 791498746
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

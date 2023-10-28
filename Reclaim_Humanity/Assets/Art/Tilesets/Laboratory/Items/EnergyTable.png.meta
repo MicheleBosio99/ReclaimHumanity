@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 82ccf948b31d06042817a46d2e2f2880
+guid: bbdc03b904635634a81d12b3a6f054c9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 24
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -110,181 +110,34 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Closet_0
-      rect:
-        serializedVersion: 2
-        x: 375
-        y: 3334
-        width: 134
-        height: 76
-      alignment: 9
-      pivot: {x: 0.5426743, y: 0.21575606}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff83efd1ef9546e4eb015f3bea16364c
-      internalID: 125382149
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ClosetBed_0
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 3302
-        width: 64
-        height: 108
-      alignment: 9
-      pivot: {x: 0.50992775, y: 0.44705313}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d52af26629ccb5a45931de88772ca3d1
-      internalID: -1176349179
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NIghtTable_0
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 3048
-        width: 32
-        height: 48
-      alignment: 9
-      pivot: {x: 0.44043398, y: 0.2882131}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ea04d05f201d2944b069032e8eef8fb
-      internalID: -308755775
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Carpet_0
-      rect:
-        serializedVersion: 2
-        x: 226
-        y: 1282
-        width: 60
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5aa59cdaf86dee24184d7d9b26c74736
-      internalID: 1864170697
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Elephant_0
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 1296
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 801b7d4d8a949f747b7957de14e4d34b
-      internalID: -724676406
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lamp_0
-      rect:
-        serializedVersion: 2
-        x: 326
-        y: 1124
-        width: 20
-        height: 28
-      alignment: 9
-      pivot: {x: 0.49999848, y: 0.20506504}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 206337c05d6323545816e287bd623ff2
-      internalID: -107495915
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Window_0
+      name: EnergyTable
       rect:
         serializedVersion: 2
         x: 4
-        y: 958
+        y: 32
         width: 88
-        height: 54
+        height: 156
       alignment: 9
-      pivot: {x: 0.4896141, y: 0.2122735}
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ffebaef2ebac4d418ccad0fab395f3a
-      internalID: -190154451
+      spriteID: d7e2cd14c26814b4cb959dfefeeb0895
+      internalID: -1916487034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Window_1
+      name: GreenButton
       rect:
         serializedVersion: 2
-        x: 100
-        y: 958
-        width: 88
-        height: 54
-      alignment: 9
-      pivot: {x: 0.5077896, y: 0.20804173}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 551accae50d19464a864a0c9e1a1b901
-      internalID: -2129888792
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Light_0
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 696
-        width: 96
-        height: 71
+        x: 96
+        y: 52
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1c073da2c381074ab8b6c7ba4cc2964
-      internalID: 1507544493
+      spriteID: bfa6bbe516721be42a7e998331fcb31b
+      internalID: -1309731321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ClosetEnd_0
+      name: YellowButton
       rect:
         serializedVersion: 2
-        x: 384
-        y: 3334
-        width: 2
-        height: 78
+        x: 96
+        y: 84
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f486ccb9c8bee441b4a9a48f376ce7a
-      internalID: -523939417
+      spriteID: e30bc2588ef1b614da79d5be6590473a
+      internalID: 1230843337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4_Bedroom_32x32_0
+      name: RedButton
       rect:
         serializedVersion: 2
-        x: 418
-        y: 1258
-        width: 20
-        height: 20
+        x: 96
+        y: 116
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4168664ed5486e347a3e93b60bb82c03
-      internalID: -1881076598
+      spriteID: d41b0299dc7bce24395e21d88cdd3316
+      internalID: 842983763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4_Bedroom_32x32_1
+      name: RedLed
       rect:
         serializedVersion: 2
-        x: 438
-        y: 1258
-        width: 20
-        height: 20
+        x: 96
+        y: 151
+        width: 9
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0aa6936f0b70694a86f8754bf8089d6
-      internalID: -1333804840
+      spriteID: eb3c5eee3c47bd24ca5ec0b012d92831
+      internalID: -1934461688
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4_Bedroom_32x32_2
+      name: GreenLed
       rect:
         serializedVersion: 2
-        x: 458
-        y: 1258
-        width: 20
-        height: 20
+        x: 105
+        y: 151
+        width: 9
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -376,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d606ca0ffb47ff40b6e82a987d67f7d
-      internalID: -1248479914
+      spriteID: bc2baa987b8030242b9e78ff5c07b224
+      internalID: 479562343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4_Bedroom_32x32_3
+      name: BlueLed
       rect:
         serializedVersion: 2
-        x: 418
-        y: 1238
-        width: 20
-        height: 20
+        x: 114
+        y: 151
+        width: 9
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -397,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cab5f256330aaca4c9c7c020fd193532
-      internalID: -1402177396
+      spriteID: d7be2394b01628f40ac8a4ec8634ed8c
+      internalID: 458614506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4_Bedroom_32x32_4
+      name: OffLed
       rect:
         serializedVersion: 2
-        x: 438
-        y: 1238
-        width: 20
-        height: 20
+        x: 96
+        y: 142
+        width: 9
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35a5258719db838428efae423b981e6a
-      internalID: 891070415
+      spriteID: c8f9d9c5b22284a4d8207f3c66814bcd
+      internalID: 1867804776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4_Bedroom_32x32_5
+      name: YellowLed
       rect:
         serializedVersion: 2
-        x: 458
-        y: 1238
-        width: 20
-        height: 20
+        x: 105
+        y: 142
+        width: 9
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -439,20 +292,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49ff4b182b7e17a4eb6a76718044cbe4
-      internalID: -626531320
+      spriteID: 7d06535faf06aa24c9d417cd4ac9d803
+      internalID: 1723532393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4_Bedroom_32x32_6
+      name: EnergyTable_0
       rect:
         serializedVersion: 2
-        x: 418
-        y: 1218
-        width: 20
-        height: 20
+        x: 119
+        y: 59
+        width: 1
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -460,20 +313,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f5c65cc13c64664b9bfbea4f57861bd
-      internalID: 1602781066
+      spriteID: b2836a1a39d264845aae3d6e10dc131b
+      internalID: 335260948
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4_Bedroom_32x32_7
+      name: GnamOpen
       rect:
         serializedVersion: 2
-        x: 438
-        y: 1218
-        width: 20
-        height: 20
+        x: 97
+        y: 161
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -481,20 +334,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2dbb8a3881f5ad942b67a261aa1d4041
-      internalID: 305958898
+      spriteID: 95018776f641cb0459cd92ab14fce0f4
+      internalID: 7586378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4_Bedroom_32x32_8
+      name: Gnam25
       rect:
         serializedVersion: 2
-        x: 458
-        y: 1218
-        width: 20
-        height: 20
+        x: 129
+        y: 161
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -502,20 +355,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42c33ebfb5726464a9d3d2296025d1b6
-      internalID: -1471564797
+      spriteID: 776c6fbbe28844741982efc275dc7355
+      internalID: 367832039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4_Bedroom_32x32_9
+      name: Gnam50
       rect:
         serializedVersion: 2
-        x: 456
-        y: 1192
-        width: 20
-        height: 20
+        x: 161
+        y: 161
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -523,20 +376,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f6a5427ccc81ce40915ee1bf9d9d58e
-      internalID: -1574672051
+      spriteID: 5ebf7fbd4cb998544b319307b28b17be
+      internalID: 1269644858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4_Bedroom_32x32_10
+      name: Gnam75
       rect:
         serializedVersion: 2
-        x: 420
-        y: 1192
-        width: 20
-        height: 20
+        x: 129
+        y: 129
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -544,20 +397,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a9ec53cadc8cb44d9afd46ea9cd0b2a
-      internalID: 1747947420
+      spriteID: f131a95bf54b4c546ab539158a8e3fe4
+      internalID: 463233178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4_Bedroom_32x32_11
+      name: GnamClosed
       rect:
         serializedVersion: 2
-        x: 420
-        y: 1156
-        width: 20
-        height: 20
+        x: 161
+        y: 129
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -565,41 +418,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bcb104c89010a0458d76d248be12f2c
-      internalID: 802150615
+      spriteID: 320240094d92a3c4686789cafc193c95
+      internalID: 1770970866
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4_Bedroom_32x32_12
+      name: ScreenOff
       rect:
         serializedVersion: 2
-        x: 456
-        y: 1156
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc9194c93340ca54f866d348ec19fec8
-      internalID: -1850592067
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 4_Bedroom_32x32_13
-      rect:
-        serializedVersion: 2
-        x: 226
-        y: 1156
-        width: 60
-        height: 56
+        x: 128
+        y: 86
+        width: 32
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -607,8 +439,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e21bd3a6d8c50b4e8cc436675dbad64
-      internalID: -1639327978
+      spriteID: 7326d4ef1f51eaf4695705826ec0ef2e
+      internalID: 2140598386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScreenOn
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 86
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72bf4ab9ff7bab34191f7aaa6cd2e795
+      internalID: -1498836057
       vertices: []
       indices: 
       edges: []
@@ -624,30 +477,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      4_Bedroom_32x32_0: 42044676
-      4_Bedroom_32x32_1: 197712660
-      4_Bedroom_32x32_10: 1602781066
-      4_Bedroom_32x32_11: 305958898
-      4_Bedroom_32x32_12: -1471564797
-      4_Bedroom_32x32_13: -1639327978
-      4_Bedroom_32x32_2: 1246689697
-      4_Bedroom_32x32_3: -2060627876
-      4_Bedroom_32x32_4: -1881076598
-      4_Bedroom_32x32_5: -1333804840
-      4_Bedroom_32x32_6: -1248479914
-      4_Bedroom_32x32_7: -1402177396
-      4_Bedroom_32x32_8: 891070415
-      4_Bedroom_32x32_9: -626531320
-      Carpet_0: 1864170697
-      ClosetBed_0: -1176349179
-      ClosetEnd_0: -523939417
-      Closet_0: 125382149
-      Elephant_0: -724676406
-      Lamp_0: -107495915
-      Light_0: 1507544493
-      NIghtTable_0: -308755775
-      Window_0: -190154451
-      Window_1: -2129888792
+      BlueLed: 458614506
+      EnergyTable: -1916487034
+      EnergyTable_0: 335260948
+      Gnam25: 367832039
+      Gnam50: 1269644858
+      Gnam75: 463233178
+      GnamClosed: 1770970866
+      GnamOpen: 7586378
+      GreenButton: -1309731321
+      GreenLed: 479562343
+      OffLed: 1867804776
+      RedButton: 842983763
+      RedLed: -1934461688
+      ScreenOff: 2140598386
+      ScreenOn: -1498836057
+      YellowButton: 1230843337
+      YellowLed: 1723532393
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
