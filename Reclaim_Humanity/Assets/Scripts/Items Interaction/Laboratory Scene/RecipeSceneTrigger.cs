@@ -1,35 +1,34 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class RecipeSceneTrigger : MonoBehaviour {
-    [SerializeField] private int sceneBuildIndex = 2;
+    
     private bool isTriggered = false;
-
-    private SpriteRenderer _renderer;
+    private SpriteRenderer FButtonRenderer;
     [SerializeField] private GameObject FButton;
-
-    [SerializeField] private GameObject generateEnergy;
+    //[SerializeField] private GameObject ToOpenUI;
     
     private void Start() {
-        _renderer = FButton.GetComponent<SpriteRenderer>();
-        _renderer.enabled = false;
-        generateEnergy.SetActive(false);
+        FButtonRenderer = FButton.GetComponent<SpriteRenderer>();
+        FButtonRenderer.enabled = false;
+        //ToOpenUI.SetActive(false);
     }
 
 
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D other) {
         isTriggered = true;
-        _renderer.enabled = true;
+        FButtonRenderer.enabled = true;
     }
 
     private void OnTriggerExit2D(Collider2D other) {
         isTriggered = false;
-        _renderer.enabled = false;
+        FButtonRenderer.enabled = false;
     }
 
     private void Update() {
         if (isTriggered && Input.GetKeyDown(KeyCode.F)) {
-            generateEnergy.SetActive(true);
+            //ToOpenUI.SetActive(true);
         }
     }
 }
