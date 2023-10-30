@@ -10,19 +10,24 @@ public class EnergySpheres : MonoBehaviour {
     private Animator animator;
     private float min;
     private float max;
+    private float maxEnergy;
+    private float maxEnergyPerSphere;
     
     // Start is called before the first frame update
     void Awake() {
+        maxEnergy = labEnergy.MaxEnergyLab;
+        maxEnergyPerSphere = maxEnergy / 5.0f;
         animator = gameObject.GetComponent<Animator>();
-        min = (sphereNumber - 1) * 100.0f;
-        max = sphereNumber * 100.0f;
+        min = (sphereNumber - 1) * maxEnergyPerSphere;
+        max = sphereNumber * maxEnergyPerSphere;
     }
 
     private void Update() {
         int animationToPlay;
-        if (labEnergy.totalEnergy >= max) { animationToPlay = 4; }
-        else if (labEnergy.totalEnergy < min) { animationToPlay = 0; }
-        else { animationToPlay = (int) Math.Floor((labEnergy.totalEnergy - min) / 25); }
+        float level = maxEnergyPerSphere / 4.0f;
+        if (labEnergy.CurrentEnergy >= max) { animationToPlay = 4; }
+        else if (labEnergy.CurrentEnergy < min) { animationToPlay = 0; }
+        else { animationToPlay = (int) Math.Floor((labEnergy.CurrentEnergy - min) / level); }
 
         animator.SetInteger("AnimationToPlay", animationToPlay);
     }

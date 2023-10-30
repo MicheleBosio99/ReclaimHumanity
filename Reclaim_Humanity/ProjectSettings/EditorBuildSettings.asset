@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/World Scenes/OvergrownForest.unity
     guid: 44c1c90ec0863cd4a8ac0d50e6e646db
   - enabled: 1
-    path: Assets/Scenes/World Scenes/RuinedVillage.unity
+    path: Assets/Scenes/World Scenes/RuinedCity.unity
     guid: 6c7d5912e197d2442bf5d67bf608667f
   - enabled: 1
     path: Assets/Scenes/World Scenes/Wastelands.unity

@@ -7,7 +7,7 @@ public class Spawn : MonoBehaviour
     [SerializeField] private GameObject spawnPoint;
     private SpawnHandler spawnHandler;
     private float delay=0;
-    private float time = 0;
+    private float time;
     private bool go=false;
     [SerializeField ] private Enemy enemy;
 

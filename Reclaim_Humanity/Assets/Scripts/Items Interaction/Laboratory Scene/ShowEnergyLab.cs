@@ -11,6 +11,6 @@ public class ShowEnergyLab : MonoBehaviour {
     }
 
     private void Update() {
-        textEnergy.text = labEnergy.totalEnergy.ToString();
+        textEnergy.text = labEnergy.CurrentEnergy.ToString();
     }
 }

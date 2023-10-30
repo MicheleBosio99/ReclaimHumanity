@@ -1,0 +1,1601 @@
+fileFormatVersion: 2
+guid: 2abf970cfd6ddce499b11939a046821b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LeftArrowSign
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 5091
+        width: 45
+        height: 108
+      alignment: 9
+      pivot: {x: 0.5043538, y: 0.028374566}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a8af88a763666d47a43d15f868b8e66
+      internalID: -2040158654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AcessDeniedSign
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 5091
+        width: 45
+        height: 108
+      alignment: 9
+      pivot: {x: 0.49999967, y: 0.022931134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7bbca5806d9214f9461406bfc8974f
+      internalID: -1581171483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PedestrianStripesSign
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 4803
+        width: 45
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0719d8069b410de45abbc66de92e5527
+      internalID: -299768178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MultipleDirectionSign_1
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 4803
+        width: 75
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e8bb045cfdc2e440b32add750591138
+      internalID: 2076425158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElectricalDangerSign
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 4803
+        width: 45
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219b312bfbedc20449d6eec32939e73f
+      internalID: -89379693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftBench
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 4944
+        width: 45
+        height: 111
+      alignment: 9
+      pivot: {x: 0.4999973, y: 0.15513708}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b6ce2a2d6c76440956774722584020
+      internalID: 33799109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightBench
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 4944
+        width: 45
+        height: 111
+      alignment: 9
+      pivot: {x: 0.4999973, y: 0.166086}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc1e14a32746494d91593e8e7b9f70e
+      internalID: -1701658748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StreetLamp1
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 5088
+        width: 42
+        height: 183
+      alignment: 9
+      pivot: {x: 0.48553032, y: 0.071686625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b15e5475f6b3a64eb1d2ba9a17dba9f
+      internalID: -413744060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftBenchExtension
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 5088
+        width: 45
+        height: 96
+      alignment: 9
+      pivot: {x: 0.47387424, y: 0.044855755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33fee064994bb0b459d3107c3a826490
+      internalID: -1585524892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightBenchExtension
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 5088
+        width: 45
+        height: 96
+      alignment: 9
+      pivot: {x: 0.4956448, y: 0.050979614}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ecf5846cbd824841b3b1e46332f2a82
+      internalID: 587209260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontBench
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 5091
+        width: 126
+        height: 66
+      alignment: 9
+      pivot: {x: 0.49999902, y: 0.19131008}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7046b177fa16a93439210a81b637cf9a
+      internalID: 10792928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontBenchSmaller
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 5187
+        width: 78
+        height: 66
+      alignment: 9
+      pivot: {x: 0.49231583, y: 0.2821008}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 982a655e9c7468e4bbe397481034cf5f
+      internalID: 1227210826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass1
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 4848
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eea76488c6e7ff4c849bea31f072522
+      internalID: 503427531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass2
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 4896
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311a94b73577a4e47a8ed055da6b6138
+      internalID: -522928902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass3
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 4848
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2cfd36bb6096da4dbf665bf827c8256
+      internalID: 1935073020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass4
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 4896
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ba04831d6520e43b2f91af69bf36cd
+      internalID: -2134965315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass5
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 4848
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729ff529b26ed7843a9eaad9439443e7
+      internalID: -1056148829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass6
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 4800
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aa2c7611949bc049a5c3fe49f6e1523
+      internalID: -873130179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass7
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 4944
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f69ff0606518058408b250194cfe1e95
+      internalID: -910465927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass8
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 4944
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c01f600a10a1d41bd6c0c00ba0ce21
+      internalID: -2124910749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass9
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 4944
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02b406f42cad0b743be76506c9bf243f
+      internalID: -70801495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass10
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 4944
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583a0019bf0b08d4fa23cde7ac16b96b
+      internalID: 142773363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass11
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 4944
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4fde6b4a8fefc14ea7bd6de8000405b
+      internalID: -1009441422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass12
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 4896
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a5e400125534a4b84326b804e221df
+      internalID: -1037968260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass13
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 4848
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46b6e98ab164cbe419788233335ed0c6
+      internalID: 1061309593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass14
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 4800
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b540292850d624d8c05c7b16b8ddc3
+      internalID: 1657483897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass15
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 4752
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b6ca5ebda3daa4a9e484959624b576
+      internalID: 918823219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass16
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 4752
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea64d2a76b0c314fbc47f89b8f4947f
+      internalID: -710838267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass17
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 4752
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc050fcab023af3459dbe74bfbaab3f5
+      internalID: -97137959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass18
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 4752
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1daa9b00a458a664c9908672f2cedde4
+      internalID: -22937436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass19
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 4752
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427a104bbbda5e14ebf7d8c0d1b36d11
+      internalID: 760416356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manhole1
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 4464
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e7c49dfe9656f4b8079e1d55474646
+      internalID: -326765705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manhole2
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 4368
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29eeceb829a13394f9e56ec3cf369a94
+      internalID: 1623997735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manhole3
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 4419
+        width: 33
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41fb8dc9c3b0e124090233965521717a
+      internalID: -1980678915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmptyBin1
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 4452
+        width: 42
+        height: 51
+      alignment: 9
+      pivot: {x: 0.49999928, y: 0.1197055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a3b0fea388fc0d4796830dbe3ed43b8
+      internalID: 1603514246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullBin1
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 4446
+        width: 42
+        height: 60
+      alignment: 9
+      pivot: {x: 0.508101, y: 0.27882487}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4191fbacca73194e805510e3036708f
+      internalID: -409268704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoleInStreet1
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 4332
+        width: 141
+        height: 72
+      alignment: 9
+      pivot: {x: 0.50965375, y: 0.8402913}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81be4fc99f7f45f49a0a0ed4b951dfe8
+      internalID: 1259232783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoleInStreet2
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 4233
+        width: 96
+        height: 72
+      alignment: 9
+      pivot: {x: 0.46691385, y: 0.8654921}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f5f7ab36d9fe2542a90f6930db79d16
+      internalID: -1482921946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullBin2
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 4179
+        width: 87
+        height: 117
+      alignment: 9
+      pivot: {x: 0.4895686, y: 0.10443376}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc2d4167763edc48a404dad836ba47b
+      internalID: 951573676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldFullBinExtension2
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 4128
+        width: 87
+        height: 51
+      alignment: 9
+      pivot: {x: 0.49478394, y: 0.2953623}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc3db1788bea1904997d3dc76163c709
+      internalID: -1458354142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trash
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 4227
+        width: 33
+        height: 33
+      alignment: 9
+      pivot: {x: 0.4999963, y: 0.36640328}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2edaf98f3a6fbb542a77d557f1b5a869
+      internalID: 1399149924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParkBin1
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 4035
+        width: 33
+        height: 63
+      alignment: 9
+      pivot: {x: 0.4724972, y: 0.11828032}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90732cec91d14a244907829c54e99829
+      internalID: -487606003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree1
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 4032
+        width: 84
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f900ce95d25884244b06810c10f92507
+      internalID: 744655851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree2
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 3888
+        width: 90
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f0bf6fb082d2c448904adb5a7f12e75
+      internalID: 437054312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree1.1
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 3695
+        width: 84
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0067544fcf10d14a975f37bd4334ff7
+      internalID: -670920450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree2.1
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 3552
+        width: 90
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa655bee6b594f49afa2382f92f3ac7
+      internalID: 251939831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OilBarrelBlue
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 4008
+        width: 42
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5085885, y: 0.21233866}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f011c4b134e4a44684fb1d39b7a4a69
+      internalID: -620013475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OilBarrelsBlue
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 3984
+        width: 90
+        height: 93
+      alignment: 9
+      pivot: {x: 0.48796928, y: 0.18956338}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea005014b954d3d409f5feca4b6e69d1
+      internalID: 1117136017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OilBarrelsGreen
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 3888
+        width: 90
+        height: 93
+      alignment: 9
+      pivot: {x: 0.512028, y: 0.18956338}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bf48c58d15696e40a4a894fef8777cb
+      internalID: -878834581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OilBarrelGreen
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 3912
+        width: 42
+        height: 69
+      alignment: 9
+      pivot: {x: 0.48281133, y: 0.23848647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0f68691851af774f883dbd5ea9d57db
+      internalID: 413054398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParkBin2
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 3939
+        width: 37
+        height: 60
+      alignment: 9
+      pivot: {x: 0.4958265, y: 0.13451335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea5b288e39938f74883552c604d6e2a4
+      internalID: -528054219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParkBin3
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 3939
+        width: 33
+        height: 63
+      alignment: 9
+      pivot: {x: 0.4859619, y: 0.11514912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62695ebcc3fb1e64db2a507a5b7bdc0a
+      internalID: -1363482082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trash1
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 2400
+        width: 177
+        height: 108
+      alignment: 9
+      pivot: {x: 0.5739001, y: 0.3416183}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6957ec68195d04986578771fedfcde
+      internalID: -1032699133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trash2
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 2256
+        width: 177
+        height: 105
+      alignment: 9
+      pivot: {x: 0.5966387, y: 0.39458936}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e4693b3329b7704bb0d1851e80be112
+      internalID: -479520706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trash3
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 2160
+        width: 177
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5852694, y: 0.35326385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0f5e17d80fa024682cb8d75e1f61a3
+      internalID: 710944885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NuclearWastes
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 2115
+        width: 39
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f989ce3697c741245b51ed21ed1ae8bf
+      internalID: -244993483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldCarSide1
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1782
+        width: 192
+        height: 129
+      alignment: 9
+      pivot: {x: 0.52096206, y: 0.29720336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6382ee5606d99643af46f5f7ed7b0cb
+      internalID: 622276410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldCar1
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 1920
+        width: 186
+        height: 108
+      alignment: 9
+      pivot: {x: 0.47295225, y: 0.239138}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a5aef408dccbb64ba9ef0f04d7f3785
+      internalID: 1379649164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldCar2
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 2115
+        width: 186
+        height: 108
+      alignment: 9
+      pivot: {x: 0.489181, y: 0.19255461}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69ffd16313d15eb439b9cf410a1ef536
+      internalID: -1512561776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldCar3
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 2115
+        width: 184
+        height: 108
+      alignment: 9
+      pivot: {x: 0.4945314, y: 0.21118842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e1b9bff93eea84aa578be6f3126379
+      internalID: 2090315021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StreetLamp3
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 3744
+        width: 87
+        height: 177
+      alignment: 9
+      pivot: {x: 0.8006971, y: 0.07365185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f006fcb55497d4244aedf509c47bfafb
+      internalID: 1081401518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StreetLamp4
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 3744
+        width: 87
+        height: 177
+      alignment: 9
+      pivot: {x: 0.19930258, y: 0.08502163}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec6cf413a5c8a644f8f9bebacf2e9adb
+      internalID: -2098189973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass20
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 3935
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b04ce7e1781d5d6408e5ad0717858712
+      internalID: -60780231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass21
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 3935
+        width: 46
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9cdf2139c5864844b3c608b4dc21dde
+      internalID: -1166181386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass22
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 3987
+        width: 28
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.20652941}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33b5f6a3a02aeb489b4aa3612ee6aa2
+      internalID: 1924461732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrossSign
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 4803
+        width: 45
+        height: 108
+      alignment: 9
+      pivot: {x: 0.49571532, y: 0.0357666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc3fed38e0eea914e83adacf7b939f58
+      internalID: -1972621818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterTower
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 2267
+        width: 221
+        height: 310
+      alignment: 9
+      pivot: {x: 0.49363577, y: 0.19145587}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d22fe9fd1a8d5143b7be4fa3d7b07a8
+      internalID: 100839408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      AcessDeniedSign: -1581171483
+      CrossSign: -1972621818
+      ElectricalDangerSign: -89379693
+      EmptyBin1: 1603514246
+      FrontBench: 10792928
+      FrontBenchSmaller: 1227210826
+      FullBin1: -409268704
+      FullBin2: 951573676
+      Grass1: -522928902
+      Grass10: -70801495
+      Grass11: 142773363
+      Grass12: -1009441422
+      Grass13: -1037968260
+      Grass14: 1061309593
+      Grass15: 1657483897
+      Grass16: 918823219
+      Grass17: -710838267
+      Grass18: -97137959
+      Grass19: -22937436
+      Grass2: -522928902
+      Grass20: -60780231
+      Grass21: -1166181386
+      Grass22: 1924461732
+      Grass3: 1935073020
+      Grass4: -1357555785
+      Grass5: -2134965315
+      Grass6: -1056148829
+      Grass7: -873130179
+      Grass8: -910465927
+      Grass9: -2124910749
+      HoleInStreet1: 1259232783
+      HoleInStreet2: -1482921946
+      LeftArrowSign: -2040158654
+      LeftBench: 33799109
+      LeftBenchExtension: -1585524892
+      Manhole1: -326765705
+      Manhole2: 1623997735
+      Manhole3: -1980678915
+      MultipleDirectionSign_1: 2076425158
+      NuclearWastes: -244993483
+      OilBarrelBlue: -620013475
+      OilBarrelGreen: 413054398
+      OilBarrelsBlue: 1117136017
+      OilBarrelsGreen: -878834581
+      OldCar1: 1379649164
+      OldCar2: -1512561776
+      OldCar3: 2090315021
+      OldCarSide1: 622276410
+      OldFullBinExtension2: -1458354142
+      ParkBin1: -487606003
+      ParkBin2: -528054219
+      ParkBin3: -1363482082
+      PedestrianStripesSign: -299768178
+      RightBench: -1701658748
+      RightBenchExtension: 587209260
+      StreetLamp1: -413744060
+      StreetLamp3: 1081401518
+      StreetLamp4: -2098189973
+      Trash: 1399149924
+      Trash1: -1032699133
+      Trash2: -479520706
+      Trash3: 710944885
+      Tree1: 744655851
+      Tree1.1: -670920450
+      Tree2: 437054312
+      Tree2.1: 251939831
+      WaterTower: 100839408
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
