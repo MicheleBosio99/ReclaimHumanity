@@ -1,53 +1,63 @@
-# RECLAIM HUMANITY
+# RECLAIM;HUMANITY  _ V0.0
 
-Game Design Document v0.0:
+- # OVERVIEW
+    RECLAIM;HUMANITY is a top down 2D RPG game in pixel art, in it gamers will play as Wollo, a cute little robot, which has to overcome the most difficult mission he has ever accomplished: save the whole humainty!
+    ___
+    ___
 
+- # GAMEPLAY: An Exploration Adventure
+    Humans has been affected by a terrible virus, which has paralyzed all of them, your mission will be to find the cure against this virus. Here are listed the main mechanics that the player will use to fulfill the task:
 
-- ## GAMEPLAY: An Exploration Adventure
-    - Main idea is reading (paralyzed) humans mind throught the TranceSmitter;
-    - Final goal being the creation of a "potion" that will wake up humans;
-    - View is 2D top-down and angled;
-    - The game will feature turn-based combat (still I am really not sure about how to do them efficiently and not boring), so, I think, it will be possible to change anytime to a run&gun gameplay if we see turn-based doesn't work out, since this one is much easier to implement and doesn't change anything about health/drops/actions/etc... that will be already implemented;
-    - Recipe tree which has as the root the final "potion" that saves humanity -> means (many) items are needed. Items can be drop from enemies or can be found in the environment, interaction with items necessary for the character to be able to pick them up. Recipes are prepared in the lab only, there will be a precise place to do them;
-    - Items can also be used to generate energy for the recipe creations. Every recipe has an amount of energy required and every item has a total amount of energy that can generate throught the Organic Generator (?);
-    - 
-
-- ## MAIN CHARACTER:
-    - Wollo, a lonely robot which whishes to wake up his master; has the possibility of waking up humanity by beginning a trip which will lead him to many items. However he doesn't know the recipes for creating the final drug which will awake people, so must use the TranceSmitter to connect to paralyzed humans and read their mind hoping to find the recipes he needs;
-    - 
-
-- ## CONTEXT:
-    - Place and timeline: Earth, at some point in the near future, all human beings got afflicted by a strange virus, which grants a sort of immortality but blocks every movement of a person, paralyzing her;
-    - Environment: there is a laboratory which is where Wollo lives, that divides 3 biomes: an Overgrown Forest, a Ruined City and some near Nuclear Wastelands;
-    - 
-
-- ## ENEMIES:
-    - At first I think it's best to have one type of enemy in the Overgrown Forest and one type in the Ruined City. For the nuclear wastelands we could use the same two enemies of the other biomes and just make them greenish and slightly more powerful (they got evolved by nuclear emissions). At last a big bad Nuclear Horror will be the final boss and once defeated him we'll have the unique item we need to complete the recipe for the wake-up-humans potion;
-
-
-    - TODO: decide which enemies to put for each biomes. This mobs will have one/two drops we can use for recipes. We will later add some others, if time let us, which will not have drops for recipes but only for energy generation of the lab. Some examples:
-        - Overgrown Forest: Rabid wolves, Aggressive carnivorous plants, Big (Walking Birds), ...
-        - Ruined City: Large Rats, Hostile (Cleaning ?) Robots, ...
-        - Wastelands: easy since we can use the more powerful version of whatever we have choosen in the other biomes + Nuclear Horror;
+    - EXPLORATION: go around the world, search in every corner and find all the things you need to go on on your adventure, may these be items to generate energy or some knowledge about recipes you heard about a long time ago;
     
-    - 
+    - Whenever you find a human use your main tool, the TRANCESMITTER (KEYCODE.T), to speak to them. This will help you unlock more recipes which will lead, at the end, to the final cure;
 
-- ## ALLIES:
-    - As "secondary missions" (absolutely very very very short) Wollo will be able to do something to wake up companions that will help him in combats. TODO decide if companions are woken up by finding them around the world map and by repairing them, or if they just wake up whenever the laboratory reaches a certain amount of energy;
-    - TODO decide in minimal details what companions do:
-    
-        | WHat can they do? | PROs | CONs |
-        | ----------- | ----------- | ----------- |
-        | Fight side by side with Wollo |  |  |
-        | Equip weapons |  |  |
-        | Move in the world<br>(or only came out in battle) |  | Many more animations to do |
-        |  |  |  |
-        |  |  |  |
+    - Crafting is not easy, you must first find the correct RECIPE that generate that ITEM and second find all the ingredients you'll need for it. You will find items laying all around the map, but sometimes it will not be so easy and you'll have to fight to obtain them;
 
-        in general I'll leave the companions thing to be implemented in the end if we have time. It is a really good idea, but it means many more sprites and animations are to be found and the whole combat will need to include them, which I don't think it's an easy task...;
-    
-    - If we have no time, but we manage to find sprites then we can add the "save robot friend" mission and have him either waiting for us in the lab or just following us around, which should be an easy task to implement even after the game is fully developed;
-    - 
+    - COMBAT: may it be that you need some items for your new recipes or that you need access to some mysterious place, sometimes combat will be necessary to advance in the adventure. Just pay attention not to die, otherwise who will save humanity? Combat will be TURN-BASED, most similar to a pokemon style, where Wollo will face enemies one action at a time;
+
+    - There won't be a player LEVEL to carry on, but a "Laboratory" one, in form of ENERGY accumulated in the Lab. Every time you find yourself with an inventory full of useless items don't just drop them! Use those to generate energy in the laboratory in order to unlock POWER-UPS, new WEAPONS and many other things. Moreover recipes will need a certain amount of energy to be completed (they won't consumeit though) so be careful to this aspect of the game too;
+
+    ___
+    ___
+
+- # CHARACTERS
+    - MAIN CHARACTER: Wollo, a lonely robot which whishes to wake up his master; has the possibility of waking up humanity by beginning a trip which will lead him to many items. However he doesn't know the recipes for creating the final drug which will awake people, so must use the TranceSmitter to connect to paralyzed humans and read their mind hoping to find the recipes he needs;
+    - HUMANS: All around the world will be placed humans, which are unfortunately paralyzed. You can interact with them only with the Trancesmitter, and they will contribute to your addventure as they can.
+    - ENEMIES: There will be enemies scattered everywhere, so pay attention to where you go. Try not to face powerful creatures if you are not preapered to. Technically speaking we can add as many enemies as we want / have time to, but for starters one typology for each biome I think will be enough. These first enemies' drops will be used in recipes too, while possible future enemies will just have their drops used to generate energy in the lab.
+    - DR.IDK: your creator, as all other humans, has been affected by the virus and now stands still in his room in the laboratory. When you'll finally complete your mission and have the cure use that on him to complete the game;
+    - COMPANIONS: Along the way you may find companions (2 MAX) which will travel with you. They will be more than happy to help you, but they're shy and will come out only when you need the most: during fights;
+
+___
+___
+
+- # GAME STORY
+- The world 100 years before our (in game) time: humanity has rised to the top of civilization: people have found a solution for climate change, they now use only energy from renewable sources and they have solved world' hunger and wars problem. There is just a little extra thing that humans still don't have that will make them the perfect species: immortality. But how to accomplish that? All most famous biologists and doctors of the world have come together to make that a reality and are now working on this special virus that could be the final solution. They are really really close, but the current virus has a just little problem since it gives immortality, but it also paralyzes the victim. And, just like in the worse horror films, this virus manages to find a way to spread outside the lab it was contained in and, as we know, affect whole humanity. Wollo, which is immune (obv) to its effect, carries on his life like nothing has happened, but day by day he feels more and more lonely, but he can't do anything since he doesn't know nothing about medicine. Until one day, now, 100 years later, he discovers in the lab the TranceSmitter and now has a way to learn about the world by getting in touch with humans. It begins then our adventure to save everyone;
+
+__
+__
+
+- # THE WORLD
+    - The main location will be the laboratory where the player may generate nergy for unlocking new things and craft recipes with items found.
+    - The explorable world will feature 3 biomes: Overgrown Forest, Ruined City and Wastelands. Wollo will have to explore each one of them to find unique items and enemies that will help him finishing his mission. Possibly each biome will have a single unique item that will be found at the end of the biome exploration and that is necessary to make some specific recipe.
+    - TODO complete with description of which enemy will be found, what collectible items and what unique items will be found in each biome:
+    - OVERGROWN FOREST:
+    - RUINED CITY:
+    - WASTELANDS:
+
+___
+___
+
+- # MEDIA LIST
+    - Sprites used as tilesets and items sprites have been found on Itch.io and here is a list:
+        - LimeZu: "Modern Interiors", "Modern Exteriors";
+        - ELVGames: "Rogue Adventure World!";
+
+___
+___
+___
+
+# OTHER DETAILS:
 
 - ## SCENES DETAILS:
     - LABORATORY:
@@ -85,16 +95,21 @@ Game Design Document v0.0:
         - How is audio manager implemented, ...?;
     
     - SCRIPTABLE OBJECTS:
-        - Energy of the lab is saved in the scriptable object called "LabEnergySO" which is under the "Scriptable Objects/General" folder;
-        - ?;
+        - TotalEnergy and CurrentEnergy of the lab are saved in the scriptable object called "LabEnergySO" which is under the "Scriptable Objects/General" folder;
+        - Must use a SO for the inventory;
     
 
 - ## POST GAME IDEAS:
     - Add here ideas which could be included after the main game is complete...
-    - ?;
+    - Add new enemies which drops will only be used as energy generation;
+
+
 
 
 ___
+___
+___
+
 
 ## GROUP MEMBERS: TODO COMPLETE
 - MICHELE BOSIO: michele2.bosio@mail.polimi.it - Team Leader & Developer;
@@ -119,4 +134,12 @@ ___
     - ?: Search/Start design of main character sprites and animations;
     - ?: Complete GDD with all background decisions and structure it with the new discussed sections;
 
-- LATER DL: Before 06/11/23: Game Design Document first version MUST BE FINALIZED and shared with the prof. IT WILL BE EVALUATED (I think so)?
+- Before 06/11/23: Game Design Document first version MUST BE FINALIZED and shared with the prof. IT WILL BE EVALUATED (I think so)?
+
+- Before 14/11/23 > New deadlines to complete:
+    - Make working inventory system;
+    - Make recipes and energy systems in the laboratory;
+    - Carry on combat system and scene;
+    - Try to complete biomes scenes with map configuration and some details;
+    - Finish pause menu;
+    - Other things?

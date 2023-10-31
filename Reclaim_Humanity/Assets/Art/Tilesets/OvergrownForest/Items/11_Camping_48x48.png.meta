@@ -1,0 +1,2305 @@
+fileFormatVersion: 2
+guid: 7537d7e46bd1869459bfa631070ccd8f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CompleteLargerTree1
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 5424
+        width: 234
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61dc1a0118e360b4c94899b2f59099b7
+      internalID: 761583388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteNormalTree1
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 4848
+        width: 180
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3abdaff0ae5821439746d5a2d7474e5
+      internalID: 133958635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleterShortTree1
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 4848
+        width: 174
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45c90a59fe376e64396d5f4c9c767527
+      internalID: 2035515461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteBigTree1
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 5235
+        width: 189
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f4b036c3394b5478b966a4d014d4a8
+      internalID: -726058711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteNormalTree2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 4992
+        width: 96
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5030fdb2dde484a4287a7d3a08bd7285
+      internalID: -91392362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteBigTree2
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 4992
+        width: 96
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea5a6696f3350f4cbedb49bfec41220
+      internalID: -1112348312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteBiggerTree1
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 4992
+        width: 96
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e086609dce0d4ac43a236403fd62432c
+      internalID: 1488043810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteTwig1
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 5094
+        width: 54
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 876944eb0a821164a942a27380fea7ee
+      internalID: -286232878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteSmallTree1
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 5427
+        width: 144
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a9f5d99f0452c4eaba1278bc85a230
+      internalID: 2136409741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Log1
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 5235
+        width: 72
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0226e73a55790df47a794aadb9b1c28d
+      internalID: 161402565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteBiggestTree1
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 4707
+        width: 229
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88879e6a9ee3e3419c26696f36beddb
+      internalID: 1424487414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteNakedTree1
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 4323
+        width: 90
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bd558a1282017c41aa72f2640d11f2b
+      internalID: -1295877318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteNakedTree2
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 4467
+        width: 117
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b497544a8b6ef74bac267597a906c82
+      internalID: 784204643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteNakedTree3
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 4467
+        width: 90
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e03a78094fc1cc24885556f151345ae1
+      internalID: -99950657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteNakedTree4
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 4467
+        width: 117
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36d401ad82010b48a11b5445fac5dec
+      internalID: -1893444721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Twig2
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 4319
+        width: 40
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc3b0e34d38ca4b419ffeb52eef4bc91
+      internalID: 1214927141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Twig3
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 4324
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78915ce7aa1cec7499878eebcac4ecde
+      internalID: 203760504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Twig4
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 4324
+        width: 46
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044408b07b02acc42a8081f2759b5f19
+      internalID: -2140661438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteNormalTree3
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 4992
+        width: 183
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b190fca0d744640aaca0c039f54c67
+      internalID: 1523446314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExtensionNormalTree3
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 4944
+        width: 183
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d42f55efe8e064db2372307ab0e7e8
+      internalID: 1375942776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExtensionNormalTree2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 4945
+        width: 96
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 812d82098d1b15e46a21d2c7e42609c8
+      internalID: 1674643520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExtensionBigTree2
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 4945
+        width: 96
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78e62a878910c454daaef9a23c47bca0
+      internalID: 855704449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteNormalTreePineCone
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 4704
+        width: 96
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a94852f874b274bbecff03abb0690f
+      internalID: -589369557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteBigTreePineCone
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 4704
+        width: 96
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8ac54a0680d1645b4bcb64628de44a
+      internalID: 1923217402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteBiggerTreePineCone
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 4704
+        width: 95
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123efd32dfb0af942b568cd49b63b9ce
+      internalID: -145297405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExtensionShortTree1
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 4752
+        width: 174
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02da73cdd561e0c488f3e385375c0dd3
+      internalID: 1786513006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExtensionNormalTree1
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 4752
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd671c031d395d44bd1dc8c448c6179
+      internalID: 1874069383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteLittleTree1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 4368
+        width: 96
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a53e9ab3ac972cf4b8273e73cc7855d3
+      internalID: 1472609819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExtensionLittleTree1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 4320
+        width: 96
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e682c6184bd8915458513f2e6099d556
+      internalID: -1471466827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Twig5
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 4323
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a580af6b55c1a47ad626007208acda
+      internalID: 1956644777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Twig6
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 4321
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3f1abe328214f4c8124c738c31dc72
+      internalID: 817955639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteNakedTre5
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 4325
+        width: 90
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 976b16b401b94ed42a20a015d22c6579
+      internalID: 1852583770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteNakedTree6
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 4467
+        width: 117
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962f7d6340246344b97bd19bd83c9790
+      internalID: -503653565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteNakedtree7
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 4464
+        width: 101
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12adb0a1d0bbae749b7796409f2cbdc0
+      internalID: -1902197700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteNakedTree8
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 4466
+        width: 120
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b66dcf22f913443a81186f95f8303d
+      internalID: 731716977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CompleteChonkTree1
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 5136
+        width: 174
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3dda5fa46dfd064fa3536443091bd53
+      internalID: -1648862466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExtensionChonkTree1
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 5088
+        width: 174
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c42d4274809a44ba0486d5177e3b55
+      internalID: 2130139058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExtensionLargerTree1
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 5328
+        width: 234
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a1a8335f55ad3a42ac63e47d8067590
+      internalID: -735882939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExtensionSmallTree1
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 5331
+        width: 145
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7778ca019f0f032409aec818d88b99bf
+      internalID: 688618527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExtensionBigTree1
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 5139
+        width: 189
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585b1e1ce30c1944fbd69040e9194f95
+      internalID: -680143294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BunchOfTree1
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 479
+        width: 385
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 227e1afc1a310bc498638e7f0b190d5d
+      internalID: 157023726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BunchOfTrees2
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 240
+        width: 384
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b530beca6728047ae89fb0e4c7546c
+      internalID: 1783014879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BunchOfTrees3
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 0
+        width: 336
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f8b30dcf573a042bc82ec9b4c820ed
+      internalID: -228895179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftBOT3
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 0
+        width: 108
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d28d67520b261468baad1a80f81b33
+      internalID: -610815260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftBOT2
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 274
+        width: 153
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3666c5dcc96a0c842af778ebd56fe498
+      internalID: 1077141636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftBOT1
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 478
+        width: 158
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffeff99f3cafa264dbc3bb60337dd128
+      internalID: -1316624038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightBOT1
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 510
+        width: 92
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8222f7c1838cb0b4b857e96cb4ec84d0
+      internalID: 456279668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightBOT2
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 275
+        width: 102
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cb67a34ace1069449f5878b4770a124
+      internalID: 292574669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightBOT3
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 0
+        width: 111
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2206dd65fa27046b3f86bfa37de9f0
+      internalID: 1894758726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkerTree1
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 1824
+        width: 108
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e85923d7ca080a84698ac0ce12f90703
+      internalID: -123395243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkerTree2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2304
+        width: 186
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f92a03c3803985488c90104155573fc
+      internalID: -787030196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 2304
+        width: 188
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f7df993c374981428e99f47e136efce
+      internalID: 1533375965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree20
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 2448
+        width: 188
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750840f3849e3ad4a8059aad95e6cd75
+      internalID: -448326608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree21
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 2448
+        width: 98
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20c0addad8af0d44faa3bcb3811fa57e
+      internalID: 1276098732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree22
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 2448
+        width: 96
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d84d209a2e0bac4f849cce36b4524ef
+      internalID: 647645429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree23
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 2736
+        width: 91
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eae31443ee3eb642b23ed8365770dd3
+      internalID: -1953601485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 2736
+        width: 86
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4057884cd2e064048917379244d54098
+      internalID: -2018353283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 2688
+        width: 93
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b6a1f87bd041641bbc61bf023ee6cb
+      internalID: -593134696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 2688
+        width: 84
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33830d3ed8aeb7a4cbd385a188286905
+      internalID: 1654853150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 2883
+        width: 145
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523fdb95ab3136f4f92ed8abb419c2ca
+      internalID: 1032104267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 2880
+        width: 235
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e813b64cf8fcb9f47a60b8a2f9f8d4ef
+      internalID: 1137694661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 2835
+        width: 192
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47cc367f3ff1e874cae01e7325e6adcd
+      internalID: 551357833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 2691
+        width: 189
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d0abb867aaeec4a99aceebe38d58ee
+      internalID: 1880929576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 2595
+        width: 189
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: accc2cc8200bbe9459fe902f08082e69
+      internalID: -1472366127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2208
+        width: 186
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b264b2bcae7a5b4abf4f78674155c4c
+      internalID: -823361661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 2208
+        width: 188
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122c0c90dd6859243be7eac131489baa
+      internalID: -1649663948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 2787
+        width: 144
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c83b9d73c05651e4a86ddec81015fff8
+      internalID: 725299091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 2928
+        width: 91
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172a74312a1cb1a478c1822c3a452e9c
+      internalID: -1409036889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 2592
+        width: 175
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8c1c986a5e894429c8b046025640e2
+      internalID: 1744023654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_13
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 2544
+        width: 175
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd2e59e59ebb6240b873a693a68eede
+      internalID: -267162064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2160
+        width: 96
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46210634a8d682f40859baac6f3b980a
+      internalID: 84960312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_15
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 2160
+        width: 96
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6a986ef37bfb54e873133e01188fd8
+      internalID: 1209799474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_16
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2160
+        width: 96
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e29458122d00e1c46a0eaaafbc5cd589
+      internalID: 313947681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_17
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 2163
+        width: 230
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e37c077d5265764e9954d3a3b010fe8
+      internalID: 508272165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_18
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 1776
+        width: 233
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce248881677797d4c9a1565db3218498
+      internalID: -625986755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_19
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 2400
+        width: 188
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce15958608cee71439bfb9a4488b3197
+      internalID: -518532521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_20
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 2784
+        width: 236
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a33ff662c16854a9cae01ca06b0556
+      internalID: 879751436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_21
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 4848
+        width: 180
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e85248dd82f118f45bb30c64311385a6
+      internalID: 422229764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_22
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 5379
+        width: 192
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c0539db9a5601d4988974021be9d1a8
+      internalID: -1169956842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_23
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 5331
+        width: 192
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7209acd1ca103224fa715cbf0e3940a9
+      internalID: -792031468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_24
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 5472
+        width: 91
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2df94909dc326bf4aa59b81885bb06a2
+      internalID: 787862021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_25
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 5424
+        width: 91
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 992f62da944804d4ebf12cae76d15b8b
+      internalID: -623743011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_26
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 5521
+        width: 63
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3605d8ab4fb5e3469695b2b969df2f0
+      internalID: 1580244986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_27
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 5518
+        width: 46
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b3c107fc80c5d14b8d6b271f1f4aa1e
+      internalID: -2103661806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_28
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 5283
+        width: 54
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3d0b6fda56750e4f90eb849affcb80e
+      internalID: 1420215377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_29
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 5235
+        width: 56
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eaea438b00dbd64fbbe1dcb64da2972
+      internalID: 829970971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_30
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 5145
+        width: 39
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5345c33575e8bb746baf1eb5388ee532
+      internalID: 1699663675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_31
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 5189
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47137793b1ad56e41958ca499d8bb001
+      internalID: 1212292771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_32
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 5186
+        width: 51
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4441b297085980c4f802ff896408c094
+      internalID: -1568836055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_33
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 5148
+        width: 33
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7026e4eaec93530408fa3a7693ebaab4
+      internalID: -274561436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_34
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 5146
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c43371d9a6bae4479f926428b0b18a0
+      internalID: 1253391722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_35
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 5096
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f1bb29575a320f47bca55178bb61643
+      internalID: -335822231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_36
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 5092
+        width: 52
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af3f28e7a8879f46a59c692c0867f32
+      internalID: 778321713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_37
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 4926
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a40e98a546595d4eab1fcead6e3b733
+      internalID: 1253791278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_38
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 4905
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62bf76efecb70d54cb4e1de70e5fdd98
+      internalID: -327910516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_39
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 4917
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3deae1592444d994f9138b4d49f02b08
+      internalID: 1143541634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_40
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 4899
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e251f9cea621c54ca1bdb905723c8e4
+      internalID: -215732377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_41
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2448
+        width: 96
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ba5d9264e274c4c9b48c0dd304fb16
+      internalID: 132630238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_42
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 2550
+        width: 54
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b460baab3f9737f46b8e9c3dc32c9962
+      internalID: 1134647758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      11_Camping_48x48_0: -2018353283
+      11_Camping_48x48_1: -593134696
+      11_Camping_48x48_10: 725299091
+      11_Camping_48x48_11: -1409036889
+      11_Camping_48x48_12: 1744023654
+      11_Camping_48x48_13: -267162064
+      11_Camping_48x48_14: 84960312
+      11_Camping_48x48_15: 1209799474
+      11_Camping_48x48_16: 313947681
+      11_Camping_48x48_17: 508272165
+      11_Camping_48x48_18: -625986755
+      11_Camping_48x48_19: -518532521
+      11_Camping_48x48_2: 1654853150
+      11_Camping_48x48_20: 879751436
+      11_Camping_48x48_21: 422229764
+      11_Camping_48x48_22: -1169956842
+      11_Camping_48x48_23: -792031468
+      11_Camping_48x48_24: 787862021
+      11_Camping_48x48_25: -623743011
+      11_Camping_48x48_26: 1580244986
+      11_Camping_48x48_27: -2103661806
+      11_Camping_48x48_28: 1420215377
+      11_Camping_48x48_29: 829970971
+      11_Camping_48x48_3: 1032104267
+      11_Camping_48x48_30: 1699663675
+      11_Camping_48x48_31: 1212292771
+      11_Camping_48x48_32: -1568836055
+      11_Camping_48x48_33: -274561436
+      11_Camping_48x48_34: 1253391722
+      11_Camping_48x48_35: -335822231
+      11_Camping_48x48_36: 778321713
+      11_Camping_48x48_37: 1253791278
+      11_Camping_48x48_38: -327910516
+      11_Camping_48x48_39: 1143541634
+      11_Camping_48x48_4: 1137694661
+      11_Camping_48x48_40: -215732377
+      11_Camping_48x48_41: 132630238
+      11_Camping_48x48_42: 1134647758
+      11_Camping_48x48_5: 551357833
+      11_Camping_48x48_6: 1880929576
+      11_Camping_48x48_7: -1472366127
+      11_Camping_48x48_8: -823361661
+      11_Camping_48x48_9: -1649663948
+      BunchOfTree1: 157023726
+      BunchOfTrees2: 1783014879
+      BunchOfTrees3: -228895179
+      CompleteBigTree1: -726058711
+      CompleteBigTree2: -1112348312
+      CompleteBigTreePineCone: 1923217402
+      CompleteBiggerTree1: 1488043810
+      CompleteBiggerTreePineCone: -145297405
+      CompleteBiggestTree1: 1424487414
+      CompleteChonkTree1: -1648862466
+      CompleteLargerTree1: 761583388
+      CompleteLittleTree1: 1472609819
+      CompleteNakedTre5: 1852583770
+      CompleteNakedTree1: -1295877318
+      CompleteNakedTree2: 784204643
+      CompleteNakedTree3: -99950657
+      CompleteNakedTree4: -1893444721
+      CompleteNakedTree6: -503653565
+      CompleteNakedTree8: 731716977
+      CompleteNakedtree7: -1902197700
+      CompleteNormalTree1: 133958635
+      CompleteNormalTree2: -91392362
+      CompleteNormalTree3: 1523446314
+      CompleteNormalTreePineCone: -589369557
+      CompleteSmallTree1: 2136409741
+      CompleteTwig1: -286232878
+      CompleterShortTree1: 2035515461
+      DarkerTree1: -123395243
+      DarkerTree2: -787030196
+      ExtensionBigTree1: -680143294
+      ExtensionBigTree2: 855704449
+      ExtensionChonkTree1: 2130139058
+      ExtensionLargerTree1: -735882939
+      ExtensionLittleTree1: -1471466827
+      ExtensionNormalTree1: 1874069383
+      ExtensionNormalTree2: 1674643520
+      ExtensionNormalTree3: 1375942776
+      ExtensionShortTree1: 1786513006
+      ExtensionSmallTree1: 688618527
+      LeftBOT1: -1316624038
+      LeftBOT2: 1077141636
+      LeftBOT3: -610815260
+      Log1: 161402565
+      RightBOT1: 456279668
+      RightBOT2: 292574669
+      RightBOT3: 1894758726
+      Tree: 1533375965
+      Tree20: -448326608
+      Tree21: 1276098732
+      Tree22: 647645429
+      Tree23: -1953601485
+      Twig2: 1214927141
+      Twig3: 203760504
+      Twig4: -2140661438
+      Twig5: 1956644777
+      Twig6: 817955639
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
