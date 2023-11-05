@@ -1,4 +1,5 @@
-# RECLAIM;HUMANITY  _ V0.0
+# RECLAIM;HUMANITY
+### Game Design Document V0.0
 
 - # OVERVIEW
     RECLAIM;HUMANITY is a top down 2D RPG game in pixel art, in it gamers will play as Wollo, a cute little robot, which has to overcome the most difficult mission he has ever accomplished: save the whole humainty!
