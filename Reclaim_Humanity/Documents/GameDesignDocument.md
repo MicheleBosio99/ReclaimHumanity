@@ -211,6 +211,8 @@ ___
 
             - - ![Slots Image](GDDImages/slots.png)
 
+            - INVENTORY UI: just as described in the UI sections, it is used in every biome scene in the same way so I made it a prefab;
+
             - HUMANS: prefab that contains main properties of the humans, like its sprite, the json file linked to him that contains its dialogue, its ID which may be just his name and nothing else, their 2D collider and a trigger collider to use as trigger for dialogues. This will be used to create all humans;
         
 

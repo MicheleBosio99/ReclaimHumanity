@@ -4,12 +4,9 @@ using UnityEngine.InputSystem;
 
 public class OpenInventoryScript : MonoBehaviour {
     
-    [SerializeField] private GameObject InventoryMenu;
-
-    private void Start() { InventoryMenu.SetActive(false); }
+    [SerializeField] private GameObject PlayerMenu;
 
     public void OpenInventory(InputAction.CallbackContext context) {
-        if (!InventoryMenu.activeSelf) { InventoryMenu.SetActive(true); }
-        else { InventoryMenu.SetActive(false); }
+        if (context.performed) { PlayerMenu.GetComponent<ChangeMenuShowed>().GetKeyPressed(context.control.name); }
     }
 }

@@ -26,6 +26,14 @@ public class InventoryItemsSO : ScriptableObject {
         if (specialItemsInInventory.Count >= maxSpecialSlots) return false;
         specialItemsInInventory.Add(item); return true;
     }
+
+    public InventoryItem GetInfoOrdinaryItemInInventory(int index) {
+        return index >= ordinaryItemsInInventory.Count ? InventoryItem.GetEmptyItem() : ordinaryItemsInInventory[index];
+    }
+
+    public InventoryItem GetInfoSpecialItemInInventory(int index) {
+        return index >= specialItemsInInventory.Count ? InventoryItem.GetEmptyItem() : specialItemsInInventory[index];
+    }
 }
 
 public class InventoryItem {
@@ -33,11 +41,22 @@ public class InventoryItem {
     private string itemID;
     private Sprite itemSprite;
     private int itemQuantity;
+    private string description;
+    private float energyGeneratedOnBurn;
+    private bool isSpecialItem;
 
-    public InventoryItem(string itemID, Sprite itemSprite, int itemQuantity) {
+    public InventoryItem(string itemID, Sprite itemSprite, int itemQuantity,
+            string description, float energyGeneratedOnBurn, bool isSpecialItem) {
         this.itemID = itemID;
         this.itemSprite = itemSprite;
         this.itemQuantity = itemQuantity;
+        this.description = description;
+        this.energyGeneratedOnBurn = energyGeneratedOnBurn;
+        this.isSpecialItem = isSpecialItem;
+    }
+
+    public static InventoryItem GetEmptyItem() {
+        return new InventoryItem("", null, 0, "", 0.0f, false);
     }
 
     public string ItemID {
@@ -53,5 +72,24 @@ public class InventoryItem {
     public int ItemQuantity {
         get => itemQuantity;
         set => itemQuantity = value;
+    }
+
+    public string Description {
+        get => description;
+        set => description = value;
+    }
+
+    public float EnergyGeneratedOnBurn {
+        get => energyGeneratedOnBurn;
+        set => energyGeneratedOnBurn = value;
+    }
+
+    public bool IsSpecialItem {
+        get => isSpecialItem;
+        set => isSpecialItem = value;
+    }
+
+    public override string ToString() {
+        return $"ID: {ItemID}, Quantity: {itemQuantity}, Description: {Description}, Energy: {EnergyGeneratedOnBurn}, Special: {IsSpecialItem}";
     }
 }

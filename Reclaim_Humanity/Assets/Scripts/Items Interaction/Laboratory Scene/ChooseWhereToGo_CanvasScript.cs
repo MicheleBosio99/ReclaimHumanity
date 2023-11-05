@@ -8,29 +8,30 @@ public class ChooseWhereToGoScript : MonoBehaviour {
     
     [SerializeField] private GameObject player;
     private bool stopPlayer;
+    private PlayerMovement playerMovement;
 
-    private void Start() {
+    private void Awake() {
+        playerMovement = player.GetComponent<PlayerMovement>();
         gameObject.SetActive(false);
     }
 
     private void OnEnable() {
         gameObject.transform.position = player.transform.position;
-        stopPlayer = true;
+        playerMovement.CurrentSpeed = 0.0f;
     }
-    private void OnDisable() { stopPlayer = false; }
+    private void OnDisable() { playerMovement.CurrentSpeed = playerMovement.NormalSpeed; }
 
     private void Update() {
-        if (stopPlayer) { player.SetActive(false); }
-        if (gameObject.activeSelf && Input.GetKeyDown(KeyCode.F)) { OnCloseButtonClick(); }
+        if (gameObject.activeSelf && Input.GetKeyDown(KeyCode.F)) { OnCloseButtonClick(); } // Must be changed to use InputActions 
     }
 
-    public void OnCloseButtonClick() {
-        player.SetActive(true);
-        gameObject.SetActive(false);
-    }
+    public void OnCloseButtonClick() { gameObject.SetActive(false); }
     
     // GTF = Go To Forest
-    public void OnGTFButtonClick() { SceneManager.LoadScene(sceneName: "OvergrownForest"); }
+    public void OnGTFButtonClick() {
+        Debug.Log("pressed");
+        SceneManager.LoadScene(sceneName: "OvergrownForest");
+    }
     
     // GTC = Go To City
     public void OnGTCButtonClick() { SceneManager.LoadScene(sceneName: "RuinedCity"); }
