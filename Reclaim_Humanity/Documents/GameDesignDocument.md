@@ -77,17 +77,21 @@ __
         - SPECIAL WASTELANDS ITEM:
             - These wastelands were the result of a tremendous nuclear explosion happened since the nuclear power plant, whithout humans, didn't have the required maintenance and went blowing up. Now nuclear scraps can be found all around it, but if someone manages to find his way inside the (once) power plant he will find that one nuclear reactor is still in good shape (how? I don't know, magic maybe). This reactor is the last component necessary to make the cure, and will be the container in which Wollo'll make it.
 
-    - ->> Just to specify, once all 3 special components will be found they will be carried to the laboratory where a special UI will be presented with 3 slots. Putting the 3 components inside the slots, and pressing the button celow, will create a single machinery, which will not be possible to put in the inventory but will be "spawned" autromatically inside the laboratory. When Wollo will put all necessary potions/materials inside it the process of creating the final cure will start and in a couple of seconds, it will be possible to take the cure item and finish the game;
+    - &rarr; Just to specify, once all 3 special components will be found they will be carried to the laboratory where a special UI will be presented with 3 slots. Putting the 3 components inside the slots, and pressing the button celow, will create a single machinery, which will not be possible to put in the inventory but will be "spawned" autromatically inside the laboratory. When Wollo will put all necessary potions/materials inside it the process of creating the final cure will start and in a couple of seconds, it will be possible to take the cure item and finish the game;
 
 ___
 ___
 
-- # MEDIA LIST
-    - Spritesheets and tilesets used for the game were found on itch.io as:
-        - LimeZu: "Modern Interiors", "Modern Exteriors";
-        - ELVGames: "Rogue Adventure World!";
-
-
+# MEDIA LIST
+- Sprites used as tilesets and items sprites have been found on Itch.io and here is a list:
+## SPRITES
+* Sprites used as tilesets and items sprites have been found on Itch.io and here is a list:
+    - LimeZu: "Modern Interiors", "Modern Exteriors";
+    - ELVGames: "Rogue Adventure World!";
+* Characters and enemies (with thier relative animations) have been created using a graphic program that can manage pixel art.
+## MUSIC
+- Music in background are a selection of tracks from videogames "Days Gone" and "The last of us 2";
+- Sound effects are downloaded from https://www.zapsplat.com/ and they are all free license.
 ___
 ___
 
@@ -130,7 +134,7 @@ ___
     - GENERAL DETAILS:
         - MAIN CHARACTER: The main character is controlled by the player and is used to go around the game world. For a specific description of all its components see the Prefabs section below here;
 
-        - GRID AND TILEMAP > All scenes use grids to draw the map of their biome; this grids are composed by different tilemaps so that it is possible to have different behaviour with each one. To obtain the desired render results we used the property "Order in layer" inside the Tilemap Renderer component of each tilemap.Tilemaps are described below in order from the lowest order one to the highest rendered:
+        - GRID AND TILEMAP &rarr; All scenes use grids to draw the map of their biome; this grids are composed by different tilemaps so that it is possible to have different behaviour with each one. To obtain the desired render results we used the property "Order in layer" inside the Tilemap Renderer component of each tilemap.Tilemaps are described below in order from the lowest order one to the highest rendered:
             - BGBehind: a rectangular area all Black, used as "Out of the map" view.
 
             - Background: contains the drawings of the shape of the map with all the different pavements used. For example the Overgrown Forest uses this layer to draw the grass growing on, basically, all the map;
@@ -194,6 +198,8 @@ ___
 
             - MAIN MENU: it's an UI canvas that has an image for background and a "Start Game" and a "Quit" buttons for now;
 
+            - PAUSE PANEL: it's an UI canvas that stops the flow of the game. It can be called in every scene pressing "p" or "Esc" button. Pause Menu consist in: 2 buttons ("Resume": disable PausePanel and continue to play; "Main Menu": load MainMenu scene and interrupt game) and 3 sliders ("Master Volume", "Music Volume", "Sounds Volume" that sets the volumes during the game);
+
         
 
         - PREFABS:
@@ -249,7 +255,7 @@ ___
 ## GROUP MEMBERS: TODO COMPLETE
 - MICHELE BOSIO: michele2.bosio@mail.polimi.it - Team Leader & Developer;
 - ANASTASIA FAVERO: anastasia.favero@mail.polimi.it - Developer;
-- ANDREA PESCI: andrea1.pesci@mail.polimi.it - Developer;
+- ANDREA PESCI: andrea1.pesci@mail.polimi.it - Sound Engineer & Developer;
 - RICCARDO MALPIEDI : riccardo.malpiedi@mail.polimi.it - Developer;
 - IACOPO ROBERTO FERRARIO : iacoporoberto.ferrario@mail.polimi.it - Developer;
 
