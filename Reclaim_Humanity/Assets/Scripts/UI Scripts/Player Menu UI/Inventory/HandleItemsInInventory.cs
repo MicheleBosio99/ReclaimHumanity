@@ -14,7 +14,19 @@ public class HandleItemsInInventory : MonoBehaviour {
     [SerializeField] private GameObject EnergyText;
 
     [SerializeField] private InventoryItemsSO inventorySlotsSO;
-    
+
+    public GameObject CurrentSelectedSlot { get; set; }
+
+    public List<GameObject> OrdinaryInventorySlotsUI {
+        get => ordinaryInventorySlotsUI;
+        set => ordinaryInventorySlotsUI = value;
+    }
+
+    public List<GameObject> SpecialInventorySlotsUI {
+        get => specialInventorySlotsUI;
+        set => specialInventorySlotsUI = value;
+    }
+
     private void Start() {
         UpdateOrdinarySlots(); UpdateSpecialSlots();
         for (int i = 0; i < ordinaryInventorySlotsUI.Count; i++) {
@@ -23,7 +35,8 @@ public class HandleItemsInInventory : MonoBehaviour {
         for (int i = 0; i < specialInventorySlotsUI.Count; i++) {
             specialInventorySlotsUI[i].GetComponent<HandleSlotSelection>().SaveHandler(this, i, true);
         }
-        
+
+        CurrentSelectedSlot = ordinaryInventorySlotsUI[0];
         GenerateTestItem();
     }
 
@@ -68,26 +81,6 @@ public class HandleItemsInInventory : MonoBehaviour {
         }
     }
     
-
-    // TODO
-    private List<Dictionary<Vector2, int>> nextPositionsForeachSlot;
-    
-    private void ComputeNextSlot() {
-        nextPositionsForeachSlot = new List<Dictionary<Vector2, int>>();
-
-        Dictionary<Vector2, int> newPosDict = new Dictionary<Vector2, int>();
-        
-        foreach (var slot in ordinaryInventorySlotsUI) {
-            newPosDict.Add(new Vector2(1, 0), 1);
-            
-            nextPositionsForeachSlot.Add(newPosDict);
-        }
-
-        foreach (var sslot in specialInventorySlotsUI) {
-            
-        }
-    }
-
     public void ShowDescriptionSelectedObject(int index, bool isSpecial) {
         InventoryItem itemInSlotSelected = isSpecial
             ? inventorySlotsSO.GetInfoSpecialItemInInventory(index)
@@ -103,6 +96,11 @@ public class HandleItemsInInventory : MonoBehaviour {
     public void UnShowDescriptionSelectedObject() {
         DescriptionText.GetComponent<TextMeshProUGUI>().text = " ";
         EnergyText.GetComponent<TextMeshProUGUI>().text = " ";
+    }
+
+    public void SetCurrentSelectedSlotByIndex(int index, bool isSlotSpecial) {
+        CurrentSelectedSlot.GetComponent<HandleSlotSelection>().ExitHover();
+        CurrentSelectedSlot = isSlotSpecial ? specialInventorySlotsUI[index] : ordinaryInventorySlotsUI[index];
     }
 
 

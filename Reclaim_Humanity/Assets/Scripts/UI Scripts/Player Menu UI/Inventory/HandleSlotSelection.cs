@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -12,7 +14,7 @@ public class HandleSlotSelection : MonoBehaviour, IPointerEnterHandler, IPointer
     
     
     private Image slotImage;
-    private Tuple<HandleItemsInInventory, int> handlerWithIndex;
+    public Tuple<HandleItemsInInventory, int> handlerWithIndex;
 
     private bool isSlotSpecial;
 
@@ -22,8 +24,9 @@ public class HandleSlotSelection : MonoBehaviour, IPointerEnterHandler, IPointer
         normalSlotColor = slotImage.color;
         normalSlotScale = gameObject.transform.localScale;
     }
-    
+
     public void EnterHover() {
+        handlerWithIndex.Item1.SetCurrentSelectedSlotByIndex(handlerWithIndex.Item2, isSlotSpecial);
         handlerWithIndex.Item1.ShowDescriptionSelectedObject(handlerWithIndex.Item2, isSlotSpecial);
         gameObject.transform.localScale = selectedSlotScale;
         slotImage.color = selectedSlotColor;
