@@ -18,7 +18,6 @@ public class HandleItemInSlot : MonoBehaviour {
     public InventoryItem ItemInSlot { get; set; }
 
     public void FillSlotWithItem(InventoryItem item) {
-        // Debug.Log("Registered new item insertion: " + item.ToString() + " iSP? " + isSlotSpecial);
         ItemInSlot = item;
         itemImage.sprite = item.ItemSprite;
         var color = itemImage.color; color.a = 1.0f; itemImage.color = color;

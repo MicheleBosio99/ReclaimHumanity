@@ -41,8 +41,8 @@ public class ChangeMenuShowed : MonoBehaviour {
         // Stop time for menu open
         Time.timeScale = 0.0f;
         
-        // Stop player
-        playerMovement.CurrentSpeed = 0.0f;
+        // Stop player, not necessary since we are stopping time;
+        //  playerMovement.CurrentSpeed = 0.0f;
         
         OpenPlayerMenuButton.SetActive(false);
         BackgroundGeneralPanel.SetActive(true);
@@ -77,8 +77,8 @@ public class ChangeMenuShowed : MonoBehaviour {
         OpenPlayerMenuButton.SetActive(true);
         BackgroundGeneralPanel.SetActive(false);
         
-        // Make player move again
-        playerMovement.CurrentSpeed = playerMovement.NormalSpeed;
+        // Make player move again, no more necessary since we are stopping and restarting time;
+        // playerMovement.CurrentSpeed = playerMovement.NormalSpeed;
     }
     
     private void ChangeMenuScreen(GameObject objToEnable) {

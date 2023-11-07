@@ -8,18 +8,13 @@ public class ChooseWhereToGoScript : MonoBehaviour {
     
     [SerializeField] private GameObject player;
     private bool stopPlayer;
-    private PlayerMovement playerMovement;
-
-    private void Awake() {
-        playerMovement = player.GetComponent<PlayerMovement>();
-        gameObject.SetActive(false);
-    }
 
     private void OnEnable() {
         gameObject.transform.position = player.transform.position;
-        playerMovement.CurrentSpeed = 0.0f;
+        Time.timeScale = 0.0f;
     }
-    private void OnDisable() { playerMovement.CurrentSpeed = playerMovement.NormalSpeed; }
+
+    private void OnDisable() { Time.timeScale = 1.0f; }
 
     private void Update() {
         if (gameObject.activeSelf && Input.GetKeyDown(KeyCode.F)) { OnCloseButtonClick(); } // Must be changed to use InputActions 

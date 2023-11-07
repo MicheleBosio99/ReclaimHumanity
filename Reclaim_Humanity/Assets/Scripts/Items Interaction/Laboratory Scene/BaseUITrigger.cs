@@ -12,6 +12,7 @@ public class BaseUITrigger : MonoBehaviour {
     private void Start() {
         FButtonRenderer = FButton.GetComponent<SpriteRenderer>();
         FButtonRenderer.enabled = false;
+        ToOpenUI.SetActive(false);
     }
     
     // Start is called before the first frame update
