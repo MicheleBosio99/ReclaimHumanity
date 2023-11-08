@@ -11,5 +11,14 @@ public class OpenInventoryScript : MonoBehaviour {
         if (context.performed) { PlayerMenu.GetComponent<ChangeMenuShowed>().GetKeyPressed(context.control.name); }
     }
 
-    public GameObject CurrentlyOpenUI { get; set; }
+    public GameObject CurrentlyToOpenUI { get; set; }
+    private bool isActive = false;
+
+    public void OpenCloseUI(InputAction.CallbackContext context) {
+        if (CurrentlyToOpenUI == null) { return; }
+        if (context.performed) {
+            if (isActive) { CurrentlyToOpenUI.SetActive(false); isActive = false; }
+            else { CurrentlyToOpenUI.SetActive(true); isActive = true; }
+        }
+    }
 }

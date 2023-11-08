@@ -584,7 +584,7 @@ MonoBehaviour:
   shadowTop: {fileID: 1438341448037420112}
   lightTop: {fileID: 6201263780269795811}
   lightBottom: {fileID: 2185057366594743944}
-  player: {fileID: 0}
+  player: {fileID: 1344862835144778464, guid: f7ad302aac4072c4b9ba222f39dcc7f4, type: 3}
 --- !u!114 &7942635781010990918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -599,3 +599,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FButton: {fileID: 1135547834566611273}
   ToOpenUI: {fileID: 0}
+  player: {fileID: 1344862835144778464, guid: f7ad302aac4072c4b9ba222f39dcc7f4, type: 3}

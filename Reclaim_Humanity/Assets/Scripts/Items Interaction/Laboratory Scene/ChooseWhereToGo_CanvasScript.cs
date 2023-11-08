@@ -7,18 +7,16 @@ using UnityEngine.SceneManagement;
 public class ChooseWhereToGoScript : MonoBehaviour {
     
     [SerializeField] private GameObject player;
-    private bool stopPlayer;
+    private PlayerMovement movement;
+
+    private void Start() { movement = player.GetComponent<PlayerMovement>(); }
 
     private void OnEnable() {
         gameObject.transform.position = player.transform.position;
-        Time.timeScale = 0.0f;
+        if(movement != null) { movement.CurrentSpeed = 0.0f; }
     }
 
-    private void OnDisable() { Time.timeScale = 1.0f; }
-
-    private void Update() {
-        if (gameObject.activeSelf && Input.GetKeyDown(KeyCode.F)) { OnCloseButtonClick(); } // Must be changed to use InputActions 
-    }
+    private void OnDisable() { if (movement != null) { movement.CurrentSpeed = movement.NormalSpeed; } }
 
     public void OnCloseButtonClick() { gameObject.SetActive(false); }
     
@@ -33,6 +31,4 @@ public class ChooseWhereToGoScript : MonoBehaviour {
     
     // GTW = Go To Wastelands
     public void OnGTWButtonClick() { SceneManager.LoadScene(sceneName: "Wastelands"); }
-    
-    
 }
