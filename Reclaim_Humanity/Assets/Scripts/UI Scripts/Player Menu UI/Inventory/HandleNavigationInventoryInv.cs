@@ -3,19 +3,19 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using Vector2 = UnityEngine.Vector2;
 
-public class HandleNavigationInventory : MonoBehaviour {
+public class HandleNavigationInventoryInv : MonoBehaviour {
 
     [SerializeField] private GameObject InventoryPanel;
-    private HandleSlotSelection selectionHandler;
-    private HandleItemsInInventory inventoryHandler;
+    private HandleSlotSelectionInv _selectionInvHandler;
+    private HandleItemsInInventoryInv _inventoryInvHandler;
     
     private SlotNavigationGraph slotGraph;
 
     private void Awake() {
-        inventoryHandler = InventoryPanel.GetComponent<HandleItemsInInventory>();
+        _inventoryInvHandler = InventoryPanel.GetComponent<HandleItemsInInventoryInv>();
 
-        var ordinarySlots = inventoryHandler.OrdinaryInventorySlotsUI;
-        var specialSlots = inventoryHandler.SpecialInventorySlotsUI;
+        var ordinarySlots = _inventoryInvHandler.OrdinaryInventorySlotsUI;
+        var specialSlots = _inventoryInvHandler.SpecialInventorySlotsUI;
 
         List<GameObject> slotsOrdered = new List<GameObject>();
         
@@ -30,9 +30,9 @@ public class HandleNavigationInventory : MonoBehaviour {
     }
     
     private void ChangeSelectedSlot(Vector2 movement) {
-        inventoryHandler.CurrentSelectedSlot.GetComponent<HandleSlotSelection>().ExitHover();
-        inventoryHandler.CurrentSelectedSlot = slotGraph.GetNeighborWithDirection(inventoryHandler.CurrentSelectedSlot, movement);
-        inventoryHandler.CurrentSelectedSlot.GetComponent<HandleSlotSelection>().EnterHover();
+        _inventoryInvHandler.CurrentSelectedSlot.GetComponent<HandleSlotSelectionInv>().ExitHover();
+        _inventoryInvHandler.CurrentSelectedSlot = slotGraph.GetNeighborWithDirection(_inventoryInvHandler.CurrentSelectedSlot, movement);
+        _inventoryInvHandler.CurrentSelectedSlot.GetComponent<HandleSlotSelectionInv>().EnterHover();
     }
 
     private Queue<Vector2> movementQueue = new Queue<Vector2>();

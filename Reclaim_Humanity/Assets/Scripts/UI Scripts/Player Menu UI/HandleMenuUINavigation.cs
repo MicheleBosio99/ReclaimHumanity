@@ -11,7 +11,7 @@ public class HandleMenuUI : MonoBehaviour {
     [SerializeField] private GameObject StatisticsPanel;
     [SerializeField] private GameObject MapPanel;
 
-    private HandleNavigationInventory handlerInventory;
+    private HandleNavigationInventoryInv _handlerInventoryInv;
     private HandleNavigationOptions handlerOptions;
     private HandleNavigationStatistics handlerStatistics;
     private HandleNavigationMap handlerMap;
@@ -24,7 +24,7 @@ public class HandleMenuUI : MonoBehaviour {
     private void Awake() {
         menuShowedHandler = PlayerMenu.GetComponent<ChangeMenuShowed>();
 
-        handlerInventory = InventoryPanel.GetComponent<HandleNavigationInventory>();
+        _handlerInventoryInv = InventoryPanel.GetComponent<HandleNavigationInventoryInv>();
         handlerOptions = OptionsPanel.GetComponent<HandleNavigationOptions>();
         handlerStatistics = StatisticsPanel.GetComponent<HandleNavigationStatistics>();
         handlerMap = MapPanel.GetComponent<HandleNavigationMap>();
@@ -37,7 +37,7 @@ public class HandleMenuUI : MonoBehaviour {
         
         var movement = context.ReadValue<Vector2>();
         if (context.performed) {
-            if (currentEnabledMenu == InventoryPanel) { handlerInventory.GetNavigationInput(movement); }
+            if (currentEnabledMenu == InventoryPanel) { _handlerInventoryInv.GetNavigationInput(movement); }
             else if (currentEnabledMenu == OptionsPanel) { handlerOptions.GetNavigationInput(movement); }
             else if (currentEnabledMenu == StatisticsPanel) { handlerStatistics.GetNavigationInput(movement); }
             else if (currentEnabledMenu == MapPanel) { handlerMap.GetNavigationInput(movement); }

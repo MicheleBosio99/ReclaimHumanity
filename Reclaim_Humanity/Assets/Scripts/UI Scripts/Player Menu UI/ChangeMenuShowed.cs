@@ -19,7 +19,7 @@ public class ChangeMenuShowed : MonoBehaviour {
 
     [SerializeField] private GameObject BackgroundGeneralPanel;
     
-    [SerializeField] private GameObject Player;
+    [SerializeField] private GameObject player;
     private PlayerMovement playerMovement;
 
     private GameObject currentEnabledGameObj;
@@ -27,7 +27,7 @@ public class ChangeMenuShowed : MonoBehaviour {
     public GameObject CurrentEnabledGameObj => currentEnabledGameObj;
 
     private void Awake() {
-        playerMovement = Player.GetComponent<PlayerMovement>();
+        playerMovement = player.GetComponent<PlayerMovement>();
         
         InventoryPanel.SetActive(false);
         OptionsPanel.SetActive(false);
@@ -76,6 +76,8 @@ public class ChangeMenuShowed : MonoBehaviour {
         currentEnabledGameObj = null;
         OpenPlayerMenuButton.SetActive(true);
         BackgroundGeneralPanel.SetActive(false);
+        
+        player.GetComponent<OpenInventoryScript>().ClosedInventory();
         
         // Make player move again, no more necessary since we are stopping and restarting time;
         // playerMovement.CurrentSpeed = playerMovement.NormalSpeed;

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class HandleSlotSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
+public class HandleSlotSelectionInv : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
     
     private Vector3 normalSlotScale;
     private Color normalSlotColor;
@@ -14,7 +14,7 @@ public class HandleSlotSelection : MonoBehaviour, IPointerEnterHandler, IPointer
     
     
     private Image slotImage;
-    public Tuple<HandleItemsInInventory, int> handlerWithIndex;
+    public Tuple<HandleItemsInInventoryInv, int> handlerWithIndex;
 
     private bool isSlotSpecial;
 
@@ -42,9 +42,9 @@ public class HandleSlotSelection : MonoBehaviour, IPointerEnterHandler, IPointer
 
     public void OnPointerExit(PointerEventData eventData) { ExitHover(); }
 
-    public void SaveHandler(HandleItemsInInventory slotsHandler, int index, bool isSpecial) {
+    public void SaveHandler(HandleItemsInInventoryInv slotsHandler, int index, bool isSpecial) {
         isSlotSpecial = isSpecial;
-        handlerWithIndex = new Tuple<HandleItemsInInventory, int>(slotsHandler, index);
+        handlerWithIndex = new Tuple<HandleItemsInInventoryInv, int>(slotsHandler, index);
     }
 }
 

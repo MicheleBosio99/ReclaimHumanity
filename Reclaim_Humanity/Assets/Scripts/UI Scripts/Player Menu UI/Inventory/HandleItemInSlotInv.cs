@@ -2,10 +2,14 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HandleItemInSlotGE : MonoBehaviour {
-    
+// This MonoBehaviour handles the slots inside the inventory.
+// FillSlotsWithItem is only called by script HandleItemsInventory whenever the inventory is updated;
+public class HandleItemInSlotInv : MonoBehaviour {
+
     [SerializeField] private Image itemImage;
     [SerializeField] private TextMeshProUGUI quantity;
+
+    [SerializeField] private bool isSlotSpecial;
 
     public InventoryItem ItemInSlot { get; set; }
 

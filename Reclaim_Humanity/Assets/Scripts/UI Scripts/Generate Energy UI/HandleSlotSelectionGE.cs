@@ -1,0 +1,21 @@
+using System;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
+public class HandleSlotSelectionGE : MonoBehaviour , IPointerClickHandler {
+    
+    private Image slotImage;
+    public Tuple<HandleItemsInInventoryGE, int> handlerWithIndex;
+
+    private bool isInventory;
+
+    private void Start() { slotImage = gameObject.GetComponent<Image>(); }
+    
+    public void OnPointerClick(PointerEventData eventData) { handlerWithIndex.Item1.SlotGotClicked(handlerWithIndex.Item2, isInventory); }
+    
+    public void SaveHandler(HandleItemsInInventoryGE slotsHandler, int index, bool _isInventory) {
+        isInventory = _isInventory;
+        handlerWithIndex = new Tuple<HandleItemsInInventoryGE, int>(slotsHandler, index);
+    }
+}

@@ -1,10 +1,11 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
-public class HandleItemsInInventory : MonoBehaviour {
+public class HandleItemsInInventoryInv : MonoBehaviour {
     
     [SerializeField] private List<GameObject> ordinaryInventorySlotsUI;
     [SerializeField] private List<GameObject> specialInventorySlotsUI;
@@ -28,17 +29,18 @@ public class HandleItemsInInventory : MonoBehaviour {
     }
 
     private void Start() {
-        UpdateOrdinarySlots(); UpdateSpecialSlots();
         for (int i = 0; i < ordinaryInventorySlotsUI.Count; i++) {
-            ordinaryInventorySlotsUI[i].GetComponent<HandleSlotSelection>().SaveHandler(this, i, false);
+            ordinaryInventorySlotsUI[i].GetComponent<HandleSlotSelectionInv>().SaveHandler(this, i, false);
         }
         for (int i = 0; i < specialInventorySlotsUI.Count; i++) {
-            specialInventorySlotsUI[i].GetComponent<HandleSlotSelection>().SaveHandler(this, i, true);
+            specialInventorySlotsUI[i].GetComponent<HandleSlotSelectionInv>().SaveHandler(this, i, true);
         }
 
         CurrentSelectedSlot = ordinaryInventorySlotsUI[0];
         GenerateTestItem();
     }
+
+    private void OnEnable() { UpdateOrdinarySlots(); UpdateSpecialSlots(); }
 
     public void AddNewItemToInventory(InventoryItem item) {
         if (item.IsSpecialItem) { AddNewSpecialItemToInventory(item); }
@@ -68,16 +70,27 @@ public class HandleItemsInInventory : MonoBehaviour {
     }
 
     private void UpdateOrdinarySlots() {
-        for (int i = 0; i < inventorySlotsSO.OrdinaryItemsInInventory.Count; i++) {
-            ordinaryInventorySlotsUI[i].GetComponent<HandleItemInSlot>()
+        Debug.Log(inventorySlotsSO.OrdinaryItemsInInventory[0].ToString());
+        var i = 0;
+        for (i = 0; i < inventorySlotsSO.OrdinaryItemsInInventory.Count; i ++) {
+            ordinaryInventorySlotsUI[i].GetComponent<HandleItemInSlotInv>()
                 .FillSlotWithItem(inventorySlotsSO.OrdinaryItemsInInventory[i]);
+        }
+        Debug.Log(i);
+        Debug.Log(ordinaryInventorySlotsUI.Count);
+        for (var j = i + 1; j < inventorySlotsSO.MaxOrdinarySlots; j ++) {
+            ordinaryInventorySlotsUI[j].GetComponent<HandleItemInSlotInv>().EmptySlot();
         }
     }
     
     private void UpdateSpecialSlots() {
-        for (int i = 0; i < inventorySlotsSO.SpecialItemsInInventory.Count; i++) {
-            specialInventorySlotsUI[i].GetComponent<HandleItemInSlot>()
+        var i = 0;
+        for (i = 0; i < inventorySlotsSO.SpecialItemsInInventory.Count; i ++) {
+            specialInventorySlotsUI[i].GetComponent<HandleItemInSlotInv>()
                 .FillSlotWithItem(inventorySlotsSO.SpecialItemsInInventory[i]);
+        }
+        for (var j = i; j < inventorySlotsSO.MaxOrdinarySlots; j ++) {
+            ordinaryInventorySlotsUI[j].GetComponent<HandleItemInSlotInv>().EmptySlot();
         }
     }
     
@@ -99,7 +112,7 @@ public class HandleItemsInInventory : MonoBehaviour {
     }
 
     public void SetCurrentSelectedSlotByIndex(int index, bool isSlotSpecial) {
-        CurrentSelectedSlot.GetComponent<HandleSlotSelection>().ExitHover();
+        CurrentSelectedSlot.GetComponent<HandleSlotSelectionInv>().ExitHover();
         CurrentSelectedSlot = isSlotSpecial ? specialInventorySlotsUI[index] : ordinaryInventorySlotsUI[index];
     }
 

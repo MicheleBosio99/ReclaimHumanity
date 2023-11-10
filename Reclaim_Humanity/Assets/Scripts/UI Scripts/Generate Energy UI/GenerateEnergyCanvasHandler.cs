@@ -7,9 +7,7 @@ public class GenerateEnergyCanvasHandler : MonoBehaviour {
     
     [SerializeField] private GameObject player;
     private PlayerMovement movement;
-
     
-
     private void Start() {
         movement = player.GetComponent<PlayerMovement>();
     }
@@ -20,7 +18,6 @@ public class GenerateEnergyCanvasHandler : MonoBehaviour {
     }
 
     private void OnDisable() { if (movement != null) { movement.CurrentSpeed = movement.NormalSpeed; } }
-    
-    
-    
+
+    public void OnCloseButtonClick() { player.GetComponent<OpenInventoryScript>().OpenCloseUIFunc(true); }
 }

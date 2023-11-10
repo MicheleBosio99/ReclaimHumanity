@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc5af1f0173fede4f8350dc60265f543, type: 3}
   m_Name: EnergySpheresSO
   m_EditorClassIdentifier: 
-  currentEnergy: 280
+  startingEnergy: 0
   maxEnergyLab: 500
