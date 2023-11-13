@@ -70,15 +70,12 @@ public class HandleItemsInInventoryInv : MonoBehaviour {
     }
 
     private void UpdateOrdinarySlots() {
-        Debug.Log(inventorySlotsSO.OrdinaryItemsInInventory[0].ToString());
         var i = 0;
         for (i = 0; i < inventorySlotsSO.OrdinaryItemsInInventory.Count; i ++) {
             ordinaryInventorySlotsUI[i].GetComponent<HandleItemInSlotInv>()
                 .FillSlotWithItem(inventorySlotsSO.OrdinaryItemsInInventory[i]);
         }
-        Debug.Log(i);
-        Debug.Log(ordinaryInventorySlotsUI.Count);
-        for (var j = i + 1; j < inventorySlotsSO.MaxOrdinarySlots; j ++) {
+        for (var j = i; j < inventorySlotsSO.MaxOrdinarySlots; j ++) {
             ordinaryInventorySlotsUI[j].GetComponent<HandleItemInSlotInv>().EmptySlot();
         }
     }
@@ -89,8 +86,8 @@ public class HandleItemsInInventoryInv : MonoBehaviour {
             specialInventorySlotsUI[i].GetComponent<HandleItemInSlotInv>()
                 .FillSlotWithItem(inventorySlotsSO.SpecialItemsInInventory[i]);
         }
-        for (var j = i; j < inventorySlotsSO.MaxOrdinarySlots; j ++) {
-            ordinaryInventorySlotsUI[j].GetComponent<HandleItemInSlotInv>().EmptySlot();
+        for (var j = i; j < inventorySlotsSO.MaxSpecialSlots; j ++) {
+            specialInventorySlotsUI[j].GetComponent<HandleItemInSlotInv>().EmptySlot();
         }
     }
     
@@ -117,8 +114,13 @@ public class HandleItemsInInventoryInv : MonoBehaviour {
     }
 
 
-    [SerializeField] private Sprite itemSprite;
-    private void GenerateTestItem() { AddNewItemToInventory(new InventoryItem("id0", itemSprite, 10,
-        "Test Item", 10.0f, false)); }
+    [SerializeField] private Sprite itemSprite1;
+    [SerializeField] private Sprite itemSprite2;
+    private void GenerateTestItem() {
+        AddNewItemToInventory(new InventoryItem("ID-E1", itemSprite1, 10,
+        "ItemTest1", 4.0f, false));
+        AddNewItemToInventory(new InventoryItem("ID-E2", itemSprite2, 5,
+            "ItemTest2", 10.0f, false));
+    }
     
 }

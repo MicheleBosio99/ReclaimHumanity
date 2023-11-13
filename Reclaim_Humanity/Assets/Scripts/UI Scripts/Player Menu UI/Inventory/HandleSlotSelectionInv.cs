@@ -47,17 +47,3 @@ public class HandleSlotSelectionInv : MonoBehaviour, IPointerEnterHandler, IPoin
         handlerWithIndex = new Tuple<HandleItemsInInventoryInv, int>(slotsHandler, index);
     }
 }
-
-
-
-// public void OnPointerClick(PointerEventData eventData) {
-//     return; // NOT USED IN INVENTORY
-//     //isSelected = !isSelected;
-//     //if (isSelected) { ShowSelected(); }
-//     //else { ShowUnselected(); }
-//     
-//     //handlerWithIndex.Item1.SlotIsSelected(handlerWithIndex.Item2, isSlotSpecial);
-// }
-
-
-// public void DeselectSlot() { isSelected = false; ShowUnselected(); }

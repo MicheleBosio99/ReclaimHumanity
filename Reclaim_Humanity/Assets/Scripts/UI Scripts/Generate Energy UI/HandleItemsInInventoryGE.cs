@@ -35,6 +35,8 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
         UpdateSlot();
     }
 
+    public void OnDisable() { if (holdingSlotsUIList != null) { foreach (var slot in holdingSlotsUIList) { slot.ResetSlot(); } } }
+
     private void UpdateSlot() {
         for (var i = 0; i < inventorySO.OrdinaryItemsInInventory.Count(); i++) {
             inventorySlotsUI[i].GetComponent<HandleItemInSlotGE>().FillSlotWithItem(inventorySOItems[i]);
@@ -50,12 +52,12 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
         }
     }
     
-    public void SlotGotClicked(int index, bool _isInventory) {
-        if (_isInventory) { InventorySlotGotClicked(index); }
-        else { ChosenSlotGotClicked(index); }
+    public void SlotGotClicked(int index, bool _isInventory, bool shift) {
+        if (_isInventory) { InventorySlotGotClicked(index, shift); }
+        else { ChosenSlotGotClicked(index, shift); }
     }
 
-    private void InventorySlotGotClicked(int index) {
+    private void InventorySlotGotClicked(int index, bool shift) {
         var done = false;
         if (index >= inventorySO.OrdinaryItemsInInventory.Count()) { return; }
 
@@ -70,18 +72,19 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
         }
             
         // Not full list but slot already clicked
-        if (slot != null) { done = slot.Swap1InvTOCho(); }
+        if (slot != null) { done = slot.Swap1InvTOCho(shift); }
             
         // Still space in list and slot never clicked or emptied
         else {
             var itemInv = inventorySOItems[index];
             var itemCho = itemInv.CreateCopy(); itemCho.ItemQuantity = 0;
             
-            slot = new HoldSlotUI(inventorySlotsUI[index], chosenItemSlotsUI[index],
-                itemInv, itemCho, index, holdingSlotsUIList.Count());
+            var choIndex = holdingSlotsUIList.Count();
+            slot = new HoldSlotUI(inventorySlotsUI[index], chosenItemSlotsUI[choIndex],
+                itemInv, itemCho, index, choIndex);
             
             holdingSlotsUIList.Add(slot);
-            done = slot.Swap1InvTOCho();
+            done = slot.Swap1InvTOCho(shift);
         }
 
         if (!done) return;
@@ -90,11 +93,11 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
         UpdateDescriptionText(slot.ItemInInventory.Description, slot.ItemInInventory.EnergyGeneratedOnBurn.ToString());
     }
 
-    private void ChosenSlotGotClicked(int index) {
+    private void ChosenSlotGotClicked(int index, bool shift) {
         HoldSlotUI slot = null;
         foreach (var hsUI in holdingSlotsUIList) { if (hsUI.IndexChoSlot == index) { slot = hsUI; } }
         if (slot == null) { UpdateDescriptionText("", ""); return; }
-        if (!slot.Swap1ChoTOInv()) { holdingSlotsUIList.Remove(slot); }
+        if (!slot.Swap1ChoTOInv(shift)) { holdingSlotsUIList.Remove(slot); }
         
         energyCreated -= slot.ItemInChosen.EnergyGeneratedOnBurn;
         UpdateEnergyText();
@@ -106,22 +109,16 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
     private void UpdateDescriptionText(string description, string energy) { textsHandler.UpdateDescriptionAndEnergy(description, energy); }
 
     public void OnGenerateEnergyClick() {
-        var toRemove = new List<HoldSlotUI>();
-        foreach (var slotTuple in holdingSlotsUIList) {
-            slotTuple.ResetChosen();
-            toRemove.Add(slotTuple);
-        }
+        foreach (var slotTuple in holdingSlotsUIList) { slotTuple.EmptyChosenSlot(); }
         holdingSlotsUIList.RemoveAll(slot => true);
-        Assert.AreEqual(0, holdingSlotsUIList.Count());
         
-        foreach (var slot in toRemove) { holdingSlotsUIList.Remove(slot); }
+        Assert.AreEqual(0, holdingSlotsUIList.Count);
         
         labEnergySO.CurrentEnergy += energyCreated;
         textsHandler.UpdateEnergy("");
         energyCreated = 0.0f;
         
         inventorySOItems.RemoveAll(slot => slot.ItemQuantity == 0);
-        
     }
 
 }
@@ -161,28 +158,48 @@ public class HoldSlotUI {
         IndexChoSlot = indexChoSlot;
     }
 
-    public bool Swap1InvTOCho() {
-        // if (itemInInventory.ItemQuantity == 0) { return false; }
+    public bool Swap1InvTOCho(bool shift) {
+        return Swap1InvToChoBody();
+        // if (!shift) { return Swap1InvToChoBody(); }
         //
-        // itemInInventory.ItemQuantity --;
-        // itemInChosen.ItemQuantity ++;
-        //
-        // chosenItemHandler.FillSlotWithItem(itemInChosen);
-        // inventoryItemHandler.FillSlotWithItem(itemInInventory);
+        // var times = itemInInventory.ItemQuantity;
+        // for (var i = 0; i < times; i++) { var res = Swap1InvToChoBody(); }
         //
         // return true;
-        
-        if (itemInInventory.ItemQuantity == 0) { inventoryItemHandler.EmptySlot(); return false; }
-        
-        itemInInventory.ItemQuantity --;
-        itemInChosen.ItemQuantity ++;
-        
-        chosenItemHandler.FillSlotWithItem(itemInChosen);
-        inventoryItemHandler.FillSlotWithItem(itemInInventory);
-        return true;
     }
+
+    private bool Swap1InvToChoBody() {
+        switch (itemInInventory.ItemQuantity) {
+            case 0: return false;
+        
+            case 1:
+                itemInInventory.ItemQuantity --;
+                itemInChosen.ItemQuantity ++;
+        
+                inventoryItemHandler.EmptySlot();
+                chosenItemHandler.FillSlotWithItem(itemInChosen);
+                return true;
+        
+            default:
+                itemInInventory.ItemQuantity --;
+                itemInChosen.ItemQuantity ++;
     
-    public bool Swap1ChoTOInv() {
+                chosenItemHandler.FillSlotWithItem(itemInChosen);
+                inventoryItemHandler.FillSlotWithItem(itemInInventory);
+                return true;
+        }
+    }
+
+    public bool Swap1ChoTOInv(bool shift) {
+        return Swap1ChoTOInvBody();
+        // if (!shift) { return Swap1ChoTOInvBody(); }
+        //
+        // var times = itemInChosen.ItemQuantity;
+        // for (var i = 0; i < times; i ++) { var res = Swap1ChoTOInvBody(); }
+        // return false;
+    }
+
+    private bool Swap1ChoTOInvBody() {
         itemInInventory.ItemQuantity ++;
         itemInChosen.ItemQuantity --;
         
@@ -192,7 +209,15 @@ public class HoldSlotUI {
         chosenItemHandler.FillSlotWithItem(itemInChosen); return true;
     }
 
-    public void ResetChosen() { chosenItemHandler.EmptySlot(); }
+    public void EmptyChosenSlot() { chosenItemHandler.EmptySlot(); }
+
+    public void ResetSlot() {
+        chosenItemHandler.EmptySlot();
+        inventoryItemHandler.EmptySlot();
+        
+        itemInInventory.ItemQuantity += itemInChosen.ItemQuantity;
+        itemInChosen.ItemQuantity = 0;
+    }
 
     public override string ToString() {
         return $"invSlotUI: {inventorySlotUI}, choSlotUI: {chosenSlotUI}, itemInInv: {itemInInventory}, " +

@@ -1,0 +1,47 @@
+{
+    "recipesList" :
+    [
+        {
+            "recipeName" : "Example Recipe 1",
+            "recipeDescription" : "This is a recipe 1 example",
+            "item1ID" : "ItemTest1",
+            "item1Name" : "ItemTest1",
+            "item1QuantityReq" : 3,
+            "item2ID" : "ItemTest2",
+            "item2Name" : "ItemTest2",
+            "item2QuantityReq" : 1,
+            "itemResultID" : "ItemTest3",
+            "itemResultName" : "ItemTest3",
+            "itemResultQuantity" : 1,
+            "enabled" : 1
+        },
+        {
+            "recipeName" : "Example Recipe 2",
+            "recipeDescription" : "This is a recipe 2 example",
+            "item1ID" : "ItemTest1",
+            "item1Name" : "ItemTest1",
+            "item1QuantityReq" : 2,
+            "item2ID" : "ItemTest2",
+            "item2Name" : "ItemTest2",
+            "item2QuantityReq" : 4,
+            "itemResultID" : "ItemTest4",
+            "itemResultName" : "ItemTest4",
+            "itemResultQuantity" : 2,
+            "enabled" : 0
+        },
+        {
+            "recipeName" : "Example Recipe 3",
+            "recipeDescription" : "This is a recipe 3 example",
+            "item1ID" : "ItemTest3",
+            "item1Name" : "ItemTest3",
+            "item1QuantityReq" : 1,
+            "item2ID" : "ItemTest5",
+            "item2Name" : "ItemTest5",
+            "item2QuantityReq" : 1,
+            "itemResultID" : "ItemTest6",
+            "itemResultName" : "ItemTest6",
+            "itemResultQuantity" : 1,
+            "enabled" : 0
+        }
+    ]
+}

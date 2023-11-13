@@ -16,12 +16,17 @@ public class InventoryItemsSO : ScriptableObject {
     // Called by some script on player that will detect collisions with items and pick them up;
     public bool AddOrdinaryItemToInventory(InventoryItem item) {
         if (ordinaryItemsInInventory.Count >= MaxOrdinarySlots) return false;
-        ordinaryItemsInInventory.Add(item); return true;
+        
+        var notNewItem = SearchOrdinaryItemByID(item.ItemID);
+        if (notNewItem.ItemQuantity > 0) { notNewItem.ItemQuantity += item.ItemQuantity; }
+        else { ordinaryItemsInInventory.Add(item); }
+        return true;
     }
     
     public bool AddSpecialItemToInventory(InventoryItem item) {
         if (specialItemsInInventory.Count >= MaxSpecialSlots) return false;
         specialItemsInInventory.Add(item); return true;
+        // Probably needs changes, not now
     }
 
     public InventoryItem GetInfoOrdinaryItemInInventory(int index) {
@@ -30,6 +35,16 @@ public class InventoryItemsSO : ScriptableObject {
 
     public InventoryItem GetInfoSpecialItemInInventory(int index) {
         return index >= specialItemsInInventory.Count ? InventoryItem.GetEmptyItem() : specialItemsInInventory[index];
+    }
+
+    public InventoryItem SearchOrdinaryItemByID(string itemID) {
+        foreach (var item in ordinaryItemsInInventory) { if (item.ItemID == itemID) { return item; } }
+        return InventoryItem.GetEmptyItem();
+    }
+    
+    public InventoryItem SearchSpecialItemByID(string itemID) {
+        foreach (var item in specialItemsInInventory) { if (item.ItemID == itemID) { return item; } }
+        var itemRet = InventoryItem.GetEmptyItem(); itemRet.IsSpecialItem = true; return itemRet;
     }
 }
 

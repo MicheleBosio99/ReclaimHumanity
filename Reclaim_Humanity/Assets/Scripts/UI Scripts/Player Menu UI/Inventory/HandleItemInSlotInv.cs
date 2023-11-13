@@ -20,6 +20,8 @@ public class HandleItemInSlotInv : MonoBehaviour {
         quantity.text = item.ItemQuantity.ToString();
     }
 
+    public void UpdateQuantity(int newQuantity) { quantity.text = newQuantity.ToString(); }
+
     public void EmptySlot() {
         ItemInSlot = null;
         itemImage.sprite = null;

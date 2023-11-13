@@ -3,12 +3,12 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "EnergySO", menuName = "ScriptableObjects/EnergySpheresSO")]
 public class LabEnergySO : ScriptableObject {
-    [SerializeField] private float startingEnergy = 280.0f;
-    private float currentEnergy = 0.0f;
-    [SerializeField] private float maxEnergyLab = 500.0f; // Should be initialized via .json file with all parameters;
+    [SerializeField] private float startingEnergy = 0.0f;
+    [SerializeField] private float currentEnergy;
+    [SerializeField] private float maxEnergyLab = 1000.0f; // Should be initialized via .json file with all parameters;
     
     private void Awake() { currentEnergy = startingEnergy; }
-    
+
     public float CurrentEnergy {
         get => currentEnergy;
         set => currentEnergy = value;
@@ -18,4 +18,16 @@ public class LabEnergySO : ScriptableObject {
         get => maxEnergyLab;
         set => maxEnergyLab = value;
     }
+    
+    // public float GetCurrentEnergy() { return currentEnergy; }
+    //
+    // // public void SetCurrentEnergy(float energy) { currentEnergy = energy; }
+    //
+    // public void AddEnergyToCurrent(float energy) {
+    //     if(currentEnergy + energy < maxEnergyLab) { currentEnergy += startingEnergy; }
+    //     else { currentEnergy = maxEnergyLab; }
+    //     Debug.Log(energy + ", " + currentEnergy);
+    // }
+    //
+    // public float GetMaxEnergy() { return maxEnergyLab; }
 }
