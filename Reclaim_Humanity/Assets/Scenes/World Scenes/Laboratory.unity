@@ -1183,6 +1183,7 @@ GameObject:
   - component: {fileID: 48889512}
   - component: {fileID: 48889514}
   - component: {fileID: 48889513}
+  - component: {fileID: 48889515}
   m_Layer: 5
   m_Name: Item1Panel
   m_TagString: Untagged
@@ -1249,6 +1250,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48889511}
   m_CullTransparentMesh: 1
+--- !u!114 &48889515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48889511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9439186332c3bc4f90f2d246ef2afec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipeImage: {fileID: 841699720}
+  recipeTextQuantity: {fileID: 1905395385}
 --- !u!1 &53160597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,6 +1275,7 @@ GameObject:
   - component: {fileID: 53160598}
   - component: {fileID: 53160600}
   - component: {fileID: 53160599}
+  - component: {fileID: 53160601}
   m_Layer: 5
   m_Name: Item2Panel
   m_TagString: Untagged
@@ -1326,6 +1342,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53160597}
   m_CullTransparentMesh: 1
+--- !u!114 &53160601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53160597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9439186332c3bc4f90f2d246ef2afec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipeImage: {fileID: 1232020417}
+  recipeTextQuantity: {fileID: 1591980850}
 --- !u!1 &54986245
 GameObject:
   m_ObjectHideFlags: 0
@@ -5898,6 +5928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29eae31c01d05304ebb44fce35aeeaf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  handlerGO: {fileID: 770826693}
   recipesJson: {fileID: 4900000, guid: 81cfd31b1bcfb754e920bb616e5efbe5, type: 3}
   recipeButtonsParent: {fileID: 433326554}
   recipeButtonPrefab: {fileID: 6806174297254896801, guid: 510b409ac3d84ea4f9cbcc3bfcd6e041, type: 3}
@@ -8714,7 +8745,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 451734336}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 770826697}
+        m_TargetAssemblyTypeName: RecipesSelectionHandler, Assembly-CSharp
+        m_MethodName: OnPlusQuantityClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &451734336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11855,8 +11898,9 @@ GameObject:
   - component: {fileID: 633240927}
   - component: {fileID: 633240929}
   - component: {fileID: 633240928}
+  - component: {fileID: 633240930}
   m_Layer: 5
-  m_Name: ItemResImage
+  m_Name: ItemResultPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11874,8 +11918,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 957748641}
   - {fileID: 1019139610}
+  - {fileID: 957748641}
   m_Father: {fileID: 2133236020}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -11921,6 +11965,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633240926}
   m_CullTransparentMesh: 1
+--- !u!114 &633240930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633240926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9439186332c3bc4f90f2d246ef2afec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipeImage: {fileID: 1019139611}
+  recipeTextQuantity: {fileID: 957748642}
 --- !u!1 &636223082
 GameObject:
   m_ObjectHideFlags: 0
@@ -13640,7 +13698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -13670,7 +13728,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 739038829}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 770826697}
+        m_TargetAssemblyTypeName: RecipesSelectionHandler, Assembly-CSharp
+        m_MethodName: OnCraftButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &739038829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14298,6 +14368,7 @@ GameObject:
   - component: {fileID: 770826694}
   - component: {fileID: 770826696}
   - component: {fileID: 770826695}
+  - component: {fileID: 770826697}
   m_Layer: 5
   m_Name: RecipesPanel
   m_TagString: Untagged
@@ -14364,6 +14435,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 770826693}
   m_CullTransparentMesh: 1
+--- !u!114 &770826697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770826693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432c4e741d1cb7c4988aea53ae94f0f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryItemsSo: {fileID: 11400000, guid: fb3e977362a9ace4381d1e0cbaa8c1e3, type: 2}
+  slotItemReq1: {fileID: 48889511}
+  slotItemReq2: {fileID: 53160597}
+  slotItemResult: {fileID: 633240926}
 --- !u!1 &771364050 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2202837659533597482, guid: ab318b3c451264d489766a4071b821a2, type: 3}
@@ -89472,7 +89559,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1608058950}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 770826697}
+        m_TargetAssemblyTypeName: RecipesSelectionHandler, Assembly-CSharp
+        m_MethodName: OnMinusQuantityClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1608058950
 MonoBehaviour:
   m_ObjectHideFlags: 0

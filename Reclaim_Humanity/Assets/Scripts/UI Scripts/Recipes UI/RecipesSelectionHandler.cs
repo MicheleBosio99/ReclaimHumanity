@@ -4,6 +4,8 @@ using UnityEngine.Assertions;
 
 public class RecipesSelectionHandler : MonoBehaviour {
     
+    private List<GameObject> recipesButtons;
+    
     [SerializeField] private InventoryItemsSO inventoryItemsSo;
     private List<InventoryItem> itemsInInventory;
     
@@ -31,6 +33,10 @@ public class RecipesSelectionHandler : MonoBehaviour {
     
     private Sprite itemResultSprite;
     
+    private ItemsSO item1SO;
+    private ItemsSO item2SO;
+    private ItemsSO itemResSO;
+    
 
     private void Start() {
         handlerSlotItemReq1 = slotItemReq1.GetComponent<RecipesItemSlotHandler>();
@@ -51,31 +57,27 @@ public class RecipesSelectionHandler : MonoBehaviour {
 
     private void UpdateRecipeSlots() {
         if (activeRecipe == null) { ResetRecipeSlots(); return; }
-
-        var itemReq1 = new Item(activeRecipe.item1ID, activeRecipe.item1Name, activeRecipe.item1QuantityReq);
-        var itemReq2 = new Item(activeRecipe.item2ID, activeRecipe.item2Name, activeRecipe.item2QuantityReq);
-        var itemResult = new Item(activeRecipe.itemResultID, activeRecipe.itemResultName, activeRecipe.itemResultQuantity);
         
-        itemReq1.itemSprite = Resources.Load<Sprite>($"ItemsSprites/{itemReq1.itemID}");
-        itemReq2.itemSprite = Resources.Load<Sprite>($"ItemsSprites/{itemReq2.itemID}");
-        itemResultSprite = itemResult.itemSprite = Resources.Load<Sprite>($"ItemsSprites/{itemResult.itemID}");
+        item1SO = Resources.Load<ItemsSO>($"Items/{activeRecipe.item1ID}");
+        item2SO = Resources.Load<ItemsSO>($"Items/{activeRecipe.item2ID}");
+        itemResSO = Resources.Load<ItemsSO>($"Items/{activeRecipe.itemResultID}");
         
-        requiredQuantityItem1 = itemReq1.itemQuantity * activeRecipeQuantity;
-        requiredQuantityItem2 = itemReq2.itemQuantity * activeRecipeQuantity;
-        quantityItemResult = itemResult.itemQuantity * activeRecipeQuantity;
+        requiredQuantityItem1 = activeRecipe.item1QuantityReq * activeRecipeQuantity;
+        requiredQuantityItem2 = activeRecipe.item1QuantityReq * activeRecipeQuantity;
+        quantityItemResult = activeRecipe.item1QuantityReq * activeRecipeQuantity;
         
         // Check if itemReq1 and itemReq2 are available in inventory with right amounts;
         // ItemReq1:
-        itemReq1Inventory = inventoryItemsSo.SearchOrdinaryItemByID(itemReq1.itemID);
+        itemReq1Inventory = inventoryItemsSo.SearchOrdinaryItemByID(item1SO.ItemID);
         var itemReq1Enough = itemReq1Inventory.ItemQuantity >= requiredQuantityItem1;
         // ItemReq2:
-        itemReq2Inventory = inventoryItemsSo.SearchOrdinaryItemByID(itemReq2.itemID);
+        itemReq2Inventory = inventoryItemsSo.SearchOrdinaryItemByID(item2SO.ItemID);
         var itemReq2Enough = itemReq2Inventory.ItemQuantity >= requiredQuantityItem2;
         
         // Set sprites, 40 % visible if not possible to craft them;
-        handlerSlotItemReq1.SetImageWithTransparency(itemReq1.itemSprite, itemReq1Enough ? 1.0f : 0.4f);
-        handlerSlotItemReq2.SetImageWithTransparency(itemReq2.itemSprite, itemReq2Enough ? 1.0f : 0.4f);
-        handlerSlotItemResult.SetImageWithTransparency(itemResult.itemSprite, 
+        handlerSlotItemReq1.SetImageWithTransparency(item1SO.ItemSprite, itemReq1Enough ? 1.0f : 0.4f);
+        handlerSlotItemReq2.SetImageWithTransparency(item2SO.ItemSprite, itemReq2Enough ? 1.0f : 0.4f);
+        handlerSlotItemResult.SetImageWithTransparency(itemResSO.ItemSprite,
             itemReq1Enough & itemReq2Enough ? 1.0f : 0.4f);
         
         // Set quantities required;
@@ -134,11 +136,9 @@ public class RecipesSelectionHandler : MonoBehaviour {
         itemResultedInventory = inventoryItemsSo.SearchOrdinaryItemByID(activeRecipe.itemResultID);
         if (itemResultedInventory.ItemQuantity > 0) { itemResultedInventory.ItemQuantity += quantityItemResult; }
         else {
-            // inventoryItemsSo.AddOrdinaryItemToInventory(new InventoryItem(activeRecipe.itemResultID, itemResultSprite,
-            //     quantityItemResult, "", 0.0f, false));
-            // ERRORRRRRRR TODO: make it so that it gets from resources a scriptable object with all the information about the object already coded inside;
+            var invItem = itemResSO.ToInventoryItem(quantityItemResult);
+            Assert.IsTrue(inventoryItemsSo.AddOrdinaryItemToInventory(invItem));
         }
-
     }
 
 

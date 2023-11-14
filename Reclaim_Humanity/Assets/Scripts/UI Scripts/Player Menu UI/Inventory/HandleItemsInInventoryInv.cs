@@ -117,10 +117,11 @@ public class HandleItemsInInventoryInv : MonoBehaviour {
     [SerializeField] private Sprite itemSprite1;
     [SerializeField] private Sprite itemSprite2;
     private void GenerateTestItem() {
-        AddNewItemToInventory(new InventoryItem("ID-E1", itemSprite1, 10,
-        "ItemTest1", 4.0f, false));
-        AddNewItemToInventory(new InventoryItem("ID-E2", itemSprite2, 5,
-            "ItemTest2", 10.0f, false));
+        AddNewItemToInventory(Resources.Load<ItemsSO>($"Items/itemTest1").ToInventoryItem(10));
+        AddNewItemToInventory(Resources.Load<ItemsSO>($"Items/itemTest2").ToInventoryItem(6));
+        AddNewItemToInventory(Resources.Load<ItemsSO>($"Items/itemTest3").ToInventoryItem(4));
+        AddNewItemToInventory(Resources.Load<ItemsSO>($"Items/itemTest4").ToInventoryItem(7));
+        AddNewItemToInventory(Resources.Load<ItemsSO>($"Items/itemTest5").ToInventoryItem(15));
     }
     
 }

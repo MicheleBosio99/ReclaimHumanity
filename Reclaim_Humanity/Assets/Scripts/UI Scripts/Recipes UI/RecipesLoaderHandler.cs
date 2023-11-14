@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class RecipesLoaderHandler : MonoBehaviour {
     
+    [SerializeField] private GameObject handlerGO;
+    private RecipesSelectionHandler handler;
     [SerializeField] private TextAsset recipesJson;
     private RecipesList recipesList;
     
@@ -14,6 +16,7 @@ public class RecipesLoaderHandler : MonoBehaviour {
     private List<GameObject> recipeButtons;
 
     private void Start() {
+        handler = handlerGO.GetComponent<RecipesSelectionHandler>();
         recipesList = new RecipesList();
         recipesList = JsonUtility.FromJson<RecipesList>(recipesJson.text);
         // foreach (var rec in recipesList.recipesList) { Debug.Log(rec); }
@@ -26,7 +29,8 @@ public class RecipesLoaderHandler : MonoBehaviour {
 
         foreach (var recipe in recipesList.recipesList) {
             var buttonRecipe = Instantiate(recipeButtonPrefab, recipeButtonsParent.transform, false);
-            buttonRecipe.GetComponent<RecipesButtonsHandler>().SetRecipe(recipe);
+            var buttonScript = buttonRecipe.GetComponent<RecipesButtonsHandler>();
+            buttonScript.SetRecipe(recipe); buttonScript.SetHandler(handler);
             recipeButtons.Add(buttonRecipe);
         }
     }

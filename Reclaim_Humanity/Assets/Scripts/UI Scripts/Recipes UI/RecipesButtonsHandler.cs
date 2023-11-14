@@ -7,12 +7,11 @@ using UnityEngine.EventSystems;
 
 public class RecipesButtonsHandler : MonoBehaviour , IPointerClickHandler { 
     [SerializeField] private TextMeshProUGUI recipeText;
-    [SerializeField] private GameObject recipesSelectionHanlder;
     private RecipesSelectionHandler handler;
     
     private Recipe recipe;
 
-    private void Start() { handler = recipesSelectionHanlder.GetComponent<RecipesSelectionHandler>(); }
+    public void SetHandler(RecipesSelectionHandler _handler) {this.handler = _handler; }
 
     public void SetRecipe(Recipe _recipe) { this.recipe = _recipe; }
 
