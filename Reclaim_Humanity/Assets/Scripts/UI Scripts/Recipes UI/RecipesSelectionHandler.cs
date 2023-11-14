@@ -151,19 +151,4 @@ public class RecipesSelectionHandler : MonoBehaviour {
         yield return new WaitForSeconds(2.0f);
         notEnoughSpacePanel.SetActive(false);
     }
-
-
-    private class Item {
-        public string itemID;
-        public string itemName;
-        public int itemQuantity;
-        
-        public Sprite itemSprite;
-
-        public Item(string itemID, string itemName, int itemQuantity) {
-            this.itemID = itemID;
-            this.itemName = itemName;
-            this.itemQuantity = itemQuantity;
-        }
-    }
 }
