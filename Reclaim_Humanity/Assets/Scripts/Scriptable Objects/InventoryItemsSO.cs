@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -46,6 +47,20 @@ public class InventoryItemsSO : ScriptableObject {
         foreach (var item in specialItemsInInventory) { if (item.ItemID == itemID) { return item; } }
         var itemRet = InventoryItem.GetEmptyItem(); itemRet.IsSpecialItem = true; return itemRet;
     }
+
+    public void ChangeQuantityOrdinaryItem(InventoryItem item, int quantity) {
+        if (item.ItemQuantity < quantity) { throw new NotEnoughItemsInInventoryException(); }
+        if (item.ItemQuantity == quantity) { ordinaryItemsInInventory.Remove(item); }
+        else { item.ItemQuantity -= quantity; }
+    }
+
+    public void Delete0QuantityElement() { ordinaryItemsInInventory.RemoveAll(item => item.ItemQuantity == 0); }
+}
+
+public class NotEnoughItemsInInventoryException : Exception {
+    public NotEnoughItemsInInventoryException() { }
+    public NotEnoughItemsInInventoryException(string message) : base(message) { }
+    public NotEnoughItemsInInventoryException(string message, Exception inner) : base(message, inner) { }
 }
 
 public class InventoryItem {

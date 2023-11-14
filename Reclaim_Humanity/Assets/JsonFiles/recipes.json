@@ -27,7 +27,7 @@
             "itemResultID" : "ItemTest4",
             "itemResultName" : "ItemTest4",
             "itemResultQuantity" : 2,
-            "enabled" : 0
+            "enabled" : 1
         },
         {
             "recipeName" : "Example Recipe 3",
@@ -35,13 +35,13 @@
             "item1ID" : "ItemTest3",
             "item1Name" : "ItemTest3",
             "item1QuantityReq" : 1,
-            "item2ID" : "ItemTest5",
-            "item2Name" : "ItemTest5",
+            "item2ID" : "ItemTest4",
+            "item2Name" : "ItemTest4",
             "item2QuantityReq" : 1,
-            "itemResultID" : "ItemTest6",
-            "itemResultName" : "ItemTest6",
+            "itemResultID" : "ItemTest5",
+            "itemResultName" : "ItemTest5",
             "itemResultQuantity" : 1,
-            "enabled" : 0
+            "enabled" : 1
         }
     ]
 }

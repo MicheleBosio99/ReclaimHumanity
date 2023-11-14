@@ -28,9 +28,13 @@ public class RecipesLoaderHandler : MonoBehaviour {
         recipeButtons = new List<GameObject>();
 
         foreach (var recipe in recipesList.recipesList) {
+            if (!recipe.enabled) continue;
+            
             var buttonRecipe = Instantiate(recipeButtonPrefab, recipeButtonsParent.transform, false);
             var buttonScript = buttonRecipe.GetComponent<RecipesButtonsHandler>();
-            buttonScript.SetRecipe(recipe); buttonScript.SetHandler(handler);
+            buttonScript.SetRecipe(recipe);
+            buttonScript.SetHandler(handler);
+            
             recipeButtons.Add(buttonRecipe);
         }
     }

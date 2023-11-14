@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -7,7 +8,7 @@ public class RecipesSelectionHandler : MonoBehaviour {
     private List<GameObject> recipesButtons;
     
     [SerializeField] private InventoryItemsSO inventoryItemsSo;
-    private List<InventoryItem> itemsInInventory;
+    [SerializeField] private GameObject notEnoughSpacePanel;
     
     [SerializeField] private GameObject slotItemReq1;
     [SerializeField] private GameObject slotItemReq2;
@@ -43,14 +44,14 @@ public class RecipesSelectionHandler : MonoBehaviour {
         handlerSlotItemReq2 = slotItemReq2.GetComponent<RecipesItemSlotHandler>();
         handlerSlotItemResult = slotItemResult.GetComponent<RecipesItemSlotHandler>();
         
-        itemsInInventory = inventoryItemsSo.OrdinaryItemsInInventory;
-        
         activeRecipeQuantity = 0;
         recipeIsActive = false;
         
         requiredQuantityItem1 = 0;
         requiredQuantityItem2 = 0;
         quantityItemResult = 0;
+        
+        notEnoughSpacePanel.SetActive(false);
     }
 
     public void RecipeButtonClicked(Recipe recipe) { activeRecipe = recipe; activeRecipeQuantity = 1; UpdateRecipeSlots(); }
@@ -63,8 +64,8 @@ public class RecipesSelectionHandler : MonoBehaviour {
         itemResSO = Resources.Load<ItemsSO>($"Items/{activeRecipe.itemResultID}");
         
         requiredQuantityItem1 = activeRecipe.item1QuantityReq * activeRecipeQuantity;
-        requiredQuantityItem2 = activeRecipe.item1QuantityReq * activeRecipeQuantity;
-        quantityItemResult = activeRecipe.item1QuantityReq * activeRecipeQuantity;
+        requiredQuantityItem2 = activeRecipe.item2QuantityReq * activeRecipeQuantity;
+        quantityItemResult = activeRecipe.itemResultQuantity * activeRecipeQuantity;
         
         // Check if itemReq1 and itemReq2 are available in inventory with right amounts;
         // ItemReq1:
@@ -88,7 +89,9 @@ public class RecipesSelectionHandler : MonoBehaviour {
         recipeIsActive =  itemReq1Enough & itemReq2Enough;
     }
 
-    private void ResetRecipeSlots() {
+    public void ResetRecipeSlots() {
+        if (handlerSlotItemReq1 == null || handlerSlotItemReq2 == null || handlerSlotItemResult == null) { return; }
+
         activeRecipeQuantity = 0;
         recipeIsActive = false;
         
@@ -110,12 +113,12 @@ public class RecipesSelectionHandler : MonoBehaviour {
 
 
     public void OnPlusQuantityClick() {
-        activeRecipeQuantity = activeRecipeQuantity == 0 ? 0 : activeRecipeQuantity ++;
+        activeRecipeQuantity = activeRecipeQuantity == 0 ? 0 : activeRecipeQuantity + 1;
         UpdateRecipeSlots();
     }
 
     public void OnMinusQuantityClick() {
-        activeRecipeQuantity = activeRecipeQuantity <= 0 ? 0 : (activeRecipeQuantity == 1 ? 1 : activeRecipeQuantity --);
+        activeRecipeQuantity = activeRecipeQuantity <= 0 ? 0 : (activeRecipeQuantity == 1 ? 1 : activeRecipeQuantity - 1);
         UpdateRecipeSlots();
     }
 
@@ -123,22 +126,30 @@ public class RecipesSelectionHandler : MonoBehaviour {
         if (!recipeIsActive) { return; }
 
         if (inventoryItemsSo.OrdinaryItemsInInventory.Count == inventoryItemsSo.MaxOrdinarySlots) {
-            Debug.Log("Handle Message Full Inventory");
-            return;
+            StartCoroutine(ShowNotEnoughSpacePanel()); return;
         }
 
-        itemReq1Inventory.ItemQuantity -= requiredQuantityItem1;
-        Assert.IsTrue(itemReq1Inventory.ItemQuantity >= 0);
-        // Check for itemQuantity in inventorySlotSO == 0, because there is need to handle delete of objects with 0 quantity;
-        itemReq2Inventory.ItemQuantity -= requiredQuantityItem2;
-        Assert.IsTrue(itemReq2Inventory.ItemQuantity >= 0);
+        try {
+            inventoryItemsSo.ChangeQuantityOrdinaryItem(itemReq1Inventory, requiredQuantityItem1);
+            inventoryItemsSo.ChangeQuantityOrdinaryItem(itemReq2Inventory, requiredQuantityItem2);
+        }
+        catch (NotEnoughItemsInInventoryException e) { Debug.Log(e); return; }
         
+
         itemResultedInventory = inventoryItemsSo.SearchOrdinaryItemByID(activeRecipe.itemResultID);
         if (itemResultedInventory.ItemQuantity > 0) { itemResultedInventory.ItemQuantity += quantityItemResult; }
         else {
             var invItem = itemResSO.ToInventoryItem(quantityItemResult);
             Assert.IsTrue(inventoryItemsSo.AddOrdinaryItemToInventory(invItem));
         }
+        
+        ResetRecipeSlots();
+    }
+
+    private IEnumerator ShowNotEnoughSpacePanel() {
+        notEnoughSpacePanel.SetActive(true);
+        yield return new WaitForSeconds(2.0f);
+        notEnoughSpacePanel.SetActive(false);
     }
 
 
