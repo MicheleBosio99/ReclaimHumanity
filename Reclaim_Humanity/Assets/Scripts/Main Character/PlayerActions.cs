@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour {
 
-    private float normalSpeed = 10.0f;
+    [SerializeField] private float normalSpeed = 10.0f;
     private float currentSpeed = 0.0f;
 
     public float NormalSpeed {
