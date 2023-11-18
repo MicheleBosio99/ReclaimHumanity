@@ -106587,6 +106587,10 @@ PrefabInstance:
       propertyPath: m_Transition
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3932784907277633899, guid: ab318b3c451264d489766a4071b821a2, type: 3}
+      propertyPath: isSlotSpecial
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6986665827898709438, guid: ab318b3c451264d489766a4071b821a2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
