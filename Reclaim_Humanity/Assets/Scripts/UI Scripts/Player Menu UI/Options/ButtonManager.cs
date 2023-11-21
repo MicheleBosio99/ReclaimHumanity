@@ -6,10 +6,13 @@ using UnityEngine;
 public class ButtonFunctions : MonoBehaviour {
 
     [SerializeField] private GameObject YouSureQuitView;
+    [SerializeField] private Player player;
 
     private void Start() { YouSureQuitView.SetActive(false); }
 
-    public void OnSaveClick() { SaveGame(); }
+    public void OnSaveClick() { player.SaveGame(); }
+
+    public void OnLoadClick() { player.LoadGame(); }
 
     public void OnQuitGameClick() { YouSureQuitView.SetActive(true); }
 
@@ -17,5 +20,7 @@ public class ButtonFunctions : MonoBehaviour {
 
     public void OnReallyQuitGameClick() { Application.Quit(); }
 
-    private void SaveGame() { Debug.Log("Game saved successfully;\n"); } // TODO
+    
+
+    
 }
