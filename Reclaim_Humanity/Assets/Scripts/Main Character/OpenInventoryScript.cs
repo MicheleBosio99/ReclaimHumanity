@@ -10,10 +10,9 @@ public class OpenInventoryScript : MonoBehaviour {
     
     public void OpenInventory(InputAction.CallbackContext context) {
         PlayerMenu.SetActive(true);
-        if (context.performed && !isActive) {
-            inventoryIsOpen = true;
-            PlayerMenu.GetComponent<ChangeMenuShowed>().GetKeyPressed(context.control.name);
-        }
+        if (!context.performed || isActive) return;
+        inventoryIsOpen = true;
+        PlayerMenu.GetComponent<ChangeMenuShowed>().GetKeyPressed(context.control.name);
     }
 
     public void ClosedInventory() { inventoryIsOpen = false; }

@@ -81,7 +81,7 @@ __
         - SPECIAL WASTELANDS ITEM:
             - These wastelands were the result of a tremendous nuclear explosion happened since the nuclear power plant, whithout humans, didn't have the required maintenance and went blowing up. Now nuclear scraps can be found all around it, but if someone manages to find his way inside the (once) power plant he will find that one nuclear reactor is still in good shape (how? I don't know, magic maybe). This reactor is the last component necessary to make the cure, and will be the container in which Wollo'll make it.
 
-    - &rarr; Just to note, once all 3 special components will be found they will be carried to the laboratory where a special UI will be presented with 3 slots. Putting the 3 components inside the slots, and pressing the button celow, will create a single machinery, which will not be possible to put in the inventory but will be "spawned" autromatically inside the laboratory. When Wollo will put all necessary potions/materials inside it the process of creating the final cure will start and in a couple of seconds, it will be possible to take the cure item and finish the game;
+    - &rarr; Just to note, once all 3 special components will be found they will be carried to the laboratory where a special UI will be presented with 3 slots. Putting the 3 components inside the slots, and pressing the button below, will create a single machinery, which will not be possible to put in the inventory but will be "spawned" autromatically inside the laboratory. When Wollo will put all necessary potions/materials inside it the process of creating the final cure will start and in a couple of seconds, it will be possible to take the cure item and finish the game;
 
 ___
 ___
