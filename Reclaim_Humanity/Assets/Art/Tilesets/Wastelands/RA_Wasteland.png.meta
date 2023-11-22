@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -106,9 +106,6364 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: RA_Wasteland_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 836
+        width: 193
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0118a15d7fa242b41bf1c08b45f8f85b
+      internalID: -669215210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_1
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 335
+        width: 578
+        height: 769
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c1433fcd27a5c46a3709faeb43caae
+      internalID: -2055216659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_2
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 1073
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd2e5ce6cb214b34cb7288ef1bd81886
+      internalID: 1914776909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_3
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 1073
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84eabedace9d1a54287cbcf74fd688db
+      internalID: -927167862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_4
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 1079
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9311f844b57285746af742226a750235
+      internalID: 1574182950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_5
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1066
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89c25564ed28a0f40a2962ee6ddda69a
+      internalID: -1437026080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_6
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 1079
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd64833cef7b04499d86c640d9cffd4
+      internalID: -1543521112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_7
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 1073
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: accd31bf7d7557d49ab4b04376fade2c
+      internalID: 1397334079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1073
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd7e2ea9c8249248b6c8bb3aaf627b5
+      internalID: -1170301300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_9
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 1066
+        width: 42
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de75a6b23f61164db2f40d9006a7b23
+      internalID: -136153407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_10
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 1061
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5d24d507db29840b89508d4de17882
+      internalID: 1516626729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_11
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 1055
+        width: 195
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fdf1605e6018ce4ca520d5ba5d00fae
+      internalID: -1853199850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_12
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 719
+        width: 862
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d46c98f5f1916e4e80584fcde4e5fa5
+      internalID: 1445011796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_13
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 1061
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de6ae29fffa25ec4ea9b488873298472
+      internalID: -328333785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_14
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 913
+        width: 288
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d30866c9bec70a40a1fa029da14a1d3
+      internalID: 1376189042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_15
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 1025
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f72327409edee4b40ad1f228a1b5570b
+      internalID: 1285331536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_16
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 1034
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c1e7d3ed078514a80d9e15a35e9414
+      internalID: 791187609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_17
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 1025
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 269a383a97ad0e34fa024c8b45f585c6
+      internalID: -165250884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_18
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 1034
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4d70bb5b392984d894cbd5c97c3286
+      internalID: 332251407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_19
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 1037
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44593708b77c599469af07bb99ebcee8
+      internalID: 451031752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_20
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 1037
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 421677ee62347f6409a434d30f5a3305
+      internalID: 771510242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_21
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 1028
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4738711e33baf3346a8e13454c792d00
+      internalID: 1284481069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_22
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 1037
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 753c80c59a2fdcc4b81541d76006c4d7
+      internalID: 1225927707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_23
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 1025
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69dad957350b03f4191a8ce67eae63f4
+      internalID: -1236876289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_24
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1025
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72eb03245b78637408a34cb961fbd136
+      internalID: 1927622760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_25
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 1037
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6658b18e7bf39954d87437b42c8c73c1
+      internalID: 206598378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_26
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 1010
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5bdc17a6c2edba49993498ac8ffbc70
+      internalID: 42971701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_27
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 1012
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514d9c3680077194ca6690b8d13b9fd6
+      internalID: 1217111880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_28
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 1019
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e9238ff7a673645912e7167fa93278
+      internalID: -1754447129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_29
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 1010
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2b15e060f4050419fcccd29a3bf814
+      internalID: 601149740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_30
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 1012
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4910a5a2a3f173d43b1ac2ab29fb2e1b
+      internalID: 2113399043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_31
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1016
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da09ac60e955ed44ba53ccd5a25869c8
+      internalID: -604884502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_32
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 1012
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5697477b6d4d7e4281c8e0fc9b6b133
+      internalID: -361081422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_33
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 1010
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2dc0a265fb26934d9273c52369bf5b8
+      internalID: 62659057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_34
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 976
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a91199e78fc39cf47aac0c629c4fba3c
+      internalID: -1684477816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_35
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 976
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4367082d6973e03488f0b7bd2a925eb8
+      internalID: -314411592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_36
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 976
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f16114f4f2868294384da521fa25ac78
+      internalID: -1780931988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_37
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 976
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f074d8012c55641abb55ee54639558
+      internalID: 1678969040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_38
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 967
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b8431b0c6fe6824c8618b14fa0e9d31
+      internalID: -1801851781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_39
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 962
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd9fa3763e90e394ea05c6b9550db49b
+      internalID: 909932335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_40
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 962
+        width: 68
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45f2be7c88f01843859327d0177f13c
+      internalID: -1501429808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_41
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 958
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb408ed358a15f44ba2526ca076dac8
+      internalID: 943262701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_42
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 965
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a56553b2a030a46ad8e987229910d9
+      internalID: -199725180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_43
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 917
+        width: 94
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23a6b8762a80dc46bed9fec288031f0
+      internalID: 218244888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_44
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 913
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f4da977a9512a49aa82920b8230835
+      internalID: 1710226018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_45
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 911
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b94fac82ba824d45919d93a4a849453
+      internalID: -596143705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_46
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 911
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14f0e9d433eb294cb42d86c5bec1366
+      internalID: 1608645506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_47
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 938
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33527551e1014fb4793f65bc9c2d83fe
+      internalID: -1180299469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_48
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 926
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d90c68721d30e9e4cbcfbcb6bfa7bbee
+      internalID: 1741406815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_49
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 913
+        width: 42
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0671d7915386be544a41bf415a2ac0c8
+      internalID: -2057237932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_50
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 929
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9406713c612068845a8aed25dcf0ed17
+      internalID: -710782793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_51
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 913
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf17d8f1a414c734abc57aafe5a7ae26
+      internalID: 532463761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_52
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 938
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b8eb0f3337b71041a05e5058a26081c
+      internalID: -374412246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_53
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 913
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df9a04996796ce24784e1e7ca001c874
+      internalID: 1368675102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_54
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 929
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3524c27fb45e2d4fb8690a65bb53146
+      internalID: 1304857277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_55
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 929
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf6fa0571cb0f948949c318970beca8
+      internalID: -531272393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_56
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 917
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b8717da311d4d4cbe02b3cc049473e
+      internalID: 684980697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_57
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 911
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f94f757171bcb294ebe57ca22bef314a
+      internalID: -130292688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_58
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 913
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d83bbc7d5778dc498c4637d80ae5c90
+      internalID: 524769213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_59
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 787
+        width: 104
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e4344713a74194a80f86c576e58d43
+      internalID: -967815488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_60
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 724
+        width: 139
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d269153bc9369a47a8a19925f3d0b57
+      internalID: 343291653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_61
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 724
+        width: 137
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a8937c676560fe4b94282e005cb4797
+      internalID: -1657405078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_62
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 868
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c1c153040f560342a41896307bb922f
+      internalID: 1276897421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_63
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 884
+        width: 41
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 306bc90faceb21f45935e95cecf8d930
+      internalID: 642863138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_64
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 881
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4c0d9dd6e945f49a3916cede72e6bb
+      internalID: 58080166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_65
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 875
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b98173cebf263e468707a4aad45a762
+      internalID: -613885794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_66
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 877
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d2d69db82ad9b4f9e10f3b950271e3
+      internalID: -194743918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_67
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 881
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc973d876a72e294288e08942e24f531
+      internalID: -1499746926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_68
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 877
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc6ccab9cb23cb47b318d4ff14df521
+      internalID: 99500429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_69
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 866
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12f27076cee8b343ac0b913269f141b
+      internalID: 1164406885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_70
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 830
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0bc2ce92928f3e4594256b3276e4c13
+      internalID: 95016895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_71
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 845
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf775362026d5e4bb2ded60d6115b86
+      internalID: 1076167033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_72
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 821
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1896cfab45187c7478747d233d558d80
+      internalID: 1560220489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_73
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 845
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97bc22fbeb9963f47a38c7e76e234e74
+      internalID: -1406454786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_74
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 845
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c9d7bcf7b4f935438d98625ba5da8b1
+      internalID: 945392773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_75
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 830
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba357ea4e4f581343a2278784f42e332
+      internalID: 844130946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_76
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 841
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed4551e57b20a354d9d5d204ea4614be
+      internalID: -1679197426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_77
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 670
+        width: 177
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 983224d9e0bef684e81dd2453c18568e
+      internalID: -628523202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_78
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 818
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2746eb0422964c746bacc041c61605d9
+      internalID: -1152936950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_79
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 818
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e519b010bcacb040b9e111da3541cb7
+      internalID: 612394394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_80
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 818
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17ad171e51461949a31244046ab0c1f
+      internalID: -51457628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_81
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 769
+        width: 36
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a967a8cbeebda499e8ce98707418f7
+      internalID: -335056326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_82
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 539
+        width: 146
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32c27c298c412c48b7b342d24eca615
+      internalID: -1535885814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_83
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 740
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f9bd261b8b09a14197e95fb113b5e59
+      internalID: 1917712598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_84
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 742
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47efc8dee8b3cf946a7fb447f47912b1
+      internalID: 1584354235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_85
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 674
+        width: 116
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55e00b014c90eab488e22ad98addaeea
+      internalID: -2093215379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_86
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 767
+        width: 20
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd3ae75f5e09f1145ad2261971a72e07
+      internalID: -522189625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_87
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 722
+        width: 36
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a4347d457bbbc4593d9e51fae71b81
+      internalID: -1078379129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_88
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 0
+        width: 769
+        height: 748
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa4210850329f043b8db64cb86a4763
+      internalID: -1390426638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_89
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 526
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f97bfcd7cf1bb74f9ae7f44207ae838
+      internalID: 1898632577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_90
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 526
+        width: 182
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2553742b284710f4ba757c552f6b4df9
+      internalID: -1960169547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_91
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 674
+        width: 20
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b214117361a43914a9aeb1780326c4b4
+      internalID: 623564739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_92
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 530
+        width: 116
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b95f065dcd5fe498466479e0aa185f
+      internalID: 272014730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_93
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 623
+        width: 20
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 125021c12ca43a14b860afa6e511ff75
+      internalID: -817244842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_94
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 625
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ff6ddf9e9268f47ba809bafdde0577
+      internalID: -556038879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_95
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 578
+        width: 92
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02743c8e0a6e9ce42badaf26ff993a83
+      internalID: -1147947531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_96
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 526
+        width: 98
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24867e38ef257214093a803e5521a5cd
+      internalID: 289412769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_97
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 443
+        width: 124
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46bb16f09808eef409018f1c174052f6
+      internalID: -1237434844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_98
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 530
+        width: 45
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 238aa666bb22b8149b233aeed4222d78
+      internalID: -1122476231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_99
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 347
+        width: 158
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0698a75f7e71604d879f6d6ebd12190
+      internalID: 1729399335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_100
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 347
+        width: 159
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4be8ad2d6ae3854b9d72e125f9ece33
+      internalID: -1527907237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_101
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 385
+        width: 116
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba5bd6f5305fef1449f973d457114dbe
+      internalID: 1991405053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_102
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 479
+        width: 20
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e217005959386a4a867fc74d7b24dca
+      internalID: 1275029398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_103
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 482
+        width: 22
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df056f84f428de408131617bff420ed
+      internalID: -1077364586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_104
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 434
+        width: 92
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99038ce28d1d9aa4ebf81c9d99b7ae19
+      internalID: -1166356734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_105
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 383
+        width: 98
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff5ca8363eae3d34fb9a0514b5007c4b
+      internalID: 1525106424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_106
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 142
+        width: 193
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c7dc3530ec55149874c6aae2d003bf
+      internalID: 696547316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_107
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 403
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2527f7b1e4a2aa541b7b9d5b91d8c890
+      internalID: 449945080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_108
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 407
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b8f1c4133cec34ebc7925bda2432da
+      internalID: -1604251727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_109
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 385
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c70fe7680979144aaba19cc962e7f64
+      internalID: -1578502403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_110
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 257
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 596dd8f5bb9797f4d9e7417a8d742365
+      internalID: -1249792661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_111
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 257
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac7a9ecac9691cf4b853445c5188e5eb
+      internalID: 392868092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_112
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 257
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bdd80432129ad84ca8055de4ee52ecf
+      internalID: -2030449824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_113
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 257
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2745fc43855ca44bb506b23cd8f70f6
+      internalID: 805798083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_114
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 47
+        width: 51
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 075574c8f8f26704bb59ad0e4080dc25
+      internalID: 247526252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_115
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 257
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 233d9d8f88cc810458880cd21f070af9
+      internalID: 1336823138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_116
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 0
+        width: 290
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bdc43448232f9448bd87e0b0b6de4ce
+      internalID: -825231771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_117
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 257
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00fbc53d154cff94dbaa2c4b148c0ea8
+      internalID: -1882184735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_118
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 257
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdca62a4f602205488345fb568f56d91
+      internalID: 1481406629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_119
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 257
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df6925ee1ae670742b87c6aeb35050a1
+      internalID: 1194677273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_120
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 257
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c721e78432b184a9c0e0ee33d222ff
+      internalID: -387189570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_121
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 257
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cbab79444c6598478c220b20a29806a
+      internalID: -1760042780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_122
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 257
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b93edd2e296d26468b798a4f5da6b3f
+      internalID: -899776306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_123
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 257
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d81ad1922ac13e4bac7849bae294860
+      internalID: 349231631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_124
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 47
+        width: 114
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1055e9c1ba9920d4c975063a9d882f9f
+      internalID: -1674740205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_125
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 257
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f43f6b0d6e8cb274b8a270d5aba8a9d4
+      internalID: -1122264424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_126
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 257
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 655952c7ff4cd0d4692dff6efd544442
+      internalID: -728212064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_127
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 47
+        width: 96
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e928e25ead69f5a49acd136882a5375f
+      internalID: -1322875287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_128
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 257
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ce584033bc9634cbf2ffa936866cf5
+      internalID: -1048299846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_129
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 257
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7230f1cae60b754380ad370c7cd3b54
+      internalID: 1449647858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_130
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 257
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffdda7eec770979459adc36adf89e11d
+      internalID: -1773304029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_131
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 257
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c78ce5c367f6bbe49a467674777c65d2
+      internalID: -1870341528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_132
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 47
+        width: 50
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a680e4ffb39154ebddee7ae5dc1cab
+      internalID: 1444229424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_133
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 257
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92a72d0c01c5b0a42bc54506c1215129
+      internalID: 1657755083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_134
+      rect:
+        serializedVersion: 2
+        x: 1451
+        y: 257
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7ad927f9b6cc04ea50b7472502609d
+      internalID: -505201145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_135
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 257
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d8bd3f4746ef154c85b2793bf97197b
+      internalID: -1278437176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_136
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 47
+        width: 65
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f755ee76fbbe9d64193289fac197e0f4
+      internalID: -1090161035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_137
+      rect:
+        serializedVersion: 2
+        x: 1823
+        y: 47
+        width: 96
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e57df04c1be064b4db5de61adaef2a4f
+      internalID: -108576749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_138
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 142
+        width: 95
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d1c77b78af35f649b80e6b1a39ecb9f
+      internalID: 1359893330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_139
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 205
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe2568d75b57c047adc7115fe6f66f6
+      internalID: 398891561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_140
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 205
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514fd56ba2ec1b147a5b6b70d25c0337
+      internalID: -248241323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_141
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 205
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6362bf05de242d648bbb998af03ef915
+      internalID: 1198121036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_142
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 205
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f153da959299df14c89432ca1ae51214
+      internalID: -1008319033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_143
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 212
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2deca74b3e946343a0b121e55c0979a
+      internalID: 2039383598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_144
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 194
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a601ed52e8e9749936f43c0445ba49
+      internalID: 1596572606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_145
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 212
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53d60cd3f567bf34daec800fe19107d6
+      internalID: -452104863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_146
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 194
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b25f01cbf5ebf044585c64a6b37cdd2d
+      internalID: 1699534730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_147
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 212
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f3eaa04846dd7c4397d2f98efa344f4
+      internalID: 365993373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_148
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 212
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cdac6668d76834429045a1bd964ae1c
+      internalID: 728276204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_149
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 203
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8507dc50d8a4c8f4195bccfc4ad70cd9
+      internalID: 2137897284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_150
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 194
+        width: 42
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1e6eed3129d5e42932a7b0a3dfb1a2
+      internalID: -765969312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_151
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 212
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa0e40f33ec0e144aadbe8f19ce3327
+      internalID: -1576205260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_152
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 203
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe436a6a5f3ecb345a282183c9ff8036
+      internalID: -1216014685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_153
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 212
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d656c70416413424cbb8c54380e65838
+      internalID: -2093868948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_154
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 212
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9489614d3ef31974085611533f7b3632
+      internalID: 1718196789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_155
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 212
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec90eceae1171224196d14d3b509f56a
+      internalID: -389765922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_156
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 214
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 252b9c2661a4b1e4cb1cd9e93ef64ee8
+      internalID: -1980908013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_157
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 214
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea9104cc6f99c54dbfb9b17ee81a15d
+      internalID: -1559423230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_158
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 214
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c8eb0e3c5c53e43b74b81689b37d2e
+      internalID: 1460715405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_159
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 214
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4635a7c1b6728c40a0093463a9fd366
+      internalID: -1350774399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_160
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 218
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c05505497371b846a1e33e2aac88483
+      internalID: 1305559948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_161
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 218
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26009f33328bb2340abe9dd5b7d0587c
+      internalID: 89209882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_162
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 218
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf38f46f953c7a84e9a346d0998c46e5
+      internalID: -1137539223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_163
+      rect:
+        serializedVersion: 2
+        x: 1562
+        y: 218
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c0b0feef8986a4a9f5f829adb82ff6
+      internalID: -1464220415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_164
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 221
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd96db01fc169c4f90e4e2d9e9084a0
+      internalID: -1600852042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_165
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 221
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51bb43c52ed2ee44db378db36d2eae09
+      internalID: -2074407116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_166
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 221
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bcecce1ed0da9b4f99008be9a63714c
+      internalID: -373616588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_167
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 221
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468f1054b8fa5cc46a0ac2fe981d9e8b
+      internalID: -1291420232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_168
+      rect:
+        serializedVersion: 2
+        x: 1946
+        y: 221
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111d817f91009484b813f4018d484e08
+      internalID: -211793749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_169
+      rect:
+        serializedVersion: 2
+        x: 1994
+        y: 221
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33655276b875f704e9caf00df83e1e70
+      internalID: 180621381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_170
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 115
+        width: 104
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab32628ec93a6424b9c62bc3f451a625
+      internalID: 2096814822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_171
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 194
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6abdeca0e081d4abd9fbe1cc648ca6
+      internalID: 531274363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_172
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 194
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd4937d314ba6b4d9f48f66f704dde0
+      internalID: -92387938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_173
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 194
+        width: 8
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54dd05469127547499c21a7b18b19cb7
+      internalID: 836716332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_174
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 194
+        width: 8
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8768e9ab3171c0d47b43749efb3989bd
+      internalID: -1124335897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_175
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 194
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5548bee98f3e66d468aaeab7b7bac276
+      internalID: 207329548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_176
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 194
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061406c1fbbe0e047ae37de81484c736
+      internalID: 529981733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_177
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 200
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 669ad5ecc3fc5714cadc39baf1503f4d
+      internalID: 1771441041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_178
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 200
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1f23db0df55cfd44a37bf2c293bdbb4
+      internalID: 881214228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_179
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 200
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c19ffe3fa397f40b6ad8828892d8e2
+      internalID: 1775092256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_180
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 200
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99cde420631c3674aaf786fa5624a9da
+      internalID: 1330092860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_181
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 200
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b77f499f71c884993e03a54ffb951e
+      internalID: 1774882357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_182
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 200
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a06cc51338aae488716a4697a321f5
+      internalID: -1282023876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_183
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 200
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67939eeb337e92344bddb341c92abbd0
+      internalID: -805636443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_184
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 200
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 984476f6dd8aed94e93d84ceb600c387
+      internalID: 611249525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_185
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 200
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15362d8d9b7aa4749b19ee0ee7c05b17
+      internalID: -538066825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_186
+      rect:
+        serializedVersion: 2
+        x: 1708
+        y: 200
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f100a5efc6579147bf5032143a984af
+      internalID: -1855693120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_187
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 200
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ecb9924544278245a81940b73ed0a17
+      internalID: -965751472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_188
+      rect:
+        serializedVersion: 2
+        x: 1805
+        y: 200
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed10fd033df90c44a113661d6439d02
+      internalID: -75086636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_189
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 196
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f90d9efbf52d874cb751545782cc5c3
+      internalID: 366151431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_190
+      rect:
+        serializedVersion: 2
+        x: 1973
+        y: 196
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e25965ef4b2697e40aebeb515a306138
+      internalID: -387880009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_191
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 155
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f4beacceb7559a439a69b0fde5a1ae9
+      internalID: -2091660198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_192
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 149
+        width: 18
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7da0a03081362fa418ee874f22b5e8e9
+      internalID: 1798344956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_193
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 149
+        width: 41
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca2b5b3856863874ba0ccfab353cc26f
+      internalID: -627560443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_194
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 155
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1f16664f3827734fb2622727e5138a4
+      internalID: -1593186508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_195
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 169
+        width: 8
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8563676f8e4523642ae11bcdb2900dbb
+      internalID: 2020076385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_196
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 155
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1218b2338b83b7a4e972872bd6762db1
+      internalID: -25709906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_197
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 149
+        width: 17
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0ebcade0ab98d4babd516fea01fbb8
+      internalID: -992132370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_198
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 167
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47209d52c22f874fb12c511412e7661
+      internalID: 1193732043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_199
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 167
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a20e4372160464dacb4c5a1c4eda84
+      internalID: -581157966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_200
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 151
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8002cf4c4e4acbb4198eed2d39303a2c
+      internalID: 1553591354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_201
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 167
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba4de26dc3999954083c7c6ef836e46c
+      internalID: -454436220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_202
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 155
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a5a4d2411a7d140ba43097c8e512a8
+      internalID: -536925169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_203
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 155
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e7df38597fe7d74cb190079ab5c8833
+      internalID: -1337653109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_204
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 146
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52269cfe1a6b57347b5d4e00d3165d9b
+      internalID: 366643894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_205
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 173
+        width: 8
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3137533eb31d754ab478c6e35359c1f
+      internalID: 382478366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_206
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 173
+        width: 8
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae7b886e4f5273a4f8b730c80d8b9115
+      internalID: 1318841613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_207
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 158
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc3f1e430a19ec4885359470e1b1de7
+      internalID: 893787194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_208
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 142
+        width: 49
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe7aafaf85be13419f1c4d46c92bc2c
+      internalID: -834735308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_209
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 142
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e0e0bf5e6b4bf74399e99ebf1318022
+      internalID: 213982260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_210
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 173
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42709fd7038398e4181e319650bc5c90
+      internalID: -537276012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_211
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 173
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04efe595665ab4d4c8b6516da5fd4d5a
+      internalID: -1898180704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_212
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 173
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f91a0b5f2ac7d484cae30bed7725945e
+      internalID: 2115653610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_213
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 173
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08025e5be14ce274b81ba13c6899a23b
+      internalID: 13793583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_214
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 176
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1354e9b1fd4506740901f2e82a9f5365
+      internalID: -163810176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_215
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 176
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f784172a713cc8d4fbb6c17b04961a43
+      internalID: -744633105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_216
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 176
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86e47e25edf07b46826ec8aa8347e20
+      internalID: 1865587021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_217
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 176
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06997b856ac137340b2bfbcb12212ca3
+      internalID: 1023713543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_218
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 176
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d335cdab59fd964b96a320424465047
+      internalID: 1040703726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_219
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 173
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35da3164074f94a45a3a579a822d5e79
+      internalID: -1467276274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_220
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 173
+        width: 45
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9aff048df1cbd3418e7b8736eb50280
+      internalID: -634321961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_221
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 173
+        width: 45
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ad454dbe3e4c54ea678ac0f2c2ea62
+      internalID: 1562272075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_222
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 176
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e633e0e066c93640942cbb928145199
+      internalID: -1221275973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_223
+      rect:
+        serializedVersion: 2
+        x: 1796
+        y: 173
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c359893a04d6047bd84eef1b158ada
+      internalID: -1434214285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_224
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 149
+        width: 47
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce6b8ef91f34eb48ba2a56d3728dc01
+      internalID: 1688376042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_225
+      rect:
+        serializedVersion: 2
+        x: 1969
+        y: 149
+        width: 49
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e44d6b42c6e6d489d9cb1e75d9fb86
+      internalID: -1148130485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_226
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 149
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4899b9edd9a9f55499be434e38c39b65
+      internalID: -1064087777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_227
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 151
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99977744cfd0d994d97aa8b1cae015d7
+      internalID: 1780012724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_228
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 151
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be3374c54e7fa3c46a2721e12747ebf8
+      internalID: -861896473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_229
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 151
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d1961b97484b84bacc1100aa994865
+      internalID: -825902469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_230
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 146
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a49d7a05cb1321b40b5b3d3d26c274ae
+      internalID: 2085385148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_231
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 155
+        width: 8
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d0424b5955b52040b21d1866723a062
+      internalID: 986490254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_232
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 146
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9301280c305b9864db53bd386a8f6f35
+      internalID: -147298991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_233
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 146
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d01b35c0f691249bc2c141600d563d
+      internalID: -2085104635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_234
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 158
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e8461a0f9f85dc4c8921423e8468157
+      internalID: 29271549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_235
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 146
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6b4748c4b5a0842aa2d3dedd83738b
+      internalID: 27673237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_236
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 158
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84fcec82f99b0034386f8fd2a0b196c8
+      internalID: -1807353054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_237
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 146
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b428fb7ea9d62144bb0ce26853b2f65
+      internalID: 995167945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_238
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 158
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866defd25239cfb4a8f2b5df715e1679
+      internalID: 1751656496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_239
+      rect:
+        serializedVersion: 2
+        x: 1276
+        y: 146
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ceb46f4120b454b9604cc06053c6f6
+      internalID: 2089867825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_240
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 158
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59f42b6b12d472840adf74c9fd268d50
+      internalID: 1821210703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_241
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 146
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb2c81f102837948bd35d4e3dc6918a
+      internalID: -738293040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_242
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 155
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcbd42cb52bafcc43a9e996a2e60b872
+      internalID: -1448076497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_243
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 151
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24a2b393e0c36594e9bc1a395b434880
+      internalID: 2781095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_244
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 155
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ff5e6d3d1bd6e44391a046d6d387fe1
+      internalID: 138664004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_245
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 151
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08c99074e106c52488a99d95e7bbf47f
+      internalID: -1212471736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_246
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 151
+        width: 45
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc222854210b3b348a9b2f878e96bb14
+      internalID: -1613976274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_247
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 155
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c75325b02487446b05984bda2c3d36
+      internalID: -1527104204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_248
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 155
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d805f0f4c165fc49a91d9480fd87cfa
+      internalID: 1216149170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_249
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 149
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2fe09d4383e724ab043c79b26c7865
+      internalID: -504535641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_250
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 155
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88aea96050f82db4f949925debb8ee5e
+      internalID: -277487712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_251
+      rect:
+        serializedVersion: 2
+        x: 1708
+        y: 149
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e78e55bf50787740991a57c1b0f8b11
+      internalID: 1003581452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_252
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 155
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61ecfdb3d423f04c9c67ffadbcc9f87
+      internalID: -2117766320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_253
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 149
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc5137f5a4e394c42bcf47184d6fde3f
+      internalID: 605640847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_254
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 155
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d26213574e80845409f33c9cca5be13f
+      internalID: 162757801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_255
+      rect:
+        serializedVersion: 2
+        x: 1805
+        y: 149
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b99290fd5bd7d6448082d75dd8eb8fd
+      internalID: -177100333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_256
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 101
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03f1680e520598c44b0a6120e760adec
+      internalID: -1554891041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_257
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 101
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 824fa5035efb3044d91abf8543813d5d
+      internalID: -18166736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_258
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 101
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a34c75556d119f42a2fb6ad81a727f0
+      internalID: -1507446857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_259
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 101
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d900006749411241a97471960dfd112
+      internalID: -1266563399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_260
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 101
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81d9c0cb3e0b22941a975f9d49b987c2
+      internalID: -1624347726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_261
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 101
+        width: 38
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6dbca5ce79e4524b8a1bbb0337ff9a4
+      internalID: -889957011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_262
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 101
+        width: 40
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3346eb2fec67dc44d8ef8eed507dbe72
+      internalID: 694863981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_263
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 101
+        width: 38
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671da760d6d68f042b6d939e66ad9707
+      internalID: -606182297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_264
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 128
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83cbfae54fd4f654884d600d75c40caa
+      internalID: -1083366797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_265
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 128
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426035b1c1c9bfe4ba4df5080db477ba
+      internalID: -249960969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_266
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 128
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68a8a1096d06d60439db4d73bda6056e
+      internalID: 77362932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_267
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 128
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16ce2b1421be62744b8bdb4903c7c8d8
+      internalID: 276559659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_268
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 115
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b00e0170ae03945b20a6f9f089369c
+      internalID: 999287906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_269
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 119
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e66500d3096341942aef8280b628db10
+      internalID: -1878914921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_270
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 122
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36268bd37fe92d64588371cfbb3223dc
+      internalID: -993768566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_271
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 122
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70dd6b8b581c1c84d83643a517b1f8e9
+      internalID: 1243187006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_272
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 119
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921fd1960d05e2c4695d46c78606a679
+      internalID: 1043420227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_273
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 119
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea6cb03f1d10d964d82495ef75cb6080
+      internalID: 1585231625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_274
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 122
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b580073f3efcd45ab74e469c373f78
+      internalID: -1044662882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_275
+      rect:
+        serializedVersion: 2
+        x: 1751
+        y: 122
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96bb334670b8c8648bacd80f0c335368
+      internalID: -129542358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_276
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 25
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f260c28080cb8449beaf3d4f3150f0
+      internalID: 1839531763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_277
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 68
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28ddf343a109fc438a530d19ba00cf2
+      internalID: 49453790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_278
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 0
+        width: 146
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc2a07d0de51cd4fb447fed1802fa10
+      internalID: -1596539952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_279
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 70
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1227bb0b3316124cb4d494edddffffb
+      internalID: 1338950357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_280
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 52
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257e4ad9fcdaf1349a6b26e76555d5af
+      internalID: -747667522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_281
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 52
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fcad7de05664164ebf7cf67373f1592
+      internalID: 1343015055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_282
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 52
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a59481ae0a25c243b3c6c399c0cedc2
+      internalID: 529516077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_283
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 52
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea41bd2b9394684f9ff5f67f7e9b333
+      internalID: 1791299880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_284
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 52
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c31e88351cd2454f876d0ff3471aeb7
+      internalID: -1772953022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_285
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 52
+        width: 38
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd895d2f2f76edc499ac9c7c8298173f
+      internalID: -612369418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_286
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 52
+        width: 40
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b641061f29d4bbc4888a6ebdbb5fd344
+      internalID: -406510810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_287
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 52
+        width: 38
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cbb27045d59ba74a910f668f6a736a7
+      internalID: 1363359069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_288
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 52
+        width: 38
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b0fcd15a4c9f604dbe6c7a70cc8f041
+      internalID: 1698591173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_289
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 52
+        width: 38
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e9d208624e0284693a7f2bf54065da
+      internalID: 155317329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_290
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 52
+        width: 38
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3af553c0dd688e458ab79d6e4bc44e8
+      internalID: -1231106220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_291
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 52
+        width: 40
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6f71b88e9d68e498ebe0fced81de7b
+      internalID: 1451847524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_292
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 52
+        width: 38
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4663bed12d110484a8eab3729e604062
+      internalID: -2072626339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_293
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 52
+        width: 38
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5587740aa20784da807fd139890a7d
+      internalID: -1135599949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_294
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 52
+        width: 38
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b113f5ad901cf47448a76dcc53af6a77
+      internalID: 101887399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_295
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 52
+        width: 38
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 269d87e7ee1ded04d92fadd90c25c3c3
+      internalID: -813183611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_296
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 52
+        width: 40
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23069c6eecf95b54293b4a3227757eb3
+      internalID: -594185252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_297
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 52
+        width: 38
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d73dd999121df740ae596c2644821a8
+      internalID: 2121968687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_298
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 52
+        width: 40
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58afc4af040ceab4a86b7d151f13b15a
+      internalID: -97639382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_299
+      rect:
+        serializedVersion: 2
+        x: 1685
+        y: 52
+        width: 38
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b737c6f5a0481374b8b3c7e5cd76cf17
+      internalID: 1038264366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_300
+      rect:
+        serializedVersion: 2
+        x: 1733
+        y: 52
+        width: 38
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b84d3ab47ea494d8bd9edd3f972874
+      internalID: -1087637153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Wasteland_301
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 52
+        width: 40
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2faaa9b65e2757843991024611bbf2bf
+      internalID: 1128010785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +6474,309 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RA_Wasteland_0: -669215210
+      RA_Wasteland_1: -2055216659
+      RA_Wasteland_10: 1516626729
+      RA_Wasteland_100: -1527907237
+      RA_Wasteland_101: 1991405053
+      RA_Wasteland_102: 1275029398
+      RA_Wasteland_103: -1077364586
+      RA_Wasteland_104: -1166356734
+      RA_Wasteland_105: 1525106424
+      RA_Wasteland_106: 696547316
+      RA_Wasteland_107: 449945080
+      RA_Wasteland_108: -1604251727
+      RA_Wasteland_109: -1578502403
+      RA_Wasteland_11: -1853199850
+      RA_Wasteland_110: -1249792661
+      RA_Wasteland_111: 392868092
+      RA_Wasteland_112: -2030449824
+      RA_Wasteland_113: 805798083
+      RA_Wasteland_114: 247526252
+      RA_Wasteland_115: 1336823138
+      RA_Wasteland_116: -825231771
+      RA_Wasteland_117: -1882184735
+      RA_Wasteland_118: 1481406629
+      RA_Wasteland_119: 1194677273
+      RA_Wasteland_12: 1445011796
+      RA_Wasteland_120: -387189570
+      RA_Wasteland_121: -1760042780
+      RA_Wasteland_122: -899776306
+      RA_Wasteland_123: 349231631
+      RA_Wasteland_124: -1674740205
+      RA_Wasteland_125: -1122264424
+      RA_Wasteland_126: -728212064
+      RA_Wasteland_127: -1322875287
+      RA_Wasteland_128: -1048299846
+      RA_Wasteland_129: 1449647858
+      RA_Wasteland_13: -328333785
+      RA_Wasteland_130: -1773304029
+      RA_Wasteland_131: -1870341528
+      RA_Wasteland_132: 1444229424
+      RA_Wasteland_133: 1657755083
+      RA_Wasteland_134: -505201145
+      RA_Wasteland_135: -1278437176
+      RA_Wasteland_136: -1090161035
+      RA_Wasteland_137: -108576749
+      RA_Wasteland_138: 1359893330
+      RA_Wasteland_139: 398891561
+      RA_Wasteland_14: 1376189042
+      RA_Wasteland_140: -248241323
+      RA_Wasteland_141: 1198121036
+      RA_Wasteland_142: -1008319033
+      RA_Wasteland_143: 2039383598
+      RA_Wasteland_144: 1596572606
+      RA_Wasteland_145: -452104863
+      RA_Wasteland_146: 1699534730
+      RA_Wasteland_147: 365993373
+      RA_Wasteland_148: 728276204
+      RA_Wasteland_149: 2137897284
+      RA_Wasteland_15: 1285331536
+      RA_Wasteland_150: -765969312
+      RA_Wasteland_151: -1576205260
+      RA_Wasteland_152: -1216014685
+      RA_Wasteland_153: -2093868948
+      RA_Wasteland_154: 1718196789
+      RA_Wasteland_155: -389765922
+      RA_Wasteland_156: -1980908013
+      RA_Wasteland_157: -1559423230
+      RA_Wasteland_158: 1460715405
+      RA_Wasteland_159: -1350774399
+      RA_Wasteland_16: 791187609
+      RA_Wasteland_160: 1305559948
+      RA_Wasteland_161: 89209882
+      RA_Wasteland_162: -1137539223
+      RA_Wasteland_163: -1464220415
+      RA_Wasteland_164: -1600852042
+      RA_Wasteland_165: -2074407116
+      RA_Wasteland_166: -373616588
+      RA_Wasteland_167: -1291420232
+      RA_Wasteland_168: -211793749
+      RA_Wasteland_169: 180621381
+      RA_Wasteland_17: -165250884
+      RA_Wasteland_170: 2096814822
+      RA_Wasteland_171: 531274363
+      RA_Wasteland_172: -92387938
+      RA_Wasteland_173: 836716332
+      RA_Wasteland_174: -1124335897
+      RA_Wasteland_175: 207329548
+      RA_Wasteland_176: 529981733
+      RA_Wasteland_177: 1771441041
+      RA_Wasteland_178: 881214228
+      RA_Wasteland_179: 1775092256
+      RA_Wasteland_18: 332251407
+      RA_Wasteland_180: 1330092860
+      RA_Wasteland_181: 1774882357
+      RA_Wasteland_182: -1282023876
+      RA_Wasteland_183: -805636443
+      RA_Wasteland_184: 611249525
+      RA_Wasteland_185: -538066825
+      RA_Wasteland_186: -1855693120
+      RA_Wasteland_187: -965751472
+      RA_Wasteland_188: -75086636
+      RA_Wasteland_189: 366151431
+      RA_Wasteland_19: 451031752
+      RA_Wasteland_190: -387880009
+      RA_Wasteland_191: -2091660198
+      RA_Wasteland_192: 1798344956
+      RA_Wasteland_193: -627560443
+      RA_Wasteland_194: -1593186508
+      RA_Wasteland_195: 2020076385
+      RA_Wasteland_196: -25709906
+      RA_Wasteland_197: -992132370
+      RA_Wasteland_198: 1193732043
+      RA_Wasteland_199: -581157966
+      RA_Wasteland_2: 1914776909
+      RA_Wasteland_20: 771510242
+      RA_Wasteland_200: 1553591354
+      RA_Wasteland_201: -454436220
+      RA_Wasteland_202: -536925169
+      RA_Wasteland_203: -1337653109
+      RA_Wasteland_204: 366643894
+      RA_Wasteland_205: 382478366
+      RA_Wasteland_206: 1318841613
+      RA_Wasteland_207: 893787194
+      RA_Wasteland_208: -834735308
+      RA_Wasteland_209: 213982260
+      RA_Wasteland_21: 1284481069
+      RA_Wasteland_210: -537276012
+      RA_Wasteland_211: -1898180704
+      RA_Wasteland_212: 2115653610
+      RA_Wasteland_213: 13793583
+      RA_Wasteland_214: -163810176
+      RA_Wasteland_215: -744633105
+      RA_Wasteland_216: 1865587021
+      RA_Wasteland_217: 1023713543
+      RA_Wasteland_218: 1040703726
+      RA_Wasteland_219: -1467276274
+      RA_Wasteland_22: 1225927707
+      RA_Wasteland_220: -634321961
+      RA_Wasteland_221: 1562272075
+      RA_Wasteland_222: -1221275973
+      RA_Wasteland_223: -1434214285
+      RA_Wasteland_224: 1688376042
+      RA_Wasteland_225: -1148130485
+      RA_Wasteland_226: -1064087777
+      RA_Wasteland_227: 1780012724
+      RA_Wasteland_228: -861896473
+      RA_Wasteland_229: -825902469
+      RA_Wasteland_23: -1236876289
+      RA_Wasteland_230: 2085385148
+      RA_Wasteland_231: 986490254
+      RA_Wasteland_232: -147298991
+      RA_Wasteland_233: -2085104635
+      RA_Wasteland_234: 29271549
+      RA_Wasteland_235: 27673237
+      RA_Wasteland_236: -1807353054
+      RA_Wasteland_237: 995167945
+      RA_Wasteland_238: 1751656496
+      RA_Wasteland_239: 2089867825
+      RA_Wasteland_24: 1927622760
+      RA_Wasteland_240: 1821210703
+      RA_Wasteland_241: -738293040
+      RA_Wasteland_242: -1448076497
+      RA_Wasteland_243: 2781095
+      RA_Wasteland_244: 138664004
+      RA_Wasteland_245: -1212471736
+      RA_Wasteland_246: -1613976274
+      RA_Wasteland_247: -1527104204
+      RA_Wasteland_248: 1216149170
+      RA_Wasteland_249: -504535641
+      RA_Wasteland_25: 206598378
+      RA_Wasteland_250: -277487712
+      RA_Wasteland_251: 1003581452
+      RA_Wasteland_252: -2117766320
+      RA_Wasteland_253: 605640847
+      RA_Wasteland_254: 162757801
+      RA_Wasteland_255: -177100333
+      RA_Wasteland_256: -1554891041
+      RA_Wasteland_257: -18166736
+      RA_Wasteland_258: -1507446857
+      RA_Wasteland_259: -1266563399
+      RA_Wasteland_26: 42971701
+      RA_Wasteland_260: -1624347726
+      RA_Wasteland_261: -889957011
+      RA_Wasteland_262: 694863981
+      RA_Wasteland_263: -606182297
+      RA_Wasteland_264: -1083366797
+      RA_Wasteland_265: -249960969
+      RA_Wasteland_266: 77362932
+      RA_Wasteland_267: 276559659
+      RA_Wasteland_268: 999287906
+      RA_Wasteland_269: -1878914921
+      RA_Wasteland_27: 1217111880
+      RA_Wasteland_270: -993768566
+      RA_Wasteland_271: 1243187006
+      RA_Wasteland_272: 1043420227
+      RA_Wasteland_273: 1585231625
+      RA_Wasteland_274: -1044662882
+      RA_Wasteland_275: -129542358
+      RA_Wasteland_276: 1839531763
+      RA_Wasteland_277: 49453790
+      RA_Wasteland_278: -1596539952
+      RA_Wasteland_279: 1338950357
+      RA_Wasteland_28: -1754447129
+      RA_Wasteland_280: -747667522
+      RA_Wasteland_281: 1343015055
+      RA_Wasteland_282: 529516077
+      RA_Wasteland_283: 1791299880
+      RA_Wasteland_284: -1772953022
+      RA_Wasteland_285: -612369418
+      RA_Wasteland_286: -406510810
+      RA_Wasteland_287: 1363359069
+      RA_Wasteland_288: 1698591173
+      RA_Wasteland_289: 155317329
+      RA_Wasteland_29: 601149740
+      RA_Wasteland_290: -1231106220
+      RA_Wasteland_291: 1451847524
+      RA_Wasteland_292: -2072626339
+      RA_Wasteland_293: -1135599949
+      RA_Wasteland_294: 101887399
+      RA_Wasteland_295: -813183611
+      RA_Wasteland_296: -594185252
+      RA_Wasteland_297: 2121968687
+      RA_Wasteland_298: -97639382
+      RA_Wasteland_299: 1038264366
+      RA_Wasteland_3: -927167862
+      RA_Wasteland_30: 2113399043
+      RA_Wasteland_300: -1087637153
+      RA_Wasteland_301: 1128010785
+      RA_Wasteland_31: -604884502
+      RA_Wasteland_32: -361081422
+      RA_Wasteland_33: 62659057
+      RA_Wasteland_34: -1684477816
+      RA_Wasteland_35: -314411592
+      RA_Wasteland_36: -1780931988
+      RA_Wasteland_37: 1678969040
+      RA_Wasteland_38: -1801851781
+      RA_Wasteland_39: 909932335
+      RA_Wasteland_4: 1574182950
+      RA_Wasteland_40: -1501429808
+      RA_Wasteland_41: 943262701
+      RA_Wasteland_42: -199725180
+      RA_Wasteland_43: 218244888
+      RA_Wasteland_44: 1710226018
+      RA_Wasteland_45: -596143705
+      RA_Wasteland_46: 1608645506
+      RA_Wasteland_47: -1180299469
+      RA_Wasteland_48: 1741406815
+      RA_Wasteland_49: -2057237932
+      RA_Wasteland_5: -1437026080
+      RA_Wasteland_50: -710782793
+      RA_Wasteland_51: 532463761
+      RA_Wasteland_52: -374412246
+      RA_Wasteland_53: 1368675102
+      RA_Wasteland_54: 1304857277
+      RA_Wasteland_55: -531272393
+      RA_Wasteland_56: 684980697
+      RA_Wasteland_57: -130292688
+      RA_Wasteland_58: 524769213
+      RA_Wasteland_59: -967815488
+      RA_Wasteland_6: -1543521112
+      RA_Wasteland_60: 343291653
+      RA_Wasteland_61: -1657405078
+      RA_Wasteland_62: 1276897421
+      RA_Wasteland_63: 642863138
+      RA_Wasteland_64: 58080166
+      RA_Wasteland_65: -613885794
+      RA_Wasteland_66: -194743918
+      RA_Wasteland_67: -1499746926
+      RA_Wasteland_68: 99500429
+      RA_Wasteland_69: 1164406885
+      RA_Wasteland_7: 1397334079
+      RA_Wasteland_70: 95016895
+      RA_Wasteland_71: 1076167033
+      RA_Wasteland_72: 1560220489
+      RA_Wasteland_73: -1406454786
+      RA_Wasteland_74: 945392773
+      RA_Wasteland_75: 844130946
+      RA_Wasteland_76: -1679197426
+      RA_Wasteland_77: -628523202
+      RA_Wasteland_78: -1152936950
+      RA_Wasteland_79: 612394394
+      RA_Wasteland_8: -1170301300
+      RA_Wasteland_80: -51457628
+      RA_Wasteland_81: -335056326
+      RA_Wasteland_82: -1535885814
+      RA_Wasteland_83: 1917712598
+      RA_Wasteland_84: 1584354235
+      RA_Wasteland_85: -2093215379
+      RA_Wasteland_86: -522189625
+      RA_Wasteland_87: -1078379129
+      RA_Wasteland_88: -1390426638
+      RA_Wasteland_89: 1898632577
+      RA_Wasteland_9: -136153407
+      RA_Wasteland_90: -1960169547
+      RA_Wasteland_91: 623564739
+      RA_Wasteland_92: 272014730
+      RA_Wasteland_93: -817244842
+      RA_Wasteland_94: -556038879
+      RA_Wasteland_95: -1147947531
+      RA_Wasteland_96: 289412769
+      RA_Wasteland_97: -1237434844
+      RA_Wasteland_98: -1122476231
+      RA_Wasteland_99: 1729399335
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
