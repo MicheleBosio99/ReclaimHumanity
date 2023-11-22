@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2858029492701773071}
   - component: {fileID: 5400765086946107913}
-  - component: {fileID: 4765972850142645828}
+  - component: {fileID: 4246767103957239900}
+  - component: {fileID: 2118177647602062766}
   - component: {fileID: 163366029920936559}
   m_Layer: 0
   m_Name: GoodMushroom1
@@ -86,8 +87,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4765972850142645828
-BoxCollider2D:
+--- !u!50 &4246767103957239900
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4009464724741039770}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &2118177647602062766
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -115,10 +143,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0119924545, y: 0.06328213}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.6949212, y: 0.049955003}
@@ -128,9 +156,39 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.28361702, y: 0.1095984}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.30507883, y: 0.6094266}
+      - {x: 0.19049549, y: 0.72400993}
+      - {x: 0.2529955, y: 0.78650993}
+      - {x: 0.2842455, y: 0.83859324}
+      - {x: 0.29466218, y: 0.93234324}
+      - {x: 0.23216216, y: 0.99484324}
+      - {x: 0.013412158, y: 1.0885932}
+      - {x: -0.36158785, y: 1.0885932}
+      - {x: -0.4136712, y: 1.0781766}
+      - {x: -0.4970045, y: 1.03651}
+      - {x: -0.5386712, y: 0.99484324}
+      - {x: -0.6740879, y: 0.84900993}
+      - {x: -0.6949212, y: 0.7969266}
+      - {x: -0.6949212, y: 0.65109324}
+      - {x: -0.6532545, y: 0.6094266}
+      - {x: -0.29908785, y: 0.6094266}
+      - {x: -0.3095045, y: 0.36984324}
+      - {x: -0.26783785, y: 0.34900993}
+      - {x: -0.2574212, y: 0.04692658}
+      - {x: -0.24700451, y: 0.015676579}
+      - {x: -0.17408785, y: -0.05724009}
+      - {x: 0.14882883, y: -0.05724009}
+      - {x: 0.20091216, y: -0.0051567554}
+      - {x: 0.2842455, y: 0.28650993}
+      - {x: 0.30507883, y: 0.31775993}
+    - - {x: -0.080337845, y: 0.6406766}
+      - {x: -0.017837843, y: 0.6406766}
+      - {x: -0.028254509, y: 0.6406766}
+      - {x: -0.09075451, y: 0.5781766}
+      - {x: -0.080337845, y: 0.5781766}
+  m_UseDelaunayMesh: 0
 --- !u!114 &163366029920936559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,5 +202,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1344862835144778464, guid: f7ad302aac4072c4b9ba222f39dcc7f4, type: 3}
-  playerInventory: {fileID: 7329476551715209462, guid: b723446adc0d0c04da9bf161c282bcc0, type: 3}
+  playerInventory: {fileID: 0}
   itemSO: {fileID: 11400000, guid: 114dc195e6ec6fa4a92885bb65e908e9, type: 2}

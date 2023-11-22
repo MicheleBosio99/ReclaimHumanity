@@ -2208,6 +2208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   YouSureQuitView: {fileID: 7298998440573298085}
+  player: {fileID: 0}
 --- !u!1 &2494503994493147570
 GameObject:
   m_ObjectHideFlags: 0
@@ -3222,7 +3223,7 @@ Canvas:
   m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -3337,7 +3338,7 @@ MonoBehaviour:
   MapPanel: {fileID: 8913412936477790213}
   OpenPlayerMenuButton: {fileID: 7235393085368887439}
   BackgroundGeneralPanel: {fileID: 7325199957116049667}
-  player: {fileID: 0}
+  player: {fileID: 1344862835144778464, guid: f7ad302aac4072c4b9ba222f39dcc7f4, type: 3}
 --- !u!114 &2740166828414423647
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -21,10 +21,7 @@ public class ChooseWhereToGoScript : MonoBehaviour {
     public void OnCloseButtonClick() { gameObject.SetActive(false); }
     
     // GTF = Go To Forest
-    public void OnGTFButtonClick() {
-        Debug.Log("pressed");
-        SceneManager.LoadScene(sceneName: "OvergrownForest");
-    }
+    public void OnGTFButtonClick() { SceneManager.LoadScene(sceneName: "OvergrownForest"); }
     
     // GTC = Go To City
     public void OnGTCButtonClick() { SceneManager.LoadScene(sceneName: "RuinedCity"); }

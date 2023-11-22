@@ -37,7 +37,6 @@ public class HandleItemsInInventoryInv : MonoBehaviour {
         }
 
         CurrentSelectedSlot = ordinaryInventorySlotsUI[0];
-        GenerateTestItem();
     }
 
     private void OnEnable() { UpdateOrdinarySlots(); UpdateSpecialSlots(); }
@@ -111,21 +110,6 @@ public class HandleItemsInInventoryInv : MonoBehaviour {
     public void SetCurrentSelectedSlotByIndex(int index, bool isSlotSpecial) {
         CurrentSelectedSlot.GetComponent<HandleSlotSelectionInv>().ExitHover();
         CurrentSelectedSlot = isSlotSpecial ? specialInventorySlotsUI[index] : ordinaryInventorySlotsUI[index];
-    }
-
-
-    [SerializeField] private Sprite itemSprite1;
-    [SerializeField] private Sprite itemSprite2;
-    private void GenerateTestItem() {
-        AddNewItemToInventory(Resources.Load<ItemsSO>($"Items/itemTest1").ToInventoryItem(9));
-        AddNewItemToInventory(Resources.Load<ItemsSO>($"Items/itemTest2").ToInventoryItem(6));
-        AddNewItemToInventory(Resources.Load<ItemsSO>($"Items/itemTest3").ToInventoryItem(4));
-        AddNewItemToInventory(Resources.Load<ItemsSO>($"Items/itemTest4").ToInventoryItem(7));
-        
-        AddNewItemToInventory(Resources.Load<ItemsSO>($"Items/itemTest5").ToInventoryItem(12));
-        AddNewItemToInventory(Resources.Load<ItemsSO>($"Items/itemTest6").ToInventoryItem(3));
-        AddNewItemToInventory(Resources.Load<ItemsSO>($"Items/itemTest7").ToInventoryItem(5));
-        AddNewItemToInventory(Resources.Load<ItemsSO>($"Items/itemTest8").ToInventoryItem(10));
     }
     
 }

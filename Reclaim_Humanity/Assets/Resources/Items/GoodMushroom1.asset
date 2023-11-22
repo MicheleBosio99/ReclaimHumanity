@@ -16,5 +16,5 @@ MonoBehaviour:
   itemName: Mushrooms
   itemSprite: {fileID: -1078000313, guid: 4c5cc9a577ab8074bb942e8ae2508b24, type: 3}
   itemEnergyGenerated: 2
-  itemDescription: These good looking mushrooms can make hungry even a robot.
+  itemDescription: These good looking mushrooms can make even a robot crave for them.
   isItemSpecial: 0

@@ -33,6 +33,10 @@ PrefabInstance:
       value: 0.78431374
       objectReference: {fileID: 0}
     - target: {fileID: 3932784907277633899, guid: ab318b3c451264d489766a4071b821a2, type: 3}
+      propertyPath: quantity
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932784907277633899, guid: ab318b3c451264d489766a4071b821a2, type: 3}
       propertyPath: isSlotSpecial
       value: 1
       objectReference: {fileID: 0}
@@ -117,7 +121,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6468246764138696128, guid: ab318b3c451264d489766a4071b821a2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab318b3c451264d489766a4071b821a2, type: 3}
