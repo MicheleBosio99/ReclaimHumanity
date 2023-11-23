@@ -1,13 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
-
-// NEEDSS TO BE CHANGEEEED
 public class ChangeMenuShowed : MonoBehaviour {
 
     [SerializeField] private GameObject InventoryPanel;
@@ -20,15 +13,12 @@ public class ChangeMenuShowed : MonoBehaviour {
     [SerializeField] private GameObject BackgroundGeneralPanel;
     
     [SerializeField] private GameObject player;
-    private PlayerMovement playerMovement;
 
     private GameObject currentEnabledGameObj;
 
     public GameObject CurrentEnabledGameObj => currentEnabledGameObj;
 
     private void Awake() {
-        playerMovement = player.GetComponent<PlayerMovement>();
-        
         InventoryPanel.SetActive(false);
         OptionsPanel.SetActive(false);
         StatisticsPanel.SetActive(false);
@@ -39,10 +29,7 @@ public class ChangeMenuShowed : MonoBehaviour {
 
     public void GetKeyPressed(string keyPressed) {
         // Stop time for menu open
-        Time.timeScale = 0.0f;
-        
-        // Stop player, not necessary since we are stopping time;
-        //  playerMovement.CurrentSpeed = 0.0f;
+        // Time.timeScale = 0.0f;
         
         OpenPlayerMenuButton.SetActive(false);
         BackgroundGeneralPanel.SetActive(true);
@@ -70,7 +57,7 @@ public class ChangeMenuShowed : MonoBehaviour {
     
     public void OnCloseButtonClick() {
         // Restart timer
-        Time.timeScale = 1.0f;
+        // Time.timeScale = 1.0f;
         
         currentEnabledGameObj.SetActive(false);
         currentEnabledGameObj = null;
@@ -78,9 +65,6 @@ public class ChangeMenuShowed : MonoBehaviour {
         BackgroundGeneralPanel.SetActive(false);
         
         player.GetComponent<OpenInventoryScript>().ClosedInventory();
-        
-        // Make player move again, no more necessary since we are stopping and restarting time;
-        // playerMovement.CurrentSpeed = playerMovement.NormalSpeed;
     }
     
     private void ChangeMenuScreen(GameObject objToEnable) {

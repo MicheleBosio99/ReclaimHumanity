@@ -2,45 +2,17 @@
     "recipesList" :
     [
         {
-            "recipeName" : "Example Recipe 1",
-            "recipeDescription" : "This is a recipe 1 example",
-            "item1ID" : "ItemTest1",
-            "item1Name" : "ItemTest1",
-            "item1QuantityReq" : 3,
-            "item2ID" : "ItemTest2",
-            "item2Name" : "ItemTest2",
-            "item2QuantityReq" : 1,
-            "itemResultID" : "ItemTest3",
-            "itemResultName" : "ItemTest3",
-            "itemResultQuantity" : 1,
-            "enabled" : 1
-        },
-        {
-            "recipeName" : "Example Recipe 2",
-            "recipeDescription" : "This is a recipe 2 example",
-            "item1ID" : "ItemTest1",
-            "item1Name" : "ItemTest1",
-            "item1QuantityReq" : 2,
-            "item2ID" : "ItemTest2",
-            "item2Name" : "ItemTest2",
-            "item2QuantityReq" : 4,
-            "itemResultID" : "ItemTest4",
-            "itemResultName" : "ItemTest4",
-            "itemResultQuantity" : 2,
-            "enabled" : 1
-        },
-        {
-            "recipeName" : "Example Recipe 3",
-            "recipeDescription" : "This is a recipe 3 example",
-            "item1ID" : "ItemTest3",
-            "item1Name" : "ItemTest3",
+            "recipeName" : "Example Recipe",
+            "recipeDescription" : "Mushrooms Strange Soup",
+            "item1ID" : "00_GoodMushroom",
+            "item1Name" : "Mushrooms",
             "item1QuantityReq" : 1,
-            "item2ID" : "ItemTest4",
-            "item2Name" : "ItemTest4",
+            "item2ID" : "01_BadMushroom",
+            "item2Name" : "Mushrooms",
             "item2QuantityReq" : 1,
-            "itemResultID" : "ItemTest5",
-            "itemResultName" : "ItemTest5",
-            "itemResultQuantity" : 1,
+            "itemResultID" : "00_GoodMushroom",
+            "itemResultName" : "Mushrooms",
+            "itemResultQuantity" : 5,
             "enabled" : 1
         }
     ]

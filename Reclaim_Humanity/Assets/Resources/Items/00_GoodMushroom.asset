@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7890fa46cbc6b8e4f806b716dc230e48, type: 3}
+  m_Name: 00_GoodMushroom
+  m_EditorClassIdentifier: 
+  itemID: 00_GoodMushroom
+  itemName: Mushrooms
+  itemSprite: {fileID: -1078000313, guid: 4c5cc9a577ab8074bb942e8ae2508b24, type: 3}
+  itemEnergyGenerated: 2
+  itemDescription: These good looking mushrooms can make even a robot crave for them.
+  isItemSpecial: 0

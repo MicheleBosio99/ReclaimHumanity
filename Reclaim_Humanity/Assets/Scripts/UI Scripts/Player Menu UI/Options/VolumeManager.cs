@@ -27,14 +27,12 @@ public class VolumeManager : MonoBehaviour
         _audioMixer.SetFloat("MasterVolume", Mathf.Log10(level)*20f);
         
         var active = !(level < 0.001);
-        Debug.Log($"Slider {active}");
         if (active ^ isMasterActive) return;
         masterVolToggle.isOn = active; isMasterActive = !isMasterActive;
     }
 
     public void ToggleMasterVolume(bool active) {
         _audioMixer.SetFloat("MasterVolume", active ? 0.0f : -80.0f);
-        Debug.Log($"Toggle {active}");
         if (active ^ isMasterActive) return;
         masterVolSlider.value = active ? 1.0f : 1e-5f; isMasterActive = !isMasterActive;
     }

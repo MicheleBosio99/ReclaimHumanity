@@ -10,9 +10,9 @@ public class ItemBehaviour : MonoBehaviour {
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject playerInventory;
     private HandleItemsInInventoryInv inventory;
+    [SerializeField] private int itemQuantity;
     
     [SerializeField] private ItemsSO itemSO;
-    private int quantity = 2;
 
     public void Start() { inventory = playerInventory.GetComponent<HandleItemsInInventoryInv>(); }
 
@@ -21,7 +21,7 @@ public class ItemBehaviour : MonoBehaviour {
     public void OnTriggerEnter2D(Collider2D other) { if(other.CompareTag("Player")) { AddToInventory(); } }
 
     public void AddToInventory() {
-        inventory.AddNewItemToInventory(itemSO.ToInventoryItem(quantity));
+        inventory.AddNewItemToInventory(itemSO.ToInventoryItem(itemQuantity));
         Destroy(gameObject);
     }
 }
