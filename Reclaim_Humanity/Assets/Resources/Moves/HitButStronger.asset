@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HitButStronger
   m_EditorClassIdentifier: 
   name: Hit but stronger
-  description: You're gonna use deal more damage, but you can miss :(
+  description: You're gonna deal more damage, but you can miss :(
   type: 0
   power: 50
   accuracy: 75
