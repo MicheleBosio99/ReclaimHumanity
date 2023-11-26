@@ -1,7 +1,10 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class ChangeMenuShowed : MonoBehaviour {
+    
+    // private void Start() { DontDestroyOnLoad(gameObject); }
 
     [SerializeField] private GameObject InventoryPanel;
     [SerializeField] private GameObject OptionsPanel;
@@ -29,7 +32,7 @@ public class ChangeMenuShowed : MonoBehaviour {
 
     public void GetKeyPressed(string keyPressed) {
         // Stop time for menu open
-        // Time.timeScale = 0.0f;
+        Time.timeScale = 0.0f;
         
         OpenPlayerMenuButton.SetActive(false);
         BackgroundGeneralPanel.SetActive(true);
@@ -57,12 +60,13 @@ public class ChangeMenuShowed : MonoBehaviour {
     
     public void OnCloseButtonClick() {
         // Restart timer
-        // Time.timeScale = 1.0f;
+        Time.timeScale = 1.0f;
         
         currentEnabledGameObj.SetActive(false);
         currentEnabledGameObj = null;
         OpenPlayerMenuButton.SetActive(true);
         BackgroundGeneralPanel.SetActive(false);
+        
         
         player.GetComponent<OpenInventoryScript>().ClosedInventory();
     }
@@ -81,6 +85,5 @@ public class ChangeMenuShowed : MonoBehaviour {
     
     public void OnMapButtonClick() { ChangeMenuScreen(MapPanel); }
     
-
     public void OnOpenMenuClick() { GetKeyPressed("escape"); }
 }

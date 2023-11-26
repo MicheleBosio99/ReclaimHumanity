@@ -9,28 +9,24 @@ public class AnimatePanel : MonoBehaviour
     [SerializeField] private Sprite[] sprites;
     [SerializeField] private float fps = 10;
 
-    private void Start() { image = GetComponent<Image>(); }
+    private void Awake() { image = gameObject.GetComponent<Image>(); }
     private void OnEnable() { Play(); }
     private void OnDisable() { Stop(); }
 
-    private void Play()
-    {
+    private void Play() {
         Stop();
         StartCoroutine(AnimSequence());
     }
  
-    private void Stop()
-    {
+    private void Stop() {
         StopAllCoroutines();
         ShowFrame(0);
     }
  
-    IEnumerator AnimSequence()
-    {
+    IEnumerator AnimSequence() {
         var delay = new WaitForSeconds(1 / fps);
         int index = 0;
-        while(true)
-        {
+        while(true) {
             if (index >= sprites.Length) index = 0;
             ShowFrame(index);
             index++;
@@ -38,8 +34,5 @@ public class AnimatePanel : MonoBehaviour
         }
     }
  
-    private void ShowFrame(int index)
-    {
-        image.sprite = sprites[index];
-    }
+    private void ShowFrame(int index) { image.sprite = sprites[index]; }
 }

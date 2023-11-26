@@ -6,7 +6,7 @@ public class ShowEnergyLab : MonoBehaviour {
     [SerializeField] private LabEnergySO labEnergy;
     private TextMeshProUGUI textEnergy;
     
-    void Awake() { textEnergy = GetComponent<TextMeshProUGUI>(); }
+    void Start() { textEnergy = GetComponent<TextMeshProUGUI>(); textEnergy.text = labEnergy.CurrentEnergy.ToString(); }
 
-    private void Update() { textEnergy.text = labEnergy.CurrentEnergy.ToString(); }
+    public void UpdateEnergy(string energy) { textEnergy.text = energy; }
 }

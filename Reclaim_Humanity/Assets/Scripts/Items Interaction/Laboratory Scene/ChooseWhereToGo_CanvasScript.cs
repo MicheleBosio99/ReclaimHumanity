@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,12 +8,14 @@ public class ChooseWhereToGoScript : MonoBehaviour {
 
     private void Start() { movement = player.GetComponent<PlayerMovement>(); }
 
-    private void OnEnable() {
-        gameObject.transform.position = player.transform.position;
-        if(movement != null) { movement.CurrentSpeed = 0.0f; }
-    }
+    private void OnEnable() { gameObject.transform.position = player.transform.position; }
 
-    private void OnDisable() { if (movement != null) { movement.CurrentSpeed = movement.NormalSpeed; } }
+    // private void OnEnable() {
+    //     gameObject.transform.position = player.transform.position;
+    //     if(movement != null) { movement.CurrentSpeed = 0.0f; }
+    // }
+    //
+    // private void OnDisable() { if (movement != null) { movement.CurrentSpeed = movement.NormalSpeed; } }
 
     public void OnCloseButtonClick() { gameObject.SetActive(false); }
     
@@ -28,4 +27,7 @@ public class ChooseWhereToGoScript : MonoBehaviour {
     
     // GTW = Go To Wastelands
     public void OnGTWButtonClick() { SceneManager.LoadScene(sceneName: "Wastelands"); }
+    
+    // GTL = Go To Laboratory
+    public void OnGTLButtonClick() { SceneManager.LoadScene(sceneName: "Laboratory"); }
 }

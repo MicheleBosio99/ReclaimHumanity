@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour {
     private Rigidbody2D rb;
     
     private void Start() {
+        // DontDestroyOnLoad(gameObject);
+        
         rb = GetComponent<Rigidbody2D>();
         currentSpeed = normalSpeed;
     }

@@ -12,6 +12,9 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
 
     [SerializeField] private List<GameObject> inventorySlotsUI;
     [SerializeField] private List<GameObject> chosenItemSlotsUI;
+    
+    [SerializeField] private GameObject batteryEnergy;
+    private ShowEnergyLab batteryEnergyText;
 
     private TextsHandler textsHandler;
     private HandleItemInSlotGE _handleItemInSlotGE;
@@ -23,6 +26,7 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
     private void Start() {
         textsHandler = gameObject.GetComponent<TextsHandler>();
         _handleItemInSlotGE = gameObject.GetComponent<HandleItemInSlotGE>();
+        batteryEnergyText = batteryEnergy.GetComponent<ShowEnergyLab>();
         
         holdingSlotsUIList = new List<HoldSlotUI>();
         maxLengthHoldingSlotsUIList = chosenItemSlotsUI.Count();
@@ -115,6 +119,7 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
         Assert.AreEqual(0, holdingSlotsUIList.Count);
         
         labEnergySO.CurrentEnergy += energyCreated;
+        batteryEnergyText.UpdateEnergy(labEnergySO.CurrentEnergy.ToString());
         textsHandler.UpdateEnergy("");
         energyCreated = 0.0f;
         

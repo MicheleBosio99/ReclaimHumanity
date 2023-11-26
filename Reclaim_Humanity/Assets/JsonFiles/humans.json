@@ -1,0 +1,36 @@
+{
+    "humans" :
+    [
+        {
+            "humanID" : "",
+            "name" : "",
+            "biome" : "",
+            "recipesUnlockedID" : "",
+            "spokenTo" : false,
+            "dialogue" :
+                {
+                    "type" : "random or ordered list",
+                    "phrases" :
+                            [
+                                ""
+                            ]
+                }
+        },
+
+        {
+            "humanID" : "",
+            "name" : "",
+            "biome" : "",
+            "recipesUnlockedID" : "",
+            "spokenTo" : false,
+            "dialogue" :
+            {
+                "type" : "random or ordered list",
+                "phrases" :
+                [
+                    ""
+                ]
+            }
+        }
+    ]
+}

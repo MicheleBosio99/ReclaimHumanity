@@ -224,7 +224,19 @@ MonoBehaviour:
     m_ActionId: ea560529-2327-4116-8875-118e9a84124b
     m_ActionName: Player/OpenInventory[/Keyboard/i,/Keyboard/escape,/Keyboard/k,/Keyboard/m]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4754563326288330437}
+        m_TargetAssemblyTypeName: OpenInventoryScript, Assembly-CSharp
+        m_MethodName: OpenCloseUI
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 391fa229-e8c6-43ea-be2c-886ef1be4801
     m_ActionName: Player/CloseUI[/Keyboard/f]
   m_NeverAutoSwitchControlSchemes: 0
@@ -258,7 +270,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerMenu: {fileID: 3228247895186584737, guid: cdbf67154cfa1bd4bb6176b5a14243cf, type: 3}
-  PlayerMenu: {fileID: 0}
 --- !u!114 &1168651925826670054
 MonoBehaviour:
   m_ObjectHideFlags: 0

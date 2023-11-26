@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,25 +7,43 @@ public class OpenInventoryScript : MonoBehaviour {
     
     [SerializeField] private GameObject PlayerMenu;
     
-    private bool inventoryIsOpen = false;
-    
+    // private bool inventoryIsOpen = false;
+
     public void OpenInventory(InputAction.CallbackContext context) {
-        PlayerMenu.SetActive(true);
         if (!context.performed || isActive) return;
-        inventoryIsOpen = true;
+        
+        PlayerMenu.SetActive(true);
+        // inventoryIsOpen = true;
         PlayerMenu.GetComponent<ChangeMenuShowed>().GetKeyPressed(context.control.name);
     }
 
-    public void ClosedInventory() { inventoryIsOpen = false; }
+    public void ClosedInventory() {
+        // inventoryIsOpen = false;
+    }
 
     public GameObject CurrentlyToOpenUI { get; set; }
     private bool isActive = false;
 
-    public void OpenCloseUI(InputAction.CallbackContext context) { if(!inventoryIsOpen) { OpenCloseUIFunc(context.performed); } }
+    public void OpenCloseUI(InputAction.CallbackContext context) {
+        // if(!inventoryIsOpen) { OpenCloseUIFunc(context.performed); } inventoryIsOpen always true cannot understand why;
+        OpenCloseUIFunc(context.performed);
+    }
 
     public void OpenCloseUIFunc(bool performed) {
         if (CurrentlyToOpenUI == null || !performed) { return; }
-        if (isActive) { CurrentlyToOpenUI.SetActive(false); isActive = false; }
-        else { CurrentlyToOpenUI.SetActive(true); isActive = true; }
+        if (isActive) { CurrentlyToOpenUI.SetActive(false); isActive = false; BlockPlayer(false); }
+        else { CurrentlyToOpenUI.SetActive(true); isActive = true; BlockPlayer(true); }
     }
+
+    private void BlockPlayer(bool blockPlayer) {
+        var playerMov = gameObject.GetComponent<PlayerMovement>();
+        playerMov.CurrentSpeed = blockPlayer ? 0.0f : playerMov.NormalSpeed;
+    }
+    
+    // IEnumerator WaitOneSecond() {
+    //     while (true) {
+    //         yield return new WaitForSeconds(1.0f);
+    //         Debug.Log(inventoryIsOpen);
+    //     }
+    // }
 }

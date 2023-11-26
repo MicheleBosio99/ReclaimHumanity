@@ -3,11 +3,9 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "EnergySO", menuName = "ScriptableObjects/EnergySpheresSO")]
 public class LabEnergySO : ScriptableObject {
-    [SerializeField] private float startingEnergy = 0.0f;
+    // [SerializeField] private float startingEnergy = 0.0f;
     [SerializeField] private float currentEnergy;
-    [SerializeField] private float maxEnergyLab = 1000.0f; // Should be initialized via .json file with all parameters;
-    
-    private void Awake() { currentEnergy = startingEnergy; }
+    [SerializeField] private float maxEnergyLab = 1000.0f; // TODO Should be initialized via .json file with all parameters when load;
 
     public float CurrentEnergy {
         get => currentEnergy;
