@@ -1219,11 +1219,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 578
-        y: 2448
+        y: 2449
         width: 188
         height: 184
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.49431723, y: 0.15742293}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2201,6 +2201,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: 11_Camping_48x48_43
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 2576
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0e6ad2b4d9d58479e3fffc4f9f7f61
+      internalID: 1901587368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -2250,6 +2271,7 @@ TextureImporter:
       11_Camping_48x48_40: -215732377
       11_Camping_48x48_41: 132630238
       11_Camping_48x48_42: 1134647758
+      11_Camping_48x48_43: 1901587368
       11_Camping_48x48_5: 551357833
       11_Camping_48x48_6: 1880929576
       11_Camping_48x48_7: -1472366127
