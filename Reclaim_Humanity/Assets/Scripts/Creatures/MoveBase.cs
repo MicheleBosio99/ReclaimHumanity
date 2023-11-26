@@ -35,6 +35,11 @@ public class MoveBase : ScriptableObject
         get { return accuracy; }
     }
     
+    public int Power
+    {
+        get { return power; }
+    }
+    
     public int PP
     {
         get { return pp; }

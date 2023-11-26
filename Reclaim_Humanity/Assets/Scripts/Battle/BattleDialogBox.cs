@@ -22,9 +22,16 @@ public class BattleDialogBox : MonoBehaviour
     [SerializeField] private TextMeshProUGUI moveDescription;
     [SerializeField] private TextMeshProUGUI typeText;
 
-    public void SetDialog(string dialog)
+    private void OnEnable()
     {
-        dialogText.text = dialog;
+        EventManager.StartListening ("Attack", Attack);
+    }
+
+    void Attack()
+    {
+        EventManager.StopListening("Attack", Attack);
+        Debug.Log("Attack, yeah!");
+        EventManager.StartListening("Attack", Attack);
     }
 
     public IEnumerator TypeDialog(string dialog)
@@ -35,6 +42,7 @@ public class BattleDialogBox : MonoBehaviour
             dialogText.text += letter;
             yield return new WaitForSeconds(1f / lettersPerSecond);
         }
+        
     }
 
     public void EnableDialogText(bool enabled)
