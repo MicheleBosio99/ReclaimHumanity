@@ -45,7 +45,8 @@ public class InventoryItemsSO : ScriptableObject {
     
     public InventoryItem SearchSpecialItemByID(string itemID) {
         foreach (var item in specialItemsInInventory) { if (item.ItemID == itemID) { return item; } }
-        var itemRet = InventoryItem.GetEmptyItem(); itemRet.IsSpecialItem = true; return itemRet;
+        // var itemRet = InventoryItem.GetEmptyItem(); itemRet.IsSpecialItem = true; return itemRet;
+        return null;
     }
 
     public void ChangeQuantityOrdinaryItem(InventoryItem item, int quantity) {

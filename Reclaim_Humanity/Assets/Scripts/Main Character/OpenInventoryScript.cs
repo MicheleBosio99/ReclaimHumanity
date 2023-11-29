@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class OpenInventoryScript : MonoBehaviour {
     
     [SerializeField] private GameObject PlayerMenu;
+    [SerializeField] private GameObject OpenPlayerMenuButton;
     
     // private bool inventoryIsOpen = false;
 
@@ -38,12 +39,7 @@ public class OpenInventoryScript : MonoBehaviour {
     private void BlockPlayer(bool blockPlayer) {
         var playerMov = gameObject.GetComponent<PlayerMovement>();
         playerMov.CurrentSpeed = blockPlayer ? 0.0f : playerMov.NormalSpeed;
+        
+        OpenPlayerMenuButton.SetActive(!blockPlayer);
     }
-    
-    // IEnumerator WaitOneSecond() {
-    //     while (true) {
-    //         yield return new WaitForSeconds(1.0f);
-    //         Debug.Log(inventoryIsOpen);
-    //     }
-    // }
 }

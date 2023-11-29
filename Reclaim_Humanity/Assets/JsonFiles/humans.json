@@ -9,14 +9,13 @@
             "spokenTo" : false,
             "dialogue" :
                 {
-                    "type" : "random or ordered list",
+                    "type" : "random or ordered",
                     "phrases" :
                             [
                                 ""
                             ]
                 }
         },
-
         {
             "humanID" : "",
             "name" : "",

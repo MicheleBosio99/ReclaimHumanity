@@ -1959,6 +1959,10 @@ PrefabInstance:
       propertyPath: BackgroundMenu
       value: 
       objectReference: {fileID: 7366894763767517558}
+    - target: {fileID: 4754563326288330437, guid: f7ad302aac4072c4b9ba222f39dcc7f4, type: 3}
+      propertyPath: OpenPlayerMenuButton
+      value: 
+      objectReference: {fileID: 7493258468802781434}
     - target: {fileID: 6161068028177571856, guid: f7ad302aac4072c4b9ba222f39dcc7f4, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.6
@@ -31468,24 +31472,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41ad187aaf1df4749ba819ab8e1f452a, type: 3}
---- !u!1 &888568112 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6227814014949019319, guid: 3bba102c2cf1b6c499e2bb909e6c9310, type: 3}
-  m_PrefabInstance: {fileID: 3411685932101987612}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &888568118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 888568112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68a5edab04b330047b34b7dc58b62e92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  door: {fileID: 924498081}
 --- !u!1 &891781182 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2202837659533597482, guid: ab318b3c451264d489766a4071b821a2, type: 3}
@@ -98920,7 +98906,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -205}
+  m_AnchoredPosition: {x: 0, y: -204.99997}
   m_SizeDelta: {x: -178, y: -488}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1052011387609679068
@@ -101499,10 +101485,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6227814014949019319, guid: 3bba102c2cf1b6c499e2bb909e6c9310, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 888568118}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bba102c2cf1b6c499e2bb909e6c9310, type: 3}
 --- !u!1 &3411805567069994196
 GameObject:
@@ -104555,7 +104538,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -229}
+  m_AnchoredPosition: {x: 0, y: -228.99997}
   m_SizeDelta: {x: 0, y: -458}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &6417886700788516587
