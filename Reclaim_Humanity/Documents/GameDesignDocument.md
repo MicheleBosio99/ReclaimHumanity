@@ -302,3 +302,23 @@ ___
     - Try to complete biomes scenes with map configuration and some details;
     - Tile sets for characters (and Animation?);
 
+- Before 25/11/23 > New deadlines to complete:
+    - Michele: work on Player Menu;
+    - Anastasia: work on enemies behaviour;
+    - Iacopo: work on enemies spawners and save game functionalities;
+    - Riccardo: continue work on combat system;
+    - Andrea: work on audio;
+
+- Before 30/11/23 > New deadlines to complete:
+    - Michele: design Forest biome and work on items + item spawners;
+    - Anastasia: design City biome;
+    - Iacopo: design Wastelands biome;
+    - Riccardo: finish working on combat system;
+    - Andrea: work on character sprites;
+
+- Before 07/12/23 > New deadlines to complete:
+    - Michele: work and complete humans;
+    - Anastasia: finish design City biome and work on enemies behaviour in spawners;
+    - Iacopo: finish design Wastelands biome and deploy enemies spawners in biomes;
+    - Riccardo: implement combat system inside biomes and link it to enemies;
+    - Andrea: work on enemies' sprites + in-game sounds;

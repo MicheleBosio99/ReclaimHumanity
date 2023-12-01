@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4370359794366168160}
   - component: {fileID: 4754563326288330437}
   - component: {fileID: 1168651925826670054}
+  - component: {fileID: 6255717712013211218}
   m_Layer: 0
   m_Name: MainCharacter
   m_TagString: Untagged
@@ -282,3 +283,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 019f0aa3537d1e247a57259d5dce287b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6255717712013211218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344862835144778464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bea40ef09e779a4cb97694749a72540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labInitPosition: {x: 0.5, y: -4.5}
+  forestInitPosition: {x: 0, y: 0}
+  cityInitPosition: {x: 0, y: 0}
+  wastelandsInitPosition: {x: 0, y: 0}

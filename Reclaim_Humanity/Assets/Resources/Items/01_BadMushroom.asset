@@ -15,6 +15,6 @@ MonoBehaviour:
   itemID: 01_BadMushroom
   itemName: Mushrooms
   itemSprite: {fileID: 1984663684, guid: 78722bdfb24befc458752fe1ff7b4234, type: 3}
-  itemEnergyGenerated: 4
-  itemDescription: Are you sure this mushroom is edible?
+  itemEnergyGenerated: 3
+  itemDescription: Are you sure this thing is edible?
   isItemSpecial: 0
