@@ -12,9 +12,12 @@ GameObject:
   - component: {fileID: 8971213465213072287}
   - component: {fileID: 3618344125689249839}
   - component: {fileID: 2223581609898835609}
-  - component: {fileID: 3902757992893524107}
+  - component: {fileID: 6493257837870892101}
   - component: {fileID: 4370359794366168160}
-  m_Layer: 0
+  - component: {fileID: 4754563326288330437}
+  - component: {fileID: 1168651925826670054}
+  - component: {fileID: 6255717712013211218}
+  m_Layer: 6
   m_Name: MainCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,8 +79,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1baa584188b58e84ba3f34aa87f2ac51, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 5eb06030ad9784c2f9a218178b390c66, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -150,8 +153,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.2}
-    oldSize: {x: 1, y: 2}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -164,7 +167,7 @@ PolygonCollider2D:
       - {x: -0.18939488, y: -0.11839497}
       - {x: 0.18890303, y: -0.11864245}
   m_UseDelaunayMesh: 0
---- !u!114 &3902757992893524107
+--- !u!114 &6493257837870892101
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -204,11 +207,11 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 7d1c8b26-37fe-42e6-a12c-675e68959474
-    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4370359794366168160}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+      - m_Target: {fileID: 4754563326288330437}
+        m_TargetAssemblyTypeName: OpenInventoryScript, Assembly-CSharp
         m_MethodName: OpenInventory
         m_Mode: 0
         m_Arguments:
@@ -220,7 +223,23 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: ea560529-2327-4116-8875-118e9a84124b
-    m_ActionName: Player/OpenInventory[/Keyboard/f]
+    m_ActionName: Player/OpenInventory[/Keyboard/i,/Keyboard/escape,/Keyboard/k,/Keyboard/m]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4754563326288330437}
+        m_TargetAssemblyTypeName: OpenInventoryScript, Assembly-CSharp
+        m_MethodName: OpenCloseUI
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 391fa229-e8c6-43ea-be2c-886ef1be4801
+    m_ActionName: Player/CloseUI[/Keyboard/f]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -238,4 +257,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ec9d3c8937dfd469896e6920a92577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  normalSpeed: 10
+--- !u!114 &4754563326288330437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344862835144778464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d742169a80070b449acf8a2587e22ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerMenu: {fileID: 3228247895186584737, guid: cdbf67154cfa1bd4bb6176b5a14243cf, type: 3}
+  OpenPlayerMenuButton: {fileID: 0}
+--- !u!114 &1168651925826670054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344862835144778464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 019f0aa3537d1e247a57259d5dce287b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6255717712013211218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344862835144778464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bea40ef09e779a4cb97694749a72540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labInitPosition: {x: 0.5, y: -4.5}
+  forestInitPosition: {x: 0, y: 0}
+  cityInitPosition: {x: 0, y: 0}
+  wastelandsInitPosition: {x: 0, y: 0}

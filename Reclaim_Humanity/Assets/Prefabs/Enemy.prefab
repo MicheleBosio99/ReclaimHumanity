@@ -131,12 +131,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad0a937567a05e4d9406c50c9f2635d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyType: Mushroom
   enemyLevel: 1
   maxHP: 10
   player: {fileID: 0}
-  speed: 1
-  angle: 360
+  speed: 3
   radius: 6
   targetMask:
     serializedVersion: 2
@@ -144,6 +142,7 @@ MonoBehaviour:
   obstructionMask:
     serializedVersion: 2
     m_Bits: 128
+  type: 0
   enem: {fileID: 6972572895829190507}
   spawn: {fileID: 0}
 --- !u!50 &4041771340836111945

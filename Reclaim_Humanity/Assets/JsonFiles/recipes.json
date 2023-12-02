@@ -1,0 +1,19 @@
+{
+    "recipesList" :
+    [
+        {
+            "recipeName" : "Example Recipe",
+            "recipeDescription" : "Mushrooms Strange Soup",
+            "item1ID" : "00_GoodMushroom",
+            "item1Name" : "Mushrooms",
+            "item1QuantityReq" : 1,
+            "item2ID" : "01_BadMushroom",
+            "item2Name" : "Mushrooms",
+            "item2QuantityReq" : 1,
+            "itemResultID" : "00_GoodMushroom",
+            "itemResultName" : "Mushrooms",
+            "itemResultQuantity" : 5,
+            "enabled" : 1
+        }
+    ]
+}

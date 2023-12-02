@@ -7,8 +7,8 @@ using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour {
 
-    private float normalSpeed = 10.0f;
-    [SerializeField] private float currentSpeed;
+    [SerializeField] private float normalSpeed = 8.0f;
+    private float currentSpeed = 8.0f;
 
     public float NormalSpeed {
         get => normalSpeed;
@@ -23,14 +23,13 @@ public class PlayerMovement : MonoBehaviour {
     private Rigidbody2D rb;
     
     private void Start() {
+        // DontDestroyOnLoad(gameObject);
+        
         rb = GetComponent<Rigidbody2D>();
+        currentSpeed = normalSpeed;
     }
 
-    public void FixedUpdate() {
-        rb.velocity = currentSpeed * movingDirection;
-    }
+    public void FixedUpdate() { rb.velocity = currentSpeed * movingDirection; }
 
-    public void Move(InputAction.CallbackContext context) {
-        movingDirection = context.ReadValue<Vector2>();
-    }
+    public void Move(InputAction.CallbackContext context) { movingDirection = context.ReadValue<Vector2>(); }
 }

@@ -1,16 +1,17 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "ItemsScriptableObject", menuName = "ScriptableObjects/ItemsSO")]
-public class Items : ScriptableObject {
+public class ItemsSO : ScriptableObject {
 
-    [SerializeField] private int itemID;
+    [SerializeField] private string itemID;
     [SerializeField] private string itemName;
-    [SerializeField] private int itemEnergy;
     [SerializeField] private Sprite itemSprite;
+    [SerializeField] private float itemEnergyGenerated;
     [SerializeField] private string itemDescription;
-    [SerializeField] private int quantity;
+    [SerializeField] private bool isItemSpecial;
 
-    public int ItemID {
+    public string ItemID {
         get => itemID;
         set => itemID = value;
     }
@@ -20,23 +21,27 @@ public class Items : ScriptableObject {
         set => itemName = value;
     }
 
-    public int ItemEnergy {
-        get => itemEnergy;
-        set => itemEnergy = value;
-    }
-
     public Sprite ItemSprite {
         get => itemSprite;
         set => itemSprite = value;
+    }
+
+    public float ItemEnergyGenerated {
+        get => itemEnergyGenerated;
+        set => itemEnergyGenerated = value;
     }
 
     public string ItemDescription {
         get => itemDescription;
         set => itemDescription = value;
     }
+    
+    public bool IsItemSpecial {
+        get => isItemSpecial;
+        set => isItemSpecial = value;
+    }
 
-    public int Quantity {
-        get => quantity;
-        set => quantity = value;
+    public InventoryItem ToInventoryItem(int quantity) {
+        return new InventoryItem(itemID, itemSprite, quantity, itemDescription, itemEnergyGenerated, isItemSpecial);
     }
 }

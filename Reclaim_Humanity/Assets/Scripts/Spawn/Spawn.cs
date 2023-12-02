@@ -34,7 +34,7 @@ public class Spawn : MonoBehaviour
         {
             enemy.SpawnPositionEnemy();
             enemy.ActivateEnemy();
-            StartCoroutine(enemy.FOVRoutine());
+            enemy.EnemyRoutine();
             delay = 0;
             spawnTimer += spawnTimer;
             go = false;
