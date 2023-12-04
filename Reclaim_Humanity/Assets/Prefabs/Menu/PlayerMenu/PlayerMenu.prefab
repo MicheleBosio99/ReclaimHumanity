@@ -1990,8 +1990,6 @@ MonoBehaviour:
   DescriptionText: {fileID: 5600169378534544959}
   EnergyText: {fileID: 855429288895422133}
   inventorySlotsSO: {fileID: 11400000, guid: fb3e977362a9ace4381d1e0cbaa8c1e3, type: 2}
-  itemSprite1: {fileID: 21300000, guid: b033c17572a7168408ab6baa33e68848, type: 3}
-  itemSprite2: {fileID: 21300000, guid: 3ec95a4f50401874483f1a98ffef9127, type: 3}
 --- !u!114 &1874350169947108200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6513,7 +6511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4150742129968261439
 RectTransform:
   m_ObjectHideFlags: 0
