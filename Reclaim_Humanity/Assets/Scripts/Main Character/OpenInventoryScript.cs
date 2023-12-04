@@ -24,6 +24,9 @@ public class OpenInventoryScript : MonoBehaviour {
 
     public GameObject CurrentlyToOpenUI { get; set; }
     private bool isActive = false;
+    
+    private bool finished;
+    public bool Finished { set => finished = value; }
 
     public void OpenCloseUI(InputAction.CallbackContext context) {
         // if(!inventoryIsOpen) { OpenCloseUIFunc(context.performed); } inventoryIsOpen always true cannot understand why;
@@ -31,7 +34,7 @@ public class OpenInventoryScript : MonoBehaviour {
     }
 
     public void OpenCloseUIFunc(bool performed) {
-        if (CurrentlyToOpenUI == null || !performed) { return; }
+        if (CurrentlyToOpenUI == null || !performed || !finished) { return; }
         if (isActive) { CurrentlyToOpenUI.SetActive(false); isActive = false; BlockPlayer(false); }
         else { CurrentlyToOpenUI.SetActive(true); isActive = true; BlockPlayer(true); }
     }
