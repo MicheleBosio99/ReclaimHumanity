@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "Move", menuName = "Creature/Create new move")]
 public class MoveBase : ScriptableObject
@@ -10,7 +11,7 @@ public class MoveBase : ScriptableObject
     [TextArea] 
     [SerializeField] private string description;
 
-    [SerializeField] private Type type;
+    [FormerlySerializedAs("type")] [SerializeField] private CreatureType type;
     [SerializeField] private int power;
     [SerializeField] private int accuracy;
     [SerializeField] private int pp;
@@ -25,7 +26,7 @@ public class MoveBase : ScriptableObject
         get { return description; }
     }
     
-    public Type Type
+    public CreatureType Type
     {
         get { return type; }
     }

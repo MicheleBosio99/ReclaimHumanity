@@ -108,9 +108,10 @@ public class BattleSystem : MonoBehaviour
                                           $"against {enemyUnits[currentTarget].Creature.Base.Name}");
         yield return new WaitForSeconds(1f);
 
-        bool isFainted = enemyUnits[currentTarget].Creature.TakeDamage(move, playerUnits[currentCreature].Creature);
+        var damageDetails = enemyUnits[currentTarget].Creature.TakeDamage(move, playerUnits[currentCreature].Creature);
         yield return enemyHuds[currentTarget].UpdateHP();
-        if (isFainted)
+        yield return ShowDamageDetails(damageDetails);
+        if (damageDetails.Fainted)
         {
             yield return dialogBox.TypeDialog($"{enemyUnits[currentTarget].Creature.Base.Name}" +
                                               $" fainted");
@@ -167,10 +168,12 @@ public class BattleSystem : MonoBehaviour
                                           $"{move.Base.Name} against {playerUnits[currentTarget].Creature.Base.Name}");
         yield return new WaitForSeconds(1f);
 
-        bool isFainted = playerUnits[currentTarget].Creature
+        var damageDetails = playerUnits[currentTarget].Creature
             .TakeDamage(move, enemyUnits[currentCreature].Creature);
         yield return playerHuds[currentTarget].UpdateHP();
-        if (isFainted)
+        yield return ShowDamageDetails(damageDetails);
+        
+        if (damageDetails.Fainted)
         {
             yield return dialogBox.TypeDialog($"{playerUnits[currentTarget].Creature.Base.Name} fainted");
             yield return new WaitForSeconds(1f);
@@ -214,6 +217,25 @@ public class BattleSystem : MonoBehaviour
         else
         {
             StartTurn();
+        }
+    }
+
+    IEnumerator ShowDamageDetails(DamageDetails damageDetails)
+    {
+        if (damageDetails.Critical > 1f)
+        {
+            yield return dialogBox.TypeDialog("A critical hit!");
+            yield return new WaitForSeconds(0.5f);
+        }
+        if (damageDetails.TypeEffectiveness > 1f)
+        {
+            yield return dialogBox.TypeDialog("It's super effective!");
+            yield return new WaitForSeconds(0.5f);
+        }
+        else if (damageDetails.TypeEffectiveness < 1f)
+        {
+            yield return dialogBox.TypeDialog("It's not very effective");
+            yield return new WaitForSeconds(0.5f);
         }
     }
 
