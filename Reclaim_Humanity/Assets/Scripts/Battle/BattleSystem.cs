@@ -28,6 +28,8 @@ public class BattleSystem : MonoBehaviour
     private int currentMove;
     private int currentCreature;
     private int currentTarget;
+    
+    private List<int> order;
 
     private List<Move> selectedMoves;
     private List<Enemy> selectedTargets;
@@ -53,12 +55,49 @@ public class BattleSystem : MonoBehaviour
         
         yield return dialogBox.TypeDialog("Oh no, some enemies :(");
         yield return new WaitForSeconds(0.5f);
+        SetOrder();
+        StartTurn();
+    }
 
-        currentCreature = 0;
-        dialogBox.SetMoveNames(playerUnits[currentCreature].Creature.Moves);
-        handL.SetActive(true);
-        handL.transform.position = playerUnits[currentCreature].transform.position + new Vector3(1,0,0);
-        StartCoroutine(PlayerAction());
+    private void SetOrder()
+    {
+        order = new List<int>();
+        for (int i = 0; i < playerBases.Count; i++)
+        {
+            order.Add(i);
+        }
+        for (int i = 0; i < enemyBases.Count; i++)
+        {
+            order.Add(i + playerBases.Count);
+        }
+        print(order.Count);
+    }
+
+    private void StartTurn()
+    {
+        if (order.Count == 0)
+        {
+            SetOrder();
+        }
+        int current = order[0];
+        order.RemoveAt(0);
+        Debug.Log(current);
+        if (current < playerBases.Count)
+        {
+            currentCreature = current;
+            dialogBox.SetMoveNames(playerUnits[currentCreature].Creature.Moves);
+            currentMove = 0;
+            currentTarget = 0;
+            handL.transform.position = playerUnits[currentCreature].transform.position + new Vector3(1,0,0);
+            handL.SetActive(true);
+            handR.SetActive(false);
+            StartCoroutine(PlayerAction());
+        }
+        else
+        {
+            currentCreature = current - playerBases.Count;
+            StartCoroutine(EnemyMove());
+        }
     }
 
     IEnumerator PerformPlayerMove()
@@ -66,55 +105,115 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.Busy;
         var move = playerUnits[currentCreature].Creature.Moves[currentMove];
         yield return dialogBox.TypeDialog($"{playerUnits[currentCreature].Creature.Base.Name} used  {move.Base.Name} " +
-                                          $"against {enemyUnits[enemyBases.Count - 1 - currentTarget].Creature.Base.Name}");
+                                          $"against {enemyUnits[currentTarget].Creature.Base.Name}");
         yield return new WaitForSeconds(1f);
 
-        bool isFainted = enemyUnits[enemyBases.Count - 1 - currentTarget].Creature
-            .TakeDamage(move, playerUnits[currentCreature].Creature);
-        yield return enemyHuds[enemyBases.Count - 1 - currentTarget].UpdateHP();
+        bool isFainted = enemyUnits[currentTarget].Creature.TakeDamage(move, playerUnits[currentCreature].Creature);
+        yield return enemyHuds[currentTarget].UpdateHP();
         if (isFainted)
         {
-            yield return dialogBox.TypeDialog($"{enemyUnits[enemyBases.Count - 1 - currentTarget].Creature.Base.Name}" +
+            yield return dialogBox.TypeDialog($"{enemyUnits[currentTarget].Creature.Base.Name}" +
                                               $" fainted");
             yield return new WaitForSeconds(1f);
+            
+            enemyUnits[currentTarget].gameObject.SetActive(false);
+            enemyHuds[currentTarget].gameObject.SetActive(false);
+            if (currentTarget < enemyBases.Count - 1)
+            {
+                BattleUnit item = enemyUnits[currentTarget];
+                enemyUnits.RemoveAt(currentTarget);
+                enemyUnits.Add(item);
+                BattleHud item2 = enemyHuds[currentTarget];
+                enemyHuds.RemoveAt(currentTarget);
+                enemyHuds.Add(item2);
+            } 
+            enemyBases.RemoveAt(currentTarget);
+            
+            for (int i = 0; i < order.Count; i++)
+            {
+                if (order[i] == currentTarget + playerBases.Count)
+                {
+                    order.RemoveAt(i);
+                }
+            }
+            for (int i = 0; i < order.Count; i++) {
+                if (order[i] > playerBases.Count + currentTarget)
+                {
+                    order[i] -= 1;
+                }
+            }
+
+            if (enemyBases.Count == 0)
+            {
+                StartCoroutine(dialogBox.TypeDialog("Congratulations, you won :)"));
+            }
+            else
+            {
+                StartTurn();
+            }
         }
         else
         {
-            StartCoroutine(EnemyMove());
+            StartTurn();
         }
     }
 
     IEnumerator EnemyMove()
     {
         state = BattleState.EnemyMove;
-        var move = enemyUnits[enemyBases.Count - 1 - currentTarget].Creature.GetRandomMove();
-        yield return dialogBox.TypeDialog($"{enemyUnits[enemyBases.Count - 1 - currentTarget].Creature.Base.Name} used  " +
-                                          $"{move.Base.Name} against {playerUnits[currentCreature].Creature.Base.Name}");
+        currentTarget = UnityEngine.Random.Range(0, playerBases.Count);
+        var move = enemyUnits[currentCreature].Creature.GetRandomMove();
+        yield return dialogBox.TypeDialog($"{enemyUnits[currentCreature].Creature.Base.Name} used  " +
+                                          $"{move.Base.Name} against {playerUnits[currentTarget].Creature.Base.Name}");
         yield return new WaitForSeconds(1f);
 
-        bool isFainted = playerUnits[currentCreature].Creature
-            .TakeDamage(move, enemyUnits[enemyBases.Count - 1 - currentTarget].Creature);
-        yield return playerHuds[currentCreature].UpdateHP();
+        bool isFainted = playerUnits[currentTarget].Creature
+            .TakeDamage(move, enemyUnits[currentCreature].Creature);
+        yield return playerHuds[currentTarget].UpdateHP();
         if (isFainted)
         {
-            yield return dialogBox.TypeDialog($"{playerUnits[currentCreature].Creature.Base.Name} fainted");
+            yield return dialogBox.TypeDialog($"{playerUnits[currentTarget].Creature.Base.Name} fainted");
             yield return new WaitForSeconds(1f);
-        }
-        else
-        {
-            if (currentCreature == playerBases.Count - 1)
+            
+            playerUnits[currentTarget].gameObject.SetActive(false);
+            playerHuds[currentTarget].gameObject.SetActive(false);
+            if (currentTarget < playerBases.Count - 1)
             {
-                currentCreature = 0;
+                BattleUnit item = playerUnits[currentTarget];
+                playerUnits.RemoveAt(currentTarget);
+                playerUnits.Add(item);
+                BattleHud item2 = playerHuds[currentTarget];
+                playerHuds.RemoveAt(currentTarget);
+                playerHuds.Add(item2);
+            } 
+            playerBases.RemoveAt(currentTarget);
+            
+            for (int i = 0; i < order.Count; i++)
+            {
+                if (order[i] == currentTarget)
+                {
+                    order.RemoveAt(i);
+                }
+            }
+            for (int i = 0; i < order.Count; i++) {
+                if (order[i] > currentTarget && order[i] < enemyBases.Count)
+                {
+                    order[i] -= 1;
+                }
+            }
+
+            if (playerBases.Count == 0)
+            {
+                StartCoroutine(dialogBox.TypeDialog("Oh no, you lose :("));
             }
             else
             {
-                currentCreature++;
+                StartTurn();
             }
-            currentMove = 0;
-            dialogBox.SetMoveNames(playerUnits[currentCreature].Creature.Moves);
-            handR.SetActive(false);
-            handL.transform.position = playerUnits[currentCreature].transform.position + new Vector3(1,0,0);
-            StartCoroutine(PlayerAction());
+        }
+        else
+        {
+            StartTurn();
         }
     }
 
@@ -144,10 +243,11 @@ public class BattleSystem : MonoBehaviour
         dialogBox.EnableActionSelector(false);
         dialogBox.EnableDialogText(true);
         dialogBox.EnableMoveSelector(false);
-        string text = "Choose the enemy to attack";
-        yield return dialogBox.TypeDialog(text);
+        yield return dialogBox.TypeDialog("Choose the enemy to attack");
         yield return new WaitForSeconds(0.5f);
+        handR.transform.position = enemyUnits[currentTarget].transform.position + new Vector3(-1.2f,0,0);
         handR.SetActive(true);
+        handL.SetActive(false);
         state = BattleState.SelectTarget;
     }
 
@@ -244,22 +344,24 @@ public class BattleSystem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            if (currentTarget < enemyBases.Count - 1)
-            {
-                ++currentTarget;
-            }
-        }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
             if (currentTarget > 0)
             {
                 --currentTarget;
             }
         }
-        handR.transform.position = enemyUnits[enemyBases.Count - 1 - currentTarget].transform.position + new Vector3(-1.2f,0,0);
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            if (currentTarget < enemyBases.Count - 1)
+            {
+                ++currentTarget;
+            }
+        }
+        handR.transform.position = enemyUnits[currentTarget].transform.position + new Vector3(-1.2f,0,0);
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
+            handR.SetActive(false);
+            handL.SetActive(false);
             StartCoroutine(PerformPlayerMove());
         }
     }

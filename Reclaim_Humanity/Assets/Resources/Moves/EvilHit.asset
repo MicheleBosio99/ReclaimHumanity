@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: edfadf1ee149cfd41a20848dcf2d7883, type: 3}
-  m_Name: HitButStronger
+  m_Name: EvilHit
   m_EditorClassIdentifier: 
-  name: Hit but stronger
-  description: You're gonna deal more damage, but you can miss :(
+  name: Evil Hit
+  description: Yeah
   type: 0
-  power: 500
-  accuracy: 75
-  pp: 30
+  power: 60
+  accuracy: 100
+  pp: 20
