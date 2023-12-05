@@ -36,29 +36,31 @@ public class PlayerMovement : MonoBehaviour {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        if (movement != Vector2.zero)
+        if (movement != Vector2.zero){
+			if (Mathf.Abs(movement.x) >= Mathf.Abs(movement.y))
         {
-           animator.SetFloat("Horizontal", movement.x); 
-           animator.SetFloat("Vertical", movement.y); 
+           	movement.y=0;
+			animator.SetFloat("Horizontal", movement.x); 
+			animator.SetFloat("Vertical", movement.y); 
         }
-        
+		else {
+			movement.x=0;
+			animator.SetFloat("Horizontal", movement.x); 
+			animator.SetFloat("Vertical", movement.y); 
+		}
+        }
         animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
-	public void Move(InputAction.CallbackContext context) { 
-		movingDirection = context.ReadValue<Vector2>(); 
-        print(movingDirection);
-	}
 
     public void FixedUpdate() { 
 		
-        currentSpeed = normalSpeed; //normal movement
-        //new method
-        //rb.MovePosition(rb.position * movement * normalSpeed * Time.fixedDeltaTime); 
-        
-        rb.velocity = currentSpeed * movingDirection; //old method
-        
-	}
+        currentSpeed = normalSpeed;
+
+        rb.velocity = currentSpeed * movingDirection * Time.fixedDeltaTime;
+        rb.position = rb.position + movement * currentSpeed * Time.fixedDeltaTime;
+
+    }
 
     
 }
