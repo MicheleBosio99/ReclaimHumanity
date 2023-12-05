@@ -4,11 +4,12 @@ public class SpawnHandler : MonoBehaviour
 {
     [SerializeField] private GameObject[] spawns;
     private int numberOfSpawns;
+    [SerializeField] private int maxNumberOfSpawns;
 
     void Update()
     {
 
-        if (numberOfSpawns < 2) //numero di nemici massimo che possono spawnare nella zona
+        if (numberOfSpawns < maxNumberOfSpawns) //numero di nemici massimo che possono spawnare nella zona
         {
             spawns[FindSpawns()].GetComponent<Spawn>().ActivateSpawn();
         }
