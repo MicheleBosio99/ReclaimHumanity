@@ -28,6 +28,8 @@ public class OpenInventoryScript : MonoBehaviour {
     private bool finished;
     public bool Finished { set => finished = value; }
 
+    private void OnEnable() { finished = true; }
+
     public void OpenCloseUI(InputAction.CallbackContext context) {
         // if(!inventoryIsOpen) { OpenCloseUIFunc(context.performed); } inventoryIsOpen always true cannot understand why;
         OpenCloseUIFunc(context.performed);
@@ -42,7 +44,7 @@ public class OpenInventoryScript : MonoBehaviour {
     private void BlockPlayer(bool blockPlayer) {
         var playerMov = gameObject.GetComponent<PlayerMovement>();
         playerMov.CurrentSpeed = blockPlayer ? 0.0f : playerMov.NormalSpeed;
-        
+
         OpenPlayerMenuButton.SetActive(!blockPlayer);
     }
 }

@@ -1,0 +1,41 @@
+[
+    {
+        "humanID" : "00_OF_MushroomGuy",
+        "humanName" : "Johnny MushBloom",
+        "biome" : "OvergrownForest",
+        "recipesUnlockedID" : [
+            ""
+        ],
+        "spokenTo" : false,
+        "dialogue" :
+        {
+            "type" : "ordered",
+            "phrases" :
+            [
+                "Hello, my name is Johnny MushBloom",
+                "Here around me you can see some mushrooms",
+                "The red ones are really good to eat",
+                "The white ones are poisonous, don't eat them",
+                "But both of them can generate some energy if burned"
+            ]
+        }
+    },
+    {
+        "humanID" : "01_OF_CoolGuy",
+        "humanName" : "Freddy MushBloom",
+        "biome" : "OvergrownForest",
+        "recipesUnlockedID" : [
+            "00_GoodSoup"
+        ],
+        "spokenTo" : false,
+        "dialogue" :
+        {
+            "type" : "random",
+            "phrases" :
+            [
+                "Nice weather today innit",
+                "I would like a little scratch behind the ear, thanks"
+            ]
+        }
+    }
+]

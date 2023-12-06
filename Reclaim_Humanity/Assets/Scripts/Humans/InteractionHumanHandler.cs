@@ -6,45 +6,70 @@ using UnityEngine.InputSystem;
 public class InteractionHumanHandler : MonoBehaviour {
     
     [SerializeField] private GameObject dialogueUI;
+    [SerializeField] private string humanID;
+    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject humansInfoLoader;
+    [SerializeField] private GameObject humanDialogueEnabler;
     
-    private Humans human;
+    private Human human;
     private DialogueHandler dialogueHandler;
+    private PlayerMovement playerMovement;
+    private OpenInventoryScript openInventory;
+    private HumansInfoLoader infoLoader;
     
-    private bool isTyping;
-    private bool hasFinished;
     private bool clickedGoOnButton;
 
-    private void Start() {
-        human = gameObject.GetComponent<Humans>();
+    private void Awake() {
         dialogueHandler = dialogueUI.GetComponent<DialogueHandler>();
-        isTyping = false;
-        hasFinished = false;
+        playerMovement = player.GetComponent<PlayerMovement>();
+        openInventory = player.GetComponent<OpenInventoryScript>();
+        infoLoader = humansInfoLoader.GetComponent<HumansInfoLoader>();
+        dialogueUI.SetActive(false);
+    }
+
+    private void Start() {
+        dialogueHandler.SetActiveHuman(this);
         clickedGoOnButton = false;
+    }
+
+    public void InitiateDialogue() {
+        if (human == null) { human = infoLoader.GetHumanById(humanID); }
+        human.dialogue.ResetPhraseNum();
+        dialogueUI.SetActive(true);
+        openInventory.Finished = false;
+        
+        playerMovement.WalkPlayerToPosition(gameObject.transform.position + new Vector3(0.0f, -2.05f, 0.0f));
+        // StartCoroutine(WaitForXSeconds(2.0f));
+        
+        StartCoroutine(StartDialogue());
     }
     
-    public void NextPhraseButtonClicked() { clickedGoOnButton = true; }
+    private IEnumerator WaitForXSeconds(float seconds) { yield return new WaitForSeconds(seconds); }
 
-    public void StartHumanInteraction(InputAction.CallbackContext context) { clickedGoOnButton = true; }
-
-    private void Update() {
-        if (isTyping || hasFinished || !clickedGoOnButton) return;
-        
-        clickedGoOnButton = false;
-            
-        var phrase = human.Dialogue.GetNextPhrase();
-        if (phrase == null) { hasFinished = true; return; }
-
-        StartCoroutine(DisplayDialogue(phrase));
+    public void DisableDialogue() {
+        StopAllCoroutines();
+        openInventory.Finished = true;
+        dialogueUI.SetActive(false);
+        dialogueHandler.SetActiveHuman(null);
     }
+    
+    public void ClickedGoOnButton() { clickedGoOnButton = true; }
 
-    private IEnumerator DisplayDialogue(string phrase) {
-        isTyping = true;
-
-        foreach (var letter in phrase.ToCharArray()) {
-            dialogueHandler.WriteSlowText(letter);
-            yield return new WaitForSeconds(0.2f);
-        }
+    private IEnumerator StartDialogue() {
+        human.dialogue.ResetPhraseNum();
         
-        isTyping = false;
+        while(true) {
+            var phrase = human.dialogue.GetNextPhrase();
+            if (phrase == null) { break; }
+            
+            var coroutine = StartCoroutine(dialogueHandler.WriteSlowText(phrase));
+            yield return new WaitUntil(() => clickedGoOnButton);
+            StopCoroutine(coroutine);
+            dialogueHandler.EmptyText();
+            clickedGoOnButton = false;
+        }
+        // yield return new WaitForSeconds(1.0f);
+        clickedGoOnButton = false;
+        humanDialogueEnabler.SetActive(false);
     }
 }

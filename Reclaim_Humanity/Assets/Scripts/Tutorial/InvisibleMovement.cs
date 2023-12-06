@@ -5,7 +5,7 @@ public class InvisibleMovement : MonoBehaviour
 {
     [SerializeField] private Vector2 targetPosition;
     [SerializeField] private float speed;
-    [SerializeField] private CinemachineVirtualCamera camera;
+    [SerializeField] private CinemachineVirtualCamera _camera;
     
     private Rigidbody2D rb;
     private bool move;
@@ -13,9 +13,10 @@ public class InvisibleMovement : MonoBehaviour
     private Transform previousFollow;
 
     private void Start() {
-        rb = gameObject.GetComponent<Rigidbody2D>();
-        previousFollow = camera.m_Follow;
-        camera.Follow = gameObject.transform;
+        GameObject go;
+        rb = (go = gameObject).GetComponent<Rigidbody2D>();
+        previousFollow = _camera.m_Follow;
+        _camera.Follow = go.transform;
         move = true;
     }
 
@@ -34,6 +35,6 @@ public class InvisibleMovement : MonoBehaviour
     private void EndMovement() {
         rb.velocity = Vector3.zero;
         Destroy(gameObject);
-        camera.Follow = previousFollow;
+        _camera.Follow = previousFollow;
     }
 }

@@ -10,11 +10,6 @@ public class StartScenePosition : MonoBehaviour {
     [SerializeField] private Vector2 cityInitPosition = Vector2.zero;
     [SerializeField] private Vector2 wastelandsInitPosition = Vector2.zero;
     
-    private string labName = "Laboratory";
-    private string forestName = "OvergrownForest";
-    private string cityName = "RuinedCity";
-    private string wastelandsName = "Wastelands";
-    
     void Start() {
         var scene = SceneManager.GetActiveScene().name;
         switch (scene) {
