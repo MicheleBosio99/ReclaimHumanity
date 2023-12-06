@@ -16,7 +16,7 @@ MonoBehaviour:
   description: A bad guy
   spriteL: {fileID: 21300000, guid: cc859b3e07f70fe46921842d680fcd46, type: 3}
   spriteR: {fileID: 21300000, guid: 2dc1ddbbc436db44c87a63de2d75ea50, type: 3}
-  type1: 0
+  type1: 3
   type2: 0
   maxHp: 80
   attack: 8
@@ -25,5 +25,5 @@ MonoBehaviour:
   specialDefense: 12
   speed: 9
   learnableMoves:
-  - moveBase: {fileID: 11400000, guid: 95dc3b20e5f64b44495f3fd4d0cf998e, type: 2}
+  - moveBase: {fileID: 11400000, guid: ab55a9566ad37594ea7d5b9954806748, type: 2}
     level: 1

@@ -12,8 +12,8 @@ public class CreatureBase : ScriptableObject
     [SerializeField] private Sprite spriteL;
     [SerializeField] private Sprite spriteR;
 
-    [SerializeField] private Type type1;
-    [SerializeField] private Type type2;
+    [SerializeField] private CreatureType type1;
+    [SerializeField] private CreatureType type2;
     
     // Base stats
     [SerializeField] private int maxHp;
@@ -45,12 +45,12 @@ public class CreatureBase : ScriptableObject
         get { return spriteR; }
     }
     
-    public Type Type1
+    public CreatureType Type1
     {
         get { return type1; }
     }
     
-    public Type Type2
+    public CreatureType Type2
     {
         get { return type2; }
     }
@@ -108,9 +108,36 @@ public class LearnableMove
     }
 }
 
-public enum Type
+public enum CreatureType
 {
+    None,
     Normal,
     Fire,
-    Water
+    Water,
+    Grass
+}
+
+public class TypeChart
+{
+    static float[][] chart =
+    {
+        //                    NOR   FIR   WAT   GRS
+        /*NOR*/ new float[] { 1f,   1f,   1f,   1f   },
+        /*FIR*/ new float[] { 1f,   0.5f, 0.5f, 2f   },
+        /*WAT*/ new float[] { 1f,   2f,   0.5f, 0.5f },
+        /*GRS*/ new float[] { 1f,   0.5f, 2f,   0.5f }
+    };
+
+    public static float GetEffectiveness(CreatureType attackType, CreatureType defenseType)
+    {
+        if (attackType == CreatureType.None || defenseType == CreatureType.None)
+        {
+            return 1;
+        }
+
+        int row = (int)attackType - 1;
+        int col = (int)defenseType - 1;
+
+        return chart[row][col];
+    }
 }

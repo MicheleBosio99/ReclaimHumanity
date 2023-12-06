@@ -15,6 +15,6 @@ MonoBehaviour:
   name: Hit but stronger
   description: You're gonna deal more damage, but you can miss :(
   type: 0
-  power: 50
+  power: 500
   accuracy: 75
   pp: 30

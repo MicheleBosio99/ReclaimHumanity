@@ -16,7 +16,7 @@ MonoBehaviour:
   description: Another bad guy
   spriteL: {fileID: 21300000, guid: e7e87bc38a610b348940d08a640e0569, type: 3}
   spriteR: {fileID: 21300000, guid: 09fc6dc79452b7543b219148cc56052b, type: 3}
-  type1: 0
+  type1: 4
   type2: 0
   maxHp: 70
   attack: 9

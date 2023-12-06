@@ -16,7 +16,7 @@ MonoBehaviour:
   description: A nice cute little robot
   spriteL: {fileID: 21300000, guid: 26b3530c3cc164b979b6ab2ff64dc2be, type: 3}
   spriteR: {fileID: 21300000, guid: d763d2d1e723f344f8a434a16a06a8a4, type: 3}
-  type1: 0
+  type1: 1
   type2: 0
   maxHp: 100
   attack: 10
@@ -28,4 +28,6 @@ MonoBehaviour:
   - moveBase: {fileID: 11400000, guid: 95dc3b20e5f64b44495f3fd4d0cf998e, type: 2}
     level: 1
   - moveBase: {fileID: 11400000, guid: 50abb94a01816654ca94bf89ff968637, type: 2}
+    level: 2
+  - moveBase: {fileID: 11400000, guid: c5fd54238bb23fd46b8f1a0bea0d4e56, type: 2}
     level: 2
