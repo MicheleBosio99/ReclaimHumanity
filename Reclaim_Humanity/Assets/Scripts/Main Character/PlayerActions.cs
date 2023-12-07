@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] private Vector2 movement;
     private Rigidbody2D rb;
     public Animator animator;
+    public AudioClip MoveClip;
     
     private void Start() {
         // DontDestroyOnLoad(gameObject);
@@ -37,6 +38,7 @@ public class PlayerMovement : MonoBehaviour {
         movement.y = Input.GetAxisRaw("Vertical");
 
         if (movement != Vector2.zero){
+            
 			if (Mathf.Abs(movement.x) >= Mathf.Abs(movement.y))
         {
            	movement.y=0;
@@ -48,6 +50,9 @@ public class PlayerMovement : MonoBehaviour {
 			animator.SetFloat("Horizontal", movement.x); 
 			animator.SetFloat("Vertical", movement.y); 
 		}
+            
+            //play the sound for move
+            //SoundFXManager.instance.PlayMovementFXClip(MoveClip, transform,1f);
         }
         animator.SetFloat("Speed", movement.sqrMagnitude);
     }
@@ -60,6 +65,8 @@ public class PlayerMovement : MonoBehaviour {
         rb.velocity = currentSpeed * movingDirection * Time.fixedDeltaTime;
         rb.position = rb.position + movement * currentSpeed * Time.fixedDeltaTime;
 
+        
+        
     }
 
     

@@ -1947,6 +1947,10 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: OpenInventoryScript, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4370359794366168160, guid: f7ad302aac4072c4b9ba222f39dcc7f4, type: 3}
+      propertyPath: MoveClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 94066509337324be2bd238d095cf571a, type: 3}
     - target: {fileID: 4754563326288330437, guid: f7ad302aac4072c4b9ba222f39dcc7f4, type: 3}
       propertyPath: PlayerMenu
       value: 
@@ -37248,6 +37252,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1643418826}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1252815334 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6842158338786297614, guid: 83eb18ad3db24463dac692ca45001acb, type: 3}
+  m_PrefabInstance: {fileID: 8880859137171098018}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1257653287
 GameObject:
   m_ObjectHideFlags: 0
@@ -83969,7 +83978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1651445307
 Transform:
   m_ObjectHideFlags: 0
@@ -83997,7 +84006,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1401de2cd389421fad021be79f4819e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundFXObject: {fileID: 0}
+  movementFXObject: {fileID: 1868115344}
+  soundFXObject: {fileID: 1252815334}
 --- !u!222 &1656107532
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -87211,6 +87221,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.28095, y: 0.7772459}
   m_EdgeRadius: 0
+--- !u!82 &1868115344 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8015292768170805173, guid: f7ad302aac4072c4b9ba222f39dcc7f4, type: 3}
+  m_PrefabInstance: {fileID: 151245728}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1870283996 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1562620262135036958, guid: 41ad187aaf1df4749ba819ab8e1f452a, type: 3}
@@ -107810,6 +107825,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 19.8
       objectReference: {fileID: 0}
+    - target: {fileID: 6349115769267439832, guid: 83eb18ad3db24463dac692ca45001acb, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: adf12ddc1da55484f8d76a86d222518e, type: 3}
     - target: {fileID: 6850308894323236715, guid: 83eb18ad3db24463dac692ca45001acb, type: 3}
       propertyPath: m_Name
       value: Music&Sound
