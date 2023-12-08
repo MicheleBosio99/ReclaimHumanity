@@ -10,7 +10,7 @@ public class StartScenePosition : MonoBehaviour {
     [SerializeField] private Vector2 cityInitPosition = Vector2.zero;
     [SerializeField] private Vector2 wastelandsInitPosition = Vector2.zero;
     
-    void Start() {
+    private void Start() {
         var scene = SceneManager.GetActiveScene().name;
         switch (scene) {
             case "Laboratory" : gameObject.transform.position = labInitPosition; break;
@@ -19,5 +19,8 @@ public class StartScenePosition : MonoBehaviour {
             case "Wastelands" : gameObject.transform.position = wastelandsInitPosition; break;
             default: Debug.Log("Error in finding scene name"); break;
         }
+        
+        
+        // gameObject.GetComponent<OpenInventoryScript>().enabled = true;
     }
 }

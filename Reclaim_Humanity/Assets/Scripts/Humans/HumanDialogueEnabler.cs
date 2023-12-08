@@ -3,7 +3,6 @@ using UnityEngine;
 public class HumanDialogueEnabler : MonoBehaviour {
     
     [SerializeField] private GameObject human;
-    
     private InteractionHumanHandler interactionHumanHandler;
     
     private bool firstTime = true;

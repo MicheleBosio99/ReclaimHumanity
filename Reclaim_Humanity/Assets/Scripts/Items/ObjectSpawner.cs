@@ -13,6 +13,7 @@ public class ObjectSpawner : MonoBehaviour {
     [SerializeField] private int maxItems = 12;
     [SerializeField] private float minSpawnDelay = 15f;
     [SerializeField] private float maxSpawnDelay = 25f;
+    [SerializeField] private bool respawn;
 
     private PolygonCollider2D spawnAreaCollider;
     
@@ -33,7 +34,7 @@ public class ObjectSpawner : MonoBehaviour {
         if (spawnAreaCollider != null && enabled) { SpawnItems(); }
     }
     
-    IEnumerator SpawnItemsRoutine() {
+    private IEnumerator SpawnItemsRoutine() {
         yield return new WaitForSeconds(Random.Range(minSpawnDelay, maxSpawnDelay));
         if (spawnedItems.Count == 0) { SpawnItems(); }
     }
@@ -72,6 +73,7 @@ public class ObjectSpawner : MonoBehaviour {
 
     public void ItemGotPickedUp(GameObject item) {
         if (spawnedItems.Contains(item)) { spawnedItems.Remove(item); }
+        if (!respawn) { return; }
         if (spawnedItems.Count == 0) { StartCoroutine(SpawnItemsRoutine()); }
     }
 }

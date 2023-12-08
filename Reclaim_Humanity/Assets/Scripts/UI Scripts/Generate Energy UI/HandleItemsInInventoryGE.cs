@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -42,8 +41,12 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
     public void OnDisable() { if (holdingSlotsUIList != null) { foreach (var slot in holdingSlotsUIList) { slot.ResetSlot(); } } }
 
     private void UpdateSlot() {
-        for (var i = 0; i < inventorySO.OrdinaryItemsInInventory.Count(); i++) {
+        var i = 0;
+        for (i = 0; i < inventorySO.OrdinaryItemsInInventory.Count(); i++) {
             inventorySlotsUI[i].GetComponent<HandleItemInSlotGE>().FillSlotWithItem(inventorySOItems[i]);
+        }
+        for (var j = i; j < inventorySO.MaxOrdinarySlots; j++) {
+            inventorySlotsUI[i].GetComponent<HandleItemInSlotGE>().EmptySlot();
         }
     }
 
@@ -125,7 +128,17 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
         
         inventorySOItems.RemoveAll(slot => slot.ItemQuantity == 0);
     }
-
+    
+    // private float timer = 0.0f;
+    //
+    // private void Update() {
+    //     timer += Time.deltaTime;
+    //
+    //     if (timer >= 4.0f) {
+    //         Debug.Log(inventorySO.OrdinaryItemToString());
+    //         timer = 0.0f;
+    //     }
+    // }
 }
 
 

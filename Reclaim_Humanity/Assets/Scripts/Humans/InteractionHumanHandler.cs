@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using Newtonsoft.Json;
 
 public class InteractionHumanHandler : MonoBehaviour {
     
@@ -10,56 +12,80 @@ public class InteractionHumanHandler : MonoBehaviour {
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject humansInfoLoader;
     [SerializeField] private GameObject humanDialogueEnabler;
+    [SerializeField] private GameObject unlockedANDRewardsUI;
+    
+    [SerializeField] private GameObject recipesSerializerGO;
+    private RecipesInfoLoader _recipesInfoLoader;
+    
+    [SerializeField] private TextAsset recipesJsonTextAsset;
     
     private Human human;
     private DialogueHandler dialogueHandler;
     private PlayerMovement playerMovement;
     private OpenInventoryScript openInventory;
     private HumansInfoLoader infoLoader;
+    private VisualizeUnlocked visualizeUnlocked;
+    
+    private string recipesJson;
+    private List<Recipe> recipesList;
     
     private bool clickedGoOnButton;
+    
+    private string persistentRecipePath;
+
+    public Human Human {
+        get => human;
+        set => human = value;
+    }
 
     private void Awake() {
         dialogueHandler = dialogueUI.GetComponent<DialogueHandler>();
         playerMovement = player.GetComponent<PlayerMovement>();
         openInventory = player.GetComponent<OpenInventoryScript>();
         infoLoader = humansInfoLoader.GetComponent<HumansInfoLoader>();
+        visualizeUnlocked = unlockedANDRewardsUI.GetComponent<VisualizeUnlocked>();
+        _recipesInfoLoader = recipesSerializerGO.GetComponent<RecipesInfoLoader>();
         dialogueUI.SetActive(false);
     }
 
-    private void Start() {
-        dialogueHandler.SetActiveHuman(this);
-        clickedGoOnButton = false;
-    }
+    // private void Start() {
+    //     if (!File.Exists(persistentRecipePath)) { File.WriteAllText(persistentRecipePath, recipesJsonTextAsset.text); }
+    //     recipesJson = File.ReadAllText(persistentRecipePath);
+    //     recipesList = JsonConvert.DeserializeObject<List<Recipe>>(recipesJson);
+    // }
 
     public void InitiateDialogue() {
-        if (human == null) { human = infoLoader.GetHumanById(humanID); }
-        human.dialogue.ResetPhraseNum();
+        dialogueHandler.SetActiveHuman(this);
+        clickedGoOnButton = false;
+        human ??= infoLoader.GetHumanById(humanID);
+        
+        dialogueHandler.WriteNameText(human.humanName);
         dialogueUI.SetActive(true);
         openInventory.Finished = false;
         
-        playerMovement.WalkPlayerToPosition(gameObject.transform.position + new Vector3(0.0f, -2.05f, 0.0f));
-        // StartCoroutine(WaitForXSeconds(2.0f));
+        // playerMovement.WalkPlayerToPosition(gameObject.transform.position + new Vector3(0.0f, -2.05f, 0.0f)); TODO
         
-        StartCoroutine(StartDialogue());
+        StartCoroutine(StartDialogue(!human.spokenTo));
     }
-    
-    private IEnumerator WaitForXSeconds(float seconds) { yield return new WaitForSeconds(seconds); }
 
     public void DisableDialogue() {
         StopAllCoroutines();
         openInventory.Finished = true;
-        dialogueUI.SetActive(false);
+        openInventory.OpenCloseUIFunc(true);
+        
+        if(dialogueUI != null) { dialogueUI.SetActive(false); }
         dialogueHandler.SetActiveHuman(null);
+        dialogueHandler.EmptyNameText();
     }
     
     public void ClickedGoOnButton() { clickedGoOnButton = true; }
 
-    private IEnumerator StartDialogue() {
-        human.dialogue.ResetPhraseNum();
+    private IEnumerator StartDialogue(bool firstTime) {
+        var dialogue = firstTime ? human.firstDialogue : human.generalDialogue;
+        dialogue.ResetPhraseNum();
         
         while(true) {
-            var phrase = human.dialogue.GetNextPhrase();
+            var phrase = dialogue.GetNextPhrase();
             if (phrase == null) { break; }
             
             var coroutine = StartCoroutine(dialogueHandler.WriteSlowText(phrase));
@@ -68,7 +94,13 @@ public class InteractionHumanHandler : MonoBehaviour {
             dialogueHandler.EmptyText();
             clickedGoOnButton = false;
         }
-        // yield return new WaitForSeconds(1.0f);
+
+        if (human.recipesUnlockedID != "") {
+            var recipeEnabled = _recipesInfoLoader.UnlockRecipe(human.recipesUnlockedID);
+            if (!recipeEnabled.Item1) { visualizeUnlocked.StartShowUnlockedMessage("recipe", recipeEnabled.Item2); }
+        }
+        infoLoader.ToggleSpokenTo(human.humanID);
+
         clickedGoOnButton = false;
         humanDialogueEnabler.SetActive(false);
     }
