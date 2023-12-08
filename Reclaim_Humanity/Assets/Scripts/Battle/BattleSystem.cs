@@ -1,9 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using System.Linq;
 
 public enum BattleState { Start, PlayerAction, PlayerMove, SelectTarget, EnemyMove, Busy }
 
@@ -36,6 +38,10 @@ public class BattleSystem : MonoBehaviour
 
     private void Start()
     {
+        playerBases = GameManager.party;
+        playerLevels = GameManager.partyLevels;
+        enemyBases = GameManager.enemies;
+        enemyLevels = GameManager.enemiesLevels;
         StartCoroutine(SetupBattle());
     }
 
@@ -61,16 +67,23 @@ public class BattleSystem : MonoBehaviour
 
     private void SetOrder()
     {
+        List<int> speeds = new List<int>();
         order = new List<int>();
         for (int i = 0; i < playerBases.Count; i++)
         {
-            order.Add(i);
+            speeds.Add(playerBases[i].Speed + UnityEngine.Random.Range(0,10));
         }
         for (int i = 0; i < enemyBases.Count; i++)
         {
-            order.Add(i + playerBases.Count);
+            speeds.Add(enemyBases[i].Speed + UnityEngine.Random.Range(0,10));
         }
-        print(order.Count);
+        
+        for (int i = 0; i < playerBases.Count + enemyBases.Count; i++)
+        {
+            int maxIndex = speeds.IndexOf(speeds.Max());
+            order.Add(maxIndex);
+            speeds[maxIndex] = 0;
+        }
     }
 
     private void StartTurn()
@@ -81,7 +94,6 @@ public class BattleSystem : MonoBehaviour
         }
         int current = order[0];
         order.RemoveAt(0);
-        Debug.Log(current);
         if (current < playerBases.Count)
         {
             currentCreature = current;
@@ -146,7 +158,7 @@ public class BattleSystem : MonoBehaviour
 
             if (enemyBases.Count == 0)
             {
-                StartCoroutine(dialogBox.TypeDialog("Congratulations, you won :)"));
+                StartCoroutine(WinFight());
             }
             else
             {
@@ -220,6 +232,13 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    IEnumerator WinFight()
+    {
+        yield return dialogBox.TypeDialog("Congratulations, you won :)");
+        yield return new WaitForSeconds(0.5f);
+        GameManager.ExitCombat();
+    }
+
     IEnumerator ShowDamageDetails(DamageDetails damageDetails)
     {
         if (damageDetails.Critical > 1f)
@@ -248,6 +267,14 @@ public class BattleSystem : MonoBehaviour
         dialogBox.EnableActionSelector(true);
         dialogBox.EnableDialogText(true);
         dialogBox.EnableMoveSelector(false);
+        state = BattleState.PlayerAction;
+    }
+
+    IEnumerator Run()
+    {
+        state = BattleState.Busy;
+        yield return dialogBox.TypeDialog("You tried :)");
+        yield return new WaitForSeconds(0.3f);
         state = BattleState.PlayerAction;
     }
     
@@ -319,7 +346,7 @@ public class BattleSystem : MonoBehaviour
             }
             else if (currentAction == 1)
             {
-                
+                StartCoroutine(Run());
             }
         }
     }

@@ -12,11 +12,18 @@ public class Creature
     
     public List<Move> Moves { get; set; }
 
-    public Creature(CreatureBase cbase, int clevel)
+    public Creature(CreatureBase cbase, int clevel, int currHp=1000)
     {
         Base = cbase;
         Level = clevel;
-        HP = MaxHp;
+        if (currHp == 1000)
+        {
+            HP = MaxHp;
+        }
+        else
+        {
+            HP = currHp;
+        }
         
         Moves = new List<Move>();
         foreach (var move in Base.LearnableMoves) 
