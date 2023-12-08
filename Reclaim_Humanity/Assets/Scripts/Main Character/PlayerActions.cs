@@ -21,7 +21,9 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] private Vector2 movement;
     private Rigidbody2D rb;
     public Animator animator;
-
+    
+    public AudioClip MoveClip;
+    
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         currentSpeed = normalSpeed;
@@ -36,6 +38,7 @@ public class PlayerMovement : MonoBehaviour {
         movement.y = Input.GetAxisRaw("Vertical");
 
         if (movement != Vector2.zero){
+            
 			if (Mathf.Abs(movement.x) >= Mathf.Abs(movement.y))
         {
            	movement.y=0;
@@ -47,6 +50,9 @@ public class PlayerMovement : MonoBehaviour {
 			animator.SetFloat("Horizontal", movement.x); 
 			animator.SetFloat("Vertical", movement.y); 
 		}
+            
+            //play the sound for move
+            //SoundFXManager.instance.PlayMovementFXClip(MoveClip, transform,1f);
         }
         animator.SetFloat("Speed", movement.sqrMagnitude);
     }
@@ -54,12 +60,15 @@ public class PlayerMovement : MonoBehaviour {
     public void OnMove(InputAction.CallbackContext context) { movingDirection = context.ReadValue<Vector2>(); }
 
     public void FixedUpdate() { rb.velocity = currentSpeed * movingDirection; }
-
+    
     public void MovePlayer(Vector2 endPosition) {
-        gameObject.transform.position = endPosition;
         movement.x = 0.0f;
         movement.y = 1.0f;
     }
+
+    public void ChangePlayerPosition(Vector2 endPosition) { gameObject.transform.position = endPosition; }
+    
+    
 
     public void WalkPlayerToPosition(Vector2 endPos) { StartCoroutine(WalkPlayer(endPos)); }
     

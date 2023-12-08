@@ -100,7 +100,7 @@ public class LoversBehaviour : MonoBehaviour
         }
     }
 
-    private void ChangePlayerPosition() { player.GetComponent<PlayerMovement>().MovePlayer(gameObject.transform.position); }
+    private void ChangePlayerPosition() { player.GetComponent<PlayerMovement>().ChangePlayerPosition(gameObject.transform.position); }
 
     private IEnumerator FadeToBlack(bool fade) {
         var startColor = blackBackgroundImage.color;

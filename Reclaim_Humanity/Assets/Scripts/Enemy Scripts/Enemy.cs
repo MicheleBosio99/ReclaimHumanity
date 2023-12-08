@@ -8,7 +8,8 @@ using UnityEngine.SceneManagement;
 public class Enemy : MonoBehaviour
 {
     [Header("Enemy Characteristics")]
-    [SerializeField] private int enemyLevel; // ??
+    [SerializeField] private List<CreatureBase> enemies;
+    [SerializeField] private List<int> levels;// ??
     [SerializeField] private int maxHP;
     private int currentHP;
 
@@ -17,6 +18,8 @@ public class Enemy : MonoBehaviour
     public float speed;
     private float distance;
     private Vector2 direction;
+    private SpriteRenderer _spriteR;
+    [SerializeField] private bool _isSpriteFrontToRight;
 
     [Header("FIELD OF VIEW")] [Range(0, 360)]
     public float radius;
@@ -26,7 +29,7 @@ public class Enemy : MonoBehaviour
     private bool playerInSight;
     private bool isChasing;
 
-    private SpriteRenderer _spriteR;
+    
 
     [Header("ENEMY TYPE")] 
     [SerializeField] private EnemyType type;
@@ -47,7 +50,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         spawnHandler = FindObjectOfType<SpawnHandler>();
-        _spriteR = FindObjectOfType<SpriteRenderer>();
+        _spriteR = this.GetComponent<SpriteRenderer>();
         currentHP = maxHP;
         //enemyHP.text = "HP: " + currentHP + " / " + maxHP;
 
@@ -80,7 +83,9 @@ public class Enemy : MonoBehaviour
             spawn.SetActive(false);
             spawnHandler.NumberOfSpawnsActiveDecrement();
 
-            SceneManager.LoadScene("Battle"); // valid for every enemy actually
+            GameManager.enemies = enemies;
+            GameManager.enemiesLevels = levels;
+            GameManager.EnterCombat();
         }
     }
     
@@ -184,14 +189,7 @@ public class Enemy : MonoBehaviour
         if (playerInSight)
         {
             // To mirror enemy sprite if it's moving right or left
-            if (direction.x >= 0f)
-            {
-                _spriteR.flipX = false;
-            }
-            else
-            {
-                _spriteR.flipX = true;
-            }
+            _spriteR.flipX = _isSpriteFrontToRight ? !(direction.x >= 0f) : direction.x >= 0f;
 
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position,
                 speed * Time.deltaTime);
@@ -208,6 +206,15 @@ public class Enemy : MonoBehaviour
             else
             {
                 transform.localScale = new Vector2(-2, 2);
+            }
+            
+            if (direction.x >= 0f)
+            {
+                _spriteR.flipX = false;
+            }
+            else
+            {
+                _spriteR.flipX = true;
             }
      */
 }
