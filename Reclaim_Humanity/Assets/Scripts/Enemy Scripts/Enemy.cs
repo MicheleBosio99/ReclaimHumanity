@@ -1,9 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
 {
@@ -12,10 +12,11 @@ public class Enemy : MonoBehaviour
     [SerializeField] private List<int> levels;// ??
     [SerializeField] private int maxHP;
     private int currentHP;
+    private bool isActive;
 
     [Header("CHASING")] 
-    public GameObject player;
-    public float speed;
+    private GameObject player;
+    [SerializeField] private float speed;
     private float distance;
     private Vector2 direction;
     private SpriteRenderer _spriteR;
@@ -28,9 +29,7 @@ public class Enemy : MonoBehaviour
     private float angle; // public?
     private bool playerInSight;
     private bool isChasing;
-
     
-
     [Header("ENEMY TYPE")] 
     [SerializeField] private EnemyType type;
     private enum EnemyType
@@ -46,23 +45,18 @@ public class Enemy : MonoBehaviour
     private SpawnHandler spawnHandler;
     // target == player
 
+    private Transform spawnPoint;
     
     void Start()
     {
         spawnHandler = FindObjectOfType<SpawnHandler>();
         _spriteR = this.GetComponent<SpriteRenderer>();
         currentHP = maxHP;
-        //enemyHP.text = "HP: " + currentHP + " / " + maxHP;
 
-        player = GameObject.FindGameObjectWithTag("Player");
-        
-        EnemyRoutine();
+        player = GameObject.FindWithTag("Player");
+        spawnPoint = gameObject.transform;
     }
 
-    void Update()
-    {
-
-    }
 
     public void ActivateEnemy()
     {
@@ -82,10 +76,18 @@ public class Enemy : MonoBehaviour
             enem.SetActive(false);
             spawn.SetActive(false);
             spawnHandler.NumberOfSpawnsActiveDecrement();
-
+            
             GameManager.enemies = enemies;
             GameManager.enemiesLevels = levels;
             GameManager.EnterCombat();
+        }
+    }
+
+    public void SetEnemySquad(List<GameObject> allEnemies)
+    {
+        for (int i = 0; i < allEnemies.Count; i++)
+        {
+            enemies.Add(ScriptableObject.CreateInstance<CreatureBase>());
         }
     }
     
@@ -196,7 +198,41 @@ public class Enemy : MonoBehaviour
             distance = Vector2.Distance(transform.position, player.transform.position);
 
         }
+        else
+        {
+            transform.position = Vector2.MoveTowards(transform.position, spawnPoint.transform.position,
+                speed * Time.deltaTime);
+            
+            // Walk around
+            while (!playerInSight)
+            {
+                var nextPos = NextPosition();
+                Vector2.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
+            }
+        }
     }
+
+    private Vector2 NextPosition()
+    {
+        PolygonCollider2D poly = GetComponentInParent<PolygonCollider2D>();
+        var bounds = poly.bounds;
+        
+        var foundPoint = false;
+        var maxAttempts = 100;
+    
+        Vector2 foundPosition = Vector2.zero;
+
+        while (!foundPoint && maxAttempts > 0) {
+            foundPosition =  new Vector2(Random.Range(bounds.min.x, bounds.max.x), Random.Range(bounds.min.y, bounds.max.y));
+            foundPoint = poly.OverlapPoint(foundPosition);
+
+            maxAttempts --;
+        }
+
+        return foundPosition;
+
+    }
+    
     
     /* If _spriteR throws exceptions or doesn't work well:
         if (direction.x >= 0f)
