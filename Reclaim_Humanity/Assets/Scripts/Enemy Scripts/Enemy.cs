@@ -179,6 +179,8 @@ public class Enemy : MonoBehaviour
         //SceneManager.LoadScene("Battle");
     }
     
+    
+    //ciaoo
     void AiChase()
     {
         distance = Vector2.Distance(transform.position, player.transform.position);
