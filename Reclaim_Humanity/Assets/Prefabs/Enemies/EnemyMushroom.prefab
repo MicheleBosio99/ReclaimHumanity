@@ -47,11 +47,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad0a937567a05e4d9406c50c9f2635d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies:
-  - {fileID: 11400000, guid: 8c9a937caedbae949808b246a03734af, type: 2}
-  levels: 
+  enemyLevel: 1
   maxHP: 10
-  speed: 6
+  player: {fileID: 0}
+  speed: 4
   _isSpriteFrontToRight: 1
   radius: 6
   targetMask:
