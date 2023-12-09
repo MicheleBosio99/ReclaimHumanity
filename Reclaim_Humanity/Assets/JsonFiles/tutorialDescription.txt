@@ -1,9 +1,13 @@
-<align=center><size=150%>Reclaim Humanity</size></align>
+<align=center><size=125%>- HUMANITY LAST HOPE -</size></align>
 <align=justified>
-In a near-future world, human civilization had reached its technological peak, and aimed next on achieving immortality. Scientists, one step away from this monumental feat, designed for this purpose an artificial virus. This virus promised eternal life but came with an unforeseen consequence: perpetual paralysis for those it infected. A catastrophic breach of this virus from its containment led to the virus spreading uncontrollably, afflicting the global population, making everyone immortal yet permanently paralyzed.
+In a near-future world, human civilization had reached its technological peak, and aimed next on achieving immortality.
+Scientists, one step away from this monumental feat, designed for this purpose an artificial virus. This virus promised eternal life but came with an unforeseen consequence: perpetual paralysis for those it infected. A catastrophic breach of this virus from its containment led to the virus spreading uncontrollably, afflicting the global population, making everyone immortal yet permanently paralyzed.
+
+
 
 Years later, in the mess of what was left of society, a lone robot, Wollo, persisted in performing routine chores. He didn't care too much about the plague that devastated humanity, however he had the constant desire of free his paralyzed creator, Dr. IDK, from the permanent effects of the virus. However, without IDK help, Wollo wasn't able to save everyone alone. Until... One fateful day, searching inside IDK tools, Wollo found a remarkable device, the <u>Trancesmitter</u>, which allows him to access and communicate through people's minds.
 
-Utilizing this tool, Wollo dug into into Dr. IDK's thoughts, and was finally able to get information talking directly with him, discovering a potential solution to humanity's situation. Tasked with the monumental challenge of saving his creator and humanity itself, Wollo faced the greatest mission of his existence. The pressing question persisted: could he face the odds and give everyone their former lifes back? The weight of the world's destiny rested on the shoulders of this resolute android...
 
+
+Utilizing this tool, Wollo dug into into Dr. IDK's thoughts, and was finally able to get information talking directly with him, discovering a potential solution to humanity's situation. Tasked with the monumental challenge of saving his creator and humanity itself, Wollo faced the greatest mission of his existence. The pressing question persisted: could he face the odds and give everyone their former lifes back? The weight of the world's destiny rested on the shoulders of this resolute android...
 </align>

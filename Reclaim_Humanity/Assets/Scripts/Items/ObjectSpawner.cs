@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [SuppressMessage("ReSharper", "IteratorNeverReturns")]
 public class ObjectSpawner : MonoBehaviour {
@@ -17,21 +18,21 @@ public class ObjectSpawner : MonoBehaviour {
 
     private PolygonCollider2D spawnAreaCollider;
     
-    [SerializeField] private bool enabled = true;
+    [SerializeField] private bool _enabled = true;
     
     private float spawnTimer;
     
     private List<GameObject> spawnedItems = new List<GameObject>();
 
     public bool Enabled {
-        get => enabled;
-        set => enabled = value;
+        get => _enabled;
+        set => _enabled = value;
     }
 
     private void Start() {
         spawnedItems = new List<GameObject>();
         spawnAreaCollider = GetComponent<PolygonCollider2D>();
-        if (spawnAreaCollider != null && enabled) { SpawnItems(); }
+        if (spawnAreaCollider != null && _enabled) { SpawnItems(); }
     }
     
     private IEnumerator SpawnItemsRoutine() {
