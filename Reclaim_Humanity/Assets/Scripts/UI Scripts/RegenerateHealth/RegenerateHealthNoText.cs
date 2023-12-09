@@ -33,7 +33,9 @@ public class RegenerateHealthNoText : MonoBehaviour {
         StopAllCoroutines();
     }
 
-    private IEnumerator SleepCoroutine() {
+    private IEnumerator SleepCoroutine()
+    {
+        GameManager.RestoreHps();
         invScript.Finished = false;
         var startColor = backgroundImage.color;
         var targetColor = backgroundImage.color; targetColor.a = 1.0f;
