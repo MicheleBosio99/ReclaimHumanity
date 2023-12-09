@@ -8,7 +8,7 @@ public class OpenInventoryScript : MonoBehaviour {
     [SerializeField] private GameObject PlayerMenu;
     [SerializeField] private GameObject OpenPlayerMenuButton;
     
-    // private bool inventoryIsOpen = false;
+    // private bool inventoryIsOpen = true;
 
     public void OpenInventory(InputAction.CallbackContext context) {
         if (!context.performed || isActive) return;
