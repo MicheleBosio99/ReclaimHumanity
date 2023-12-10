@@ -46,12 +46,6 @@ public class InteractionHumanHandler : MonoBehaviour {
         dialogueUI.SetActive(false);
     }
 
-    // private void Start() {
-    //     if (!File.Exists(persistentRecipePath)) { File.WriteAllText(persistentRecipePath, recipesJsonTextAsset.text); }
-    //     recipesJson = File.ReadAllText(persistentRecipePath);
-    //     recipesList = JsonConvert.DeserializeObject<List<Recipe>>(recipesJson);
-    // }
-
     public void InitiateDialogue() {
         dialogueHandler.SetActiveHuman(this);
         clickedGoOnButton = false;
@@ -60,8 +54,6 @@ public class InteractionHumanHandler : MonoBehaviour {
         dialogueHandler.WriteNameText(human.humanName);
         dialogueUI.SetActive(true);
         openInventory.Finished = false;
-        
-        // playerMovement.WalkPlayerToPosition(gameObject.transform.position + new Vector3(0.0f, -2.05f, 0.0f)); TODO
         
         StartCoroutine(StartDialogue(!human.spokenTo));
     }

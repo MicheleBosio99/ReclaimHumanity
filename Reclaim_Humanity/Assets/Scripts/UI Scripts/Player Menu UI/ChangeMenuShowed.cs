@@ -59,6 +59,9 @@ public class ChangeMenuShowed : MonoBehaviour {
                 if (currentEnabledGameObj == TutorialPanel) { OnCloseButtonClick(); }
                 else { OnTutorialButtonClick(); }
                 break;
+            case "close":
+                OnCloseButtonClick();
+                break;
         }
     }
     

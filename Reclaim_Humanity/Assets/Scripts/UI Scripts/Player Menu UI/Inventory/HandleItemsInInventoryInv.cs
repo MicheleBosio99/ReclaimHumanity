@@ -39,7 +39,10 @@ public class HandleItemsInInventoryInv : MonoBehaviour {
         CurrentSelectedSlot = ordinaryInventorySlotsUI[0];
     }
 
-    private void OnEnable() { UpdateOrdinarySlots(); UpdateSpecialSlots(); }
+    private void OnEnable() { 
+        if (inventorySlotsSO == null) { return; }
+        UpdateOrdinarySlots(); UpdateSpecialSlots();
+    }
 
     public void AddNewItemToInventory(InventoryItem item) {
         if (item.IsSpecialItem) { AddNewSpecialItemToInventory(item); }

@@ -30,7 +30,7 @@ public class PentagonalChartBehaviour : MonoBehaviour {
             GameManager.party[0].Defense,
             GameManager.party[0].SpecialAttack,
             GameManager.party[0].SpecialDefense,
-            GameManager.party[0].Speed / 10
+            GameManager.party[0].Speed
         };
 
         var vertices = new Vector3[numberOfVertex + 1];

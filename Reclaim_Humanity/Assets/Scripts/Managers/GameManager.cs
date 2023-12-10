@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
         recipesInfoLoader.CleanData();
         currentSceneName = "Laboratory";
         sceneToLoad = "Laboratory";
-        SceneManager.LoadScene("LoadingScene");
+        SceneManager.LoadScene("Introduction");
         SaveGame();
     }
     

@@ -73,5 +73,5 @@ public class RegenerateHealthNoText : MonoBehaviour {
     
     private void ChangeText(string _text) { text.text = _text; }
     
-    private void RegenerateHealth() {  }
+    private void RegenerateHealth() { GameManager.RestoreHps(); }
 }

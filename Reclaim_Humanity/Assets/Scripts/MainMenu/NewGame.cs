@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class NewGame : MonoBehaviour
 {
-    public void OnButtonClick()
-    {
+    public void OnButtonClick() {
         GameManager.NewGame();
     }
 }

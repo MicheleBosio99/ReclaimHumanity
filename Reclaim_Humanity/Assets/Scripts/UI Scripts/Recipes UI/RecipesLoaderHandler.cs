@@ -21,8 +21,7 @@ public class RecipesLoaderHandler : MonoBehaviour {
 
     private void Awake() {
         persistentRecipePath = Path.Combine(Application.persistentDataPath, "Resources/recipes.json");
-        if (!Directory.Exists(Path.Combine(Application.persistentDataPath, "Resources")))
-        {
+        if (!Directory.Exists(Path.Combine(Application.persistentDataPath, "Resources"))) {
             CreatePersistentFolders.GetInstance()
                 .GeneratePersistentFolder(Path.Combine(Application.persistentDataPath, "Resources"));
         }

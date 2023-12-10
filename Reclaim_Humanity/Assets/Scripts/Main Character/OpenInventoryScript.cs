@@ -11,13 +11,16 @@ public class OpenInventoryScript : MonoBehaviour {
 
     public void OpenInventory(InputAction.CallbackContext context) {
         if (!context.performed || isActive) return;
-        
-        PlayerMenu.SetActive(true);
-        inventoryIsOpen = true;
-        PlayerMenu.GetComponent<ChangeMenuShowed>().GetKeyPressed(context.control.name);
+        OpenInventoryBody(context.control.name);
     }
 
-    public void ClosedInventory() { inventoryIsOpen = false; }
+    public void OpenInventoryBody(string keyPressed) {
+        PlayerMenu.SetActive(true);
+        inventoryIsOpen = true;
+        PlayerMenu.GetComponent<ChangeMenuShowed>().GetKeyPressed(keyPressed);
+    }
+
+    public void ClosedInventory() { inventoryIsOpen = false; isActive = false; }
 
     public GameObject CurrentlyToOpenUI { get; set; }
     
@@ -49,11 +52,11 @@ public class OpenInventoryScript : MonoBehaviour {
     //
     // private void Update() {
     //     
-    //     if (!(Time.time - lastLogTime >= 1.0f)) return;
+    //     if (!(Time.time - lastLogTime >= 2.0f)) return;
     //     
-    //     Debug.Log($"Finished: {finished}");
-    //     Debug.Log($"isActive: {isActive}");
-    //     Debug.Log($"CurrentlyToOpenUI: {CurrentlyToOpenUI}");
+    //     Debug.Log($"inventoryIsOpen: {inventoryIsOpen}");
+    //     // Debug.Log($"isActive: {isActive}");
+    //     // Debug.Log($"CurrentlyToOpenUI: {CurrentlyToOpenUI}");
     //         
     //     lastLogTime = Time.time;
     // }

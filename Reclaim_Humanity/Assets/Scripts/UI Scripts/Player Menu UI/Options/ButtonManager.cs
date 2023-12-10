@@ -18,8 +18,8 @@ public class ButtonFunctions : MonoBehaviour {
 
     public void OnGoBackClick() { YouSureQuitView.SetActive(false); }
 
-    public void OnReallyQuitGameClick()
-    {
+    public void OnReallyQuitGameClick() {
+        player.GetComponent<OpenInventoryScript>().OpenInventoryBody("close");
         GameManager.GoToMainMenu();
     }
 
