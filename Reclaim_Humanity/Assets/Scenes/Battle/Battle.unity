@@ -1264,8 +1264,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -143, y: -63.39}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchoredPosition: {x: -145.49, y: -65.88}
+  m_SizeDelta: {x: 75.01, y: 75.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &351404711
 MonoBehaviour:
@@ -2688,8 +2688,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 56.39, y: 43.53}
-  m_SizeDelta: {x: 912.78, y: 528.92}
+  m_AnchoredPosition: {x: 22.367, y: 93.46}
+  m_SizeDelta: {x: 844.73, y: 636.93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &852712908
 MonoBehaviour:
@@ -2711,7 +2711,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dc2b845d9bd099a4b8c8cb761a95638e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dc8b2111cf3999e4eb6e6d95951b32fd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2764,8 +2764,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -98, y: 28}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchoredPosition: {x: -100.49, y: 25.51}
+  m_SizeDelta: {x: 75.01, y: 75.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &921020970
 MonoBehaviour:
@@ -3041,8 +3041,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 138.99998, y: -63.39}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchoredPosition: {x: 144.97, y: -57.421}
+  m_SizeDelta: {x: 91.936, y: 91.936}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &993850930
 MonoBehaviour:
@@ -3070,14 +3070,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.015686274, g: 1, b: 0.33148938, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a6383ab2c7ceab7478ce7ec3297786dd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aca8536496d7cd54b8c540515e4aa388, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4188,7 +4188,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Special Attack
+  m_text: Run
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5520,6 +5520,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 053d1b986ad973049a2fecb1459540b6, type: 2}
   - {fileID: 11400000, guid: e16135f163d076944980b04b4e9bb939, type: 2}
   playerLevels: 0300000001000000
+  playerHps: 
+  creaturesFaintedPosition: 
   enemyBases:
   - {fileID: 11400000, guid: 8c9a937caedbae949808b246a03734af, type: 2}
   - {fileID: 11400000, guid: 97134be230c71194db1dbabadbf44219, type: 2}
@@ -6548,7 +6550,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Normal Attack
+  m_text: 'Attack
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

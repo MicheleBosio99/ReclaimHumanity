@@ -8,7 +8,6 @@ public class TextsHandler : MonoBehaviour
     [SerializeField] private TextMeshProUGUI energyTotal;
     
     public void UpdateEnergy(string energy) { energyTotal.text = energy; }
-
     
     // Probably will need some kind of format
     public void UpdateDescriptionAndEnergy(string description, string energy) {

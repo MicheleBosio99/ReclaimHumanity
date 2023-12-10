@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Hit
   m_EditorClassIdentifier: 
   name: Hit
-  description: Hit the enemy (seems reasonable)
-  type: 0
+  description: Seems reasonable
+  type: 1
   power: 30
   accuracy: 100
   pp: 20

@@ -140,12 +140,12 @@ GameObject:
   - component: {fileID: 8971213465213072287}
   - component: {fileID: 3618344125689249839}
   - component: {fileID: 2223581609898835609}
+  - component: {fileID: 1004501181515856967}
   - component: {fileID: 6493257837870892101}
   - component: {fileID: 4370359794366168160}
   - component: {fileID: 4754563326288330437}
   - component: {fileID: 1168651925826670054}
   - component: {fileID: 6255717712013211218}
-  - component: {fileID: 1004501181515856967}
   m_Layer: 6
   m_Name: MainCharacter
   m_TagString: Untagged
@@ -297,6 +297,27 @@ PolygonCollider2D:
       - {x: -0.18939488, y: -0.11839497}
       - {x: 0.18890303, y: -0.11864245}
   m_UseDelaunayMesh: 0
+--- !u!95 &1004501181515856967
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344862835144778464}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8df6ed8514131442bb41a7aef7dcf0c5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &6493257837870892101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,7 +347,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4370359794366168160}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: Move
+        m_MethodName: OnMove
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -388,6 +409,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normalSpeed: 8
+  currentSpeed: 8
+  movingDirection: {x: 0, y: 0}
   movement: {x: 0, y: -1}
   animator: {fileID: 1004501181515856967}
   MoveClip: {fileID: 8300000, guid: 8b7433211d11c4393ba39c9e5bcdd52b, type: 3}
@@ -405,7 +428,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerMenu: {fileID: 3228247895186584737, guid: cdbf67154cfa1bd4bb6176b5a14243cf, type: 3}
   OpenPlayerMenuButton: {fileID: 0}
-  PlayerMenuSound: {fileID: 8300000, guid: 2263a3f6c7c574d298645850dfffd6b9, type: 3}
 --- !u!114 &1168651925826670054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,27 +453,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   labInitPosition: {x: 0.5, y: -4.5}
-  forestInitPosition: {x: 0, y: 0.5}
+  forestInitPosition: {x: 0, y: 0}
   cityInitPosition: {x: 0, y: 0}
   wastelandsInitPosition: {x: 0, y: 0}
---- !u!95 &1004501181515856967
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1344862835144778464}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8df6ed8514131442bb41a7aef7dcf0c5, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0

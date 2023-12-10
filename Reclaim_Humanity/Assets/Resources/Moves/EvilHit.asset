@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Evil Hit
   description: Yeah
-  type: 0
+  type: 1
   power: 60
   accuracy: 100
   pp: 20

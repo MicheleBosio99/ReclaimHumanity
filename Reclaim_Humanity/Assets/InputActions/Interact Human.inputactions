@@ -1,0 +1,45 @@
+{
+    "name": "Interact Human",
+    "maps": [
+        {
+            "name": "New action map",
+            "id": "129301c1-208c-4088-a2f5-c8fc182e6401",
+            "actions": [
+                {
+                    "name": "Start Human Interaction",
+                    "type": "Button",
+                    "id": "581a4813-901f-4c7a-83f8-c3b7da27fc64",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "30184a53-a203-47c0-9e7d-9f281ca72c1d",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start Human Interaction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a5ad8dc1-5d4c-43e9-af07-8129d8cca45c",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start Human Interaction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

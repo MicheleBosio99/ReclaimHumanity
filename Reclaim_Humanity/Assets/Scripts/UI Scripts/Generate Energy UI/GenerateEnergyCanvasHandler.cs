@@ -14,10 +14,10 @@ public class GenerateEnergyCanvasHandler : MonoBehaviour {
 
     private void OnEnable() {
         gameObject.transform.position = player.transform.position;
-        if(movement != null) { movement.CurrentSpeed = 0.0f; }
+        // if(movement != null) { movement.CurrentSpeed = 0.0f; }
     }
-
-    private void OnDisable() { if (movement != null) { movement.CurrentSpeed = movement.NormalSpeed; } }
+    //
+    // private void OnDisable() { if (movement != null) { movement.CurrentSpeed = movement.NormalSpeed; } }
 
     public void OnCloseButtonClick() { player.GetComponent<OpenInventoryScript>().OpenCloseUIFunc(true); }
 }

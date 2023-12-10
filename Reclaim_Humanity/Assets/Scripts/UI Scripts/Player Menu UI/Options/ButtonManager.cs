@@ -10,7 +10,7 @@ public class ButtonFunctions : MonoBehaviour {
 
     private void Start() { YouSureQuitView.SetActive(false); }
 
-    public void OnSaveClick() { player.SaveGame(); }
+    public void OnSaveClick() { GameManager.SaveGame(); }
 
     public void OnLoadClick() { player.LoadGame(); }
 
@@ -18,7 +18,10 @@ public class ButtonFunctions : MonoBehaviour {
 
     public void OnGoBackClick() { YouSureQuitView.SetActive(false); }
 
-    public void OnReallyQuitGameClick() { Application.Quit(); }
+    public void OnReallyQuitGameClick()
+    {
+        GameManager.GoToMainMenu();
+    }
 
     
 

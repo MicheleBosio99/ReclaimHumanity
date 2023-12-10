@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using UnityEngine;
 
 public class ChangeMenuShowed : MonoBehaviour {
@@ -10,16 +8,13 @@ public class ChangeMenuShowed : MonoBehaviour {
     [SerializeField] private GameObject OptionsPanel;
     [SerializeField] private GameObject StatisticsPanel;
     [SerializeField] private GameObject MapPanel;
+    [SerializeField] private GameObject TutorialPanel;
 
-    [SerializeField] private GameObject OpenPlayerMenuButton;
+    [SerializeField] private GameObject LayoutButtons;
 
     [SerializeField] private GameObject BackgroundGeneralPanel;
     
     [SerializeField] private GameObject player;
-
-    [SerializeField] private AudioClip MenuOpenSound;
-    [SerializeField] private AudioClip MenuCloseSound;
-
 
     private GameObject currentEnabledGameObj;
 
@@ -30,6 +25,7 @@ public class ChangeMenuShowed : MonoBehaviour {
         OptionsPanel.SetActive(false);
         StatisticsPanel.SetActive(false);
         MapPanel.SetActive(false);
+        TutorialPanel.SetActive(false);
         
         BackgroundGeneralPanel.SetActive(false);
     }
@@ -38,7 +34,7 @@ public class ChangeMenuShowed : MonoBehaviour {
         // Stop time for menu open
         Time.timeScale = 0.0f;
         
-        OpenPlayerMenuButton.SetActive(false);
+        LayoutButtons.SetActive(false);
         BackgroundGeneralPanel.SetActive(true);
         
         // TODO CHECK BUTTONS ON GAMEPAD NAMES!!!
@@ -59,6 +55,10 @@ public class ChangeMenuShowed : MonoBehaviour {
                 if (currentEnabledGameObj == MapPanel) { OnCloseButtonClick(); }
                 else { OnMapButtonClick(); }
                 break;
+            case "t":
+                if (currentEnabledGameObj == TutorialPanel) { OnCloseButtonClick(); }
+                else { OnTutorialButtonClick(); }
+                break;
         }
     }
     
@@ -68,11 +68,10 @@ public class ChangeMenuShowed : MonoBehaviour {
         
         currentEnabledGameObj.SetActive(false);
         currentEnabledGameObj = null;
-        OpenPlayerMenuButton.SetActive(true);
+        LayoutButtons.SetActive(true);
         BackgroundGeneralPanel.SetActive(false);
         
-        //Play closure sound
-        SoundFXManager.instance.PlaySoundFXClip(MenuCloseSound, transform,1f);
+        
         player.GetComponent<OpenInventoryScript>().ClosedInventory();
     }
     
@@ -80,9 +79,6 @@ public class ChangeMenuShowed : MonoBehaviour {
         if(currentEnabledGameObj != null) { currentEnabledGameObj.SetActive(false); }
         currentEnabledGameObj = objToEnable;
         objToEnable.SetActive(true);
-        
-        //Play opening sound
-        SoundFXManager.instance.PlaySoundFXClip(MenuOpenSound, transform,1f);
     }
     
     public void OnInventoryButtonClick() { ChangeMenuScreen(InventoryPanel); }
@@ -93,5 +89,9 @@ public class ChangeMenuShowed : MonoBehaviour {
     
     public void OnMapButtonClick() { ChangeMenuScreen(MapPanel); }
     
+    public void OnTutorialButtonClick() { ChangeMenuScreen(TutorialPanel); }
+    
     public void OnOpenMenuClick() { GetKeyPressed("escape"); }
+    
+    public void OnOpenTutorialClick() { GetKeyPressed("t"); }
 }
