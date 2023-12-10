@@ -95,7 +95,7 @@ ___
 * Characters and enemies (with thier relative animations) have been created using a graphic program that can manage pixel art.
 ## MUSIC
 - Music in background are a selection of tracks from videogames "Days Gone" and "The last of us 2";
-- Sound effects are downloaded from https://www.zapsplat.com/ and they are all free license.
+- Sound effects are downloaded from https://www.zapsplat.com/ or from https://pixabay.com/sound-effects/ and they are all free license.
 ___
 ___
 

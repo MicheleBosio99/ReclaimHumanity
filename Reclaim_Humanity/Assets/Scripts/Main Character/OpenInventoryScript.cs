@@ -6,6 +6,8 @@ public class OpenInventoryScript : MonoBehaviour {
     
     [SerializeField] private GameObject PlayerMenu;
     [SerializeField] private GameObject OpenPlayerMenuButton;
+    [SerializeField] private AudioClip PlayerActionsSound;
+
     
     private bool inventoryIsOpen;
 
@@ -35,6 +37,8 @@ public class OpenInventoryScript : MonoBehaviour {
         if (CurrentlyToOpenUI == null || !performed || !finished) { return; }
         if (isActive) { CurrentlyToOpenUI.SetActive(false); isActive = false; BlockPlayer(false); }
         else { CurrentlyToOpenUI.SetActive(true); isActive = true; BlockPlayer(true); }
+
+        SoundFXManager.instance.PlaySoundFXClip(PlayerActionsSound, transform,1f);
     }
     
     private PlayerMovement playerMov;
