@@ -219,6 +219,15 @@ public class Enemy : MonoBehaviour
 
     }
     
+    public void SetEnemySquad(List<GameObject> squad) 
+    {
+        foreach(var ene in squad)
+        {
+            enemies.Add(ScriptableObject.CreateInstance<CreatureBase>());
+        }
+
+    }
+    
 }
 
     /* If _spriteR throws exceptions or doesn't work well:
