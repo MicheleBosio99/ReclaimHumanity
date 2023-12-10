@@ -49,7 +49,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         spawnHandler = FindObjectOfType<SpawnHandler>();
-        _spriteR = this.GetComponent<SpriteRenderer>();
+        _spriteR = GetComponent<SpriteRenderer>();
         currentHP = maxHP;
 
         player = GameObject.FindWithTag("Player");
@@ -195,7 +195,6 @@ public class Enemy : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position,
                 speed * Time.deltaTime);
             distance = Vector2.Distance(transform.position, player.transform.position);
-
         }
         else
         {
