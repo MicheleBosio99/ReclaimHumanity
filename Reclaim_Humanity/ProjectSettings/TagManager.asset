@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Human
   - LaboratoryFurnishing
+  - raughness
   layers:
   - Default
   - TransparentFX

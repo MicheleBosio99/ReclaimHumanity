@@ -1952,6 +1952,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 94066509337324be2bd238d095cf571a, type: 3}
     - target: {fileID: 4754563326288330437, guid: f7ad302aac4072c4b9ba222f39dcc7f4, type: 3}
+      propertyPath: MenuSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 412343bd6e8574f45b9b34fc5d38ce72, type: 3}
+    - target: {fileID: 4754563326288330437, guid: f7ad302aac4072c4b9ba222f39dcc7f4, type: 3}
       propertyPath: PlayerMenu
       value: 
       objectReference: {fileID: 3411805567069994196}
@@ -1963,6 +1967,10 @@ PrefabInstance:
       propertyPath: BackgroundMenu
       value: 
       objectReference: {fileID: 7366894763767517558}
+    - target: {fileID: 4754563326288330437, guid: f7ad302aac4072c4b9ba222f39dcc7f4, type: 3}
+      propertyPath: PlayerMenuSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2263a3f6c7c574d298645850dfffd6b9, type: 3}
     - target: {fileID: 4754563326288330437, guid: f7ad302aac4072c4b9ba222f39dcc7f4, type: 3}
       propertyPath: OpenPlayerMenuButton
       value: 
@@ -99064,6 +99072,8 @@ MonoBehaviour:
   OpenPlayerMenuButton: {fileID: 7493258468802781434}
   BackgroundGeneralPanel: {fileID: 7366894763767517558}
   player: {fileID: 2007496900}
+  MenuOpenSound: {fileID: 8300000, guid: 412343bd6e8574f45b9b34fc5d38ce72, type: 3}
+  MenuCloseSound: {fileID: 8300000, guid: 80adefa4076aa4618929ebd1f50c91ad, type: 3}
 --- !u!224 &1027097897012229898
 RectTransform:
   m_ObjectHideFlags: 0
