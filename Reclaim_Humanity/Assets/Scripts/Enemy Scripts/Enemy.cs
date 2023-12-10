@@ -8,7 +8,8 @@ using UnityEngine.SceneManagement;
 public class Enemy : MonoBehaviour
 {
     [Header("Enemy Characteristics")]
-    [SerializeField] private int enemyLevel; // ??
+    [SerializeField] private List<CreatureBase> enemies;
+    [SerializeField] private List<int> levels;// ??
     [SerializeField] private int maxHP;
     private int currentHP;
 
@@ -82,7 +83,9 @@ public class Enemy : MonoBehaviour
             spawn.SetActive(false);
             spawnHandler.NumberOfSpawnsActiveDecrement();
 
-            SceneManager.LoadScene("Battle"); // valid for every enemy actually
+            GameManager.enemies = enemies;
+            GameManager.enemiesLevels = levels;
+            GameManager.EnterCombat();
         }
     }
     

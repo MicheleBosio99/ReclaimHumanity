@@ -22,18 +22,6 @@ public class BattleDialogBox : MonoBehaviour
     [SerializeField] private TextMeshProUGUI moveDescription;
     [SerializeField] private TextMeshProUGUI typeText;
 
-    private void OnEnable()
-    {
-        EventManager.StartListening ("Attack", Attack);
-    }
-
-    void Attack()
-    {
-        EventManager.StopListening("Attack", Attack);
-        Debug.Log("Attack, yeah!");
-        EventManager.StartListening("Attack", Attack);
-    }
-
     public IEnumerator TypeDialog(string dialog)
     {
         dialogText.text = "";

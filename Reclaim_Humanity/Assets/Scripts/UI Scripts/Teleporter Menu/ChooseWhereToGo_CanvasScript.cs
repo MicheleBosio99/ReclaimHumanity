@@ -17,14 +17,14 @@ public class ChooseWhereToGoScript : MonoBehaviour {
     public void OnCloseButtonClick() { gameObject.SetActive(false); }
     
     // GTF = Go To Forest
-    public void OnGTFButtonClick() { SceneManager.LoadScene(sceneName: "OvergrownForest"); }
+    public void OnGTFButtonClick() { GameManager.GoToScene("OvergrownForest"); }
     
     // GTC = Go To City
-    public void OnGTCButtonClick() { SceneManager.LoadScene(sceneName: "RuinedCity"); }
+    public void OnGTCButtonClick() { GameManager.GoToScene("RuinedCity"); }
     
     // GTW = Go To Wastelands
-    public void OnGTWButtonClick() { SceneManager.LoadScene(sceneName: "Wastelands"); }
+    public void OnGTWButtonClick() { GameManager.GoToScene("Wastelands"); }
     
     // GTL = Go To Laboratory
-    public void OnGTLButtonClick() { SceneManager.LoadScene(sceneName: "Laboratory"); }
+    public void OnGTLButtonClick() { GameManager.GoToScene("Laboratory"); }
 }

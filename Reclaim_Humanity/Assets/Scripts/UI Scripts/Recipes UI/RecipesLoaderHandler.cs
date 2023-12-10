@@ -1,33 +1,51 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using TMPro;
+using System.IO;
+using Newtonsoft.Json;
 using UnityEngine;
 
 public class RecipesLoaderHandler : MonoBehaviour {
     
     [SerializeField] private GameObject handlerGO;
     private RecipesSelectionHandler handler;
-    [SerializeField] private TextAsset recipesJson;
-    private RecipesList recipesList;
+    [SerializeField] private TextAsset recipesJsonTextAsset;
+    
+    private string recipesJson;
+    private List<Recipe> recipesList;
     
     [SerializeField] private GameObject recipeButtonsParent;
     [SerializeField] private GameObject recipeButtonPrefab;
     private List<GameObject> recipeButtons;
+    
+    private string persistentRecipePath;
+
+    private void Awake() {
+        persistentRecipePath = Path.Combine(Application.persistentDataPath, "Resources/recipes.json");
+        if (!Directory.Exists(Path.Combine(Application.persistentDataPath, "Resources")))
+        {
+            CreatePersistentFolders.GetInstance()
+                .GeneratePersistentFolder(Path.Combine(Application.persistentDataPath, "Resources"));
+        }
+    }
 
     private void Start() {
-        handler = handlerGO.GetComponent<RecipesSelectionHandler>();
-        recipesList = new RecipesList();
-        recipesList = JsonUtility.FromJson<RecipesList>(recipesJson.text);
-        // foreach (var rec in recipesList.recipesList) { Debug.Log(rec); }
+        if (!File.Exists(persistentRecipePath))
+        {
+            File.WriteAllText(persistentRecipePath, recipesJsonTextAsset.text);
+        }
+        recipesJson = File.ReadAllText(persistentRecipePath);
         
+        recipesList = new List<Recipe>();
+        recipesList = JsonConvert.DeserializeObject<List<Recipe>>(recipesJson);
+        
+        handler = handlerGO.GetComponent<RecipesSelectionHandler>();
         InitializeRecipesButtons();
     }
 
     private void InitializeRecipesButtons() {
         recipeButtons = new List<GameObject>();
 
-        foreach (var recipe in recipesList.recipesList) {
+        foreach (var recipe in recipesList) {
             if (!recipe.enabled) continue;
             
             var buttonRecipe = Instantiate(recipeButtonPrefab, recipeButtonsParent.transform, false);
@@ -42,6 +60,7 @@ public class RecipesLoaderHandler : MonoBehaviour {
 
 [Serializable] public class Recipe {
     
+    public string recipeID;
     public string recipeName;
     public string recipeDescription;
     
@@ -58,27 +77,9 @@ public class RecipesLoaderHandler : MonoBehaviour {
     public int itemResultQuantity;
     
     public bool enabled;
-
-    public Recipe(string recipeName, string recipeDescription, string item1ID, string item1Name, int item1QuantityReq, string item2ID, string item2Name, int item2QuantityReq, string itemResultID, string itemResultName, int itemResultQuantity, bool enabled) {
-        this.recipeName = recipeName;
-        this.recipeDescription = recipeDescription;
-        this.item1ID = item1ID;
-        this.item1Name = item1Name;
-        this.item1QuantityReq = item1QuantityReq;
-        this.item2ID = item2ID;
-        this.item2Name = item2Name;
-        this.item2QuantityReq = item2QuantityReq;
-        this.itemResultID = itemResultID;
-        this.itemResultName = itemResultName;
-        this.itemResultQuantity = itemResultQuantity;
-        this.enabled = enabled;
-    }
     
     public override string ToString() {
         return $"{recipeName}, {recipeDescription}, {item1ID}, {item1Name}, {item1QuantityReq}, {item2ID}, {item2Name}, {item2QuantityReq}," +
                $"{itemResultID}, {itemResultName}, {itemResultQuantity}, {enabled}";
     }
 }
-
-
-[Serializable] public class RecipesList { public List<Recipe> recipesList; }

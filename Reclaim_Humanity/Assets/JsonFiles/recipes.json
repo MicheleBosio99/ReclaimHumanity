@@ -1,19 +1,62 @@
-{
-    "recipesList" :
-    [
-        {
-            "recipeName" : "Example Recipe",
-            "recipeDescription" : "Mushrooms Strange Soup",
-            "item1ID" : "00_GoodMushroom",
-            "item1Name" : "Mushrooms",
-            "item1QuantityReq" : 1,
-            "item2ID" : "01_BadMushroom",
-            "item2Name" : "Mushrooms",
-            "item2QuantityReq" : 1,
-            "itemResultID" : "00_GoodMushroom",
-            "itemResultName" : "Mushrooms",
-            "itemResultQuantity" : 5,
-            "enabled" : 1
-        }
-    ]
-}
+[
+    {
+        "recipeID" : "00_MushroomSoup",
+        "recipeName" : "Mushroom Soup",
+        "recipeDescription" : "The combination of different mushrooms.",
+        "item1ID" : "00_GoodMushroom",
+        "item1Name" : "Good Mushroom",
+        "item1QuantityReq" : 3,
+        "item2ID" : "01_BadMushroom",
+        "item2Name" : "Bad Mushroom",
+        "item2QuantityReq" : 1,
+        "itemResultID" : "09_MushroomSoup",
+        "itemResultName" : "Mushroom Soup",
+        "itemResultQuantity" : 2,
+        "enabled" : false
+    },
+    {
+        "recipeID" : "01_CanineGlue",
+        "recipeName" : "Canine Glue",
+        "recipeDescription" : "The strongest glue of them all.",
+        "item1ID" : "09_MushroomSoup",
+        "item1Name" : "Mushroom Soup",
+        "item1QuantityReq" : 1,
+        "item2ID" : "03_WolfFur",
+        "item2Name" : "Wolf Fur",
+        "item2QuantityReq" : 4,
+        "itemResultID" : "10_CanineGlue",
+        "itemResultName" : "Canine Glue",
+        "itemResultQuantity" : 2,
+        "enabled" : false
+    },
+    {
+        "recipeID" : "02_PoisonousDough",
+        "recipeName" : "Poisonous Dough",
+        "recipeDescription" : "Seems good, until a skull comes out of it.",
+        "item1ID" : "02_WolfFangs",
+        "item1Name" : "Wolf Fangs",
+        "item1QuantityReq" : 2,
+        "item2ID" : "01_BadMushroom",
+        "item2Name" : "Bad Mushroom",
+        "item2QuantityReq" : 3,
+        "itemResultID" : "11_PoisonousDough",
+        "itemResultName" : "Poisonous Dough",
+        "itemResultQuantity" : 1,
+        "enabled" : false
+    },
+    {
+        "recipeID" : "03_OrganicTerracotta",
+        "recipeName" : "Organic Soft Terracotta",
+        "recipeDescription" : "A malleable and smelly clay.",
+        "item1ID" : "10_CanineGlue",
+        "item1Name" : "Canine Glue",
+        "item1QuantityReq" : 3,
+        "item2ID" : "11_PoisonousDough",
+        "item2Name" : "Poisonous Dough",
+        "item2QuantityReq" : 3,
+        "itemResultID" : "12_OrganicSoftTerracotta",
+        "itemResultName" : "Organic Soft Terracotta",
+        "itemResultQuantity" : 2,
+        "enabled" : false
+    }
+]

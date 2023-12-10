@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [SuppressMessage("ReSharper", "IteratorNeverReturns")]
 public class ObjectSpawner : MonoBehaviour {
@@ -13,27 +14,28 @@ public class ObjectSpawner : MonoBehaviour {
     [SerializeField] private int maxItems = 12;
     [SerializeField] private float minSpawnDelay = 15f;
     [SerializeField] private float maxSpawnDelay = 25f;
+    [SerializeField] private bool respawn;
 
     private PolygonCollider2D spawnAreaCollider;
     
-    [SerializeField] private bool enabled = true;
+    [SerializeField] private bool _enabled = true;
     
     private float spawnTimer;
     
     private List<GameObject> spawnedItems = new List<GameObject>();
 
     public bool Enabled {
-        get => enabled;
-        set => enabled = value;
+        get => _enabled;
+        set => _enabled = value;
     }
 
     private void Start() {
         spawnedItems = new List<GameObject>();
         spawnAreaCollider = GetComponent<PolygonCollider2D>();
-        if (spawnAreaCollider != null && enabled) { SpawnItems(); }
+        if (spawnAreaCollider != null && _enabled) { SpawnItems(); }
     }
     
-    IEnumerator SpawnItemsRoutine() {
+    private IEnumerator SpawnItemsRoutine() {
         yield return new WaitForSeconds(Random.Range(minSpawnDelay, maxSpawnDelay));
         if (spawnedItems.Count == 0) { SpawnItems(); }
     }
@@ -72,6 +74,7 @@ public class ObjectSpawner : MonoBehaviour {
 
     public void ItemGotPickedUp(GameObject item) {
         if (spawnedItems.Contains(item)) { spawnedItems.Remove(item); }
+        if (!respawn) { return; }
         if (spawnedItems.Count == 0) { StartCoroutine(SpawnItemsRoutine()); }
     }
 }

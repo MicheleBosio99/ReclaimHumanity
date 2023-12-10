@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,22 +8,24 @@ public class OpenInventoryScript : MonoBehaviour {
     [SerializeField] private GameObject OpenPlayerMenuButton;
     [SerializeField] private AudioClip PlayerMenuSound;
     
-    // private bool inventoryIsOpen = false;
+    private bool inventoryIsOpen;
 
     public void OpenInventory(InputAction.CallbackContext context) {
         if (!context.performed || isActive) return;
         
         PlayerMenu.SetActive(true);
-        // inventoryIsOpen = true;
+        inventoryIsOpen = true;
         PlayerMenu.GetComponent<ChangeMenuShowed>().GetKeyPressed(context.control.name);
     }
 
-    public void ClosedInventory() {
-        // inventoryIsOpen = false;
-    }
+    public void ClosedInventory() { inventoryIsOpen = false; }
 
     public GameObject CurrentlyToOpenUI { get; set; }
-    private bool isActive = false;
+    
+    public bool isActive;
+    private bool finished; public bool Finished { set => finished = value; }
+
+    private void OnEnable() { finished = true; }
 
     public void OpenCloseUI(InputAction.CallbackContext context) {
         // if(!inventoryIsOpen) { OpenCloseUIFunc(context.performed); } inventoryIsOpen always true cannot understand why;
@@ -32,17 +33,31 @@ public class OpenInventoryScript : MonoBehaviour {
     }
 
     public void OpenCloseUIFunc(bool performed) {
-        if (CurrentlyToOpenUI == null || !performed) { return; }
+        if (CurrentlyToOpenUI == null || !performed || !finished) { return; }
         if (isActive) { CurrentlyToOpenUI.SetActive(false); isActive = false; BlockPlayer(false); }
         else { CurrentlyToOpenUI.SetActive(true); isActive = true; BlockPlayer(true); }
         
         SoundFXManager.instance.PlaySoundFXClip(PlayerMenuSound, transform,1f);
     }
+    
+    private PlayerMovement playerMov;
+    private void Awake() { playerMov = gameObject.GetComponent<PlayerMovement>(); }
 
-    private void BlockPlayer(bool blockPlayer) {
-        var playerMov = gameObject.GetComponent<PlayerMovement>();
-        playerMov.CurrentSpeed = blockPlayer ? 0.0f : playerMov.NormalSpeed;
-        
+    public void BlockPlayer(bool blockPlayer) {
+        playerMov.enabled = !blockPlayer;
         OpenPlayerMenuButton.SetActive(!blockPlayer);
     }
+    
+    // private float lastLogTime = 0.0f;
+    //
+    // private void Update() {
+    //     
+    //     if (!(Time.time - lastLogTime >= 1.0f)) return;
+    //     
+    //     Debug.Log($"Finished: {finished}");
+    //     Debug.Log($"isActive: {isActive}");
+    //     Debug.Log($"CurrentlyToOpenUI: {CurrentlyToOpenUI}");
+    //         
+    //     lastLogTime = Time.time;
+    // }
 }
