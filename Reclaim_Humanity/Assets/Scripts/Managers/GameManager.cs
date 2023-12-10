@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -24,6 +25,8 @@ public class GameManager : MonoBehaviour
     public static RecipesInfoLoader recipesInfoLoader;
     public static List<InventoryItem> ordinaryItemsInInventory;
     public static List<InventoryItem> specialItemsInInventory;
+    
+    public static List<InventoryItem> itemsDropped;
     
     void Awake()
     {
@@ -91,8 +94,9 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("LoadingScene");
     }
     
-    public static void ExitCombat()
+    public static void ExitCombat(List<InventoryItem> _itemsDropped)
     {
+        itemsDropped = _itemsDropped;
         currentSceneName = previousSceneName;
         previousSceneName = SceneManager.GetActiveScene().name;
         sceneToLoad = currentSceneName;
@@ -101,7 +105,6 @@ public class GameManager : MonoBehaviour
     
     public static void GoToMainMenu()
     {
-        
         sceneToLoad = "MainMenu";
         SceneManager.LoadScene("LoadingScene");
     }
@@ -168,7 +171,7 @@ public class GameManager : MonoBehaviour
                 fileStream.Close();
             }
 
-            Debug.Log("Game data saved successfully.");
+            //Debug.Log("Game data saved successfully.");
         }
         catch (System.Exception e)
         {

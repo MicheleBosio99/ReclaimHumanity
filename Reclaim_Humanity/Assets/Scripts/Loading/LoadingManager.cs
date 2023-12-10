@@ -23,6 +23,8 @@ public class LoadingManager : MonoBehaviour
             {
                 asyncLoad.allowSceneActivation = true;
             }
+            
+            
 
             yield return null;
         }

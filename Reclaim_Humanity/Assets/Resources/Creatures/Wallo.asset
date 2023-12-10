@@ -31,5 +31,6 @@ MonoBehaviour:
     level: 1
   - moveBase: {fileID: 11400000, guid: c5fd54238bb23fd46b8f1a0bea0d4e56, type: 2}
     level: 1
-  - moveBase: {fileID: 11400000, guid: b0df95609b4546c4d93029d7df2064ad, type: 2}
+  - moveBase: {fileID: 11400000, guid: e885bb0a7eaa7804490e794b62cffc6b, type: 2}
     level: 1
+  droppableObjects: []

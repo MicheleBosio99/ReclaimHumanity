@@ -74,6 +74,8 @@ public class InteractionHumanHandler : MonoBehaviour {
         var dialogue = firstTime ? human.firstDialogue : human.generalDialogue;
         dialogue.ResetPhraseNum();
         
+        Debug.Log(dialogue.ToString());
+        
         while(true) {
             var phrase = dialogue.GetNextPhrase();
             if (phrase == null) { break; }

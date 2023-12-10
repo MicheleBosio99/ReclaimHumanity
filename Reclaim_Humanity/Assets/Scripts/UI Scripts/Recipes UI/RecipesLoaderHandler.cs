@@ -19,23 +19,22 @@ public class RecipesLoaderHandler : MonoBehaviour {
     
     private string persistentRecipePath;
 
-    private void Awake() {
-        persistentRecipePath = Path.Combine(Application.persistentDataPath, "Resources/recipes.json");
-        if (!Directory.Exists(Path.Combine(Application.persistentDataPath, "Resources"))) {
-            CreatePersistentFolders.GetInstance()
-                .GeneratePersistentFolder(Path.Combine(Application.persistentDataPath, "Resources"));
-        }
-    }
+    // private void Awake() {
+    //     persistentRecipePath = Path.Combine(Application.persistentDataPath, "Resources/recipes.json");
+    //     if (!Directory.Exists(Path.Combine(Application.persistentDataPath, "Resources"))) {
+    //         CreatePersistentFolders.GetInstance()
+    //             .GeneratePersistentFolder(Path.Combine(Application.persistentDataPath, "Resources"));
+    //     }
+    // }
 
     private void Start() {
-        if (!File.Exists(persistentRecipePath))
-        {
-            File.WriteAllText(persistentRecipePath, recipesJsonTextAsset.text);
-        }
-        recipesJson = File.ReadAllText(persistentRecipePath);
+        // if (!File.Exists(persistentRecipePath)) { File.WriteAllText(persistentRecipePath, recipesJsonTextAsset.text); }
+        // recipesJson = File.ReadAllText(persistentRecipePath);
         
-        recipesList = new List<Recipe>();
-        recipesList = JsonConvert.DeserializeObject<List<Recipe>>(recipesJson);
+        // recipesList = new List<Recipe>();
+        // recipesList = JsonConvert.DeserializeObject<List<Recipe>>(recipesJson);
+        
+        recipesList = GameManager.recipesInfoLoader.GetRecipeList();
         
         handler = handlerGO.GetComponent<RecipesSelectionHandler>();
         InitializeRecipesButtons();

@@ -54,9 +54,9 @@ public class OpenInventoryScript : MonoBehaviour {
     //     
     //     if (!(Time.time - lastLogTime >= 2.0f)) return;
     //     
-    //     Debug.Log($"inventoryIsOpen: {inventoryIsOpen}");
-    //     // Debug.Log($"isActive: {isActive}");
-    //     // Debug.Log($"CurrentlyToOpenUI: {CurrentlyToOpenUI}");
+    //     Debug.Log($"finished: {finished}");
+    //     Debug.Log($"isActive: {isActive}");
+    //     Debug.Log($"CurrentlyToOpenUI: {CurrentlyToOpenUI}");
     //         
     //     lastLogTime = Time.time;
     // }

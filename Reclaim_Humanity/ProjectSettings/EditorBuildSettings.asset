@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/UI/MainMenu.unity
     guid: 113f78b4dd411a741afb151d9f45c4e1
   - enabled: 1
+    path: Assets/Scenes/UI/Introduction.unity
+    guid: 8b7d34d727db73b41b5a057a12c3d5f6
+  - enabled: 1
+    path: Assets/Scenes/UI/LoadingScene.unity
+    guid: 96b0cb6db9a1e1c41a899764afab6f9a
+  - enabled: 1
     path: Assets/Scenes/World Scenes/Laboratory.unity
     guid: c412a78e60b6171459c4ad3e9e55ac47
   - enabled: 1
@@ -20,16 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/World Scenes/Wastelands.unity
     guid: 562eb45dd95e9f44d8d7b70d792711a9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/World Scenes/LaboratoryOutside.unity
     guid: 220847393091834428d06d67debd4c44
   - enabled: 1
     path: Assets/Scenes/Battle/Battle.unity
     guid: 6ac626c9cb46de34d87ad62e35e371c0
-  - enabled: 1
-    path: Assets/Scenes/UI/LoadingScene.unity
-    guid: 96b0cb6db9a1e1c41a899764afab6f9a
-  - enabled: 1
-    path: Assets/Scenes/UI/Introduction.unity
-    guid: 8b7d34d727db73b41b5a057a12c3d5f6
   m_configObjects: {}

@@ -8,8 +8,15 @@ public class HealthBarBehaviour : MonoBehaviour {
     private const float minValue = 0.214f;
     private const float maxValue = 1.0f;
 
-    private void Start() {
-        var currentHp = GameManager.partyHps[0] == 1000 ? GameManager.party[0].MaxHp : GameManager.partyHps[0];
-        greenBarImage.fillAmount = Mathf.Lerp(minValue, maxValue, (float) GameManager.partyHps[0] / (float) GameManager.party[0].MaxHp);
+    private void Start() { ShowHealth(); }
+
+    private void OnEnable() {
+        try { ShowHealth(); }
+        catch (Exception) { Debug.Log("error"); }
+    }
+
+    private void ShowHealth() {
+        var currentHp = GameManager.partyHps[0] == 1000 ? 13 : GameManager.partyHps[0];
+        greenBarImage.fillAmount = Mathf.Lerp(minValue, maxValue, (float) GameManager.partyHps[0] / 13.0f);
     }
 }

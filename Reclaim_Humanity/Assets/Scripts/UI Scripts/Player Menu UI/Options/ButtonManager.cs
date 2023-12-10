@@ -22,8 +22,4 @@ public class ButtonFunctions : MonoBehaviour {
         player.GetComponent<OpenInventoryScript>().OpenInventoryBody("close");
         GameManager.GoToMainMenu();
     }
-
-    
-
-    
 }

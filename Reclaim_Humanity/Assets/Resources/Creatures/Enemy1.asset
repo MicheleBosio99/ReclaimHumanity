@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Enemy1
   description: A bad guy
-  spriteL: {fileID: 21300000, guid: cc859b3e07f70fe46921842d680fcd46, type: 3}
-  spriteR: {fileID: 21300000, guid: 05f2d40da9ac9214f90a9e7996ab0f44, type: 3}
+  spriteL: {fileID: -1292961517, guid: 50730f50668656749afc93ebb8040965, type: 3}
+  spriteR: {fileID: -1292961517, guid: 50730f50668656749afc93ebb8040965, type: 3}
   type1: 2
   type2: 0
   maxHp: 80
@@ -27,3 +27,6 @@ MonoBehaviour:
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: ab55a9566ad37594ea7d5b9954806748, type: 2}
     level: 1
+  droppableObjects:
+  - {fileID: 11400000, guid: 114dc195e6ec6fa4a92885bb65e908e9, type: 2}
+  - {fileID: 11400000, guid: 3414926b4a6d7cc49b1e4776914b1578, type: 2}
