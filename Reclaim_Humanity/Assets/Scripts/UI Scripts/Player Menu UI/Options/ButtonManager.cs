@@ -18,7 +18,10 @@ public class ButtonFunctions : MonoBehaviour {
 
     public void OnGoBackClick() { YouSureQuitView.SetActive(false); }
 
-    public void OnReallyQuitGameClick() { GameManager.GoToMainMenu(); }
+    public void OnReallyQuitGameClick()
+    {
+        GameManager.GoToMainMenu();
+    }
 
     
 

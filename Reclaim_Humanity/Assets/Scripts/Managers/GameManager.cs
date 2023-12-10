@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -18,6 +19,11 @@ public class GameManager : MonoBehaviour
     public static string currentSceneName;
     public static Vector3 previousPosition;
     public static string filePath;
+    public static string sceneToLoad;
+    public static HumansInfoLoader humansInfoLoader;
+    public static RecipesInfoLoader recipesInfoLoader;
+    public static List<InventoryItem> ordinaryItemsInInventory;
+    public static List<InventoryItem> specialItemsInInventory;
     
     void Awake()
     {
@@ -34,6 +40,8 @@ public class GameManager : MonoBehaviour
         
         filePath = Path.Combine(Application.persistentDataPath, "savegame.dat");
         LoadFreshData(); // to remove
+        humansInfoLoader = GameObject.Find("HumanInfoLoader").GetComponent<HumansInfoLoader>();
+        recipesInfoLoader = GameObject.Find("RecipesInfoLoader").GetComponent<RecipesInfoLoader>();
     }
 
     public static void LoadFreshData()
@@ -46,25 +54,32 @@ public class GameManager : MonoBehaviour
         {
             partyHps.Add(1000);
         }
-        /*enemies = new List<CreatureBase>();
-        enemiesLevels = new List<int>();*/
-        enemies = myParty.enemies;
-        enemiesLevels = myParty.enemiesLevels;
+        enemies = new List<CreatureBase>();
+        enemiesLevels = new List<int>();
+        /*enemies = myParty.enemies;
+        enemiesLevels = myParty.enemiesLevels;*/
         previousPosition = Vector3.zero;
+        ordinaryItemsInInventory = new List<InventoryItem>();
+        specialItemsInInventory = new List<InventoryItem>();
     }
-
+    
     public static void NewGame()
     {
         LoadFreshData();
+        humansInfoLoader.CleanData();
+        recipesInfoLoader.CleanData();
+        currentSceneName = "Laboratory";
+        sceneToLoad = "Laboratory";
+        SceneManager.LoadScene("LoadingScene");
         SaveGame();
-        GoToScene("Laboratory");
     }
     
     public static void GoToScene(string SceneName)
     {
-        previousSceneName = SceneManager.GetActiveScene().name;
+        // previousSceneName = SceneManager.GetActiveScene().name;
         currentSceneName = SceneName;
-        SceneManager.LoadScene(currentSceneName);
+        sceneToLoad = SceneName;
+        SceneManager.LoadScene("LoadingScene");
     }
 
     public static void EnterCombat()
@@ -72,19 +87,23 @@ public class GameManager : MonoBehaviour
         previousSceneName = SceneManager.GetActiveScene().name;
         previousPosition = GameObject.Find("MainCharacter").transform.position;
         currentSceneName = "Battle";
-        SceneManager.LoadScene(currentSceneName);
+        sceneToLoad = "Battle";
+        SceneManager.LoadScene("LoadingScene");
     }
     
     public static void ExitCombat()
     {
         currentSceneName = previousSceneName;
         previousSceneName = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(currentSceneName);
+        sceneToLoad = currentSceneName;
+        SceneManager.LoadScene("LoadingScene");
     }
     
     public static void GoToMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        
+        sceneToLoad = "MainMenu";
+        SceneManager.LoadScene("LoadingScene");
     }
 
     public static void RestoreHps()
@@ -97,6 +116,8 @@ public class GameManager : MonoBehaviour
     
     public static void SaveGame()
     {
+        humansInfoLoader.SaveHumans();
+        recipesInfoLoader.SaveRecipes();
         GameData data = new GameData();
         List<string> partyNames = new List<string>();
         for (int i = 0; i < party.Count; i++)
@@ -107,7 +128,32 @@ public class GameManager : MonoBehaviour
         data.partyLevels = partyLevels;
         data.partyHps = partyHps;
         data.currentSceneName = currentSceneName;
-        previousPosition = GameObject.Find("MainCharacter").transform.position;
+
+        List<string> itemIds = new List<string>();
+        List<int> itemQuantities = new List<int>();
+        foreach (var item in ordinaryItemsInInventory)
+        {
+            itemIds.Add(item.ItemID);
+            itemQuantities.Add(item.ItemQuantity);
+        }
+        foreach (var item in specialItemsInInventory)
+        {
+            itemIds.Add(item.ItemID);
+            itemQuantities.Add(item.ItemQuantity);
+        }
+        data.itemIds = itemIds;
+        data.itemQuantities = itemQuantities;
+        
+        try
+        {
+            previousPosition = GameObject.Find("MainCharacter").transform.position;
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine("An exception occurred: " + ex.Message);
+            previousPosition = Vector3.zero;
+        }
+        
         data.previousPosition = new float[3];
         data.previousPosition[0] = previousPosition.x;
         data.previousPosition[1] = previousPosition.y;
@@ -133,6 +179,8 @@ public class GameManager : MonoBehaviour
     // Load game data from a binary file
     public static void LoadGame()
     {
+        humansInfoLoader.LoadHumans();
+        recipesInfoLoader.LoadRecipes();
         if (File.Exists(filePath))
         {
             BinaryFormatter formatter = new BinaryFormatter();
@@ -158,11 +206,47 @@ public class GameManager : MonoBehaviour
                     partyLevels = data.partyLevels;
                     partyHps = data.partyHps;
                     currentSceneName = data.currentSceneName;
+                    
                     Vector3 position;
                     position.x = data.previousPosition[0];
                     position.y = data.previousPosition[1];
                     position.z = data.previousPosition[2];
                     previousPosition = position;
+
+                    List<string> itemsIds = data.itemIds;
+                    List<int> itemQuantities = data.itemQuantities;
+                    ItemLoader itemLoader = GameObject.Find("InventoryItemsLoader").GetComponent<ItemLoader>();
+                    List<ItemsSO> ordinaryItemsSos = new List<ItemsSO>();
+                    List<ItemsSO> specialItemsSos = new List<ItemsSO>();
+                    for (int i = 0; i < itemsIds.Count; i++)
+                    {
+                        foreach (var itemSo in itemLoader.ItemsSos)
+                        {
+                            if (itemsIds[i] == itemSo.ItemID)
+                            {
+                                if (itemSo.IsItemSpecial)
+                                {
+                                    specialItemsSos.Add(itemSo);
+                                }
+                                else
+                                {
+                                    ordinaryItemsSos.Add(itemSo);
+                                }
+                            }
+                        }
+                    }
+
+                    for (int i = 0; i < ordinaryItemsSos.Count; i++)
+                    {
+                        ordinaryItemsInInventory.Add(ordinaryItemsSos[i].ToInventoryItem(itemQuantities[i]));
+                    }
+
+                    for (int i = 0; i < specialItemsSos.Count; i++)
+                    {
+                        specialItemsInInventory.Add(specialItemsSos[i].
+                            ToInventoryItem(itemQuantities[i+ordinaryItemsSos.Count]));
+                    }
+                    
                     GoToScene(currentSceneName);
                     Debug.Log("Game data loaded successfully.");
                     fileStream.Close();
@@ -188,4 +272,6 @@ public class GameData
     public List<int> partyHps;
     public string currentSceneName;
     public float[] previousPosition;
+    public List<string> itemIds;
+    public List<int> itemQuantities;
 }

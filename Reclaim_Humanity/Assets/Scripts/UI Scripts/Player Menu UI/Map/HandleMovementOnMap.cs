@@ -1,21 +1,24 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HandleMovementOnMap : MonoBehaviour {
     
-    [SerializeField] private Image image;
+    [SerializeField] private Image mapImage;
     [SerializeField] private GameObject player;
     
-    private const float imageDimensions = 1200.0f;
-    private Vector2 initialPosition = new Vector2(0.0f, 0.0f);
-    private Vector2 currentPosition;
-    
+    private const float imageDimension = 1200.0f;
+    private Vector2 initialPosition;
 
-    private void Start() {
-        GoOnStartPosition();
+    private void Start() { GoOnPosition(initialPosition); }
+
+    private void OnEnable() { GoOnPosition(Vector2.zero); }
+
+    private void GoOnPosition(Vector2 position) {
+        // Debug.Log(mapImage.GetComponent<RectTransform>().transform);
     }
 
-    private void GoOnStartPosition() {
-        
-    }
+    // private Vector2 ComputeMapPosition() {
+    //     return 
+    // }
 }

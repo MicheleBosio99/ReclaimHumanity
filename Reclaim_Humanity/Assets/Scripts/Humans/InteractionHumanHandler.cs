@@ -10,11 +10,9 @@ public class InteractionHumanHandler : MonoBehaviour {
     [SerializeField] private GameObject dialogueUI;
     [SerializeField] private string humanID;
     [SerializeField] private GameObject player;
-    [SerializeField] private GameObject humansInfoLoader;
     [SerializeField] private GameObject humanDialogueEnabler;
     [SerializeField] private GameObject unlockedANDRewardsUI;
     
-    [SerializeField] private GameObject recipesSerializerGO;
     private RecipesInfoLoader _recipesInfoLoader;
     
     [SerializeField] private TextAsset recipesJsonTextAsset;
@@ -42,9 +40,9 @@ public class InteractionHumanHandler : MonoBehaviour {
         dialogueHandler = dialogueUI.GetComponent<DialogueHandler>();
         playerMovement = player.GetComponent<PlayerMovement>();
         openInventory = player.GetComponent<OpenInventoryScript>();
-        infoLoader = humansInfoLoader.GetComponent<HumansInfoLoader>();
+        infoLoader = GameManager.humansInfoLoader;
         visualizeUnlocked = unlockedANDRewardsUI.GetComponent<VisualizeUnlocked>();
-        _recipesInfoLoader = recipesSerializerGO.GetComponent<RecipesInfoLoader>();
+        _recipesInfoLoader = GameManager.recipesInfoLoader;
         dialogueUI.SetActive(false);
     }
 

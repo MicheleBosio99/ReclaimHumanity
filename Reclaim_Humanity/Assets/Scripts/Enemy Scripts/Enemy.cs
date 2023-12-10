@@ -11,11 +11,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] private List<int> levels;// ??
     [SerializeField] private int maxHP;
     private int currentHP;
-    private bool isActive;
 
     [Header("CHASING")] 
-    private GameObject player;
-    [SerializeField] private float speed;
+    public GameObject player;
+    public float speed;
     private float distance;
     private Vector2 direction;
     private SpriteRenderer _spriteR;
@@ -28,7 +27,9 @@ public class Enemy : MonoBehaviour
     private float angle; // public?
     private bool playerInSight;
     private bool isChasing;
+
     
+
     [Header("ENEMY TYPE")] 
     [SerializeField] private EnemyType type;
     private enum EnemyType
@@ -51,11 +52,18 @@ public class Enemy : MonoBehaviour
         spawnHandler = FindObjectOfType<SpawnHandler>();
         _spriteR = GetComponent<SpriteRenderer>();
         currentHP = maxHP;
-
-        player = GameObject.FindWithTag("Player");
+        //enemyHP.text = "HP: " + currentHP + " / " + maxHP;
+        
         _spawnPoint = gameObject.transform;
+        player = GameObject.FindGameObjectWithTag("Player");
+        
+        EnemyRoutine();
     }
 
+    void Update()
+    {
+
+    }
 
     public void ActivateEnemy()
     {
@@ -75,18 +83,10 @@ public class Enemy : MonoBehaviour
             enem.SetActive(false);
             spawn.SetActive(false);
             spawnHandler.NumberOfSpawnsActiveDecrement();
-            
+
             GameManager.enemies = enemies;
             GameManager.enemiesLevels = levels;
             GameManager.EnterCombat();
-        }
-    }
-
-    public void SetEnemySquad(List<GameObject> allEnemies)
-    {
-        for (int i = 0; i < allEnemies.Count; i++)
-        {
-            enemies.Add(ScriptableObject.CreateInstance<CreatureBase>());
         }
     }
     
@@ -195,13 +195,6 @@ public class Enemy : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position,
                 speed * Time.deltaTime);
             distance = Vector2.Distance(transform.position, player.transform.position);
-        }
-        else
-        {
-            transform.position = Vector2.MoveTowards(transform.position, _spawnPoint.transform.position,
-                speed * Time.deltaTime);
-            
-            // Walk around
         }
     }
 
