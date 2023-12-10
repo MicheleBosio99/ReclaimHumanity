@@ -2,8 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
 {
@@ -46,14 +45,16 @@ public class Enemy : MonoBehaviour
     private SpawnHandler spawnHandler;
     // target == player
 
+    private Transform _spawnPoint;
     
     void Start()
     {
         spawnHandler = FindObjectOfType<SpawnHandler>();
-        _spriteR = this.GetComponent<SpriteRenderer>();
+        _spriteR = GetComponent<SpriteRenderer>();
         currentHP = maxHP;
         //enemyHP.text = "HP: " + currentHP + " / " + maxHP;
-
+        
+        _spawnPoint = gameObject.transform;
         player = GameObject.FindGameObjectWithTag("Player");
         
         EnemyRoutine();
@@ -194,10 +195,32 @@ public class Enemy : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position,
                 speed * Time.deltaTime);
             distance = Vector2.Distance(transform.position, player.transform.position);
-
         }
     }
+
+    private Vector2 NextPosition()
+    {
+        PolygonCollider2D poly = GetComponentInParent<PolygonCollider2D>();
+        var bounds = poly.bounds;
+        
+        var foundPoint = false;
+        var maxAttempts = 100;
     
+        Vector2 foundPosition = Vector2.zero;
+
+        while (!foundPoint && maxAttempts > 0) {
+            foundPosition =  new Vector2(Random.Range(bounds.min.x, bounds.max.x), Random.Range(bounds.min.y, bounds.max.y));
+            foundPoint = poly.OverlapPoint(foundPosition);
+
+            maxAttempts --;
+        }
+
+        return foundPosition;
+
+    }
+    
+}
+
     /* If _spriteR throws exceptions or doesn't work well:
         if (direction.x >= 0f)
             {
@@ -207,7 +230,7 @@ public class Enemy : MonoBehaviour
             {
                 transform.localScale = new Vector2(-2, 2);
             }
-            
+
             if (direction.x >= 0f)
             {
                 _spriteR.flipX = false;
@@ -217,7 +240,6 @@ public class Enemy : MonoBehaviour
                 _spriteR.flipX = true;
             }
      */
-}
 
     /*private void AreaOfViewCheck() //
     {
