@@ -9,6 +9,8 @@ public class OpenInventoryScript : MonoBehaviour {
     [SerializeField] private AudioClip PlayerMenuSound;
     
     private bool inventoryIsOpen;
+    [SerializeField] private AudioClip PlayerMenuSound;
+    
 
     public void OpenInventory(InputAction.CallbackContext context) {
         if (!context.performed || isActive) return;
@@ -30,6 +32,9 @@ public class OpenInventoryScript : MonoBehaviour {
     public void OpenCloseUI(InputAction.CallbackContext context) {
         // if(!inventoryIsOpen) { OpenCloseUIFunc(context.performed); } inventoryIsOpen always true cannot understand why;
         OpenCloseUIFunc(context.performed);
+        
+        //Play open-close sound
+        SoundFXManager.instance.PlaySoundFXClip(PlayerMenuSound, transform,1f);
     }
 
     public void OpenCloseUIFunc(bool performed) {
