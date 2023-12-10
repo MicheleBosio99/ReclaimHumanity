@@ -947,11 +947,11 @@ MonoBehaviour:
   party:
   - {fileID: 11400000, guid: 053d1b986ad973049a2fecb1459540b6, type: 2}
   - {fileID: 11400000, guid: e16135f163d076944980b04b4e9bb939, type: 2}
-  partyLevels: 0300000003000000
+  partyLevels: 0100000001000000
   enemies:
   - {fileID: 11400000, guid: 97134be230c71194db1dbabadbf44219, type: 2}
   - {fileID: 11400000, guid: 8c9a937caedbae949808b246a03734af, type: 2}
-  enemiesLevels: 0200000002000000
+  enemiesLevels: 0100000001000000
 --- !u!4 &1357286430
 Transform:
   m_ObjectHideFlags: 0
@@ -1578,7 +1578,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90bc0ce8c58eb0b44a0a253481213c28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemsSos: []
+  ItemsSos:
+  - {fileID: 11400000, guid: 114dc195e6ec6fa4a92885bb65e908e9, type: 2}
+  - {fileID: 11400000, guid: 3414926b4a6d7cc49b1e4776914b1578, type: 2}
+  - {fileID: 11400000, guid: aaf57d900e7bee44986c3aac30c60d0c, type: 2}
+  - {fileID: 11400000, guid: a848f52966ebe3747a84392d5261873e, type: 2}
+  - {fileID: 11400000, guid: 7593543b2a4e6784383949ae54652589, type: 2}
+  - {fileID: 11400000, guid: 956c2d81b3381bc4eaf719b9fee58931, type: 2}
+  - {fileID: 11400000, guid: d411776850e1e514a8027bba2a6a2071, type: 2}
+  - {fileID: 11400000, guid: 3b6dd44a05641074d936fefe679540f0, type: 2}
+  - {fileID: 11400000, guid: fd3eb0f2f0aacab498d0f65bdd43d7dc, type: 2}
+  - {fileID: 11400000, guid: 88b3702132232624583665734b519267, type: 2}
+  - {fileID: 11400000, guid: 9931b11ebf75af44ea45d1a61e3d40e3, type: 2}
+  - {fileID: 11400000, guid: a1b9087692f56734e82dc50e651812c1, type: 2}
+  - {fileID: 11400000, guid: aa8ba1e9064e9e8499d2177f6e42bc54, type: 2}
+  - {fileID: 11400000, guid: f7ecd9664871ad0478218a68cb54d62c, type: 2}
+  - {fileID: 11400000, guid: 5e3689c07bd160445a32a800662476fd, type: 2}
+  - {fileID: 11400000, guid: 371c22fff61b28e409ecd61b6cb9d3d9, type: 2}
+  - {fileID: 11400000, guid: 36ad136f6f76f7b47857d669dde1a8c3, type: 2}
 --- !u!4 &2127531141
 Transform:
   m_ObjectHideFlags: 0
