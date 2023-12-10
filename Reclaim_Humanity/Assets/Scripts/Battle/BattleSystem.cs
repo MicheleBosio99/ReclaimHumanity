@@ -180,7 +180,10 @@ public class BattleSystem : MonoBehaviour
     IEnumerator EnemyMove()
     {
         state = BattleState.EnemyMove;
+        print(playerBases.Count);
         currentTarget = UnityEngine.Random.Range(0, playerBases.Count);
+        print(currentCreature);
+        print(currentTarget);
         var move = enemyUnits[currentCreature].Creature.GetRandomMove();
         yield return dialogBox.TypeDialog($"{enemyUnits[currentCreature].Creature.Base.Name} used  " +
                                           $"{move.Base.Name} against {playerUnits[currentTarget].Creature.Base.Name}");
@@ -219,7 +222,7 @@ public class BattleSystem : MonoBehaviour
                 }
             }
             for (int i = 0; i < order.Count; i++) {
-                if (order[i] > currentTarget && order[i] < enemyBases.Count)
+                if (order[i] > currentTarget)
                 {
                     order[i] -= 1;
                 }
@@ -228,6 +231,7 @@ public class BattleSystem : MonoBehaviour
             if (playerBases.Count == 0)
             {
                 StartCoroutine(dialogBox.TypeDialog("Oh no, you lose :("));
+                GameManager.LoadGame();
             }
             else
             {

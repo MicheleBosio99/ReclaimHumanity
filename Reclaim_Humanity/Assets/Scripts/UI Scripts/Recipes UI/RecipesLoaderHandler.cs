@@ -21,11 +21,18 @@ public class RecipesLoaderHandler : MonoBehaviour {
 
     private void Awake() {
         persistentRecipePath = Path.Combine(Application.persistentDataPath, "Resources/recipes.json");
-        CreatePersistentFolders.GetInstance().GeneratePersistentFolder(Path.Combine(Application.persistentDataPath, "Resources"));
+        if (!Directory.Exists(Path.Combine(Application.persistentDataPath, "Resources")))
+        {
+            CreatePersistentFolders.GetInstance()
+                .GeneratePersistentFolder(Path.Combine(Application.persistentDataPath, "Resources"));
+        }
     }
 
     private void Start() {
-        if (!File.Exists(persistentRecipePath)) { File.WriteAllText(persistentRecipePath, recipesJsonTextAsset.text); }
+        if (!File.Exists(persistentRecipePath))
+        {
+            File.WriteAllText(persistentRecipePath, recipesJsonTextAsset.text);
+        }
         recipesJson = File.ReadAllText(persistentRecipePath);
         
         recipesList = new List<Recipe>();

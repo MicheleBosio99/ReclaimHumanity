@@ -6,8 +6,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "InventorySlotsSO", menuName = "ScriptableObjects/InventorySlotsSO")]
 public class InventoryItemsSO : ScriptableObject {
 
-    private List<InventoryItem> ordinaryItemsInInventory = new List<InventoryItem>(); // Should be loaded from saves
-    private List<InventoryItem> specialItemsInInventory = new List<InventoryItem>(); // Should be loaded from saves
+    private List<InventoryItem> ordinaryItemsInInventory = GameManager.ordinaryItemsInInventory;
+    private List<InventoryItem> specialItemsInInventory = GameManager.specialItemsInInventory;
 
     public List<InventoryItem> OrdinaryItemsInInventory { get => ordinaryItemsInInventory; }
     public List<InventoryItem> SpecialItemsInInventory { get => specialItemsInInventory; }
