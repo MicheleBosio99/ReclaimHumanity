@@ -390,7 +390,7 @@ public class BattleSystem : MonoBehaviour
         }
         dialogBox.UpdateActionSelection(currentAction);
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Space))
         {
             if (currentAction == 0)
             {
@@ -435,7 +435,7 @@ public class BattleSystem : MonoBehaviour
         }  
         dialogBox.UpdateMoveSelection(currentMove, playerUnits[currentCreature].Creature.Moves[currentMove]);
         
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Space))
         {
             StartCoroutine(SelectTarget());
         }
@@ -459,7 +459,7 @@ public class BattleSystem : MonoBehaviour
         }
         handR.transform.position = enemyUnits[currentTarget].transform.position + new Vector3(-1.2f,0,0);
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Space))
         {
             handR.SetActive(false);
             handL.SetActive(false);

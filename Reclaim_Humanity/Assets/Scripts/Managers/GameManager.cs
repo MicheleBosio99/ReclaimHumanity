@@ -218,10 +218,12 @@ public class GameManager : MonoBehaviour
                     ItemLoader itemLoader = GameObject.Find("InventoryItemsLoader").GetComponent<ItemLoader>();
                     List<ItemsSO> ordinaryItemsSos = new List<ItemsSO>();
                     List<ItemsSO> specialItemsSos = new List<ItemsSO>();
+                    print(itemLoader.ItemsSos.Count);
                     for (int i = 0; i < itemsIds.Count; i++)
                     {
                         foreach (var itemSo in itemLoader.ItemsSos)
                         {
+                            print("hello");
                             if (itemsIds[i] == itemSo.ItemID)
                             {
                                 if (itemSo.IsItemSpecial)
@@ -236,6 +238,8 @@ public class GameManager : MonoBehaviour
                         }
                     }
 
+                    ordinaryItemsInInventory = new List<InventoryItem>();
+                    specialItemsInInventory = new List<InventoryItem>();
                     for (int i = 0; i < ordinaryItemsSos.Count; i++)
                     {
                         ordinaryItemsInInventory.Add(ordinaryItemsSos[i].ToInventoryItem(itemQuantities[i]));
@@ -246,8 +250,9 @@ public class GameManager : MonoBehaviour
                         specialItemsInInventory.Add(specialItemsSos[i].
                             ToInventoryItem(itemQuantities[i+ordinaryItemsSos.Count]));
                     }
-                    
+                    print(ordinaryItemsInInventory.Count);
                     GoToScene(currentSceneName);
+                    print(ordinaryItemsInInventory.Count);
                     Debug.Log("Game data loaded successfully.");
                     fileStream.Close();
                 }
