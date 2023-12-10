@@ -428,6 +428,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerMenu: {fileID: 3228247895186584737, guid: cdbf67154cfa1bd4bb6176b5a14243cf, type: 3}
   OpenPlayerMenuButton: {fileID: 0}
+  PlayerActionsSound: {fileID: 8300000, guid: 2263a3f6c7c574d298645850dfffd6b9, type: 3}
+  isActive: 0
 --- !u!114 &1168651925826670054
 MonoBehaviour:
   m_ObjectHideFlags: 0
