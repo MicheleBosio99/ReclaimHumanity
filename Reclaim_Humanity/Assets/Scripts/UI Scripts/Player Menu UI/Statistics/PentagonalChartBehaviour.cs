@@ -12,8 +12,9 @@ public class PentagonalChartBehaviour : MonoBehaviour {
     private const float maxStats = 20;
     private const int numberOfVertex = 5;
     
-    public Color centerColor = Color.black;
-    public Color outerColor = Color.white;
+    [SerializeField] private Color centerColor;
+    [SerializeField] private Color outerColor;
+    [SerializeField] private const float alphaLevel = 0.9f;
 
 
     private void Awake() { radarMeshCanvasRenderer = radarMesh.GetComponent<CanvasRenderer>(); }
@@ -60,6 +61,7 @@ public class PentagonalChartBehaviour : MonoBehaviour {
             var normalizedDistance = distance / pentagonSideLength;
             
             colors[i] = Color.Lerp(centerColor, outerColor, normalizedDistance);
+            colors[i].a = alphaLevel;
         }
 
 

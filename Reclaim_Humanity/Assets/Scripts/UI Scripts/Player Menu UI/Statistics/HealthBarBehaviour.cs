@@ -11,11 +11,6 @@ public class HealthBarBehaviour : MonoBehaviour {
     private const float maxHealth = 125.0f;
 
     private void Start() {
-        var clampedHealth = GameManager.party[0].MaxHp / maxHealth;
-        Debug.Log(clampedHealth);
-        var lerpHealth = Mathf.Lerp(minValue, maxValue, clampedHealth);
-        Debug.Log(lerpHealth);
-        
-        greenBarImage.fillAmount = lerpHealth;
+        greenBarImage.fillAmount = Mathf.Lerp(minValue, maxValue, GameManager.party[0].MaxHp / maxHealth);
     }
 }

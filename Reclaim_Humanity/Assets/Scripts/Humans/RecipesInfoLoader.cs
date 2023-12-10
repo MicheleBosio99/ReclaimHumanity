@@ -13,14 +13,42 @@ public class RecipesInfoLoader : MonoBehaviour {
     private string persistentRecipePath;
 
     private void Awake() {
-        persistentRecipePath = Path.Combine(Application.persistentDataPath, "Resources/recipes.json");
-        CreatePersistentFolders.GetInstance().GeneratePersistentFolder(Path.Combine(Application.persistentDataPath, "Resources"));
+        CreatePaths();
+    }
+    
+    private void Start() {
+        LoadRecipes();
     }
 
-    private void Start() {
-        if (!File.Exists(persistentRecipePath)) { File.WriteAllText(persistentRecipePath, recipesJsonTextAsset.text); }
+    public void CreatePaths()
+    {
+        persistentRecipePath = Path.Combine(Application.persistentDataPath, "Resources/recipes.json");
+        if (!Directory.Exists(Path.Combine(Application.persistentDataPath, "Resources")))
+        {
+            CreatePersistentFolders.GetInstance()
+                .GeneratePersistentFolder(Path.Combine(Application.persistentDataPath, "Resources"));
+        }
+    }
+
+    public void LoadRecipes()
+    {
+        if (!File.Exists(persistentRecipePath))
+        {
+            File.WriteAllText(persistentRecipePath, recipesJsonTextAsset.text);
+        }
         var recipesJson = File.ReadAllText(persistentRecipePath);
         recipesList = JsonConvert.DeserializeObject<List<Recipe>>(recipesJson);
+    }
+    
+    public void CleanData()
+    {
+        var path = Path.Combine(Application.persistentDataPath, "Resources");
+        if (Directory.Exists(path))
+        {
+            // Directory.Delete(path, true);
+            CreatePaths();
+            LoadRecipes();
+        }
     }
 
     private void OnDisable() { SerializeJson(); }
@@ -29,10 +57,15 @@ public class RecipesInfoLoader : MonoBehaviour {
         File.WriteAllText(persistentRecipePath, JsonConvert.SerializeObject(recipesList, Formatting.Indented));
     }
 
+    public void SaveRecipes()
+    {
+        SerializeJson();
+    }
+
     public Tuple<bool, string> UnlockRecipe(string recipeUnlockedID) {
         var recipe = recipesList.Find((recipe) => recipe.recipeID == recipeUnlockedID);
         var _enabled = recipe.enabled; recipe.enabled = true;
-        SerializeJson();
+        // SerializeJson();
         
         return new Tuple<bool, string>(_enabled, recipe.recipeName);
     }
