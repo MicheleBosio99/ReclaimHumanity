@@ -409,8 +409,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normalSpeed: 8
-  currentSpeed: 8
-  movingDirection: {x: 0, y: 0}
   movement: {x: 0, y: -1}
   animator: {fileID: 1004501181515856967}
   MoveClip: {fileID: 8300000, guid: 8b7433211d11c4393ba39c9e5bcdd52b, type: 3}
@@ -428,6 +426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerMenu: {fileID: 3228247895186584737, guid: cdbf67154cfa1bd4bb6176b5a14243cf, type: 3}
   OpenPlayerMenuButton: {fileID: 0}
+  PlayerMenuSound: {fileID: 8300000, guid: 2263a3f6c7c574d298645850dfffd6b9, type: 3}
 --- !u!114 &1168651925826670054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,6 +452,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   labInitPosition: {x: 0.5, y: -4.5}
-  forestInitPosition: {x: 0, y: 0}
+  forestInitPosition: {x: 0, y: 0.5}
   cityInitPosition: {x: 0, y: 0}
   wastelandsInitPosition: {x: 0, y: 0}
