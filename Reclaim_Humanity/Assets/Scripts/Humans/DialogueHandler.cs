@@ -9,6 +9,8 @@ public class DialogueHandler : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI dialogueUItext;
     [SerializeField] private TextMeshProUGUI nameUIText;
     [SerializeField] private float lettersDelay = 0.05f;
+
+    [SerializeField] private AudioClip DialogueDown;
     
     private InteractionHumanHandler activeHuman;
 
@@ -16,6 +18,9 @@ public class DialogueHandler : MonoBehaviour {
 
     public IEnumerator WriteSlowText(string phrase) {
         EmptyText();
+        
+        // Sound Here
+        SoundFXManager.instance.PlaySoundFXClip(DialogueDown, transform,1f);
 
         for (var i = 0; i < phrase.Length; i ++) {
             var letter = phrase[i];
@@ -31,7 +36,6 @@ public class DialogueHandler : MonoBehaviour {
             yield return new WaitForSeconds(Random.Range(0, lettersDelay));
         }
         
-        // Sounds
     }
     
     public void EmptyText() { WriteFastText(""); }

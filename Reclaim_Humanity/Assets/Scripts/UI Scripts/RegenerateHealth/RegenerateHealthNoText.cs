@@ -10,6 +10,8 @@ public class RegenerateHealthNoText : MonoBehaviour {
     [SerializeField] private float sleepTime;
     [SerializeField] private GameObject player;
     [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private AudioClip Regeneration;
+    
     
     private OpenInventoryScript invScript;
     
@@ -26,7 +28,13 @@ public class RegenerateHealthNoText : MonoBehaviour {
         invScript.Finished = true;
     }
 
-    private void OnEnable() { StartCoroutine(SleepCoroutine()); }
+    private void OnEnable()
+    {
+        StartCoroutine(SleepCoroutine());
+        
+        //start sound
+        SoundFXManager.instance.PlaySoundFXClip(Regeneration, transform,1f);
+    }
 
     private void OnDisable() {
         ChangeColorImage(0.0f);

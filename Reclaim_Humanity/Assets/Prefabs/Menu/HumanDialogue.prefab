@@ -118,6 +118,7 @@ MonoBehaviour:
   dialogueUItext: {fileID: 6546353684141880002}
   nameUIText: {fileID: 6609415881666637403}
   lettersDelay: 0.08
+  DialogueDown: {fileID: 8300000, guid: af41a1eeba2b24be49e3f6eaeb753762, type: 3}
 --- !u!1 &2534183214581330486
 GameObject:
   m_ObjectHideFlags: 0
