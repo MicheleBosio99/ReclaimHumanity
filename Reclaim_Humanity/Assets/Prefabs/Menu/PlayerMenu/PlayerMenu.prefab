@@ -2320,6 +2320,8 @@ MonoBehaviour:
   LayoutButtons: {fileID: 3609673800471761513}
   BackgroundGeneralPanel: {fileID: 1192956446282053571}
   player: {fileID: 0}
+  OpenMenuSound: {fileID: 8300000, guid: 412343bd6e8574f45b9b34fc5d38ce72, type: 3}
+  CloseMenuSound: {fileID: 8300000, guid: 80adefa4076aa4618929ebd1f50c91ad, type: 3}
 --- !u!114 &9177124647012929339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10308,8 +10310,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2492137015949512734}
   m_HandleRect: {fileID: 4382455138674849845}
   m_Direction: 2
-  m_Value: 0.99999994
-  m_Size: 0.36369634
+  m_Value: 1
+  m_Size: 0.36394987
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

@@ -327,3 +327,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlockedText: {fileID: 8524613171266347436}
   unlockedPanel: {fileID: 1687402924358237837}
+  RecipeUnlock: {fileID: 8300000, guid: 8d0742bf786d54ebc8fca8448f8204e9, type: 3}

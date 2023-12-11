@@ -25,6 +25,8 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private BattleDialogBox dialogBox;
     [SerializeField] private GameObject handL;
     [SerializeField] private GameObject handR;
+    [SerializeField] private AudioClip Attack_switch;
+    [SerializeField] private AudioClip Target_switch;
 
     private BattleState state;
     private int currentAction;
@@ -411,6 +413,7 @@ public class BattleSystem : MonoBehaviour
             if (currentMove < playerUnits[currentCreature].Creature.Moves.Count - 1)
             {
                 ++currentMove;
+                SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -418,6 +421,7 @@ public class BattleSystem : MonoBehaviour
             if (currentMove > 0)
             {
                 --currentMove;
+                SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }   
         else if (Input.GetKeyDown(KeyCode.DownArrow))
@@ -425,6 +429,7 @@ public class BattleSystem : MonoBehaviour
             if (currentMove < playerUnits[currentCreature].Creature.Moves.Count - 2)
             {
                 currentMove += 2;
+                SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }   
         else if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -432,6 +437,7 @@ public class BattleSystem : MonoBehaviour
             if (currentMove > 1)
             {
                 currentMove -= 2;
+                SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }  
         dialogBox.UpdateMoveSelection(currentMove, playerUnits[currentCreature].Creature.Moves[currentMove]);
@@ -450,6 +456,7 @@ public class BattleSystem : MonoBehaviour
             {
                 --currentTarget;
             }
+            SoundFXManager.instance.PlaySoundFXClip(Target_switch, transform,1f);
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
@@ -457,6 +464,7 @@ public class BattleSystem : MonoBehaviour
             {
                 ++currentTarget;
             }
+            SoundFXManager.instance.PlaySoundFXClip(Target_switch, transform,1f);
         }
         handR.transform.position = enemyUnits[currentTarget].transform.position + new Vector3(-1.2f,0,0);
 

@@ -16,6 +16,9 @@ public class ChangeMenuShowed : MonoBehaviour {
     
     [SerializeField] private GameObject player;
 
+    [SerializeField] private AudioClip OpenMenuSound;
+    [SerializeField] private AudioClip CloseMenuSound;
+
     private GameObject currentEnabledGameObj;
 
     public GameObject CurrentEnabledGameObj => currentEnabledGameObj;
@@ -74,6 +77,8 @@ public class ChangeMenuShowed : MonoBehaviour {
         LayoutButtons.SetActive(true);
         BackgroundGeneralPanel.SetActive(false);
         
+        //Play Close sound
+        SoundFXManager.instance.PlaySoundFXClip(CloseMenuSound, transform,1f);
         
         player.GetComponent<OpenInventoryScript>().ClosedInventory();
     }
@@ -82,6 +87,9 @@ public class ChangeMenuShowed : MonoBehaviour {
         if(currentEnabledGameObj != null) { currentEnabledGameObj.SetActive(false); }
         currentEnabledGameObj = objToEnable;
         objToEnable.SetActive(true);
+        
+        //Play Open sound
+        SoundFXManager.instance.PlaySoundFXClip(OpenMenuSound, transform,1f);
     }
     
     public void OnInventoryButtonClick() { ChangeMenuScreen(InventoryPanel); }

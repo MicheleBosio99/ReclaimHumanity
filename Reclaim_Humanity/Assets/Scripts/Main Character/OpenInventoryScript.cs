@@ -9,6 +9,8 @@ public class OpenInventoryScript : MonoBehaviour {
     
     private bool inventoryIsOpen;
 
+    [SerializeField] private AudioClip PlayerMenuSound;
+
     public void OpenInventory(InputAction.CallbackContext context) {
         if (!context.performed || isActive) return;
         OpenInventoryBody(context.control.name);
@@ -34,7 +36,13 @@ public class OpenInventoryScript : MonoBehaviour {
     public void OpenCloseUIFunc(bool performed) {
         if (CurrentlyToOpenUI == null || !performed || !finished) { return; }
         if (isActive) { CurrentlyToOpenUI.SetActive(false); isActive = false; BlockPlayer(false); }
-        else { CurrentlyToOpenUI.SetActive(true); isActive = true; BlockPlayer(true); }
+        else
+        {
+            CurrentlyToOpenUI.SetActive(true); isActive = true; BlockPlayer(true); 
+        }
+        
+        //Play Open-close sound
+        SoundFXManager.instance.PlaySoundFXClip(PlayerMenuSound, transform,1f);
     }
 
     public void CloseTeleportUI() {

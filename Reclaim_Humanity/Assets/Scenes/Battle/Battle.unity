@@ -5529,6 +5529,8 @@ MonoBehaviour:
   dialogBox: {fileID: 733903753}
   handL: {fileID: 19665340}
   handR: {fileID: 1114970849}
+  Attack_switch: {fileID: 8300000, guid: 561463c08e8f4457aa8071d4b61a76dc, type: 3}
+  Target_switch: {fileID: 8300000, guid: 52e48bb5b53194b6ea0f4e9feaed8ce3, type: 3}
 --- !u!4 &1541214258
 Transform:
   m_ObjectHideFlags: 0
