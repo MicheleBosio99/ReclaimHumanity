@@ -3,10 +3,13 @@ using UnityEngine;
 
 public class ShowEnergyLab : MonoBehaviour {
     
-    [SerializeField] private LabEnergySO labEnergy;
+    [SerializeField] private GameObject labEnergySOSetter;
     private TextMeshProUGUI textEnergy;
     
-    void Start() { textEnergy = GetComponent<TextMeshProUGUI>(); textEnergy.text = labEnergy.CurrentEnergy.ToString(); }
+    private void Start() {
+        textEnergy = GetComponent<TextMeshProUGUI>();
+        textEnergy.text = labEnergySOSetter.GetComponent<LabEnergySOSetter>().GetCurrentEnergy().ToString();
+    }
 
     public void UpdateEnergy(string energy) { textEnergy.text = energy; }
 }

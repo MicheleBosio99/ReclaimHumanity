@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
     
     public static List<InventoryItem> itemsDropped;
     
+    public static float energyInLab;
+    
     void Awake()
     {
         if (instance == null)
@@ -64,6 +66,8 @@ public class GameManager : MonoBehaviour
         previousPosition = Vector3.zero;
         ordinaryItemsInInventory = new List<InventoryItem>();
         specialItemsInInventory = new List<InventoryItem>();
+        
+        energyInLab = 0.0f;
     }
     
     public static void NewGame()
@@ -161,6 +165,11 @@ public class GameManager : MonoBehaviour
         data.previousPosition[0] = previousPosition.x;
         data.previousPosition[1] = previousPosition.y;
         data.previousPosition[2] = previousPosition.z;
+        
+        data.energyInLab = energyInLab;
+        
+        previousPosition = Vector3.zero;
+        
         BinaryFormatter formatter = new BinaryFormatter();
 
         try
@@ -215,6 +224,8 @@ public class GameManager : MonoBehaviour
                     position.y = data.previousPosition[1];
                     position.z = data.previousPosition[2];
                     previousPosition = position;
+                    
+                    energyInLab = data.energyInLab;
 
                     List<string> itemsIds = data.itemIds;
                     List<int> itemQuantities = data.itemQuantities;
@@ -282,4 +293,6 @@ public class GameData
     public float[] previousPosition;
     public List<string> itemIds;
     public List<int> itemQuantities;
+    
+    public float energyInLab;
 }

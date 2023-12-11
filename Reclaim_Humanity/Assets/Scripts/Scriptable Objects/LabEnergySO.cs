@@ -7,25 +7,10 @@ public class LabEnergySO : ScriptableObject {
     [SerializeField] private float currentEnergy;
     [SerializeField] private float maxEnergyLab = 1000.0f; // TODO Should be initialized via .json file with all parameters when load;
 
-    public float CurrentEnergy {
-        get => currentEnergy;
-        set => currentEnergy = value;
-    }
-
-    public float MaxEnergyLab {
-        get => maxEnergyLab;
-        set => maxEnergyLab = value;
-    }
+    public void SetCurrentEnergy(float energy) { currentEnergy = Mathf.Clamp(energy, 0.0f, maxEnergyLab); }
+    public void AddToCurrentEnergy(float energy) { currentEnergy = Mathf.Clamp(currentEnergy + energy, 0.0f, maxEnergyLab); }
+    public float GetCurrentEnergy() { return currentEnergy; }
     
-    // public float GetCurrentEnergy() { return currentEnergy; }
-    //
-    // // public void SetCurrentEnergy(float energy) { currentEnergy = energy; }
-    //
-    // public void AddEnergyToCurrent(float energy) {
-    //     if(currentEnergy + energy < maxEnergyLab) { currentEnergy += startingEnergy; }
-    //     else { currentEnergy = maxEnergyLab; }
-    //     Debug.Log(energy + ", " + currentEnergy);
-    // }
-    //
-    // public float GetMaxEnergy() { return maxEnergyLab; }
+    
+    public float GetMaximumEnergy() { return maxEnergyLab; }
 }

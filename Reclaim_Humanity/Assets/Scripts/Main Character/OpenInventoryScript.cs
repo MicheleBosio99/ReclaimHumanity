@@ -36,6 +36,12 @@ public class OpenInventoryScript : MonoBehaviour {
         if (isActive) { CurrentlyToOpenUI.SetActive(false); isActive = false; BlockPlayer(false); }
         else { CurrentlyToOpenUI.SetActive(true); isActive = true; BlockPlayer(true); }
     }
+
+    public void CloseTeleportUI() {
+        isActive = false;
+        finished = true;
+        BlockPlayer(false);
+    }
     
     private PlayerMovement playerMov;
     private void Awake() { playerMov = gameObject.GetComponent<PlayerMovement>(); }

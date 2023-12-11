@@ -16,10 +16,10 @@ public class TurnOnOffLed : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "Player") { _renderer.sprite = ledOn; }
+        if (other.CompareTag("Player")) { _renderer.sprite = ledOn; }
     }
     
     private void OnTriggerExit2D(Collider2D other) {
-        if (other.tag == "Player") { _renderer.sprite = ledOff; }
+        if (other.CompareTag("Player")) { _renderer.sprite = ledOff; }
     }
 }
