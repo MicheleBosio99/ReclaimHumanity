@@ -140,7 +140,7 @@ public class RecipesSelectionHandler : MonoBehaviour {
         if (itemResultedInventory.ItemQuantity > 0) { itemResultedInventory.ItemQuantity += quantityItemResult; }
         else {
             var invItem = itemResSO.ToInventoryItem(quantityItemResult);
-            Assert.IsTrue(inventoryItemsSo.AddOrdinaryItemToInventory(invItem));
+            inventoryItemsSo.AddOrdinaryItemToInventory(invItem);
         }
         
         ResetRecipeSlots();

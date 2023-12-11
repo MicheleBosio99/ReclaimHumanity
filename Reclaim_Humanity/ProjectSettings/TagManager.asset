@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Human
   - LaboratoryFurnishing
+  - Dog
   layers:
   - Default
   - TransparentFX

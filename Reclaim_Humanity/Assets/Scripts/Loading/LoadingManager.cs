@@ -11,7 +11,7 @@ public class LoadingManager : MonoBehaviour
         StartCoroutine(LoadAsyncScene());
     }
 
-    IEnumerator LoadAsyncScene()
+    private IEnumerator LoadAsyncScene()
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(GameManager.sceneToLoad);
         
@@ -23,9 +23,6 @@ public class LoadingManager : MonoBehaviour
             {
                 asyncLoad.allowSceneActivation = true;
             }
-            
-            
-
             yield return null;
         }
     }

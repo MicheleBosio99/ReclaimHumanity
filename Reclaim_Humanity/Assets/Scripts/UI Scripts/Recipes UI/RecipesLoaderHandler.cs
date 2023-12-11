@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
-using Newtonsoft.Json;
+using System.Linq;
 using UnityEngine;
 
 public class RecipesLoaderHandler : MonoBehaviour {
@@ -9,6 +8,7 @@ public class RecipesLoaderHandler : MonoBehaviour {
     [SerializeField] private GameObject handlerGO;
     private RecipesSelectionHandler handler;
     [SerializeField] private TextAsset recipesJsonTextAsset;
+    [SerializeField] private GameObject noRecipesEnabledPanel;
     
     private string recipesJson;
     private List<Recipe> recipesList;
@@ -42,7 +42,7 @@ public class RecipesLoaderHandler : MonoBehaviour {
 
     private void InitializeRecipesButtons() {
         recipeButtons = new List<GameObject>();
-
+        
         foreach (var recipe in recipesList) {
             if (!recipe.enabled) continue;
             
@@ -53,6 +53,8 @@ public class RecipesLoaderHandler : MonoBehaviour {
             
             recipeButtons.Add(buttonRecipe);
         }
+        
+        if (recipeButtons.Count != 0) { noRecipesEnabledPanel.SetActive(false); }
     }
 }
 
