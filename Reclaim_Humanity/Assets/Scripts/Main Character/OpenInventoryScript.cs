@@ -51,16 +51,16 @@ public class OpenInventoryScript : MonoBehaviour {
         OpenPlayerMenuButton.SetActive(!blockPlayer);
     }
     
-    //private float lastLogTime = 0.0f;
-    
-    //private void Update() {
-        
-    //    if (!(Time.time - lastLogTime >= 2.0f)) return;
-        
-    //    Debug.Log($"inventoryIsOpen: {inventoryIsOpen}");
-        // Debug.Log($"isActive: {isActive}");
-        // Debug.Log($"CurrentlyToOpenUI: {CurrentlyToOpenUI}");
-            
-    //    lastLogTime = Time.time;
-    //}
+    // private float lastLogTime = 0.0f;
+    //
+    // private void Update() {
+    //     
+    //     if (!(Time.time - lastLogTime >= 2.0f)) return;
+    //     
+    //     Debug.Log($"inventoryIsOpen: {inventoryIsOpen}");
+    //     // Debug.Log($"isActive: {isActive}");
+    //     // Debug.Log($"CurrentlyToOpenUI: {CurrentlyToOpenUI}");
+    //         
+    //     lastLogTime = Time.time;
+    // }
 }
