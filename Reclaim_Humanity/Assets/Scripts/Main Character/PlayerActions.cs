@@ -34,22 +34,24 @@ public class PlayerMovement : MonoBehaviour {
     private void OnDisable() { rb.velocity = Vector2.zero; }
 
     private void Update() {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        // movement.x = Input.GetAxisRaw("Horizontal");
+        // movement.y = Input.GetAxisRaw("Vertical"); //This lines make the player skin change with the arrows, but not move;
+        
+        movement = movingDirection;
 
         if (movement != Vector2.zero){
             
-			if (Mathf.Abs(movement.x) >= Mathf.Abs(movement.y))
-        {
-           	movement.y=0;
-			animator.SetFloat("Horizontal", movement.x); 
-			animator.SetFloat("Vertical", movement.y); 
-        }
-		else {
-			movement.x=0;
-			animator.SetFloat("Horizontal", movement.x); 
-			animator.SetFloat("Vertical", movement.y); 
-		}
+            if (Mathf.Abs(movement.x) >= Mathf.Abs(movement.y))
+            {
+           	    movement.y=0;
+			    animator.SetFloat("Horizontal", movement.x); 
+			    animator.SetFloat("Vertical", movement.y); 
+            }
+		    else {
+			    movement.x=0;
+			    animator.SetFloat("Horizontal", movement.x); 
+			    animator.SetFloat("Vertical", movement.y); 
+		    }
             
             //play the sound for move
             //SoundFXManager.instance.PlayMovementFXClip(MoveClip, transform,1f);
