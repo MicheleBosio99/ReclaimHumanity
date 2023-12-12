@@ -9,6 +9,8 @@ public class ScrollAutomatically : MonoBehaviour {
     [SerializeField] private float scrollSpeed = 0.02f;
     [SerializeField] private GameObject continueButton;
     [SerializeField] private GameObject loadingText;
+    [SerializeField] private float initialLoadingWait;
+    [SerializeField] private float sceneLoadWait;
     private const float targetScrollValue = 0.0f;
 
     private void Start() {
@@ -18,16 +20,13 @@ public class ScrollAutomatically : MonoBehaviour {
     }
 
     private IEnumerator AutoScrollCoroutine() {
-        yield return new WaitForSeconds(10.0f);
-        while (scrollbar.value > targetScrollValue) { scrollbar.value -= Time.deltaTime * scrollSpeed; yield return null; }
-        
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(initialLoadingWait);
+        // while (scrollbar.value > targetScrollValue) { scrollbar.value -= Time.deltaTime * scrollSpeed; yield return null; }
         
         loadingText.SetActive(false);
         continueButton.SetActive(true);
         
-        yield return new WaitForSeconds(25.0f);
-        
+        yield return new WaitForSeconds(sceneLoadWait);
         ChangeSceneTo("Laboratory");
     }
 

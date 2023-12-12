@@ -88,7 +88,6 @@ public class ChangeMenuShowed : MonoBehaviour {
         currentEnabledGameObj = objToEnable;
         objToEnable.SetActive(true);
         
-        //Play Open sound
         SoundFXManager.instance.PlaySoundFXClip(OpenMenuSound, transform,1f);
     }
     

@@ -30,6 +30,11 @@ public class InteractionHumanHandler : MonoBehaviour {
     private bool clickedGoOnButton;
     
     private string persistentRecipePath;
+    
+    private bool isTyping;
+
+    public bool GetIsTyping() { return isTyping; }
+    public void SetIsTyping(bool _isTyping) { isTyping = _isTyping; }
 
     public Human Human {
         get => human;
@@ -37,6 +42,7 @@ public class InteractionHumanHandler : MonoBehaviour {
     }
 
     private void Awake() {
+        isTyping = false;
         dialogueHandler = dialogueUI.GetComponent<DialogueHandler>();
         playerMovement = player.GetComponent<PlayerMovement>();
         openInventory = player.GetComponent<OpenInventoryScript>();
@@ -74,15 +80,20 @@ public class InteractionHumanHandler : MonoBehaviour {
         var dialogue = firstTime ? human.firstDialogue : human.generalDialogue;
         dialogue.ResetPhraseNum();
         
-        Debug.Log(dialogue.ToString());
-        
         while(true) {
             var phrase = dialogue.GetNextPhrase();
             if (phrase == null) { break; }
             
             var coroutine = StartCoroutine(dialogueHandler.WriteSlowText(phrase));
+            
             yield return new WaitUntil(() => clickedGoOnButton);
-            StopCoroutine(coroutine);
+            
+            if (isTyping) {
+                StopCoroutine(coroutine);
+                clickedGoOnButton = false;
+                dialogueHandler.WriteFastText(phrase);
+                yield return new WaitUntil(() => clickedGoOnButton);
+            }
             dialogueHandler.EmptyText();
             clickedGoOnButton = false;
         }

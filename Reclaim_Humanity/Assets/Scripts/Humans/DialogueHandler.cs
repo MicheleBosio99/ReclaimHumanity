@@ -14,12 +14,12 @@ public class DialogueHandler : MonoBehaviour {
     
     private InteractionHumanHandler activeHuman;
 
-    private void WriteFastText(string phrase) { dialogueUItext.text = phrase; }
+    public void WriteFastText(string phrase) { dialogueUItext.text = phrase; }
 
     public IEnumerator WriteSlowText(string phrase) {
+        activeHuman.SetIsTyping(true);
         EmptyText();
         
-        // Sound Here
         SoundFXManager.instance.PlaySoundFXClip(DialogueDown, transform,1f);
 
         for (var i = 0; i < phrase.Length; i ++) {
@@ -35,7 +35,7 @@ public class DialogueHandler : MonoBehaviour {
             dialogueUItext.text += letter;
             yield return new WaitForSeconds(Random.Range(0, lettersDelay));
         }
-        
+        activeHuman.SetIsTyping(false);
     }
     
     public void EmptyText() { WriteFastText(""); }
