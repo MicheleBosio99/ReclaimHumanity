@@ -382,6 +382,7 @@ public class BattleSystem : MonoBehaviour
             if (currentAction < 1)
             {
                 ++currentAction;
+                SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -389,6 +390,7 @@ public class BattleSystem : MonoBehaviour
             if (currentAction > 0)
             {
                 --currentAction;
+                SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }
         dialogBox.UpdateActionSelection(currentAction);
@@ -455,16 +457,18 @@ public class BattleSystem : MonoBehaviour
             if (currentTarget > 0)
             {
                 --currentTarget;
+                SoundFXManager.instance.PlaySoundFXClip(Target_switch, transform,1f);
             }
-            SoundFXManager.instance.PlaySoundFXClip(Target_switch, transform,1f);
+            
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             if (currentTarget < enemyBases.Count - 1)
             {
                 ++currentTarget;
+                SoundFXManager.instance.PlaySoundFXClip(Target_switch, transform,1f);
             }
-            SoundFXManager.instance.PlaySoundFXClip(Target_switch, transform,1f);
+            
         }
         handR.transform.position = enemyUnits[currentTarget].transform.position + new Vector3(-1.2f,0,0);
 
