@@ -7,10 +7,16 @@ public class HealthBarBehaviour : MonoBehaviour {
     [SerializeField] private Image greenBarImage;
     private const float minValue = 0.214f;
     private const float maxValue = 1.0f;
-    
-    private const float maxHealth = 125.0f;
 
-    private void Start() {
-        greenBarImage.fillAmount = Mathf.Lerp(minValue, maxValue, GameManager.party[0].MaxHp / maxHealth);
+    private void Start() { ShowHealth(); }
+
+    private void OnEnable() {
+        try { ShowHealth(); }
+        catch (Exception) { Debug.Log("error"); }
+    }
+
+    private void ShowHealth() {
+        var currentHp = GameManager.partyHps[0] == 1000 ? 13 : GameManager.partyHps[0];
+        greenBarImage.fillAmount = Mathf.Lerp(minValue, maxValue, (float) GameManager.partyHps[0] / 13.0f);
     }
 }

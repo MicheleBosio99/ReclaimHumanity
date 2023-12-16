@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -24,6 +25,10 @@ public class GameManager : MonoBehaviour
     public static RecipesInfoLoader recipesInfoLoader;
     public static List<InventoryItem> ordinaryItemsInInventory;
     public static List<InventoryItem> specialItemsInInventory;
+    
+    public static List<InventoryItem> itemsDropped;
+    
+    public static float energyInLab;
     
     void Awake()
     {
@@ -61,6 +66,8 @@ public class GameManager : MonoBehaviour
         previousPosition = Vector3.zero;
         ordinaryItemsInInventory = new List<InventoryItem>();
         specialItemsInInventory = new List<InventoryItem>();
+        
+        energyInLab = 0.0f;
     }
     
     public static void NewGame()
@@ -70,7 +77,7 @@ public class GameManager : MonoBehaviour
         recipesInfoLoader.CleanData();
         currentSceneName = "Laboratory";
         sceneToLoad = "Laboratory";
-        SceneManager.LoadScene("LoadingScene");
+        SceneManager.LoadScene("Introduction");
         SaveGame();
     }
     
@@ -91,8 +98,9 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("LoadingScene");
     }
     
-    public static void ExitCombat()
+    public static void ExitCombat(List<InventoryItem> _itemsDropped)
     {
+        itemsDropped = _itemsDropped;
         currentSceneName = previousSceneName;
         previousSceneName = SceneManager.GetActiveScene().name;
         sceneToLoad = currentSceneName;
@@ -101,7 +109,6 @@ public class GameManager : MonoBehaviour
     
     public static void GoToMainMenu()
     {
-        
         sceneToLoad = "MainMenu";
         SceneManager.LoadScene("LoadingScene");
     }
@@ -158,6 +165,11 @@ public class GameManager : MonoBehaviour
         data.previousPosition[0] = previousPosition.x;
         data.previousPosition[1] = previousPosition.y;
         data.previousPosition[2] = previousPosition.z;
+        
+        data.energyInLab = energyInLab;
+        
+        previousPosition = Vector3.zero;
+        
         BinaryFormatter formatter = new BinaryFormatter();
 
         try
@@ -168,7 +180,7 @@ public class GameManager : MonoBehaviour
                 fileStream.Close();
             }
 
-            Debug.Log("Game data saved successfully.");
+            //Debug.Log("Game data saved successfully.");
         }
         catch (System.Exception e)
         {
@@ -212,13 +224,15 @@ public class GameManager : MonoBehaviour
                     position.y = data.previousPosition[1];
                     position.z = data.previousPosition[2];
                     previousPosition = position;
+                    
+                    energyInLab = data.energyInLab;
 
                     List<string> itemsIds = data.itemIds;
                     List<int> itemQuantities = data.itemQuantities;
                     ItemLoader itemLoader = GameObject.Find("InventoryItemsLoader").GetComponent<ItemLoader>();
                     List<ItemsSO> ordinaryItemsSos = new List<ItemsSO>();
                     List<ItemsSO> specialItemsSos = new List<ItemsSO>();
-                    print(itemLoader.ItemsSos.Count);
+                    // print(itemLoader.ItemsSos.Count);
                     for (int i = 0; i < itemsIds.Count; i++)
                     {
                         foreach (var itemSo in itemLoader.ItemsSos)
@@ -250,10 +264,10 @@ public class GameManager : MonoBehaviour
                         specialItemsInInventory.Add(specialItemsSos[i].
                             ToInventoryItem(itemQuantities[i+ordinaryItemsSos.Count]));
                     }
-                    print(ordinaryItemsInInventory.Count);
+                    // print(ordinaryItemsInInventory.Count);
                     GoToScene(currentSceneName);
-                    print(ordinaryItemsInInventory.Count);
-                    Debug.Log("Game data loaded successfully.");
+                    // print(ordinaryItemsInInventory.Count);
+                    // Debug.Log("Game data loaded successfully.");
                     fileStream.Close();
                 }
             }
@@ -279,4 +293,6 @@ public class GameData
     public float[] previousPosition;
     public List<string> itemIds;
     public List<int> itemQuantities;
+    
+    public float energyInLab;
 }

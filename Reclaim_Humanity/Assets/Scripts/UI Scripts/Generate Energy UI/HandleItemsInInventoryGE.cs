@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Assertions;
 
 public class HandleItemsInInventoryGE : MonoBehaviour {
-    [SerializeField] private LabEnergySO labEnergySO;
+    [SerializeField] private GameObject labEnergySOSetter;
     [SerializeField] private InventoryItemsSO inventorySO;
     private List<InventoryItem> inventorySOItems;
 
@@ -17,6 +17,7 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
 
     private TextsHandler textsHandler;
     private HandleItemInSlotGE _handleItemInSlotGE;
+    private LabEnergySOSetter energySoSetter;
     private float energyCreated;
 
     private List<HoldSlotUI> holdingSlotsUIList;
@@ -26,6 +27,7 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
         textsHandler = gameObject.GetComponent<TextsHandler>();
         _handleItemInSlotGE = gameObject.GetComponent<HandleItemInSlotGE>();
         batteryEnergyText = batteryEnergy.GetComponent<ShowEnergyLab>();
+        energySoSetter = labEnergySOSetter.GetComponent<LabEnergySOSetter>();
         
         holdingSlotsUIList = new List<HoldSlotUI>();
         maxLengthHoldingSlotsUIList = chosenItemSlotsUI.Count();
@@ -119,26 +121,20 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
         foreach (var slotTuple in holdingSlotsUIList) { slotTuple.EmptyChosenSlot(); }
         holdingSlotsUIList.RemoveAll(slot => true);
         
-        Assert.AreEqual(0, holdingSlotsUIList.Count);
         
-        labEnergySO.CurrentEnergy += energyCreated;
-        batteryEnergyText.UpdateEnergy(labEnergySO.CurrentEnergy.ToString());
+        
+        // NEW
+        energySoSetter.UpdateEnergySO(energyCreated);
+        GameManager.energyInLab = energySoSetter.GetCurrentEnergy();
+        batteryEnergyText.UpdateEnergy(energySoSetter.GetCurrentEnergy().ToString());
+        //
+        
+        
         textsHandler.UpdateEnergy("");
         energyCreated = 0.0f;
         
         inventorySOItems.RemoveAll(slot => slot.ItemQuantity == 0);
     }
-    
-    // private float timer = 0.0f;
-    //
-    // private void Update() {
-    //     timer += Time.deltaTime;
-    //
-    //     if (timer >= 4.0f) {
-    //         Debug.Log(inventorySO.OrdinaryItemToString());
-    //         timer = 0.0f;
-    //     }
-    // }
 }
 
 

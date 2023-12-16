@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
@@ -29,21 +30,30 @@ public class HandleItemsInInventoryInv : MonoBehaviour {
     }
 
     private void Start() {
-        for (int i = 0; i < ordinaryInventorySlotsUI.Count; i++) {
+        for (var i = 0; i < ordinaryInventorySlotsUI.Count; i++) {
             ordinaryInventorySlotsUI[i].GetComponent<HandleSlotSelectionInv>().SaveHandler(this, i, false);
         }
-        for (int i = 0; i < specialInventorySlotsUI.Count; i++) {
+        for (var i = 0; i < specialInventorySlotsUI.Count; i++) {
             specialInventorySlotsUI[i].GetComponent<HandleSlotSelectionInv>().SaveHandler(this, i, true);
         }
 
         CurrentSelectedSlot = ordinaryInventorySlotsUI[0];
+        
+        if(GameManager.itemsDropped != null) { AddNewListItemToInventory(GameManager.itemsDropped); }
     }
 
-    private void OnEnable() { UpdateOrdinarySlots(); UpdateSpecialSlots(); }
+    private void OnEnable() { 
+        if (inventorySlotsSO == null) { return; }
+        UpdateOrdinarySlots(); UpdateSpecialSlots();
+    }
 
     public void AddNewItemToInventory(InventoryItem item) {
         if (item.IsSpecialItem) { AddNewSpecialItemToInventory(item); }
         else { AddNewOrdinaryItemToInventory(item); }
+    }
+
+    public void AddNewListItemToInventory(List<InventoryItem> items) {
+        foreach (var item in items) { AddNewItemToInventory(item); }
     }
 
     public void AddNewOrdinaryItemToInventory(InventoryItem item) {
@@ -111,5 +121,7 @@ public class HandleItemsInInventoryInv : MonoBehaviour {
         CurrentSelectedSlot.GetComponent<HandleSlotSelectionInv>().ExitHover();
         CurrentSelectedSlot = isSlotSpecial ? specialInventorySlotsUI[index] : ordinaryInventorySlotsUI[index];
     }
+    
+    
     
 }

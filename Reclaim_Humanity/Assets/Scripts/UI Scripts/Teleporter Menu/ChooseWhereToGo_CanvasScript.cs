@@ -1,9 +1,13 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ChooseWhereToGoScript : MonoBehaviour {
     
     [SerializeField] private GameObject player;
+    private OpenInventoryScript openInventory;
+
+    private void Start() { openInventory = player.GetComponent<OpenInventoryScript>(); }
 
     private void OnEnable() { gameObject.transform.position = player.transform.position; }
 
@@ -14,7 +18,7 @@ public class ChooseWhereToGoScript : MonoBehaviour {
     //
     // private void OnDisable() { if (movement != null) { movement.CurrentSpeed = movement.NormalSpeed; } }
 
-    public void OnCloseButtonClick() { gameObject.SetActive(false); }
+    public void OnCloseButtonClick() { openInventory.CloseTeleportUI(); gameObject.SetActive(false); }
     
     // GTF = Go To Forest
     public void OnGTFButtonClick() { GameManager.GoToScene("OvergrownForest"); }

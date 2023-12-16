@@ -15,6 +15,7 @@ public class ObjectSpawner : MonoBehaviour {
     [SerializeField] private float minSpawnDelay = 15f;
     [SerializeField] private float maxSpawnDelay = 25f;
     [SerializeField] private bool respawn;
+    [SerializeField] private AudioClip ItemCollectedSound;
 
     private PolygonCollider2D spawnAreaCollider;
     
@@ -73,7 +74,10 @@ public class ObjectSpawner : MonoBehaviour {
     }
 
     public void ItemGotPickedUp(GameObject item) {
-        if (spawnedItems.Contains(item)) { spawnedItems.Remove(item); }
+        if (spawnedItems.Contains(item)) { 
+            spawnedItems.Remove(item);
+            SoundFXManager.instance.PlaySoundFXClip(ItemCollectedSound, transform,1f); 
+        }
         if (!respawn) { return; }
         if (spawnedItems.Count == 0) { StartCoroutine(SpawnItemsRoutine()); }
     }

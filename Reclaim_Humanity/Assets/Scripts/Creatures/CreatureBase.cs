@@ -25,6 +25,8 @@ public class CreatureBase : ScriptableObject
     [SerializeField] private int speed;
 
     [SerializeField] private List<LearnableMove> learnableMoves;
+    
+    [SerializeField] private List<ItemsSO> droppableObjects;
 
     public string Name
     {
@@ -89,6 +91,10 @@ public class CreatureBase : ScriptableObject
     public List<LearnableMove> LearnableMoves
     {
         get { return learnableMoves; }
+    }
+
+    public List<ItemsSO> DroppableObjects {
+        get { return droppableObjects; }
     }
 }
 

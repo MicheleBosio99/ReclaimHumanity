@@ -11,6 +11,7 @@ public class TriggerCollisionHandler : MonoBehaviour {
 
     private void Start() {
         openInventory = player.GetComponent<OpenInventoryScript>();
+        humanDialogueEnabler.SetActive(false);
         FButton.SetActive(false);
     }
 
