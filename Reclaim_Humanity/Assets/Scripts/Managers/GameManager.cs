@@ -100,13 +100,40 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < itemsDropped.Count; i++)
         {
-            if (itemsDropped[i].IsSpecialItem)
+            if (!itemsDropped[i].IsSpecialItem)
             {
-                specialItemsInInventory.Add(itemsDropped[i]);
+                bool flag = false;
+                for (int j = 0; j < ordinaryItemsInInventory.Count; j++)
+                {
+                    if (itemsDropped[i].ItemID == ordinaryItemsInInventory[j].ItemID)
+                    {
+                        ordinaryItemsInInventory[j].ItemQuantity += itemsDropped[i].ItemQuantity;
+                        flag = true;
+                        break;
+                    }
+                }
+                if (!flag)
+                {
+                    ordinaryItemsInInventory.Add(itemsDropped[i]);
+                }
             }
             else
             {
-                ordinaryItemsInInventory.Add(itemsDropped[i]);
+                bool flag = false;
+                for (int j = 0; j < specialItemsInInventory.Count; j++)
+                {
+                    if (itemsDropped[i].ItemID == specialItemsInInventory[j].ItemID)
+                    {
+                        specialItemsInInventory[j].ItemQuantity += itemsDropped[i].ItemQuantity;
+                        flag = true;
+                        break;
+                    }
+                }
+
+                if (!flag)
+                {
+                    specialItemsInInventory.Add(itemsDropped[i]);
+                }
             }
         }
         currentSceneName = previousSceneName;
