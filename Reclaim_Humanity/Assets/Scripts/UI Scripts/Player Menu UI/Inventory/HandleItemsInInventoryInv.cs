@@ -39,7 +39,7 @@ public class HandleItemsInInventoryInv : MonoBehaviour {
 
         CurrentSelectedSlot = ordinaryInventorySlotsUI[0];
         
-        if(GameManager.itemsDropped != null) { AddNewListItemToInventory(GameManager.itemsDropped); }
+        // if(GameManager.itemsDropped != null) { AddNewListItemToInventory(GameManager.itemsDropped); }
     }
 
     private void OnEnable() { 

@@ -8,7 +8,7 @@ public class ButtonManager : MonoBehaviour {
     [SerializeField] private GameObject YouSureQuitView;
     [SerializeField] private GameObject BackgroundPanel;
     [SerializeField] private GameObject FeedbackPanel;
-    [SerializeField] private Player player;
+    [SerializeField] private GameObject mainCharachter;
 
     private void Start() {
         BackgroundPanel.SetActive(false);
@@ -17,8 +17,6 @@ public class ButtonManager : MonoBehaviour {
     }
 
     public void OnSaveClick() { GameManager.SaveGame(); }
-
-    public void OnLoadClick() { player.LoadGame(); }
 
     public void OnQuitGameClick() {
         BackgroundPanel.SetActive(true);
@@ -37,7 +35,7 @@ public class ButtonManager : MonoBehaviour {
     }
 
     public void OnReallyQuitGameClick() {
-        player.GetComponent<OpenInventoryScript>().OpenInventoryBody("close");
+        mainCharachter.GetComponent<OpenInventoryScript>().OpenInventoryBody("close");
         GameManager.GoToMainMenu();
     }
 }

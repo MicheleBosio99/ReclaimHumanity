@@ -24,8 +24,6 @@ public class GameManager : MonoBehaviour
     public static List<InventoryItem> ordinaryItemsInInventory;
     public static List<InventoryItem> specialItemsInInventory;
     
-    public static List<InventoryItem> itemsDropped;
-    
     public static float energyInLab;
     public static VolumeConfiguration volumeConfig;
     
@@ -98,9 +96,19 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("LoadingScene");
     }
     
-    public static void ExitCombat(List<InventoryItem> _itemsDropped)
+    public static void ExitCombat(List<InventoryItem> itemsDropped)
     {
-        itemsDropped = _itemsDropped;
+        for (int i = 0; i < itemsDropped.Count; i++)
+        {
+            if (itemsDropped[i].IsSpecialItem)
+            {
+                specialItemsInInventory.Add(itemsDropped[i]);
+            }
+            else
+            {
+                ordinaryItemsInInventory.Add(itemsDropped[i]);
+            }
+        }
         currentSceneName = previousSceneName;
         previousSceneName = SceneManager.GetActiveScene().name;
         sceneToLoad = currentSceneName;
@@ -264,10 +272,10 @@ public class GameManager : MonoBehaviour
                         specialItemsInInventory.Add(specialItemsSos[i].
                             ToInventoryItem(itemQuantities[i+ordinaryItemsSos.Count]));
                     }
-                    // print(ordinaryItemsInInventory.Count);
+                    print(ordinaryItemsInInventory.Count);
                     GoToScene(currentSceneName);
-                    // print(ordinaryItemsInInventory.Count);
-                    // Debug.Log("Game data loaded successfully.");
+                    print(ordinaryItemsInInventory.Count);
+                    Debug.Log("Game data loaded successfully.");
                     fileStream.Close();
                 }
             }
