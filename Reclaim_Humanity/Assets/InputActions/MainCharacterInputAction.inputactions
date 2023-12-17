@@ -201,11 +201,11 @@
                 },
                 {
                     "name": "",
-                    "id": "75db8a56-d97e-4832-841d-6110c203c8ec",
-                    "path": "<Gamepad>/buttonNorth",
+                    "id": "f20d6006-54b4-4460-a7e6-071f3fcc028c",
+                    "path": "<Gamepad>/dpad/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad",
+                    "groups": "",
                     "action": "OpenCloseUI",
                     "isComposite": false,
                     "isPartOfComposite": false

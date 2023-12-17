@@ -15,11 +15,11 @@ public class RegenerateHealthNoText : MonoBehaviour {
     
     private OpenInventoryScript invScript;
     
-    private int timesSleep;
+    //private int timesSleep;
     private bool finished;
 
     private void Awake() {
-        timesSleep = 0;
+        //timesSleep = 0;
         invScript = player.GetComponent<OpenInventoryScript>();
         gameObject.SetActive(false);
         ChangeColorImage(0.0f);
@@ -64,7 +64,7 @@ public class RegenerateHealthNoText : MonoBehaviour {
         
         ChangeText("");
         currentTime = 0f;
-        while (currentTime < sleepTime) {
+        while (currentTime < sleepTime / 2.0f) {
             currentTime += Time.deltaTime;
             backgroundImage.color = Color.Lerp(targetColor, startColor, Mathf.Lerp(0, 1, currentTime / sleepTime));
             yield return null;

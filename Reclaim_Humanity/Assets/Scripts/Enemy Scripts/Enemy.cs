@@ -89,7 +89,7 @@ public class Enemy : MonoBehaviour
             GameManager.EnterCombat();
         }
     }
-    
+
     /*
      * Enemy Type Coroutines
      * Type 0: Chasing --> FOV (30°) + Chasing

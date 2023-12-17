@@ -88,7 +88,7 @@ public class ChangeMenuShowed : MonoBehaviour {
         currentEnabledGameObj = objToEnable;
         objToEnable.SetActive(true);
         
-        SoundFXManager.instance.PlaySoundFXClip(OpenMenuSound, transform,1f);
+        SoundFXManager.instance.PlaySoundFXClip(OpenMenuSound, transform,0.75f);
     }
     
     public void OnInventoryButtonClick() { ChangeMenuScreen(InventoryPanel); }

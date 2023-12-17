@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using JetBrains.Annotations;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -29,6 +27,7 @@ public class GameManager : MonoBehaviour
     public static List<InventoryItem> itemsDropped;
     
     public static float energyInLab;
+    public static VolumeConfiguration volumeConfig;
     
     void Awake()
     {
@@ -68,6 +67,7 @@ public class GameManager : MonoBehaviour
         specialItemsInInventory = new List<InventoryItem>();
         
         energyInLab = 0.0f;
+        volumeConfig = new VolumeConfiguration();
     }
     
     public static void NewGame()
@@ -295,4 +295,21 @@ public class GameData
     public List<int> itemQuantities;
     
     public float energyInLab;
+}
+
+public class VolumeConfiguration {
+    private float masterVolume = 1.0f;
+    private float musicVolume = 1.0f;
+    private float soundsVolume = 1.0f;
+    
+    public float GetMasterVolume() { return masterVolume; }
+    public float GetMusicVolume() { return musicVolume; }
+    public float GetSoundsVolume() { return soundsVolume; }
+    
+    public void SetMasterVolume(float _masterVolume) { masterVolume = _masterVolume; }
+    public void SetMusicVolume(float _musicVolume) { musicVolume = _musicVolume; }
+    public void SetSoundsVolume(float _soundsVolume) { soundsVolume = _soundsVolume; }
+
+    public void SetAllVolumes(List<float> volumes) { masterVolume = volumes[0]; musicVolume = volumes[1]; soundsVolume = volumes[2]; }
+    public List<float> GetAllVolumes() { return new List<float>() {masterVolume, musicVolume, soundsVolume}; }
 }

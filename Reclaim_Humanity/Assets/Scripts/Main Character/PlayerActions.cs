@@ -34,9 +34,6 @@ public class PlayerMovement : MonoBehaviour {
     private void OnDisable() { rb.velocity = Vector2.zero; }
 
     private void Update() {
-        // movement.x = Input.GetAxisRaw("Horizontal");
-        // movement.y = Input.GetAxisRaw("Vertical"); //This lines make the player skin change with the arrows, but not move;
-        
         movement = movingDirection;
 
         if (movement != Vector2.zero){
@@ -69,8 +66,6 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     public void ChangePlayerPosition(Vector2 endPosition) { gameObject.transform.position = endPosition; }
-    
-    
 
     public void WalkPlayerToPosition(Vector2 endPos) { StartCoroutine(WalkPlayer(endPos)); }
     

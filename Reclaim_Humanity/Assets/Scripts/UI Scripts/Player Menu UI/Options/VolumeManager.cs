@@ -1,11 +1,10 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class VolumeManager : MonoBehaviour
-{
+public class VolumeManager : MonoBehaviour {
     [SerializeField] private AudioMixer _audioMixer;
     
     [SerializeField] private Slider masterVolSlider;
@@ -16,57 +15,118 @@ public class VolumeManager : MonoBehaviour
     [SerializeField] private Toggle musicVolToggle;
     [SerializeField] private Toggle soundVolToggle;
     
-    private bool isMasterActive = true;
-    private bool isMusicActive = true;
-    private bool isSoundActive = true;
+    private float masterValue;
+    private float musicValue;
+    private float soundsValue;
     
-    // TODO: system not properly working, does mute the volume but interaction slider/toggle are not working. Solve;
+    private bool masterToggleValue;
+    private bool musicToggleValue;
+    private bool soundsToggleValue;
+
+    private const float TOLERANCE = 0.01f;
     
+    private bool isChanging;
+
+    private void Awake() { LoadAudioConfiguration(); }
+
     // MASTER
-    public void SetMasterVolume(float level) {
-        _audioMixer.SetFloat("MasterVolume", Mathf.Log10(level)*20f);
+    public void HandleMasterVolumeSlider(float value) {
+        isChanging = true;
+        _audioMixer.SetFloat("MasterVolume", Mathf.Log10(value)*20f);
+        masterToggleValue = Math.Abs(value - masterVolSlider.minValue) > TOLERANCE;
+        masterVolToggle.isOn = masterToggleValue;
+        isChanging = false;
         
-        var active = !(level < 0.001);
-        if (active ^ isMasterActive) return;
-        masterVolToggle.isOn = active; isMasterActive = !isMasterActive;
+        SaveAudioConfiguration();
     }
-
-    public void ToggleMasterVolume(bool active) {
-        _audioMixer.SetFloat("MasterVolume", active ? 0.0f : -80.0f);
-        if (active ^ isMasterActive) return;
-        masterVolSlider.value = active ? 1.0f : 1e-5f; isMasterActive = !isMasterActive;
+    
+    public void HandleMasterVolumeToggle(bool active) {
+        masterVolToggle.isOn = active;
+        masterToggleValue = active;
+        
+        if (active) { if (!isChanging) { masterVolSlider.value = masterValue; } }
+        else {
+            var volRef = masterVolSlider.value; masterValue = volRef;
+            masterVolSlider.value = masterVolSlider.minValue;
+        }
     }
-
+    
     // MUSIC
-    public void SetMusicVolume(float level) {
-        _audioMixer.SetFloat("MusicVolume", Mathf.Log10(level)*20f);
+    public void HandleMusicVolumeSlider(float value) {
+        isChanging = true;
+        _audioMixer.SetFloat("MusicVolume", Mathf.Log10(value)*20f);
+        musicToggleValue = Math.Abs(value - musicVolSlider.minValue) > TOLERANCE;
+        musicVolToggle.isOn = musicToggleValue;
+        isChanging = false;
         
-        var active = !(level < 0.001);
-        if (active ^ isMusicActive) return;
-        musicVolToggle.isOn = active; isMusicActive = !isMusicActive;
+        //SaveAudioConfiguration();
     }
     
-    public void ToggleMusicVolume(bool active) {
-        _audioMixer.SetFloat("MusicVolume", active ? 0.0f : -80.0f);
+    public void HandleMusicVolumeToggle(bool active) {
+        musicVolToggle.isOn = active;
+        musicToggleValue = active;
         
-        if (active ^ isMusicActive) return;
-        musicVolSlider.value = active ? 1.0f : 1e-5f; isMusicActive = !isMusicActive;
+        if (active) { if (!isChanging) { musicVolSlider.value = musicValue; } }
+        else {
+            var volRef = musicVolSlider.value; musicValue = volRef;
+            musicVolSlider.value = musicVolSlider.minValue;
+            _audioMixer.SetFloat("MusicVolume", Mathf.Log10(musicVolSlider.minValue)*20f);
+        }
     }
-    
     
     // SOUNDS
-    public void SetSoundFXVolume(float level) {
-        _audioMixer.SetFloat("SoundsVolume", Mathf.Log10(level)*20f);
+    public void HandleSoundsVolumeSlider(float value) {
+        isChanging = true;
+        _audioMixer.SetFloat("SoundsVolume", Mathf.Log10(value)*20f);
+        soundsToggleValue = Math.Abs(value - soundVolSlider.minValue) > TOLERANCE;
+        soundVolToggle.isOn = soundsToggleValue;
+        isChanging = false;
         
-        var active = !(level < 0.001);
-        if (active ^ isSoundActive) return;
-        soundVolToggle.isOn = active; isSoundActive = !isSoundActive;
+        SaveAudioConfiguration();
     }
     
-    public void ToggleSoundVolume(bool active) {
-        _audioMixer.SetFloat("SoundsVolume", active ? 0.0f : -80.0f);
+    public void HandleSoundsVolumeToggle(bool active) {
+        soundVolToggle.isOn = active;
+        soundsToggleValue = active;
         
-        if (active ^ isSoundActive) return;
-        soundVolSlider.value = active ? 1.0f : 1e-5f; isSoundActive = !isSoundActive;
+        if (active) { if (!isChanging) { soundVolSlider.value = soundsValue; } }
+        else {
+            var volRef = soundVolSlider.value; soundsValue = volRef;
+            soundVolSlider.value = soundVolSlider.minValue;
+        }
+    }
+
+    private void LoadAudioConfiguration() {
+        if (GameManager.volumeConfig == null) { masterValue = 1.0f; musicValue = 1.0f; soundsValue = 1.0f; return; }
+
+        var volConfig = GameManager.volumeConfig.GetAllVolumes();
+        
+        masterVolToggle.isOn = volConfig[0] > TOLERANCE;
+        masterVolSlider.value = volConfig[0];
+        
+        musicVolToggle.isOn = volConfig[1] > TOLERANCE;
+        musicVolSlider.value = volConfig[1];
+        
+        soundVolToggle.isOn = volConfig[2] > TOLERANCE;
+        soundVolSlider.value = volConfig[2];
+    }
+    
+    private const float minDifferenceUpdate = 0.2f;
+    private const float minTimeUpdate = 0.25f;
+    private float lastTimeChanged;
+
+    private void SaveAudioConfiguration() {
+        if (Time.time - lastTimeChanged < minTimeUpdate) { return; }
+
+        var volumes = GameManager.volumeConfig.GetAllVolumes();
+        if ((Mathf.Abs(volumes[0] - masterVolSlider.value) > minDifferenceUpdate) ||
+                (Mathf.Abs(volumes[1] - musicVolSlider.value) > minDifferenceUpdate) ||
+                (Mathf.Abs(volumes[2] - soundVolSlider.value) > minDifferenceUpdate)) {
+            GameManager.volumeConfig.SetAllVolumes(new List<float>() {
+                masterVolSlider.value,
+                musicVolSlider.value,
+                soundVolSlider.value
+            });
+        }
     }
 }

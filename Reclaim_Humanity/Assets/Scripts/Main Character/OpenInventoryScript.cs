@@ -6,10 +6,23 @@ public class OpenInventoryScript : MonoBehaviour {
     
     [SerializeField] private GameObject PlayerMenu;
     [SerializeField] private GameObject OpenPlayerMenuButton;
-    
-    private bool inventoryIsOpen;
-
     [SerializeField] private AudioClip PlayerMenuSound;
+    
+    private PlayerMovement playerMov;
+    public bool isActive;
+    private bool inventoryIsOpen;
+    private bool finished;
+    
+    public bool Finished { set => finished = value; }
+
+    private void Awake() {
+        playerMov = gameObject.GetComponent<PlayerMovement>();
+        finished = true;
+        isActive = false;
+        inventoryIsOpen = false;
+    }
+    
+    private void OnEnable() { finished = true; }
 
     public void OpenInventory(InputAction.CallbackContext context) {
         if (!context.performed || isActive) return;
@@ -25,23 +38,15 @@ public class OpenInventoryScript : MonoBehaviour {
     public void ClosedInventory() { inventoryIsOpen = false; isActive = false; }
 
     public GameObject CurrentlyToOpenUI { get; set; }
-    
-    public bool isActive;
-    private bool finished; public bool Finished { set => finished = value; }
-
-    private void OnEnable() { finished = true; }
 
     public void OpenCloseUI(InputAction.CallbackContext context) { if(!inventoryIsOpen) { OpenCloseUIFunc(context.performed); } }
 
     public void OpenCloseUIFunc(bool performed) {
         if (CurrentlyToOpenUI == null || !performed || !finished) { return; }
         if (isActive) { CurrentlyToOpenUI.SetActive(false); isActive = false; BlockPlayer(false); }
-        else
-        {
-            CurrentlyToOpenUI.SetActive(true); isActive = true; BlockPlayer(true); 
-        }
+        else { CurrentlyToOpenUI.SetActive(true); isActive = true; BlockPlayer(true); }
         
-        //Play Open-close sound
+        // Play Open-close sound
         SoundFXManager.instance.PlaySoundFXClip(PlayerMenuSound, transform,1f);
     }
 
@@ -50,9 +55,6 @@ public class OpenInventoryScript : MonoBehaviour {
         finished = true;
         BlockPlayer(false);
     }
-    
-    private PlayerMovement playerMov;
-    private void Awake() { playerMov = gameObject.GetComponent<PlayerMovement>(); }
 
     public void BlockPlayer(bool blockPlayer) {
         playerMov.enabled = !blockPlayer;
