@@ -98,6 +98,8 @@ public class LoversBehaviour : MonoBehaviour
             ChangePlayerPosition();
             
             textBackground.text = "The love unleashed by this long divided couple is so strong\nit can even heal a little robot.\n<i>Your health has been completely restored</i>";
+            GameManager.RestoreHps();
+            
             yield return new WaitForSeconds(holdDuration);
             textBackground.text = "";
             StartCoroutine(FadeToBlack(false));
