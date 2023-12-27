@@ -30,6 +30,11 @@ public class InteractionHumanHandler : MonoBehaviour {
     private bool clickedGoOnButton;
     
     private string persistentRecipePath;
+    
+    private bool isTyping;
+
+    public bool GetIsTyping() { return isTyping; }
+    public void SetIsTyping(bool _isTyping) { isTyping = _isTyping; }
 
     public Human Human {
         get => human;
@@ -37,6 +42,7 @@ public class InteractionHumanHandler : MonoBehaviour {
     }
 
     private void Awake() {
+        isTyping = false;
         dialogueHandler = dialogueUI.GetComponent<DialogueHandler>();
         playerMovement = player.GetComponent<PlayerMovement>();
         openInventory = player.GetComponent<OpenInventoryScript>();
@@ -46,12 +52,6 @@ public class InteractionHumanHandler : MonoBehaviour {
         dialogueUI.SetActive(false);
     }
 
-    // private void Start() {
-    //     if (!File.Exists(persistentRecipePath)) { File.WriteAllText(persistentRecipePath, recipesJsonTextAsset.text); }
-    //     recipesJson = File.ReadAllText(persistentRecipePath);
-    //     recipesList = JsonConvert.DeserializeObject<List<Recipe>>(recipesJson);
-    // }
-
     public void InitiateDialogue() {
         dialogueHandler.SetActiveHuman(this);
         clickedGoOnButton = false;
@@ -60,8 +60,6 @@ public class InteractionHumanHandler : MonoBehaviour {
         dialogueHandler.WriteNameText(human.humanName);
         dialogueUI.SetActive(true);
         openInventory.Finished = false;
-        
-        // playerMovement.WalkPlayerToPosition(gameObject.transform.position + new Vector3(0.0f, -2.05f, 0.0f)); TODO
         
         StartCoroutine(StartDialogue(!human.spokenTo));
     }
@@ -87,8 +85,15 @@ public class InteractionHumanHandler : MonoBehaviour {
             if (phrase == null) { break; }
             
             var coroutine = StartCoroutine(dialogueHandler.WriteSlowText(phrase));
+            
             yield return new WaitUntil(() => clickedGoOnButton);
-            StopCoroutine(coroutine);
+            
+            if (isTyping) {
+                StopCoroutine(coroutine);
+                clickedGoOnButton = false;
+                dialogueHandler.WriteFastText(phrase);
+                yield return new WaitUntil(() => clickedGoOnButton);
+            }
             dialogueHandler.EmptyText();
             clickedGoOnButton = false;
         }

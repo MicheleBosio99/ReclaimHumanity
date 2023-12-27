@@ -3,27 +3,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonFunctions : MonoBehaviour {
+public class ButtonManager : MonoBehaviour {
 
     [SerializeField] private GameObject YouSureQuitView;
-    [SerializeField] private Player player;
+    [SerializeField] private GameObject BackgroundPanel;
+    [SerializeField] private GameObject FeedbackPanel;
+    [SerializeField] private GameObject mainCharachter;
 
-    private void Start() { YouSureQuitView.SetActive(false); }
+    private void Start() {
+        BackgroundPanel.SetActive(false);
+        YouSureQuitView.SetActive(false);
+        FeedbackPanel.SetActive(false);
+    }
 
     public void OnSaveClick() { GameManager.SaveGame(); }
 
-    public void OnLoadClick() { player.LoadGame(); }
-
-    public void OnQuitGameClick() { YouSureQuitView.SetActive(true); }
-
-    public void OnGoBackClick() { YouSureQuitView.SetActive(false); }
-
-    public void OnReallyQuitGameClick()
-    {
-        GameManager.GoToMainMenu();
+    public void OnQuitGameClick() {
+        BackgroundPanel.SetActive(true);
+        YouSureQuitView.SetActive(true);
     }
 
-    
+    public void OnFeedbackButtonClick() {
+        BackgroundPanel.SetActive(true);
+        FeedbackPanel.SetActive(true);
+    }
 
-    
+    public void OnGoBackClick() {
+        BackgroundPanel.SetActive(false);
+        YouSureQuitView.SetActive(false);
+        FeedbackPanel.SetActive(false);
+    }
+
+    public void OnReallyQuitGameClick() {
+        mainCharachter.GetComponent<OpenInventoryScript>().OpenInventoryBody("close");
+        GameManager.GoToMainMenu();
+    }
 }

@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.UI;
 using System.Linq;
 
 public enum BattleState { Start, PlayerAction, PlayerMove, SelectTarget, EnemyMove, Busy }
@@ -27,6 +25,8 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private BattleDialogBox dialogBox;
     [SerializeField] private GameObject handL;
     [SerializeField] private GameObject handR;
+    [SerializeField] private AudioClip Attack_switch;
+    [SerializeField] private AudioClip Target_switch;
 
     private BattleState state;
     private int currentAction;
@@ -38,6 +38,8 @@ public class BattleSystem : MonoBehaviour
 
     private List<Move> selectedMoves;
     private List<Enemy> selectedTargets;
+    
+    private List<InventoryItem> itemsDropped;
 
     private void Start()
     {
@@ -48,6 +50,14 @@ public class BattleSystem : MonoBehaviour
         enemyLevels = GameManager.enemiesLevels;
         creaturesFainted = new List<Creature>();
         creaturesFaintedPosition = new List<int>();
+        
+        itemsDropped = new List<InventoryItem>();
+        foreach (var enemy in GameManager.enemies) {
+            var itemDropped = enemy.DroppableObjects[UnityEngine.Random.Range(0, enemy.DroppableObjects.Count)];
+            var quantity = UnityEngine.Random.Range(1, 4);
+            itemsDropped.Add(itemDropped.ToInventoryItem(quantity));
+        }
+        
         StartCoroutine(SetupBattle());
     }
 
@@ -180,10 +190,7 @@ public class BattleSystem : MonoBehaviour
     IEnumerator EnemyMove()
     {
         state = BattleState.EnemyMove;
-        print(playerBases.Count);
         currentTarget = UnityEngine.Random.Range(0, playerBases.Count);
-        print(currentCreature);
-        print(currentTarget);
         var move = enemyUnits[currentCreature].Creature.GetRandomMove();
         yield return dialogBox.TypeDialog($"{enemyUnits[currentCreature].Creature.Base.Name} used  " +
                                           $"{move.Base.Name} against {playerUnits[currentTarget].Creature.Base.Name}");
@@ -262,33 +269,29 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    IEnumerator WinFight()
-    {
+    IEnumerator WinFight() {
         yield return dialogBox.TypeDialog("Congratulations, you won :)");
         yield return new WaitForSeconds(0.5f);
         List<Creature> creatures = new List<Creature>();
-        for (int i = 0; i < playerUnits.Count; i++)
-        {
+        for (int i = 0; i < playerUnits.Count; i++) {
             creatures.Add(playerUnits[i].Creature);
         }
-        if (creaturesFainted.Count > 0)
-        {
-            for (int i = creaturesFainted.Count - 1; i >= 0; i--)
-            {
+
+        if (creaturesFainted.Count > 0) {
+            for (int i = creaturesFainted.Count - 1; i >= 0; i--) {
                 creatures.Insert(creaturesFaintedPosition[i], creaturesFainted[i]);
                 GameManager.party.Insert(creaturesFaintedPosition[i], creaturesFainted[i].Base);
             }
         }
-        
-        for (int i = 0; i < GameManager.partyHps.Count; i++)
-        {
+
+        for (int i = 0; i < GameManager.partyHps.Count; i++) {
             GameManager.partyHps[i] = creatures[i].HP;
-            if (creatures[i].HP == 0)
-            {
+            if (creatures[i].HP == 0) {
                 GameManager.partyHps[i] = 1;
             }
         }
-        GameManager.ExitCombat();
+        
+        GameManager.ExitCombat(itemsDropped);
     }
 
     IEnumerator ShowDamageDetails(DamageDetails damageDetails)
@@ -379,6 +382,7 @@ public class BattleSystem : MonoBehaviour
             if (currentAction < 1)
             {
                 ++currentAction;
+                SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -386,6 +390,7 @@ public class BattleSystem : MonoBehaviour
             if (currentAction > 0)
             {
                 --currentAction;
+                SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }
         dialogBox.UpdateActionSelection(currentAction);
@@ -410,6 +415,7 @@ public class BattleSystem : MonoBehaviour
             if (currentMove < playerUnits[currentCreature].Creature.Moves.Count - 1)
             {
                 ++currentMove;
+                SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -417,6 +423,7 @@ public class BattleSystem : MonoBehaviour
             if (currentMove > 0)
             {
                 --currentMove;
+                SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }   
         else if (Input.GetKeyDown(KeyCode.DownArrow))
@@ -424,6 +431,7 @@ public class BattleSystem : MonoBehaviour
             if (currentMove < playerUnits[currentCreature].Creature.Moves.Count - 2)
             {
                 currentMove += 2;
+                SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }   
         else if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -431,6 +439,7 @@ public class BattleSystem : MonoBehaviour
             if (currentMove > 1)
             {
                 currentMove -= 2;
+                SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }  
         dialogBox.UpdateMoveSelection(currentMove, playerUnits[currentCreature].Creature.Moves[currentMove]);
@@ -448,14 +457,18 @@ public class BattleSystem : MonoBehaviour
             if (currentTarget > 0)
             {
                 --currentTarget;
+                SoundFXManager.instance.PlaySoundFXClip(Target_switch, transform,1f);
             }
+            
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             if (currentTarget < enemyBases.Count - 1)
             {
                 ++currentTarget;
+                SoundFXManager.instance.PlaySoundFXClip(Target_switch, transform,1f);
             }
+            
         }
         handR.transform.position = enemyUnits[currentTarget].transform.position + new Vector3(-1.2f,0,0);
 

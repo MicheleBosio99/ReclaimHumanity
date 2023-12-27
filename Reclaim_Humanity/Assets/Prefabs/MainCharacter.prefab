@@ -144,7 +144,6 @@ GameObject:
   - component: {fileID: 6493257837870892101}
   - component: {fileID: 4370359794366168160}
   - component: {fileID: 4754563326288330437}
-  - component: {fileID: 1168651925826670054}
   - component: {fileID: 6255717712013211218}
   m_Layer: 6
   m_Name: MainCharacter
@@ -428,20 +427,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerMenu: {fileID: 3228247895186584737, guid: cdbf67154cfa1bd4bb6176b5a14243cf, type: 3}
   OpenPlayerMenuButton: {fileID: 0}
-  PlayerActionsSound: {fileID: 8300000, guid: 2263a3f6c7c574d298645850dfffd6b9, type: 3}
+  PlayerMenuSound: {fileID: 8300000, guid: 2263a3f6c7c574d298645850dfffd6b9, type: 3}
   isActive: 0
---- !u!114 &1168651925826670054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1344862835144778464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 019f0aa3537d1e247a57259d5dce287b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6255717712013211218
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,6 +12,8 @@ public class RecipesInfoLoader : MonoBehaviour {
     private List<Recipe> recipesList;
     private string persistentRecipePath;
 
+    public List<Recipe> GetRecipeList() { return recipesList; }
+
     private void Awake() {
         CreatePaths();
     }

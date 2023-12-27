@@ -6,16 +6,17 @@ TagManager:
   tags:
   - Human
   - LaboratoryFurnishing
+  - Dog
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - CameraCollision
   - Water
   - UI
   - ThePlayer
   - Obstacles
-  - 
+  - Enemies
   - 
   - 
   - 

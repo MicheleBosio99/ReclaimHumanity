@@ -10,14 +10,16 @@ public class RegenerateHealthNoText : MonoBehaviour {
     [SerializeField] private float sleepTime;
     [SerializeField] private GameObject player;
     [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private AudioClip Regeneration;
+    
     
     private OpenInventoryScript invScript;
     
-    private int timesSleep;
+    //private int timesSleep;
     private bool finished;
 
     private void Awake() {
-        timesSleep = 0;
+        //timesSleep = 0;
         invScript = player.GetComponent<OpenInventoryScript>();
         gameObject.SetActive(false);
         ChangeColorImage(0.0f);
@@ -26,7 +28,13 @@ public class RegenerateHealthNoText : MonoBehaviour {
         invScript.Finished = true;
     }
 
-    private void OnEnable() { StartCoroutine(SleepCoroutine()); }
+    private void OnEnable()
+    {
+        StartCoroutine(SleepCoroutine());
+        
+        //start sound
+        SoundFXManager.instance.PlaySoundFXClip(Regeneration, transform,1f);
+    }
 
     private void OnDisable() {
         ChangeColorImage(0.0f);
@@ -56,7 +64,7 @@ public class RegenerateHealthNoText : MonoBehaviour {
         
         ChangeText("");
         currentTime = 0f;
-        while (currentTime < sleepTime) {
+        while (currentTime < sleepTime / 2.0f) {
             currentTime += Time.deltaTime;
             backgroundImage.color = Color.Lerp(targetColor, startColor, Mathf.Lerp(0, 1, currentTime / sleepTime));
             yield return null;
@@ -73,5 +81,5 @@ public class RegenerateHealthNoText : MonoBehaviour {
     
     private void ChangeText(string _text) { text.text = _text; }
     
-    private void RegenerateHealth() {  }
+    private void RegenerateHealth() { GameManager.RestoreHps(); }
 }

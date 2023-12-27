@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -24,6 +23,9 @@ public class GameManager : MonoBehaviour
     public static RecipesInfoLoader recipesInfoLoader;
     public static List<InventoryItem> ordinaryItemsInInventory;
     public static List<InventoryItem> specialItemsInInventory;
+    
+    public static float energyInLab;
+    public static VolumeConfiguration volumeConfig;
     
     void Awake()
     {
@@ -61,6 +63,9 @@ public class GameManager : MonoBehaviour
         previousPosition = Vector3.zero;
         ordinaryItemsInInventory = new List<InventoryItem>();
         specialItemsInInventory = new List<InventoryItem>();
+        
+        energyInLab = 0.0f;
+        volumeConfig = new VolumeConfiguration();
     }
     
     public static void NewGame()
@@ -70,7 +75,7 @@ public class GameManager : MonoBehaviour
         recipesInfoLoader.CleanData();
         currentSceneName = "Laboratory";
         sceneToLoad = "Laboratory";
-        SceneManager.LoadScene("LoadingScene");
+        SceneManager.LoadScene("Introduction");
         SaveGame();
     }
     
@@ -91,8 +96,46 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("LoadingScene");
     }
     
-    public static void ExitCombat()
+    public static void ExitCombat(List<InventoryItem> itemsDropped)
     {
+        for (int i = 0; i < itemsDropped.Count; i++)
+        {
+            if (!itemsDropped[i].IsSpecialItem)
+            {
+                bool flag = false;
+                for (int j = 0; j < ordinaryItemsInInventory.Count; j++)
+                {
+                    if (itemsDropped[i].ItemID == ordinaryItemsInInventory[j].ItemID)
+                    {
+                        ordinaryItemsInInventory[j].ItemQuantity += itemsDropped[i].ItemQuantity;
+                        flag = true;
+                        break;
+                    }
+                }
+                if (!flag)
+                {
+                    ordinaryItemsInInventory.Add(itemsDropped[i]);
+                }
+            }
+            else
+            {
+                bool flag = false;
+                for (int j = 0; j < specialItemsInInventory.Count; j++)
+                {
+                    if (itemsDropped[i].ItemID == specialItemsInInventory[j].ItemID)
+                    {
+                        specialItemsInInventory[j].ItemQuantity += itemsDropped[i].ItemQuantity;
+                        flag = true;
+                        break;
+                    }
+                }
+
+                if (!flag)
+                {
+                    specialItemsInInventory.Add(itemsDropped[i]);
+                }
+            }
+        }
         currentSceneName = previousSceneName;
         previousSceneName = SceneManager.GetActiveScene().name;
         sceneToLoad = currentSceneName;
@@ -101,7 +144,6 @@ public class GameManager : MonoBehaviour
     
     public static void GoToMainMenu()
     {
-        
         sceneToLoad = "MainMenu";
         SceneManager.LoadScene("LoadingScene");
     }
@@ -158,6 +200,11 @@ public class GameManager : MonoBehaviour
         data.previousPosition[0] = previousPosition.x;
         data.previousPosition[1] = previousPosition.y;
         data.previousPosition[2] = previousPosition.z;
+        
+        data.energyInLab = energyInLab;
+        
+        previousPosition = Vector3.zero;
+        
         BinaryFormatter formatter = new BinaryFormatter();
 
         try
@@ -168,7 +215,7 @@ public class GameManager : MonoBehaviour
                 fileStream.Close();
             }
 
-            Debug.Log("Game data saved successfully.");
+            //Debug.Log("Game data saved successfully.");
         }
         catch (System.Exception e)
         {
@@ -212,13 +259,15 @@ public class GameManager : MonoBehaviour
                     position.y = data.previousPosition[1];
                     position.z = data.previousPosition[2];
                     previousPosition = position;
+                    
+                    energyInLab = data.energyInLab;
 
                     List<string> itemsIds = data.itemIds;
                     List<int> itemQuantities = data.itemQuantities;
                     ItemLoader itemLoader = GameObject.Find("InventoryItemsLoader").GetComponent<ItemLoader>();
                     List<ItemsSO> ordinaryItemsSos = new List<ItemsSO>();
                     List<ItemsSO> specialItemsSos = new List<ItemsSO>();
-                    print(itemLoader.ItemsSos.Count);
+                    // print(itemLoader.ItemsSos.Count);
                     for (int i = 0; i < itemsIds.Count; i++)
                     {
                         foreach (var itemSo in itemLoader.ItemsSos)
@@ -279,4 +328,23 @@ public class GameData
     public float[] previousPosition;
     public List<string> itemIds;
     public List<int> itemQuantities;
+    
+    public float energyInLab;
+}
+
+public class VolumeConfiguration {
+    private float masterVolume = 1.0f;
+    private float musicVolume = 1.0f;
+    private float soundsVolume = 1.0f;
+    
+    public float GetMasterVolume() { return masterVolume; }
+    public float GetMusicVolume() { return musicVolume; }
+    public float GetSoundsVolume() { return soundsVolume; }
+    
+    public void SetMasterVolume(float _masterVolume) { masterVolume = _masterVolume; }
+    public void SetMusicVolume(float _musicVolume) { musicVolume = _musicVolume; }
+    public void SetSoundsVolume(float _soundsVolume) { soundsVolume = _soundsVolume; }
+
+    public void SetAllVolumes(List<float> volumes) { masterVolume = volumes[0]; musicVolume = volumes[1]; soundsVolume = volumes[2]; }
+    public List<float> GetAllVolumes() { return new List<float>() {masterVolume, musicVolume, soundsVolume}; }
 }

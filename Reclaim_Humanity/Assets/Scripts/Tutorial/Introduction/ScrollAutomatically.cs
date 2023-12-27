@@ -1,8 +1,5 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Assertions;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -10,17 +7,30 @@ public class ScrollAutomatically : MonoBehaviour {
     
     [SerializeField] private Scrollbar scrollbar;
     [SerializeField] private float scrollSpeed = 0.02f;
+    [SerializeField] private GameObject continueButton;
+    [SerializeField] private GameObject loadingText;
+    [SerializeField] private float initialLoadingWait;
+    [SerializeField] private float sceneLoadWait;
     private const float targetScrollValue = 0.0f;
 
-    private void Start() { StartCoroutine(AutoScrollCoroutine()); }
+    private void Start() {
+        loadingText.SetActive(true);
+        continueButton.SetActive(false);
+        StartCoroutine(AutoScrollCoroutine());
+    }
 
     private IEnumerator AutoScrollCoroutine() {
-        yield return new WaitForSeconds(10.0f);
-        while (scrollbar.value > targetScrollValue) { scrollbar.value -= Time.deltaTime * scrollSpeed; yield return null; }
-        yield return new WaitForSeconds(18.0f);
+        yield return new WaitForSeconds(initialLoadingWait);
+        // while (scrollbar.value > targetScrollValue) { scrollbar.value -= Time.deltaTime * scrollSpeed; yield return null; }
         
-        ChangeSceneToLab();
+        loadingText.SetActive(false);
+        continueButton.SetActive(true);
+        
+        yield return new WaitForSeconds(sceneLoadWait);
+        ChangeSceneTo("Laboratory");
     }
+
+    public void ContinueStartGame(string sceneName) { StopAllCoroutines(); ChangeSceneTo(sceneName); }
     
-    private void ChangeSceneToLab() { SceneManager.LoadScene("Laboratory"); }
+    private void ChangeSceneTo(string sceneName) { SceneManager.LoadScene(sceneName); }
 }

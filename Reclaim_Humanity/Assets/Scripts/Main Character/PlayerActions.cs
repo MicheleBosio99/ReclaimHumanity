@@ -34,22 +34,21 @@ public class PlayerMovement : MonoBehaviour {
     private void OnDisable() { rb.velocity = Vector2.zero; }
 
     private void Update() {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        movement = movingDirection;
 
         if (movement != Vector2.zero){
             
-			if (Mathf.Abs(movement.x) >= Mathf.Abs(movement.y))
-        {
-           	movement.y=0;
-			animator.SetFloat("Horizontal", movement.x); 
-			animator.SetFloat("Vertical", movement.y); 
-        }
-		else {
-			movement.x=0;
-			animator.SetFloat("Horizontal", movement.x); 
-			animator.SetFloat("Vertical", movement.y); 
-		}
+            if (Mathf.Abs(movement.x) >= Mathf.Abs(movement.y))
+            {
+           	    movement.y=0;
+			    animator.SetFloat("Horizontal", movement.x); 
+			    animator.SetFloat("Vertical", movement.y); 
+            }
+		    else {
+			    movement.x=0;
+			    animator.SetFloat("Horizontal", movement.x); 
+			    animator.SetFloat("Vertical", movement.y); 
+		    }
             
             //play the sound for move
             //SoundFXManager.instance.PlayMovementFXClip(MoveClip, transform,1f);
@@ -67,8 +66,6 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     public void ChangePlayerPosition(Vector2 endPosition) { gameObject.transform.position = endPosition; }
-    
-    
 
     public void WalkPlayerToPosition(Vector2 endPos) { StartCoroutine(WalkPlayer(endPos)); }
     

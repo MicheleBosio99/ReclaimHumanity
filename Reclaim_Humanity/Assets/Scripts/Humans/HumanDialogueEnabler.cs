@@ -12,7 +12,7 @@ public class HumanDialogueEnabler : MonoBehaviour {
     }
 
     private void OnEnable() {
-        if (firstTime) { gameObject.SetActive(false); return; }
+        if (firstTime) { return; }
         interactionHumanHandler.InitiateDialogue();
     }
 

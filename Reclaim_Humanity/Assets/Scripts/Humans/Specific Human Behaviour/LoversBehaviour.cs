@@ -41,9 +41,10 @@ public class LoversBehaviour : MonoBehaviour
         
         persistentHumanPath = Path.Combine(Application.persistentDataPath, "Resources/Humans/humans_OF.json");
         CreatePersistentFolders.GetInstance().GeneratePersistentFolder(Path.Combine(Application.persistentDataPath, "Resources/Humans"));
-        
-        // Set doneAlready from saves;
-        doneAlready = false;
+
+        if (PlayerPrefs.HasKey("RomeoJulietLoversDone")) {
+            doneAlready = true; // PlayerPrefs.GetInt("RomeoJulietLoversDone") == 1;
+        }
     }
 
     private void Start() { StartCoroutine(!doneAlready ? CheckLoverStatus() : ChangeLovers(false)); }
@@ -64,17 +65,19 @@ public class LoversBehaviour : MonoBehaviour
             loverGirlHandler = loverGirl.GetComponent<InteractionHumanHandler>();
         }
 
-        while (!loverBoyHandler.Human.spokenTo || !loverGirlHandler.Human.spokenTo) { yield return new WaitForSeconds(2.5f); }
-        
+        while (!loverBoyHandler.Human.spokenTo || !loverGirlHandler.Human.spokenTo) { yield return new WaitForSeconds(1.5f); }
+
+        if (player.GetComponent<OpenInventoryScript>().isActive) { player.GetComponent<OpenInventoryScript>().OpenCloseUIFunc(true); }
         
         StartCoroutine(ChangeLovers(true));
         doneAlready = true;
     }
     
     private const float fadeDuration = 2.0f;
-    private const float holdDuration = 2.5f;
+    private const float holdDuration = 4.0f;
 
     private IEnumerator ChangeLovers(bool doFade) {
+        PlayerPrefs.SetInt("RomeoJulietLoversDone", 1);
         ChangeDialogues();
 
         if (doFade) {
@@ -86,13 +89,17 @@ public class LoversBehaviour : MonoBehaviour
         loverGirl.GetComponent<SpriteRenderer>().sprite = loverGirlRightSight;
         loverBoy.GetComponent<SpriteRenderer>().sprite = loverBoyLeftSight;
         
+        
+        
         loverGirl.transform.position = loverGirlNewPosition;
         loverBoy.transform.position = loverBoyNewPosition;
 
         if (doFade) {
             ChangePlayerPosition();
             
-            textBackground.text = "Thank you, Wollo!";
+            textBackground.text = "The love unleashed by this long divided couple is so strong\nit can even heal a little robot.\n<i>Your health has been completely restored</i>";
+            GameManager.RestoreHps();
+            
             yield return new WaitForSeconds(holdDuration);
             textBackground.text = "";
             StartCoroutine(FadeToBlack(false));
@@ -143,7 +150,7 @@ public class LoversBehaviour : MonoBehaviour
     }
 
     private void InitializeNewGeneralDialogues() {
-        loverBoyChangedGeneralDialogue = new List<string> { "<i>She's so beautiful, so many years and nothing of her has changed.</i>" };
-        loverGirlChangedGeneralDialogue = new List<string> { "<i>Nothing could comprehend my current emotions...</i>" };
+        loverBoyChangedGeneralDialogue = new List<string> { "<i>She's so beautiful...</i>" };
+        loverGirlChangedGeneralDialogue = new List<string> { "<i>I still love him so much <3</i>" };
     }
 }

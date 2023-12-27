@@ -29,3 +29,6 @@ MonoBehaviour:
     level: 1
   - moveBase: {fileID: 11400000, guid: c5fd54238bb23fd46b8f1a0bea0d4e56, type: 2}
     level: 1
+  droppableObjects:
+  - {fileID: 11400000, guid: aaf57d900e7bee44986c3aac30c60d0c, type: 2}
+  - {fileID: 11400000, guid: a848f52966ebe3747a84392d5261873e, type: 2}
