@@ -35,7 +35,7 @@ public class EnemySpawn : MonoBehaviour
             spawnedEnemies.Add(newEnemy);
 
             Enemy enemyScript = newEnemy.GetComponent<Enemy>();
-            //enemyScript.SetEnemySquad(spawnedEnemies);
+            enemyScript.SetEnemySquad(spawnedEnemies);
             enemyScript.EnemyRoutine();
         }
         
