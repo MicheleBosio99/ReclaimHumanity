@@ -22,12 +22,15 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
 
     private List<HoldSlotUI> holdingSlotsUIList;
     private int maxLengthHoldingSlotsUIList;
+    
+    private PowerUpsManager powerUpsManager;
 
     private void Start() {
         textsHandler = gameObject.GetComponent<TextsHandler>();
         _handleItemInSlotGE = gameObject.GetComponent<HandleItemInSlotGE>();
         batteryEnergyText = batteryEnergy.GetComponent<ShowEnergyLab>();
         energySoSetter = labEnergySOSetter.GetComponent<LabEnergySOSetter>();
+        powerUpsManager = new PowerUpsManager(energySoSetter.GetCurrentEnergy());
         
         holdingSlotsUIList = new List<HoldSlotUI>();
         maxLengthHoldingSlotsUIList = chosenItemSlotsUI.Count();
@@ -121,13 +124,10 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
         foreach (var slotTuple in holdingSlotsUIList) { slotTuple.EmptyChosenSlot(); }
         holdingSlotsUIList.RemoveAll(slot => true);
         
-        
-        
-        // NEW
         energySoSetter.UpdateEnergySO(energyCreated);
         GameManager.energyInLab = energySoSetter.GetCurrentEnergy();
         batteryEnergyText.UpdateEnergy(energySoSetter.GetCurrentEnergy().ToString());
-        //
+        
         
         
         textsHandler.UpdateEnergy("");

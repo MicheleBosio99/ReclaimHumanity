@@ -27,50 +27,54 @@ public class LoadSpecificMapChunk : MonoBehaviour {
     private void OnEnable() { ApplyTextureToUI(player.transform.position); }
 
     private void ApplyTextureToUI(Vector2 playerPosition) {
-        var mapTextureRatioX = originalTextureWidth / mapWidthInSquares;
-        var mapTextureRatioY = originalTextureHeight / mapHeightInSquares;
+        const float mapTextureRatioX = originalTextureWidth / mapWidthInSquares;
+        const float mapTextureRatioY = originalTextureHeight / mapHeightInSquares;
         
         var texturePlayerPositionX = playerPosition.x * mapTextureRatioX + textureOffsetX;
         var texturePlayerPositionY = playerPosition.y * mapTextureRatioY + textureOffsetY;
-        
+
         var lbPositionVector = new Vector2(texturePlayerPositionX - displayedImageWidth / 2.0f,
             texturePlayerPositionY - displayedImageHeight / 2.0f);
         
-        // lbPositionVector = ChangePinPosition(lbPositionVector);
+        lbPositionVector = ChangePinPosition(lbPositionVector);
+
+        // var lbPositionX = Mathf.Clamp(lbPositionVector.x, 0.0f, float.MaxValue);
+        // var lbPositionY = Mathf.Clamp(lbPositionVector.y, 0.0f, float.MaxValue);
+
+        // lbPositionVector = new Vector2(lbPositionX, lbPositionY);
 
         var chunkDim = new Vector2(displayedImageWidth, displayedImageHeight);
         
         var chunk = new Rect(lbPositionVector, chunkDim);
         // Debug.Log($"Chunk {chunk}");
-        
         mapImageUI.sprite = Sprite.Create(mapTexture, chunk, new Vector2(0.5f, 0.5f));
     }
 
     private Vector2 ChangePinPosition(Vector2 lbPositionVector) {
-        var vectorPositionPin = new Vector2();
+        Debug.Log(lbPositionVector);
+        var pinPosition = new Vector2(0.0f, 0.0f);
         
-        if (lbPositionVector.x < 0.0f) { vectorPositionPin.x = lbPositionVector.x; lbPositionVector.x = 0.0f; }
-        else if (lbPositionVector.x + displayedImageWidth >= originalTextureWidth) {
-            vectorPositionPin.x = lbPositionVector.x + displayedImageWidth - originalTextureWidth;
+        if(lbPositionVector.x < 0.0f) { pinPosition.x = lbPositionVector.x; lbPositionVector.x = 0.0f; }
+        else if(lbPositionVector.x + displayedImageWidth > originalTextureWidth) {
+            pinPosition.x = lbPositionVector.x + displayedImageWidth - originalTextureWidth;
             lbPositionVector.x = originalTextureWidth - displayedImageWidth;
         }
         
-        if (lbPositionVector.y < 0.0f) { vectorPositionPin.y = lbPositionVector.y; lbPositionVector.y = 0.0f; }
-        else if(lbPositionVector.y + displayedImageHeight >= originalTextureHeight) {
-            vectorPositionPin.y = lbPositionVector.y + displayedImageHeight - originalTextureHeight;
+        if(lbPositionVector.y < 0.0f) { pinPosition.y = lbPositionVector.y; lbPositionVector.y = 0.0f; }
+        else if(lbPositionVector.y + displayedImageHeight > originalTextureHeight) {
+            pinPosition.y = lbPositionVector.y + displayedImageHeight - originalTextureHeight;
             lbPositionVector.y = originalTextureHeight - displayedImageHeight;
         }
         
-        pinRectTransform.anchoredPosition = vectorPositionPin;
-        Debug.Log(vectorPositionPin);
+        pinPosition.x *= 1.5f;
+        pinPosition.y *= 1.5f;
+        
+        Debug.Log(pinPosition);
+        pinRectTransform.anchoredPosition = pinPosition;
         
         return lbPositionVector;
     }
 }
-
-
-
-
 
 
 
