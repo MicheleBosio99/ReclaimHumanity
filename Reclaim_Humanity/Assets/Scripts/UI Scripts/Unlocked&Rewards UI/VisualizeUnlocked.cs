@@ -15,9 +15,9 @@ public class VisualizeUnlocked : MonoBehaviour {
     public void StartShowUnlockedMessage(string type, string reward) { StartCoroutine(ShowUnlockedMessage(type, reward)); }
 
     private IEnumerator ShowUnlockedMessage(string type, string reward) {
+
+		unlockedPanel.SetActive(true);
         var rewardMessage = $"Congratulations! You unlocked the new {type}: <u>{reward}</u>";
-        
-        unlockedPanel.SetActive(true);
         
         //Play unlock sound
         SoundFXManager.instance.PlaySoundFXClip(RecipeUnlock, transform,1f);
