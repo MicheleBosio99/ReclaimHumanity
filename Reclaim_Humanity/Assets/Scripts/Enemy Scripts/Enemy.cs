@@ -174,7 +174,8 @@ public class Enemy : MonoBehaviour
         else if (playerInSight)
             playerInSight = false;
 
-        //if (playerInSight)
+        if (playerInSight)
+            print("Load Battle");
         //SceneManager.LoadScene("Battle");
     }
     
