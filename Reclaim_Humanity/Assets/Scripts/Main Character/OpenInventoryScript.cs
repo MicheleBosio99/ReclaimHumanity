@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class OpenInventoryScript : MonoBehaviour {
     
     [SerializeField] private GameObject PlayerMenu;
-    [SerializeField] private GameObject OpenPlayerMenuButton;
+    [SerializeField] private GameObject OptionsOverlay;
     [SerializeField] private AudioClip PlayerMenuSound;
     
     private PlayerMovement playerMov;
@@ -58,7 +58,7 @@ public class OpenInventoryScript : MonoBehaviour {
 
     public void BlockPlayer(bool blockPlayer) {
         playerMov.enabled = !blockPlayer;
-        OpenPlayerMenuButton.SetActive(!blockPlayer);
+        OptionsOverlay.SetActive(!blockPlayer);
     }
     
     // private float lastLogTime = 0.0f;

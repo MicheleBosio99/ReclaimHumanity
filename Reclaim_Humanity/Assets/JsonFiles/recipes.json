@@ -46,7 +46,7 @@
     },
     {
         "recipeID" : "03_OrganicTerracotta",
-        "recipeName" : "Organic Soft Terracotta",
+        "recipeName" : "Soft Organic Terracotta",
         "recipeDescription" : "A malleable and smelly clay.",
         "item1ID" : "10_CanineGlue",
         "item1Name" : "Canine Glue",
@@ -56,6 +56,71 @@
         "item2QuantityReq" : 1,
         "itemResultID" : "12_OrganicSoftTerracotta",
         "itemResultName" : "Organic Soft Terracotta",
+        "itemResultQuantity" : 1,
+        "enabled" : false
+    },
+
+
+    
+    
+    
+    {
+        "recipeID" : "04_ResilientGears",
+        "recipeName" : "Resilient Gears",
+        "recipeDescription" : "Make stronger gears that last longer.",
+        "item1ID" : "04_Coin",
+        "item1Name" : "Coin",
+        "item1QuantityReq" : 1,
+        "item2ID" : "14_Gear",
+        "item2Name" : "Gear",
+        "item2QuantityReq" : 2,
+        "itemResultID" : "15_ResilientGear",
+        "itemResultName" : "Resilient Gear",
+        "itemResultQuantity" : 2,
+        "enabled" : false
+    },
+    {
+        "recipeID" : "05_FasterGear",
+        "recipeName" : "Faster Gear",
+        "recipeDescription" : "Thanks to lubricant oil these gears run so smoothly.",
+        "item1ID" : "05_LubricantOil",
+        "item1Name" : "Lubricant Oil",
+        "item1QuantityReq" : 1,
+        "item2ID" : "14_Gear",
+        "item2Name" : "Gear",
+        "item2QuantityReq" : 2,
+        "itemResultID" : "16_FasterGear",
+        "itemResultName" : "Faster Gear",
+        "itemResultQuantity" : 2,
+        "enabled" : false
+    },
+    {
+        "recipeID" : "06_AutomaticGear",
+        "recipeName" : "Automatic Gear",
+        "recipeDescription" : "Automate your gears with a CPU.",
+        "item1ID" : "15_ResilientGear",
+        "item1Name" : "Resilient Gear",
+        "item1QuantityReq" : 2,
+        "item2ID" : "06_ElectronicScrap",
+        "item2Name" : "Electronic Scrap",
+        "item2QuantityReq" : 1,
+        "itemResultID" : "17_AutomaticGear",
+        "itemResultName" : "Automatic Gear",
+        "itemResultQuantity" : 2,
+        "enabled" : false
+    },
+    {
+        "recipeID" : "07_Gearbox",
+        "recipeName" : "Gearbox",
+        "recipeDescription" : "Merge all gear types and create this technological beauty.",
+        "item1ID" : "16_FasterGear",
+        "item1Name" : "Faster Gear",
+        "item1QuantityReq" : 2,
+        "item2ID" : "17_AutomaticGear",
+        "item2Name" : "Automatic Gear",
+        "item2QuantityReq" : 1,
+        "itemResultID" : "18_Gearbox",
+        "itemResultName" : "Gearbox",
         "itemResultQuantity" : 1,
         "enabled" : false
     }

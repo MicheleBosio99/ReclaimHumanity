@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
     public static float energyInLab;
     public static VolumeConfiguration volumeConfig;
     
+    public static SaveNumOfHumansTalkedTo humansTalkedTo;
+    
     void Awake()
     {
         if (instance == null)
@@ -44,6 +46,7 @@ public class GameManager : MonoBehaviour
         LoadFreshData(); // to remove
         humansInfoLoader = GameObject.Find("HumanInfoLoader").GetComponent<HumansInfoLoader>();
         recipesInfoLoader = GameObject.Find("RecipesInfoLoader").GetComponent<RecipesInfoLoader>();
+        volumeConfig = new VolumeConfiguration();
     }
 
     public static void LoadFreshData()
@@ -65,7 +68,9 @@ public class GameManager : MonoBehaviour
         specialItemsInInventory = new List<InventoryItem>();
         
         energyInLab = 0.0f;
-        volumeConfig = new VolumeConfiguration();
+        
+        humansTalkedTo ??= new SaveNumOfHumansTalkedTo();
+        humansTalkedTo.SetAllToZero();
     }
     
     public static void NewGame()
@@ -85,6 +90,16 @@ public class GameManager : MonoBehaviour
         currentSceneName = SceneName;
         sceneToLoad = SceneName;
         SceneManager.LoadScene("LoadingScene");
+        
+        
+        // Added to try remove forest teleport disabling player movement... Still don't know if this works...
+        try {
+            var inv = GameObject.Find("Player").GetComponent<OpenInventoryScript>();
+            inv.CloseTeleportUI();
+        }
+        catch (NullReferenceException) {}
+        
+        
     }
 
     public static void EnterCombat()
@@ -202,6 +217,7 @@ public class GameManager : MonoBehaviour
         data.previousPosition[2] = previousPosition.z;
         
         data.energyInLab = energyInLab;
+        data.savedHumansTalkedTo = humansTalkedTo;
         
         previousPosition = Vector3.zero;
         
@@ -261,6 +277,8 @@ public class GameManager : MonoBehaviour
                     previousPosition = position;
                     
                     energyInLab = data.energyInLab;
+                    humansTalkedTo = data.savedHumansTalkedTo;
+                    
 
                     List<string> itemsIds = data.itemIds;
                     List<int> itemQuantities = data.itemQuantities;
@@ -318,7 +336,7 @@ public class GameManager : MonoBehaviour
     }
 }
 
-[System.Serializable]
+[Serializable]
 public class GameData
 {
     public List<string> partyNames;
@@ -330,6 +348,7 @@ public class GameData
     public List<int> itemQuantities;
     
     public float energyInLab;
+    public SaveNumOfHumansTalkedTo savedHumansTalkedTo;
 }
 
 public class VolumeConfiguration {
@@ -347,4 +366,47 @@ public class VolumeConfiguration {
 
     public void SetAllVolumes(List<float> volumes) { masterVolume = volumes[0]; musicVolume = volumes[1]; soundsVolume = volumes[2]; }
     public List<float> GetAllVolumes() { return new List<float>() {masterVolume, musicVolume, soundsVolume}; }
+}
+
+[Serializable]
+public class SaveNumOfHumansTalkedTo {
+    
+    private int HumansInLaboratory { get; set; }
+    private int HumansInForest { get; set; }
+    private int HumansInCity { get; set; }
+    private int HumansInWastelands { get; set; }
+    
+    public void SetAllToZero () {
+        HumansInLaboratory = 0;
+        HumansInForest = 0;
+        HumansInCity = 0;
+        HumansInWastelands = 0;
+    }
+    
+    public void SetThemAll(int lab, int forest, int city, int wastelands) {
+        HumansInLaboratory = lab;
+        HumansInForest = forest;
+        HumansInCity = city;
+        HumansInWastelands = wastelands;
+    }
+    
+    public int GetHumansByBiome(string biome) {
+        return biome switch {
+            "Laboratory" => HumansInLaboratory,
+            "OvergrownForest" => HumansInForest,
+            "RuinedCity" => HumansInCity,
+            "Wastelands" => HumansInWastelands,
+            _ => 0
+        };
+    }
+    
+    public void SetHumansByBiome(string biome, int quantity) {
+        switch (biome) {
+            case "Laboratory": { HumansInLaboratory = quantity; break; }
+            case "OvergrownForest" : { HumansInForest = quantity; break;}
+            case "RuinedCity" : { HumansInCity = quantity; break; }
+            case "Wastelands" : { HumansInWastelands = quantity; break; }
+            default : { SetAllToZero(); break; }
+        }
+    }
 }

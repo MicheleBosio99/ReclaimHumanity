@@ -51,7 +51,6 @@ public class LoadSpecificMapChunk : MonoBehaviour {
     }
 
     private Vector2 ChangePinPosition(Vector2 lbPositionVector) {
-        Debug.Log(lbPositionVector);
         var pinPosition = new Vector2(0.0f, 0.0f);
         
         if(lbPositionVector.x < 0.0f) { pinPosition.x = lbPositionVector.x; lbPositionVector.x = 0.0f; }
@@ -69,7 +68,6 @@ public class LoadSpecificMapChunk : MonoBehaviour {
         pinPosition.x *= 1.5f;
         pinPosition.y *= 1.5f;
         
-        Debug.Log(pinPosition);
         pinRectTransform.anchoredPosition = pinPosition;
         
         return lbPositionVector;

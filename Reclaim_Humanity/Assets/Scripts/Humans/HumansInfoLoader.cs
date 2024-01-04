@@ -66,8 +66,7 @@ public class HumansInfoLoader : MonoBehaviour {
         // File.WriteAllText(persistentHumanPath, JsonConvert.SerializeObject(humans, Formatting.Indented));
     }
 
-    public void SaveHumans()
-    {
+    public void SaveHumans() {
         File.WriteAllText(persistentHumanPath, JsonConvert.SerializeObject(humans, Formatting.Indented));
     }
 
