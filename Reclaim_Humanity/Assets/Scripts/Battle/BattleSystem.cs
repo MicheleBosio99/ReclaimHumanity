@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using System.Linq;
+using Microsoft.Unity.VisualStudio.Editor;
+using Unity.VisualScripting;
 
 public enum BattleState { Start, PlayerAction, PlayerMove, SelectTarget, EnemyMove, Busy }
 
@@ -135,6 +137,9 @@ public class BattleSystem : MonoBehaviour
         yield return dialogBox.TypeDialog($"{playerUnits[currentCreature].Creature.Base.Name} used  {move.Base.Name} " +
                                           $"against {enemyUnits[currentTarget].Creature.Base.Name}");
         yield return new WaitForSeconds(1f);
+        
+        playerUnits[currentCreature].PlayAttackAnimation(enemyUnits[currentTarget].OriginalPos);
+        yield return new WaitForSeconds(1f);
 
         var damageDetails = enemyUnits[currentTarget].Creature.TakeDamage(move, playerUnits[currentCreature].Creature);
         enemyUnits[currentTarget].FlashOnHit();
@@ -195,6 +200,9 @@ public class BattleSystem : MonoBehaviour
         yield return dialogBox.TypeDialog($"{enemyUnits[currentCreature].Creature.Base.Name} used  " +
                                           $"{move.Base.Name} against {playerUnits[currentTarget].Creature.Base.Name}");
         yield return new WaitForSeconds(1f);
+        
+        enemyUnits[currentCreature].PlayAttackAnimation(playerUnits[currentTarget].OriginalPos);
+        yield return new WaitForSeconds(1f);
 
         var damageDetails = playerUnits[currentTarget].Creature.TakeDamage(move, enemyUnits[currentCreature].Creature);
         playerUnits[currentTarget].FlashOnHit2();
@@ -237,26 +245,7 @@ public class BattleSystem : MonoBehaviour
 
             if (playerBases.Count == 0)
             {
-                StartCoroutine(dialogBox.TypeDialog("Oh no, you lose :("));
-                List<Creature> creatures = new List<Creature>();
-                if (creaturesFainted.Count > 0)
-                {
-                    for (int i = creaturesFainted.Count - 1; i >= 0; i--)
-                    {
-                        creatures.Insert(creaturesFaintedPosition[i], creaturesFainted[i]);
-                        GameManager.party.Insert(creaturesFaintedPosition[i], creaturesFainted[i].Base);
-                    }
-                }
-        
-                for (int i = 0; i < GameManager.partyHps.Count; i++)
-                {
-                    GameManager.partyHps[i] = creatures[i].HP;
-                    if (creatures[i].HP == 0)
-                    {
-                        GameManager.partyHps[i] = 1;
-                    }
-                }
-                GameManager.LoadGame();
+                StartCoroutine(LoseFight());
             }
             else
             {
@@ -271,7 +260,13 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator WinFight() {
         yield return dialogBox.TypeDialog("Congratulations, you won :)");
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
+        for (int i = 0; i < itemsDropped.Count; i++)
+        {
+            yield return dialogBox.TypeDialog(
+                $"One enemy dropped {itemsDropped[i].ItemQuantity} {itemsDropped[i].ItemID}");
+            yield return new WaitForSeconds(1f);
+        }
         List<Creature> creatures = new List<Creature>();
         for (int i = 0; i < playerUnits.Count; i++) {
             creatures.Add(playerUnits[i].Creature);
@@ -292,6 +287,31 @@ public class BattleSystem : MonoBehaviour
         }
         
         GameManager.ExitCombat(itemsDropped);
+    }
+
+    IEnumerator LoseFight()
+    {
+        yield return dialogBox.TypeDialog("Oh no, you lose :(");
+        yield return new WaitForSeconds(1f);
+        List<Creature> creatures = new List<Creature>();
+        if (creaturesFainted.Count > 0)
+        {
+            for (int i = creaturesFainted.Count - 1; i >= 0; i--)
+            {
+                creatures.Insert(creaturesFaintedPosition[i], creaturesFainted[i]);
+                GameManager.party.Insert(creaturesFaintedPosition[i], creaturesFainted[i].Base);
+            }
+        }
+        
+        for (int i = 0; i < GameManager.partyHps.Count; i++)
+        {
+            GameManager.partyHps[i] = creatures[i].HP;
+            if (creatures[i].HP == 0)
+            {
+                GameManager.partyHps[i] = 1;
+            }
+        }
+        GameManager.LoadGame();
     }
 
     IEnumerator ShowDamageDetails(DamageDetails damageDetails)

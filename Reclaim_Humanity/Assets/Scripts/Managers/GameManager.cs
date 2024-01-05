@@ -61,8 +61,10 @@ public class GameManager : MonoBehaviour
         }
         enemies = new List<CreatureBase>();
         enemiesLevels = new List<int>();
+        // ******************************
         /*enemies = myParty.enemies;
         enemiesLevels = myParty.enemiesLevels;*/
+        // ******************************
         previousPosition = Vector3.zero;
         ordinaryItemsInInventory = new List<InventoryItem>();
         specialItemsInInventory = new List<InventoryItem>();
