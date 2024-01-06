@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Mime;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class BattleUnit : MonoBehaviour
 {
@@ -10,17 +12,31 @@ public class BattleUnit : MonoBehaviour
 
     public Creature Creature { get; set; }
 
+    private Image image;
+    private Vector3 originalPos;
+    
+    public Vector3 OriginalPos
+    {
+        get { return originalPos; }
+    }
+
+    private void Awake()
+    {
+        image = GetComponent<Image>();
+        originalPos = image.transform.localPosition;
+    }
+
     public void SetUp(CreatureBase creatureBase, int level, int HP=1000)
     {
         gameObject.SetActive(true);
         Creature = new Creature(creatureBase, level, HP);
         if (isFriend)
         {
-            GetComponent<Image>().sprite = Creature.Base.SpriteL;
+            image.sprite = Creature.Base.SpriteL;
         }
         else
         {
-            GetComponent<Image>().sprite = Creature.Base.SpriteR;
+            image.sprite = Creature.Base.SpriteR;
         }
 
         if (Creature.Base.Type1 == CreatureType.Fire)
@@ -32,6 +48,40 @@ public class BattleUnit : MonoBehaviour
         {
             GetComponent<Image>().color = Color.green;
         }
+        
+        PlayEnterAnimation();
+    }
+
+    public void PlayEnterAnimation()
+    {
+        if (isFriend)
+        {
+            image.transform.localPosition = new Vector3(-500f, originalPos.y);
+        }
+        else
+        {
+            image.transform.localPosition = new Vector3(500f, originalPos.y);
+        }
+
+        image.transform.DOLocalMoveX(originalPos.x, 1f);
+    }
+
+    public void PlayAttackAnimation(Vector3 otherPos)
+    {
+        var sequence = DOTween.Sequence();
+        if (isFriend)
+        {
+            sequence.Append(image.transform.DOLocalMove(
+                new Vector3(otherPos.x - 100f, otherPos.y), 0.3f));
+        }
+        else
+        {
+            sequence.Append(image.transform.DOLocalMove(
+                new Vector3(otherPos.x + 100f, otherPos.y), 0.3f));
+        }
+        
+        sequence.Append(image.transform.DOLocalMove(
+            new Vector3(originalPos.x, originalPos.y), 0.3f));
     }
     
     public void FlashOnHit()

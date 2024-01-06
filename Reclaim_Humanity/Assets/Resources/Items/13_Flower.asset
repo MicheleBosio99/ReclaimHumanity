@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7890fa46cbc6b8e4f806b716dc230e48, type: 3}
-  m_Name: 13_Flowers
+  m_Name: 13_Flower
   m_EditorClassIdentifier: 
   itemID: 13_Flower
   itemName: Flower

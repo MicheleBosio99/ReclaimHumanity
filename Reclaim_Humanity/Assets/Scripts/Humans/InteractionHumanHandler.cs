@@ -1,9 +1,6 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
-using Newtonsoft.Json;
 
 public class InteractionHumanHandler : MonoBehaviour {
     
@@ -16,6 +13,9 @@ public class InteractionHumanHandler : MonoBehaviour {
     private RecipesInfoLoader _recipesInfoLoader;
     
     [SerializeField] private TextAsset recipesJsonTextAsset;
+    
+    [SerializeField] private GameObject numOfHumansLeftGO;
+    private NumOfHumansLeft numOfHumansLeft;
     
     private Human human;
     private DialogueHandler dialogueHandler;
@@ -50,6 +50,8 @@ public class InteractionHumanHandler : MonoBehaviour {
         visualizeUnlocked = unlockedANDRewardsUI.GetComponent<VisualizeUnlocked>();
         _recipesInfoLoader = GameManager.recipesInfoLoader;
         dialogueUI.SetActive(false);
+        
+        numOfHumansLeft = numOfHumansLeftGO.GetComponent<NumOfHumansLeft>();
     }
 
     public void InitiateDialogue() {
@@ -102,6 +104,8 @@ public class InteractionHumanHandler : MonoBehaviour {
             var recipeEnabled = _recipesInfoLoader.UnlockRecipe(human.recipesUnlockedID);
             if (!recipeEnabled.Item1) { visualizeUnlocked.StartShowUnlockedMessage("recipe", recipeEnabled.Item2); }
         }
+        if(!human.spokenTo) { numOfHumansLeft.AddHumanTalkedTo(); }
+        
         infoLoader.ToggleSpokenTo(human.humanID);
 
         clickedGoOnButton = false;

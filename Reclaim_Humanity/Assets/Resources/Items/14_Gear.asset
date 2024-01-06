@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7890fa46cbc6b8e4f806b716dc230e48, type: 3}
-  m_Name: 02_WolfFangs
+  m_Name: 14_Gear
   m_EditorClassIdentifier: 
-  itemID: 02_WolfFangs
-  itemName: Wolf Fangs
-  itemSprite: {fileID: 21300000, guid: 178521f0ae51c1a4caa94c0da2dc89eb, type: 3}
-  itemEnergyGenerated: 1
-  itemDescription: These teeth are razor-blade sharp.
+  itemID: 14_Gear
+  itemName: Gear
+  itemSprite: {fileID: 0}
+  itemEnergyGenerated: 3
+  itemDescription: Useful piece of technology, specially for a robot.
   isItemSpecial: 0

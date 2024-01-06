@@ -124,7 +124,7 @@ public class Enemy : MonoBehaviour
     
     private IEnumerator FOVRoutine()
     {
-        angle = 30;
+        angle = 360;
         while (true)
         {
             yield return new WaitForSeconds(0.02f);
@@ -175,8 +175,15 @@ public class Enemy : MonoBehaviour
             playerInSight = false;
 
         if (playerInSight)
-            print("Load Battle");
-        //SceneManager.LoadScene("Battle");
+        {
+            enem.SetActive(false);
+            spawn.SetActive(false);
+            spawnHandler.NumberOfSpawnsActiveDecrement();
+
+            GameManager.enemies = enemies;
+            GameManager.enemiesLevels = levels;
+            GameManager.EnterCombat();
+        }
     }
     
     void AiChase()

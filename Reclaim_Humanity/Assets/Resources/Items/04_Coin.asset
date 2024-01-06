@@ -15,6 +15,6 @@ MonoBehaviour:
   itemID: 04_Coin
   itemName: Coin
   itemSprite: {fileID: 21300000, guid: 8b404e1e5239b974693851b807cfb777, type: 3}
-  itemEnergyGenerated: 1
+  itemEnergyGenerated: 2
   itemDescription: Old currency of an almost-lost era.
   isItemSpecial: 0

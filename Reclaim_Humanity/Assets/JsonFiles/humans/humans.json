@@ -211,7 +211,7 @@
         {
             "phrases" :
             [
-                "You are finally here! The profecy is about to be completed!",
+                "You are finally here! The prophecy is about to be completed!",
                 "Of course I knew you would come, one day. I am still the Divine Oracle afer all!",
                 "...          \nYou have no idea who the Divine Oracle is? Were you born yesterday?\n...                        \nIt was just a rethorical question, you don't have to answer it...",
                 "Anyway.               \nNow that you're here it is time...\nThe great <u>Fallen Star</u> is yours to take.\nYou will find it just here in the right upper corner. Just remember to use it wisely.",
@@ -224,6 +224,96 @@
             [
                 "Are you still here?     \nHave you already taken the star?     \nThere is no much else, other than the star, better to continue the mission.",
                 "For now you've done a good job Wollo, but there is still much to do.\nNevertheless I know you will reach the end and save us all."
+            ]
+        }
+    },
+    
+    
+    
+    
+    
+    
+    {
+        "humanID" : "07_RC_ResilientGearHuman",
+        "humanName" : "Titan Gearwright",
+        "biome" : "RuinedCity",
+        "recipesUnlockedID" : "04_ResilientGears",
+        "spokenTo" : false,
+        "firstDialogue" :
+        {
+            "phrases" :
+            [
+                ""
+            ]
+        },
+        "generalDialogue" :
+        {
+            "phrases" :
+            [
+                ""
+            ]
+        }
+    },
+    {
+        "humanID" : "08_RC_FasterGearHuman",
+        "humanName" : "Dash Gearwright",
+        "biome" : "RuinedCity",
+        "recipesUnlockedID" : "05_FasterGear",
+        "spokenTo" : false,
+        "firstDialogue" :
+        {
+            "phrases" :
+            [
+                ""
+            ]
+        },
+        "generalDialogue" :
+        {
+            "phrases" :
+            [
+                ""
+            ]
+        }
+    },
+    {
+        "humanID" : "09_RC_AutomaticGearHuman",
+        "humanName" : "Cypher Gearwright",
+        "biome" : "RuinedCity",
+        "recipesUnlockedID" : "06_AutomaticGear",
+        "spokenTo" : false,
+        "firstDialogue" :
+        {
+            "phrases" :
+            [
+                ""
+            ]
+        },
+        "generalDialogue" :
+        {
+            "phrases" :
+            [
+                ""
+            ]
+        }
+    },
+    {
+        "humanID" : "10_RC_GearboxHuman",
+        "humanName" : "Axle Gearwright",
+        "biome" : "RuinedCity",
+        "recipesUnlockedID" : "07_Gearbox",
+        "spokenTo" : false,
+        "firstDialogue" :
+        {
+            "phrases" :
+            [
+                ""
+            ]
+        },
+        "generalDialogue" :
+        {
+            "phrases" :
+            [
+                ""
             ]
         }
     }
