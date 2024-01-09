@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: EnergySpheresSO
   m_EditorClassIdentifier: 
   currentEnergy: 0
-  maxEnergyLab: 1000
+  maxEnergyLab: 500

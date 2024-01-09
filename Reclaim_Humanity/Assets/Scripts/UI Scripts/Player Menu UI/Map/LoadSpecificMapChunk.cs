@@ -1,4 +1,5 @@
-using System;
+using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,44 +10,30 @@ public class LoadSpecificMapChunk : MonoBehaviour {
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject playerPositionPin;
     private RectTransform pinRectTransform;
-
-    private const float mapWidthInSquares = 128.0f;
-    private const float mapHeightInSquares = 128.0f;
     
-    private const float originalTextureWidth = 1084.0f;
-    private const float originalTextureHeight = 1092.0f;
-
-    private const float displayedImageWidth = 564.0f;
-    private const float displayedImageHeight = 282.0f;
+    [SerializeField] private MapParameters mapParameter;
     
-    private const float textureOffsetX = 542.0f;
-    private const float textureOffsetY = 40.0f;
 
     private void Awake() { pinRectTransform = playerPositionPin.GetComponent<RectTransform>(); }
 
     private void OnEnable() { ApplyTextureToUI(player.transform.position); }
 
     private void ApplyTextureToUI(Vector2 playerPosition) {
-        const float mapTextureRatioX = originalTextureWidth / mapWidthInSquares;
-        const float mapTextureRatioY = originalTextureHeight / mapHeightInSquares;
+        var mapTextureRatioX = mapParameter.originalTextureWidth / mapParameter.mapWidthInSquares;
+        var mapTextureRatioY = mapParameter.originalTextureHeight / mapParameter.mapHeightInSquares;
         
-        var texturePlayerPositionX = playerPosition.x * mapTextureRatioX + textureOffsetX;
-        var texturePlayerPositionY = playerPosition.y * mapTextureRatioY + textureOffsetY;
+        var texturePlayerPositionX = playerPosition.x * mapTextureRatioX + mapParameter.textureOffsetX;
+        var texturePlayerPositionY = playerPosition.y * mapTextureRatioY + mapParameter.textureOffsetY;
 
-        var lbPositionVector = new Vector2(texturePlayerPositionX - displayedImageWidth / 2.0f,
-            texturePlayerPositionY - displayedImageHeight / 2.0f);
+        var lbPositionVector = new Vector2(texturePlayerPositionX - mapParameter.displayedImageWidth / 2.0f,
+            texturePlayerPositionY - mapParameter.displayedImageHeight / 2.0f);
         
         lbPositionVector = ChangePinPosition(lbPositionVector);
 
-        // var lbPositionX = Mathf.Clamp(lbPositionVector.x, 0.0f, float.MaxValue);
-        // var lbPositionY = Mathf.Clamp(lbPositionVector.y, 0.0f, float.MaxValue);
-
-        // lbPositionVector = new Vector2(lbPositionX, lbPositionY);
-
-        var chunkDim = new Vector2(displayedImageWidth, displayedImageHeight);
+        var chunkDim = new Vector2(mapParameter.displayedImageWidth, mapParameter.displayedImageHeight);
         
         var chunk = new Rect(lbPositionVector, chunkDim);
-        // Debug.Log($"Chunk {chunk}");
+        
         mapImageUI.sprite = Sprite.Create(mapTexture, chunk, new Vector2(0.5f, 0.5f));
     }
 
@@ -54,15 +41,15 @@ public class LoadSpecificMapChunk : MonoBehaviour {
         var pinPosition = new Vector2(0.0f, 0.0f);
         
         if(lbPositionVector.x < 0.0f) { pinPosition.x = lbPositionVector.x; lbPositionVector.x = 0.0f; }
-        else if(lbPositionVector.x + displayedImageWidth > originalTextureWidth) {
-            pinPosition.x = lbPositionVector.x + displayedImageWidth - originalTextureWidth;
-            lbPositionVector.x = originalTextureWidth - displayedImageWidth;
+        else if(lbPositionVector.x + mapParameter.displayedImageWidth > mapParameter.originalTextureWidth) {
+            pinPosition.x = lbPositionVector.x + mapParameter.displayedImageWidth - mapParameter.originalTextureWidth;
+            lbPositionVector.x = mapParameter.originalTextureWidth - mapParameter.displayedImageWidth;
         }
         
         if(lbPositionVector.y < 0.0f) { pinPosition.y = lbPositionVector.y; lbPositionVector.y = 0.0f; }
-        else if(lbPositionVector.y + displayedImageHeight > originalTextureHeight) {
-            pinPosition.y = lbPositionVector.y + displayedImageHeight - originalTextureHeight;
-            lbPositionVector.y = originalTextureHeight - displayedImageHeight;
+        else if(lbPositionVector.y + mapParameter.displayedImageHeight > mapParameter.originalTextureHeight) {
+            pinPosition.y = lbPositionVector.y + mapParameter.displayedImageHeight - mapParameter.originalTextureHeight;
+            lbPositionVector.y = mapParameter.originalTextureHeight - mapParameter.displayedImageHeight;
         }
         
         pinPosition.x *= 1.5f;
@@ -74,5 +61,7 @@ public class LoadSpecificMapChunk : MonoBehaviour {
     }
 }
 
-
-
+class NameParamBinding {
+    public string sceneName;
+    public MapParameters mapParameters;
+}
