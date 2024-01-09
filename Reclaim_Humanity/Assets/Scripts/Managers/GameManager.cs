@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public static Party completeParty;  // all potential members of party
     public static List<CreatureBase> party;
     public static List<int> partyLevels;
     public static List<int> partyHps;
@@ -51,19 +52,30 @@ public class GameManager : MonoBehaviour
 
     public static void LoadFreshData()
     {
-        Party myParty = GameObject.Find("Party").GetComponent<Party>();
-        party = myParty.party;
-        partyLevels = myParty.partyLevels;
+        completeParty = GameObject.Find("Party").GetComponent<Party>();
+        
+        party = new List<CreatureBase>();
+        partyLevels = new List<int>();
+        for (int i = 0; i < completeParty.party.Count; i++)
+        {
+            if (completeParty.party[i].Name == "Wollo")
+            {
+                party.Add(completeParty.party[i]);
+                partyLevels.Add(completeParty.partyLevels[i]);
+            }
+        }
+        
         partyHps = new List<int>();
         for (int i = 0; i < party.Count; i++)
         {
             partyHps.Add(1000);
         }
+        
         enemies = new List<CreatureBase>();
         enemiesLevels = new List<int>();
         // ******************************
-        /*enemies = myParty.enemies;
-        enemiesLevels = myParty.enemiesLevels;*/
+        enemies = completeParty.enemies;
+        enemiesLevels = completeParty.enemiesLevels;
         // ******************************
         previousPosition = Vector3.zero;
         ordinaryItemsInInventory = new List<InventoryItem>();
@@ -170,6 +182,27 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < partyHps.Count; i++)
         {
             partyHps[i] = 1000;
+        }
+    }
+    
+    public static void IncreasePartyLevel()
+    {
+        for (int i = 0; i < partyLevels.Count; i++)
+        {
+            partyLevels[i] += 1;
+        }
+    }
+
+    public static void AddBuddy(string buddyName)
+    {
+        for (int i = 0; i < completeParty.party.Count; i++)
+        {
+            if (completeParty.party[i].Name == buddyName)
+            {
+                party.Add(completeParty.party[i]);
+                partyLevels.Add(partyLevels[0]);
+                partyHps.Add(1000);
+            }
         }
     }
     
