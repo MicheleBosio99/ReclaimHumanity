@@ -28,6 +28,11 @@
             ]
         }
     },
+    
+    
+    
+    
+    
     {
         "humanID" : "00_OF_PolicemanWood",
         "humanName" : "Maur Woodsie",
@@ -227,14 +232,39 @@
             ]
         }
     },
+
+
+
     
     
     
-    
-    
-    
+
+
     {
-        "humanID" : "07_RC_ResilientGearHuman",
+        "humanID" : "07_RC_PolicemanCity",
+        "humanName" : "Asher Lawton",
+        "biome" : "RuinedCity",
+        "recipesUnlockedID" : "",
+        "spokenTo" : false,
+        "firstDialogue" :
+        {
+            "phrases" :
+            [
+                "Greetings, traveler. I'm Asher Lawton, trying to keep some semblance of order in this chaos!\n<i>Did he already realize I am completely paralyzed...?</i>           \nOooh, you say you're here to get the <b>Golden Idol</b>?!?\nI'll let you take it, only if you promise it's for saving humanity.",
+                "What you say? You're also searching for someone?\nI am too on the lookout for four mechanics, who once tinkered in these parts.\nThey're skilled, resourceful, and, given the situation, likely in need of aid.\nIf you stumble upon them, tell them Asher's ready to help.",
+                "This city is now ruined and full of tales and perils,\nbut their expertise might just hold the key to save us all...                 \nEeeehhmmm, them all!"
+            ]
+        },
+        "generalDialogue" :
+        {
+            "phrases" :
+            [
+                "The ruins whisper stories of a city long forgotten.\nThere's a beauty in its decay, but also danger lurking in every corner.\nPay attention!"
+            ]
+        }
+    },
+    {
+        "humanID" : "08_RC_ResilientGearHuman",
         "humanName" : "Titan Gearwright",
         "biome" : "RuinedCity",
         "recipesUnlockedID" : "04_ResilientGears",
@@ -243,19 +273,20 @@
         {
             "phrases" :
             [
-                ""
+                "Hey there, traveler!\nI got caught by this desease in the middle of crafting something truly special!\nWanna see?",
+                "Look here, my secret to resilience lies in the crafting of this particular gear...\nI call it the <b>Resilient Gear</b>.\nWant to know how it's done?               \nSure, I'm happy to share the recipe with you!"
             ]
         },
         "generalDialogue" :
         {
             "phrases" :
             [
-                ""
+                "Ah, it's you again! Making progress in this wild adventure?\nRemember! Resilience isn't just in the gears we craft, but it's in the choices we make too. Keep pushing forward!"
             ]
         }
     },
     {
-        "humanID" : "08_RC_FasterGearHuman",
+        "humanID" : "09_RC_FasterGearHuman",
         "humanName" : "Dash Gearwright",
         "biome" : "RuinedCity",
         "recipesUnlockedID" : "05_FasterGear",
@@ -264,19 +295,20 @@
         {
             "phrases" :
             [
-                ""
+                "Greetings, traveler! I'm Dash, always seeking speed.\nYou're after a <b>Faster Gear</b>, right? You're in The place, I'm the rightful owner of this gear patent!",
+                "But remember...                  \nSpeed isn't everything. Sometimes things are about finding the right pace."
             ]
         },
         "generalDialogue" :
         {
             "phrases" :
             [
-                ""
+                "Back for more, are you? Progress waits for no one!\nKeep up that pace, but don't forget to savor the journey.\nNot everything revolves on speed, sometimes it's about the experience too!"
             ]
         }
     },
     {
-        "humanID" : "09_RC_AutomaticGearHuman",
+        "humanID" : "10_RC_AutomaticGearHuman",
         "humanName" : "Cypher Gearwright",
         "biome" : "RuinedCity",
         "recipesUnlockedID" : "06_AutomaticGear",
@@ -285,19 +317,20 @@
         {
             "phrases" :
             [
-                ""
+                "Welcome, young one. I'm Cypher, creator of the <b>Automatic Gear</b> — a marvel of efficiency.\nIntrigued, aren't you? I am happy to share with you the recipe.",
+                "Just remember, efficiency is always the key, but often is needed something \"more\"..., for everything to be perfect."
             ]
         },
         "generalDialogue" :
         {
             "phrases" :
             [
-                ""
+                "Ah, our paths cross once more.\nRemember? Progress isn't always automatic. Be careful when thinking your moves (even if you're a robot)!\nSo, choose wisely on your journey, bye!"
             ]
         }
     },
     {
-        "humanID" : "10_RC_GearboxHuman",
+        "humanID" : "11_RC_GearboxHuman",
         "humanName" : "Axle Gearwright",
         "biome" : "RuinedCity",
         "recipesUnlockedID" : "07_Gearbox",
@@ -306,14 +339,16 @@
         {
             "phrases" :
             [
-                ""
+                "Well met! I'm Axle. Say, just to know, have you already met my children?        \nOk, rigt...",
+                "Still, I know why you're here...\nYou came for the true masterpiece, you need the <b>Gearbox</b> recipe.\nHere it is, lad.",
+                "Attention though, a creation's heart lies not just in its mechanics, but in the hands that guide them."
             ]
         },
         "generalDialogue" :
         {
             "phrases" :
             [
-                ""
+                "Back for more wisdom from this old guy, eh?\nRemember, progress is about more than just gears turning — it's about what we learn along the way.\nKeep those gears turning, adventurer!"
             ]
         }
     }
