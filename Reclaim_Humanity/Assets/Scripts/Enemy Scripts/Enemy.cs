@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
@@ -11,7 +12,16 @@ public class Enemy : MonoBehaviour
     [SerializeField] private List<int> levels;// ??
     [SerializeField] private int maxHP;
     private int currentHP;
-
+    
+    [Header("ENEMY TYPE")] 
+    [SerializeField] private EnemyType type;
+    private enum EnemyType
+    {
+        Chasing, // 0: Follows the player --combat when collision
+        Spotting, // 1: Looks for the player --combat when on sight
+        Detecting // 2: Senses the player --combat when closer than a certain range
+    }
+    
     [Header("CHASING")] 
     public GameObject player;
     public float speed;
@@ -24,20 +34,19 @@ public class Enemy : MonoBehaviour
     public float radius;
     public LayerMask targetMask;
     public LayerMask obstructionMask;
-    private float angle; // public?
+
+    //Needed only for SPOTTING enemies
+    [SerializeField] private SightDirection _sightDirection;
+    private enum SightDirection
+    {
+        up,
+        right,
+        left,
+        down
+    }
+    public float angle; // public?
     private bool playerInSight;
     private bool isChasing;
-
-    
-
-    [Header("ENEMY TYPE")] 
-    [SerializeField] private EnemyType type;
-    private enum EnemyType
-    {
-        Chasing, // 0: Follows the player --combat when collision
-        Spotting, // 1: Looks for the player --combat when on sight
-        Detecting // 2: Senses the player --combat when closer than a certain range
-    }
     
     [Header("SPAWN SETTINGS")] [SerializeField]
     private GameObject enem;
@@ -124,7 +133,7 @@ public class Enemy : MonoBehaviour
     
     private IEnumerator FOVRoutine()
     {
-        angle = 360;
+        angle = 10;
         while (true)
         {
             yield return new WaitForSeconds(0.02f);
@@ -151,6 +160,20 @@ public class Enemy : MonoBehaviour
             AiChase();
         }
     }
+
+    public Vector3 FOVDirection()
+    {
+        var toReturn = _sightDirection switch
+        {
+            SightDirection.up => transform.up,
+            SightDirection.down => -transform.up,
+            SightDirection.left => -transform.right,
+            SightDirection.right => transform.right,
+            _ => transform.up
+        };
+
+        return toReturn;
+    }
     
     private void FieldOfViewCheck() //Triangular fov (angle based)
     {
@@ -162,8 +185,7 @@ public class Enemy : MonoBehaviour
             var target = seen.transform;
             Vector2 directionToTarget = (target.position - transform.position).normalized;
             
-            if (Vector2.Angle(transform.right, directionToTarget) < angle ||
-                Vector2.Angle(-transform.right, directionToTarget) < angle) // angle / 2 ??
+            if (Vector2.Angle(FOVDirection(), directionToTarget) < angle) // angle / 2 ??
             {
                 distance = Vector2.Distance(transform.position, player.transform.position);
                 
