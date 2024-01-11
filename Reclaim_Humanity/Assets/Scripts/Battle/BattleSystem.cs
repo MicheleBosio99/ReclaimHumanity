@@ -7,7 +7,7 @@ using System.Linq;
 using Microsoft.Unity.VisualStudio.Editor;
 using Unity.VisualScripting;
 
-public enum BattleState { Start, PlayerAction, PlayerMove, SelectTarget, EnemyMove, Busy }
+public enum BattleState { Start, PlayerAction, PlayerMove, SelectTarget, EnemyMove, Busy, Item, SelectItemTarget }
 
 public class BattleSystem : MonoBehaviour
 {
@@ -35,13 +35,15 @@ public class BattleSystem : MonoBehaviour
     private int currentMove;
     private int currentCreature;
     private int currentTarget;
+    private int currentItem;
     
     private List<int> order;
 
     private List<Move> selectedMoves;
     private List<Enemy> selectedTargets;
-    
+
     private List<InventoryItem> itemsDropped;
+    private List<InventoryItem> itemsToUse;
 
     private void Start()
     {
@@ -52,6 +54,7 @@ public class BattleSystem : MonoBehaviour
         enemyLevels = GameManager.enemiesLevels;
         creaturesFainted = new List<Creature>();
         creaturesFaintedPosition = new List<int>();
+        itemsToUse = new List<InventoryItem>();
         
         itemsDropped = new List<InventoryItem>();
         foreach (var enemy in GameManager.enemies) {
@@ -65,6 +68,8 @@ public class BattleSystem : MonoBehaviour
 
     public IEnumerator SetupBattle()
     {
+        dialogBox.EnableCuriosityText(false);
+        
         for (int i = 0; i < playerBases.Count; i++)
         {
             playerUnits[i].SetUp(playerBases[i], playerLevels[i], playerHps[i]);
@@ -77,10 +82,23 @@ public class BattleSystem : MonoBehaviour
             enemyHuds[i].SetData(enemyUnits[i].Creature);
         }
         
+        SetUpItems();
+        
         yield return dialogBox.TypeDialog("Oh no, some enemies :(");
         yield return new WaitForSeconds(0.5f);
         SetOrder();
         StartTurn();
+    }
+    
+    private void SetUpItems()
+    {
+        foreach (var item in GameManager.ordinaryItemsInInventory)
+        {
+            if (item.OnCombat)
+            {
+                itemsToUse.Add(item);
+            }
+        }
     }
 
     private void SetOrder()
@@ -116,8 +134,10 @@ public class BattleSystem : MonoBehaviour
         {
             currentCreature = current;
             dialogBox.SetMoveNames(playerUnits[currentCreature].Creature.Moves);
+            dialogBox.SetItemNames(itemsToUse);
             currentMove = 0;
             currentTarget = 0;
+            currentItem = 0;
             handL.transform.position = playerUnits[currentCreature].transform.position + new Vector3(1,0,0);
             handL.SetActive(true);
             handR.SetActive(false);
@@ -264,7 +284,7 @@ public class BattleSystem : MonoBehaviour
         for (int i = 0; i < itemsDropped.Count; i++)
         {
             yield return dialogBox.TypeDialog(
-                $"One enemy dropped {itemsDropped[i].ItemQuantity} {itemsDropped[i].ItemID}");
+                $"One enemy dropped {itemsDropped[i].ItemQuantity} {itemsDropped[i].ItemName}");
             yield return new WaitForSeconds(1f);
         }
         List<Creature> creatures = new List<Creature>();
@@ -345,6 +365,21 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.PlayerAction;
     }
 
+    IEnumerator Curiosity()
+    {
+        state = BattleState.Busy;
+        dialogBox.EnableActionSelector(false);
+        dialogBox.EnableDialogText(false);
+        dialogBox.EnableCuriosityText(true);
+        yield return dialogBox.TypeCuriosity("Honey never spoils; archaeologists have found pots of honey in ancient " +
+                                          "Egyptian tombs that are over 3,000 years old and still edible.");
+        yield return new WaitForSeconds(1f);
+        dialogBox.EnableActionSelector(true);
+        dialogBox.EnableDialogText(true);
+        dialogBox.EnableCuriosityText(false);
+        state = BattleState.PlayerAction;
+    }
+    
     IEnumerator Run()
     {
         state = BattleState.Busy;
@@ -359,6 +394,59 @@ public class BattleSystem : MonoBehaviour
         dialogBox.EnableActionSelector(false);
         dialogBox.EnableDialogText(false);
         dialogBox.EnableMoveSelector(true);
+    }
+    
+    void Item()
+    {
+        if (itemsToUse.Count == 0)
+        {
+            StartCoroutine(NoItem());
+        }
+        else
+        {
+            state = BattleState.Item;
+            dialogBox.EnableActionSelector(false);
+            dialogBox.EnableDialogText(false);
+            dialogBox.EnableItemSelector(true);
+        }
+    }
+    
+    IEnumerator NoItem()
+    {
+        state = BattleState.Busy;
+        yield return dialogBox.TypeDialog("You have no item in inventory that can help you :(");
+        yield return new WaitForSeconds(0.5f);
+        dialogBox.EnableActionSelector(true);
+        dialogBox.EnableDialogText(true);
+        state = BattleState.PlayerAction;
+    }
+
+    IEnumerator PerformItem()
+    {
+        state = BattleState.Busy;
+        yield return dialogBox.TypeDialog($"You give {itemsToUse[currentItem].ItemName} to" +
+                                          $" {playerUnits[currentTarget].Creature.Base.Name}");
+        yield return new WaitForSeconds(0.5f);
+        itemsToUse[currentItem].ItemQuantity--;
+        if (itemsToUse[currentItem].ItemQuantity == 0)
+        {
+            itemsToUse.RemoveAt(currentItem);
+        }
+        StartTurn();
+    }
+
+    IEnumerator SelectItemTarget()
+    {
+        state = BattleState.Busy;
+        dialogBox.EnableActionSelector(false);
+        dialogBox.EnableDialogText(true);
+        dialogBox.EnableItemSelector(false);
+        yield return dialogBox.TypeDialog("Choose the target of the item");
+        yield return new WaitForSeconds(0.5f);
+        handL.transform.position = playerUnits[currentTarget].transform.position + new Vector3(-1.2f,0,0);
+        handL.SetActive(true);
+        handR.SetActive(false);
+        state = BattleState.SelectItemTarget;
     }
     
     IEnumerator SelectTarget()
@@ -389,6 +477,14 @@ public class BattleSystem : MonoBehaviour
         {
             HandleTargetSelection();
         }
+        else if (state == BattleState.Item)
+        {
+            HandleItemSelection();
+        }
+        else if (state == BattleState.SelectItemTarget)
+        {
+            HandleItemTargetSelection();
+        }
         else if (state == BattleState.Busy)
         {
             
@@ -397,19 +493,35 @@ public class BattleSystem : MonoBehaviour
 
     void HandleActionSelection()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            if (currentAction < 1)
+            if (currentAction < 3)
             {
                 ++currentAction;
                 SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             if (currentAction > 0)
             {
                 --currentAction;
+                SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            if (currentAction < 2)
+            {
+                currentAction += 2;
+                SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            if (currentAction > 1)
+            {
+                currentAction -= 2;
                 SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }
@@ -423,7 +535,15 @@ public class BattleSystem : MonoBehaviour
             }
             else if (currentAction == 1)
             {
+                Item();
+            }
+            else if (currentAction == 2)
+            {
                 StartCoroutine(Run());
+            }
+            else if (currentAction == 3)
+            {
+                StartCoroutine(Curiosity());
             }
         }
     }
@@ -461,7 +581,15 @@ public class BattleSystem : MonoBehaviour
                 currentMove -= 2;
                 SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
-        }  
+        } 
+        else if (Input.GetKeyDown(KeyCode.B))
+        {
+            currentMove = 0;
+            dialogBox.EnableActionSelector(true);
+            dialogBox.EnableDialogText(true);
+            dialogBox.EnableMoveSelector(false);
+            state = BattleState.PlayerAction;
+        }
         dialogBox.UpdateMoveSelection(currentMove, playerUnits[currentCreature].Creature.Moves[currentMove]);
         
         if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Space))
@@ -497,6 +625,86 @@ public class BattleSystem : MonoBehaviour
             handR.SetActive(false);
             handL.SetActive(false);
             StartCoroutine(PerformPlayerMove());
+        }
+    }
+
+    void HandleItemSelection()
+    {
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            if (currentItem < itemsToUse.Count - 1)
+            {
+                ++currentItem;
+                SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            if (currentItem > 0)
+            {
+                --currentItem;
+                SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
+            }
+        }   
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            if (currentItem < itemsToUse.Count - 2)
+            {
+                currentItem += 2;
+                SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
+            }
+        }   
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            if (currentItem > 1)
+            {
+                currentItem -= 2;
+                SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
+            }
+        } 
+        else if (Input.GetKeyDown(KeyCode.B))
+        {
+            currentItem = 0;
+            dialogBox.EnableActionSelector(true);
+            dialogBox.EnableDialogText(true);
+            dialogBox.EnableItemSelector(false);
+            state = BattleState.PlayerAction;
+        }
+        dialogBox.UpdateItemSelection(currentItem, itemsToUse[currentItem]);
+        
+        if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(SelectItemTarget());
+        }
+    }
+
+    void HandleItemTargetSelection()
+    {
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            if (currentTarget > 0)
+            {
+                --currentTarget;
+                SoundFXManager.instance.PlaySoundFXClip(Target_switch, transform,1f);
+            }
+            
+        }
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            if (currentTarget < playerBases.Count - 1)
+            {
+                ++currentTarget;
+                SoundFXManager.instance.PlaySoundFXClip(Target_switch, transform,1f);
+            }
+            
+        }
+        handL.transform.position = playerUnits[currentTarget].transform.position + new Vector3(1f,0,0);
+
+        if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Space))
+        {
+            handR.SetActive(false);
+            handL.SetActive(false);
+            StartCoroutine(PerformItem());
         }
     }
 }

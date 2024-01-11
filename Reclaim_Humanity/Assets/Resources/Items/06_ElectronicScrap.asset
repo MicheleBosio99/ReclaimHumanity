@@ -18,3 +18,4 @@ MonoBehaviour:
   itemEnergyGenerated: 0
   itemDescription: Really useful after a long battle to repair any damages.
   isItemSpecial: 0
+  onCombat: 1
