@@ -8,6 +8,7 @@ public class PowerUp : ScriptableObject {
     public FunctionsCallable selectedFunction;
     public int powerUpLevel;
     public string powerUpText;
+    public bool enabled;
 
     public enum FunctionsCallable {
         IncreasePartyLevel,
@@ -16,10 +17,10 @@ public class PowerUp : ScriptableObject {
         EnlargeMapShowed,
         UnlockMove,
         UnlockFinalRecipe,
-        
     }
 
     public void CallSelectedFunction() {
+        enabled = true;
         switch (selectedFunction) {
             case FunctionsCallable.IncreasePartyLevel: IncreasePartyLevel(powerUpLevel); break;
             case FunctionsCallable.IncreaseEnemyLevel: IncreaseEnemyLevel(powerUpLevel); break;
@@ -31,7 +32,7 @@ public class PowerUp : ScriptableObject {
         }
     }
 
-    private void IncreasePartyLevel(int level) { Debug.Log($"Increase Party Level by: {level};"); }
+    private void IncreasePartyLevel(int level) { Debug.Log($"Increase Party Level by: {level};"); GameManager.IncreasePartyLevel(); }
     
     private void IncreaseEnemyLevel(int level) { Debug.Log($"Increase Enemy Level by: {level};"); }
     
