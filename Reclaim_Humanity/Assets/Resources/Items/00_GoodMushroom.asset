@@ -18,3 +18,4 @@ MonoBehaviour:
   itemEnergyGenerated: 2
   itemDescription: These good looking mushrooms can make even a robot crave for them.
   isItemSpecial: 0
+  onCombat: 1

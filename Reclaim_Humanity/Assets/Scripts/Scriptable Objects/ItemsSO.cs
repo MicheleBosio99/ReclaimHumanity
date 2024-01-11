@@ -10,6 +10,7 @@ public class ItemsSO : ScriptableObject {
     [SerializeField] private float itemEnergyGenerated;
     [SerializeField] private string itemDescription;
     [SerializeField] private bool isItemSpecial;
+    [SerializeField] private bool onCombat;
 
     public string ItemID {
         get => itemID;
@@ -40,8 +41,14 @@ public class ItemsSO : ScriptableObject {
         get => isItemSpecial;
         set => isItemSpecial = value;
     }
+    
+    public bool OnCombat {
+        get => onCombat;
+        set => onCombat = value;
+    }
 
     public InventoryItem ToInventoryItem(int quantity) {
-        return new InventoryItem(itemID, itemSprite, quantity, itemDescription, itemEnergyGenerated, isItemSpecial);
+        return new InventoryItem(itemID, itemName, itemSprite, quantity, itemDescription, 
+            itemEnergyGenerated, isItemSpecial, onCombat);
     }
 }
