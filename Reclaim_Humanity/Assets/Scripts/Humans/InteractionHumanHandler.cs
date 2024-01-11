@@ -74,6 +74,12 @@ public class InteractionHumanHandler : MonoBehaviour {
         if(dialogueUI != null) { dialogueUI.SetActive(false); }
         dialogueHandler.SetActiveHuman(null);
         dialogueHandler.EmptyNameText();
+
+        if (humanID == "AAA_Buddy1")
+        {
+            GameManager.AddBuddy("OneWheelBoy");
+            gameObject.SetActive(false);
+        }
     }
     
     public void ClickedGoOnButton() { clickedGoOnButton = true; }

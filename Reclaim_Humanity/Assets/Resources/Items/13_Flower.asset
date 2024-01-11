@@ -18,3 +18,4 @@ MonoBehaviour:
   itemEnergyGenerated: 1
   itemDescription: Cutest flowers found all over the forest.
   isItemSpecial: 0
+  onCombat: 1

@@ -71,37 +71,47 @@ public class NotEnoughItemsInInventoryException : Exception {
     public NotEnoughItemsInInventoryException(string message, Exception inner) : base(message, inner) { }
 }
 
-public class InventoryItem {
-
+public class InventoryItem
+{
     private string itemID;
+    private string itemName;
     private Sprite itemSprite;
     private int itemQuantity;
     private string description;
     private float energyGeneratedOnBurn;
     private bool isSpecialItem;
+    private bool onCombat;
 
-    public InventoryItem(string itemID, Sprite itemSprite, int itemQuantity,
-            string description, float energyGeneratedOnBurn, bool isSpecialItem) {
+    public InventoryItem(string itemID, string itemName, Sprite itemSprite, int itemQuantity,
+            string description, float energyGeneratedOnBurn, bool isSpecialItem, bool onCombat) {
         this.itemID = itemID;
+        this.itemName = itemName;
         this.itemSprite = itemSprite;
         this.itemQuantity = itemQuantity;
         this.description = description;
         this.energyGeneratedOnBurn = energyGeneratedOnBurn;
         this.isSpecialItem = isSpecialItem;
+        this.onCombat = onCombat;
     }
 
     public InventoryItem CreateCopy() {
-        return new InventoryItem(itemID, ItemSprite, ItemQuantity, description,
-            energyGeneratedOnBurn, isSpecialItem);
+        return new InventoryItem(itemID, itemName, ItemSprite, ItemQuantity, description,
+            energyGeneratedOnBurn, isSpecialItem, onCombat);
     }
 
     public static InventoryItem GetEmptyItem() {
-        return new InventoryItem("", null, 0, "", 0.0f, false);
+        return new InventoryItem("", "", null, 0, "", 0.0f,
+            false, false);
     }
 
     public string ItemID {
         get => itemID;
         set => itemID = value;
+    }
+    
+    public string ItemName {
+        get => itemName;
+        set => itemName = value;
     }
 
     public Sprite ItemSprite {
@@ -127,6 +137,11 @@ public class InventoryItem {
     public bool IsSpecialItem {
         get => isSpecialItem;
         set => isSpecialItem = value;
+    }
+    
+    public bool OnCombat {
+        get => onCombat;
+        set => onCombat = value;
     }
 
     public override string ToString() {
