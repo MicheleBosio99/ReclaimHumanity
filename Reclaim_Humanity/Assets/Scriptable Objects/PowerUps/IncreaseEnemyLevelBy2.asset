@@ -16,3 +16,4 @@ MonoBehaviour:
   selectedFunction: 1
   powerUpLevel: 2
   powerUpText: Enemy Level Increased
+  enabled: 0

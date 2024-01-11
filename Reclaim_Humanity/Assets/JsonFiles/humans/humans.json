@@ -28,10 +28,32 @@
             ]
         }
     },
-    
-    
-    
-    
+
+    {
+        "humanID" : "AAA_Buddy1",
+        "humanName" : "Buddy1",
+        "biome" : "OvergrownForest",
+        "recipesUnlockedID" : "",
+        "spokenTo" : false,
+        "firstDialogue" :
+        {
+            "phrases" :
+            [
+                "Good evening colleague, how you doin'?",
+                "Me? I'm just a regular robot built to keep the parking safe, but situation has been really quiet in this period",
+                "What are you saying? Humans have been paralyzed for last years? I thought they were just resting!",
+                "You're trying to save them? That's so nice! Can I help you in some way?",
+                "Oh, cool, I'm gonna join your adventure. We're gonna be an incredible duo, like macaroni and parmesan cheese!"
+            ]
+        },
+        "generalDialogue" :
+        {
+            "phrases" :
+            [
+                ""
+            ]
+        }
+    },
     
     {
         "humanID" : "00_OF_PolicemanWood",

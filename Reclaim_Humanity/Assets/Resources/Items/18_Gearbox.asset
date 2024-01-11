@@ -15,6 +15,6 @@ MonoBehaviour:
   itemID: 18_Gearbox
   itemName: Gearbox
   itemSprite: {fileID: 0}
-  itemEnergyGenerated: 50
+  itemEnergyGenerated: 16
   itemDescription: Combination of gear types. We'll use it later...
   isItemSpecial: 0

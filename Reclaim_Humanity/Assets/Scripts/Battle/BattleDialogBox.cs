@@ -11,16 +11,21 @@ public class BattleDialogBox : MonoBehaviour
     [SerializeField] private Color highlitedColor;
     
     [SerializeField] private TextMeshProUGUI dialogText;
+    [SerializeField] private TextMeshProUGUI curiosityText;
     [SerializeField] private GameObject actionSelector;
     [SerializeField] private GameObject moveSelector;
     [SerializeField] private GameObject moveDetails;
+    [SerializeField] private GameObject itemSelector;
+    [SerializeField] private GameObject itemDetails;
 
     [SerializeField] private List<TextMeshProUGUI> actionTexts;
     [SerializeField] private List<TextMeshProUGUI> moveTexts;
+    [SerializeField] private List<TextMeshProUGUI> itemTexts;
     
     
     [SerializeField] private TextMeshProUGUI moveDescription;
     [SerializeField] private TextMeshProUGUI typeText;
+    [SerializeField] private TextMeshProUGUI itemDescription;
 
     public IEnumerator TypeDialog(string dialog)
     {
@@ -30,12 +35,26 @@ public class BattleDialogBox : MonoBehaviour
             dialogText.text += letter;
             yield return new WaitForSeconds(1f / lettersPerSecond);
         }
-        
+    }
+    
+    public IEnumerator TypeCuriosity(string dialog)
+    {
+        curiosityText.text = "";
+        foreach (var letter in dialog.ToCharArray())
+        {
+            curiosityText.text += letter;
+            yield return new WaitForSeconds(1f / lettersPerSecond);
+        }
     }
 
     public void EnableDialogText(bool enabled)
     {
         dialogText.enabled = enabled;
+    }
+    
+    public void EnableCuriosityText(bool enabled)
+    {
+        curiosityText.enabled = enabled;
     }
     
     public void EnableActionSelector(bool enabled)
@@ -47,6 +66,12 @@ public class BattleDialogBox : MonoBehaviour
     {
         moveSelector.SetActive(enabled);
         moveDetails.SetActive(enabled);
+    }
+    
+    public void EnableItemSelector(bool enabled)
+    {
+        itemSelector.SetActive(enabled);
+        itemDetails.SetActive(enabled);
     }
 
     public void UpdateActionSelection(int selectedAction)
@@ -81,6 +106,23 @@ public class BattleDialogBox : MonoBehaviour
         moveDescription.text = move.Base.Description;
         typeText.text = move.Base.Type.ToString();
     }
+    
+    public void UpdateItemSelection(int selectedItem, InventoryItem item)
+    {
+        for (int i = 0; i < itemTexts.Count; i++)
+        {
+            if (i == selectedItem)
+            {
+                itemTexts[i].color = highlitedColor;
+            }
+            else
+            {
+                itemTexts[i].color = Color.black;
+            }
+        }
+
+        itemDescription.text = item.Description;
+    }
 
     public void SetMoveNames(List<Move> moves)
     {
@@ -93,6 +135,21 @@ public class BattleDialogBox : MonoBehaviour
             else
             {
                 moveTexts[i].text = "-";
+            }
+        }
+    }
+    
+    public void SetItemNames(List<InventoryItem> items)
+    {
+        for (int i = 0; i < itemTexts.Count; i++)
+        {
+            if (i < items.Count)
+            {
+                itemTexts[i].text = items[i].ItemName + " (x" + items[i].ItemQuantity + ")";
+            }
+            else
+            {
+                itemTexts[i].text = "-";
             }
         }
     }
