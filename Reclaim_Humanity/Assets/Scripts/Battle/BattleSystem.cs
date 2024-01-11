@@ -632,7 +632,7 @@ public class BattleSystem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            if (currentItem < GameManager.ordinaryItemsInInventory.Count)
+            if (currentItem < itemsToUse.Count - 1)
             {
                 ++currentItem;
                 SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
@@ -648,7 +648,7 @@ public class BattleSystem : MonoBehaviour
         }   
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            if (currentItem < GameManager.ordinaryItemsInInventory.Count - 2)
+            if (currentItem < itemsToUse.Count - 2)
             {
                 currentItem += 2;
                 SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
