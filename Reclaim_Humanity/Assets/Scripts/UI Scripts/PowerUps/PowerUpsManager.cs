@@ -10,6 +10,8 @@ public class PowerUpsManager : MonoBehaviour {
     private void Awake() { UpdatePowerUps(); }
 
     public void UpdatePowerUps() {
-        foreach (var powUp in powerUps.Where(powUp => GameManager.energyInLab >= powUp.energyThreshold)) { powUp.CallSelectedFunction(); }
+        foreach (var powUp in powerUps.Where(powUp => (GameManager.energyInLab >= powUp.energyThreshold) && powUp.enabled == false)) {
+            powUp.CallSelectedFunction();
+        }
     }
 }

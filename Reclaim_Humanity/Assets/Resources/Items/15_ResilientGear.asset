@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 15_ResilientGear
   m_EditorClassIdentifier: 
   itemID: 15_ResilientGear
-  itemName: Flower
+  itemName: Resilient Gear
   itemSprite: {fileID: 0}
   itemEnergyGenerated: 8
   itemDescription: Just gears, but stronger.

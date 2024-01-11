@@ -10950,7 +10950,7 @@ MonoBehaviour:
   - {fileID: 1953963777}
   - {fileID: 2006112062}
   - {fileID: 445819846}
-  PowerUpsManager: {fileID: 0}
+  PowerUpsManager: {fileID: 197519887}
   batteryEnergy: {fileID: 1103408260}
 --- !u!114 &750545378
 MonoBehaviour:
@@ -98827,7 +98827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6850308894323236715, guid: 83eb18ad3db24463dac692ca45001acb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
