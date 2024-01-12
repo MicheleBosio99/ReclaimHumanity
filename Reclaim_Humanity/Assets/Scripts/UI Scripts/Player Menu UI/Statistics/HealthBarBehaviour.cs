@@ -16,7 +16,8 @@ public class HealthBarBehaviour : MonoBehaviour {
     }
 
     private void ShowHealth() {
-        var currentHp = GameManager.partyHps[0] == 1000 ? 13 : GameManager.partyHps[0];
-        greenBarImage.fillAmount = Mathf.Lerp(minValue, maxValue, (float) GameManager.partyHps[0] / 13.0f);
+        var maxHP = 13.0f;
+        var currentHp = GameManager.partyHps[0] == 1000 ? maxHP : GameManager.partyHps[0];
+        greenBarImage.fillAmount = Mathf.Lerp(minValue, maxValue, (float) GameManager.partyHps[0] / maxHP);
     }
 }
