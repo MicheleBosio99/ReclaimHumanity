@@ -44,6 +44,8 @@ public class Enemy : MonoBehaviour
         left,
         down
     }
+
+    [SerializeField] private GameObject popupIcon;
     public float angle; // public?
     private bool playerInSight;
     private bool isChasing;
@@ -177,6 +179,9 @@ public class Enemy : MonoBehaviour
     
     private void FieldOfViewCheck() //Triangular fov (angle based)
     {
+        var near = Physics2D.OverlapCircle(transform.position, radius+2, targetMask);
+        Popup(near);
+        
         var seen = Physics2D.OverlapCircle(transform.position, radius, targetMask); 
         //returns a collider when the player comes close a certain radius, but the player is not "in sight" yet
 
@@ -256,6 +261,11 @@ public class Enemy : MonoBehaviour
             enemies.Add(ScriptableObject.CreateInstance<CreatureBase>());
         }
 
+    }
+
+    private void Popup(Collider2D near)
+    {
+        popupIcon.SetActive(near);
     }
     
 }
