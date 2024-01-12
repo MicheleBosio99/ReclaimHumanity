@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 17_AutomaticGear
   itemName: Automatic Gear
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: a34a742da6d474d4f8d0fe7fe1f72e53, type: 3}
   itemEnergyGenerated: 10
   itemDescription: Just gears, but automatic.
   isItemSpecial: 0
+  onCombat: 0

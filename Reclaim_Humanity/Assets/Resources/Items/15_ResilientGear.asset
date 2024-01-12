@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 15_ResilientGear
   itemName: Resilient Gear
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: ac321f3c157453c4d9f7ad309bdc73be, type: 3}
   itemEnergyGenerated: 8
   itemDescription: Just gears, but stronger.
   isItemSpecial: 0
+  onCombat: 0

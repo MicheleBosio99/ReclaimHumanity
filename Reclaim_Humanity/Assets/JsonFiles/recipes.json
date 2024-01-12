@@ -123,5 +123,73 @@
         "itemResultName" : "Gearbox",
         "itemResultQuantity" : 1,
         "enabled" : false
+    },
+    
+    
+    
+    
+    
+    
+    
+
+    {
+        "recipeID" : "08_ExhaustSuperconductor",
+        "recipeName" : "Exhaust Superconductor",
+        "recipeDescription" : "Make stronger gears that last longer.",
+        "item1ID" : "07_NuclearWaste",
+        "item1Name" : "Nuclear Waste",
+        "item1QuantityReq" : 3,
+        "item2ID" : "08_Adenityst",
+        "item2Name" : "Adenityst",
+        "item2QuantityReq" : 1,
+        "itemResultID" : "20_ExhaustSuperconductor",
+        "itemResultName" : "Exhaust Superconductor",
+        "itemResultQuantity" : 2,
+        "enabled" : false
+    },
+    {
+        "recipeID" : "09_ChargedSuperconductor",
+        "recipeName" : "Charged Superconductor",
+        "recipeDescription" : "Make stronger gears that last longer.",
+        "item1ID" : "20_ExhaustSuperconductor",
+        "item1Name" : "Exhaust Superconductor",
+        "item1QuantityReq" : 1,
+        "item2ID" : "08_Adenityst",
+        "item2Name" : "Adenityst",
+        "item2QuantityReq" : 1,
+        "itemResultID" : "20_ChargedSuperconductor",
+        "itemResultName" : "Charged Superconductor",
+        "itemResultQuantity" : 2,
+        "enabled" : false
+    },
+    {
+        "recipeID" : "10_EnrichedGemstone",
+        "recipeName" : "Enriched Gemstone",
+        "recipeDescription" : "Automate your gears with a CPU.",
+        "item1ID" : "19_UraniumScrap",
+        "item1Name" : "Uranium Scrap",
+        "item1QuantityReq" : 2,
+        "item2ID" : "08_Adenityst",
+        "item2Name" : "Adenityst",
+        "item2QuantityReq" : 2,
+        "itemResultID" : "22_EnrichedGemstone",
+        "itemResultName" : "Enriched Gemstone",
+        "itemResultQuantity" : 3,
+        "enabled" : false
+    },
+    {
+        "recipeID" : "11_NuclearFuel",
+        "recipeName" : "Nuclear Fuel",
+        "recipeDescription" : "Merge all gear types and create this technological beauty.",
+        "item1ID" : "20_ChargedSuperconductor",
+        "item1Name" : "Charged Superconductor",
+        "item1QuantityReq" : 1,
+        "item2ID" : "17_AutomaticGear",
+        "item2Name" : "Automatic Gear",
+        "item2QuantityReq" : 2,
+        "itemResultID" : "22_EnrichedGemstone",
+        "itemResultName" : "Enriched Gemstone",
+        "itemResultQuantity" : 2,
+        "enabled" : false
     }
 ]

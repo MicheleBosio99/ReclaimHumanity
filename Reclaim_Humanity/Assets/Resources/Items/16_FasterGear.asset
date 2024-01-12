@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 16_FasterGear
   itemName: Faster Gear
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 6c2fe04ba99436241971a64bbe57236f, type: 3}
   itemEnergyGenerated: 8
   itemDescription: Just gears, but faster.
   isItemSpecial: 0
+  onCombat: 0

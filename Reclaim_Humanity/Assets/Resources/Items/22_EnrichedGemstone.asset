@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 22_EnrichedGemstone
   itemName: Enriched Gemstone
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 9dbec1c3c7f76104e8e4b6ea4df091ee, type: 3}
   itemEnergyGenerated: 12
   itemDescription: Beautiful gem, one of the most precious humans ever created.
   isItemSpecial: 0
+  onCombat: 0

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 18_Gearbox
   itemName: Gearbox
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 6869471013559084085e8a378b174436, type: 3}
   itemEnergyGenerated: 16
   itemDescription: Combination of gear types. We'll use it later...
   isItemSpecial: 0
+  onCombat: 0
