@@ -31,7 +31,7 @@
 
     {
         "humanID" : "AAA_Buddy1",
-        "humanName" : "Buddy1",
+        "humanName" : "One Wheel Boy",
         "biome" : "OvergrownForest",
         "recipesUnlockedID" : "",
         "spokenTo" : false,
@@ -44,6 +44,35 @@
                 "What are you saying? Humans have been paralyzed for last years? I thought they were just resting!",
                 "You're trying to save them? That's so nice! Can I help you in some way?",
                 "Oh, cool, I'm gonna join your adventure. We're gonna be an incredible duo, like macaroni and parmesan cheese!"
+            ]
+        },
+        "generalDialogue" :
+        {
+            "phrases" :
+            [
+                ""
+            ]
+        }
+    },
+
+    {
+        "humanID" : "AAA_Buddy2",
+        "humanName" : "Franco The Destroyer",
+        "biome" : "OvergrownForest",
+        "recipesUnlockedID" : "",
+        "spokenTo" : false,
+        "firstDialogue" :
+        {
+            "phrases" :
+            [
+                "Nice to meet you, I'm Franco, how can I help you?",
+                "I'm sorry, I can't join your weird quest, I have to keep the park safe, I was built for that",
+                "Don't be silly, humans are not paralyzed, they're just resting!",
+                "I mean, sometimes they have to charge their batteries too",
+                "...",
+                "...",
+                "Oh, that explains a lot of things...",
+                "Ok, you have my support, but if someone vandalizes the park while I'm away you're in trouble, Mr SmartGuy!"
             ]
         },
         "generalDialogue" :

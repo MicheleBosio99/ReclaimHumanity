@@ -81,9 +81,13 @@ public class InventoryItem
     private float energyGeneratedOnBurn;
     private bool isSpecialItem;
     private bool onCombat;
+    private string attributeBoosted;
+    private int boost;
+    private string itemEffect;
 
-    public InventoryItem(string itemID, string itemName, Sprite itemSprite, int itemQuantity,
-            string description, float energyGeneratedOnBurn, bool isSpecialItem, bool onCombat) {
+    public InventoryItem(string itemID, string itemName, Sprite itemSprite, int itemQuantity, string description, 
+                float energyGeneratedOnBurn, bool isSpecialItem, bool onCombat, string attributeBoosted, int boost,
+                string itemEffect) {
         this.itemID = itemID;
         this.itemName = itemName;
         this.itemSprite = itemSprite;
@@ -92,16 +96,19 @@ public class InventoryItem
         this.energyGeneratedOnBurn = energyGeneratedOnBurn;
         this.isSpecialItem = isSpecialItem;
         this.onCombat = onCombat;
+        this.attributeBoosted = attributeBoosted;
+        this.boost = boost;
+        this.itemEffect = itemEffect;
     }
 
     public InventoryItem CreateCopy() {
         return new InventoryItem(itemID, itemName, ItemSprite, ItemQuantity, description,
-            energyGeneratedOnBurn, isSpecialItem, onCombat);
+            energyGeneratedOnBurn, isSpecialItem, onCombat, attributeBoosted, boost, itemEffect);
     }
 
     public static InventoryItem GetEmptyItem() {
         return new InventoryItem("", "", null, 0, "", 0.0f,
-            false, false);
+            false, false, "", 0, "");
     }
 
     public string ItemID {
@@ -142,6 +149,21 @@ public class InventoryItem
     public bool OnCombat {
         get => onCombat;
         set => onCombat = value;
+    }
+    
+    public string AttributeBoosted {
+        get => attributeBoosted;
+        set => attributeBoosted = value;
+    }
+    
+    public int Boost {
+        get => boost;
+        set => boost = value;
+    }
+    
+    public string ItemEffect {
+        get => itemEffect;
+        set => itemEffect = value;
     }
 
     public override string ToString() {

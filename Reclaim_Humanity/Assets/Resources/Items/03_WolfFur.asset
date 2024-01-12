@@ -18,3 +18,7 @@ MonoBehaviour:
   itemEnergyGenerated: 1
   itemDescription: Really useful for the freezing nights... Maybe not for a robot.
   isItemSpecial: 0
+  onCombat: 1
+  attributeBoosted: defense
+  boost: 4
+  itemEffect: Temporary boost your defense

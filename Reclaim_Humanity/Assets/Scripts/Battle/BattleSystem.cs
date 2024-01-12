@@ -281,6 +281,9 @@ public class BattleSystem : MonoBehaviour
     IEnumerator WinFight() {
         yield return dialogBox.TypeDialog("Congratulations, you won :)");
         yield return new WaitForSeconds(1f);
+        
+        GameManager.UpdateCombatItems(itemsToUse);
+        
         for (int i = 0; i < itemsDropped.Count; i++)
         {
             yield return dialogBox.TypeDialog(
@@ -427,6 +430,26 @@ public class BattleSystem : MonoBehaviour
         yield return dialogBox.TypeDialog($"You give {itemsToUse[currentItem].ItemName} to" +
                                           $" {playerUnits[currentTarget].Creature.Base.Name}");
         yield return new WaitForSeconds(0.5f);
+        if (itemsToUse[currentItem].AttributeBoosted == "health")
+        {
+            playerUnits[currentTarget].Creature.HealHPs(itemsToUse[currentItem].Boost);
+            yield return playerHuds[currentTarget].UpdateHP();
+            yield return new WaitForSeconds(0.8f);
+            yield return dialogBox.TypeDialog($"{playerUnits[currentTarget].Creature.Base.Name} says thank you <3");
+            yield return new WaitForSeconds(0.8f);
+        }
+        if (itemsToUse[currentItem].AttributeBoosted == "attack")
+        {
+            playerUnits[currentTarget].Creature.AttackBoost += itemsToUse[currentItem].Boost;
+            yield return dialogBox.TypeDialog($"{playerUnits[currentTarget].Creature.Base.Name} now feels unbeatable!");
+            yield return new WaitForSeconds(0.8f);
+        }
+        if (itemsToUse[currentItem].AttributeBoosted == "defense")
+        {
+            playerUnits[currentTarget].Creature.DefenseBoost += itemsToUse[currentItem].Boost;
+            yield return dialogBox.TypeDialog($"{playerUnits[currentTarget].Creature.Base.Name} feels protected");
+            yield return new WaitForSeconds(0.8f);
+        }
         itemsToUse[currentItem].ItemQuantity--;
         if (itemsToUse[currentItem].ItemQuantity == 0)
         {
@@ -441,11 +464,10 @@ public class BattleSystem : MonoBehaviour
         dialogBox.EnableActionSelector(false);
         dialogBox.EnableDialogText(true);
         dialogBox.EnableItemSelector(false);
+        handL.transform.position = playerUnits[currentTarget].transform.position + new Vector3(1f,0,0);
+        handL.SetActive(true);
         yield return dialogBox.TypeDialog("Choose the target of the item");
         yield return new WaitForSeconds(0.5f);
-        handL.transform.position = playerUnits[currentTarget].transform.position + new Vector3(-1.2f,0,0);
-        handL.SetActive(true);
-        handR.SetActive(false);
         state = BattleState.SelectItemTarget;
     }
     
@@ -493,7 +515,7 @@ public class BattleSystem : MonoBehaviour
 
     void HandleActionSelection()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
             if (currentAction < 3)
             {
@@ -501,7 +523,7 @@ public class BattleSystem : MonoBehaviour
                 SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
             if (currentAction > 0)
             {
@@ -509,7 +531,7 @@ public class BattleSystem : MonoBehaviour
                 SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
             if (currentAction < 2)
             {
@@ -517,7 +539,7 @@ public class BattleSystem : MonoBehaviour
                 SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
             if (currentAction > 1)
             {
@@ -550,7 +572,7 @@ public class BattleSystem : MonoBehaviour
 
     void HandleMoveSelection()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
             if (currentMove < playerUnits[currentCreature].Creature.Moves.Count - 1)
             {
@@ -558,7 +580,7 @@ public class BattleSystem : MonoBehaviour
                 SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
             if (currentMove > 0)
             {
@@ -566,7 +588,7 @@ public class BattleSystem : MonoBehaviour
                 SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }   
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
             if (currentMove < playerUnits[currentCreature].Creature.Moves.Count - 2)
             {
@@ -574,7 +596,7 @@ public class BattleSystem : MonoBehaviour
                 SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }   
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
             if (currentMove > 1)
             {
@@ -600,7 +622,7 @@ public class BattleSystem : MonoBehaviour
 
     void HandleTargetSelection()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
             if (currentTarget > 0)
             {
@@ -609,7 +631,7 @@ public class BattleSystem : MonoBehaviour
             }
             
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
             if (currentTarget < enemyBases.Count - 1)
             {
@@ -630,7 +652,7 @@ public class BattleSystem : MonoBehaviour
 
     void HandleItemSelection()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
             if (currentItem < itemsToUse.Count - 1)
             {
@@ -638,7 +660,7 @@ public class BattleSystem : MonoBehaviour
                 SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
             if (currentItem > 0)
             {
@@ -646,7 +668,7 @@ public class BattleSystem : MonoBehaviour
                 SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }   
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
             if (currentItem < itemsToUse.Count - 2)
             {
@@ -654,7 +676,7 @@ public class BattleSystem : MonoBehaviour
                 SoundFXManager.instance.PlaySoundFXClip(Attack_switch, transform,1f);
             }
         }   
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
             if (currentItem > 1)
             {
@@ -680,7 +702,7 @@ public class BattleSystem : MonoBehaviour
 
     void HandleItemTargetSelection()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
             if (currentTarget > 0)
             {
@@ -689,7 +711,7 @@ public class BattleSystem : MonoBehaviour
             }
             
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
             if (currentTarget < playerBases.Count - 1)
             {
@@ -702,7 +724,6 @@ public class BattleSystem : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Space))
         {
-            handR.SetActive(false);
             handL.SetActive(false);
             StartCoroutine(PerformItem());
         }

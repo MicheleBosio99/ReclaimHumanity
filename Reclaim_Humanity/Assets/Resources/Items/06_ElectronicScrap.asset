@@ -19,3 +19,6 @@ MonoBehaviour:
   itemDescription: Really useful after a long battle to repair any damages.
   isItemSpecial: 0
   onCombat: 1
+  attributeBoosted: health
+  boost: 6
+  itemEffect: Recover a good amount of HPs

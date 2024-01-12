@@ -19,3 +19,6 @@ MonoBehaviour:
   itemDescription: These good looking mushrooms can make even a robot crave for them.
   isItemSpecial: 0
   onCombat: 1
+  attributeBoosted: health
+  boost: 4
+  itemEffect: Recover some HPs

@@ -12,10 +12,15 @@ public class Creature
     
     public List<Move> Moves { get; set; }
 
+    private int attackBoost;
+    private int defenseBoost;
+
     public Creature(CreatureBase cbase, int clevel, int currHp=1000)
     {
         Base = cbase;
         Level = clevel;
+        attackBoost = 0;
+        defenseBoost = 0;
         if (currHp == 1000)
         {
             HP = MaxHp;
@@ -69,6 +74,16 @@ public class Creature
     {
         get { return Mathf.FloorToInt((Base.MaxHp * Level) / 100f) + 10; }
     }
+    
+    public int AttackBoost { 
+        get => attackBoost;
+        set => attackBoost = value; }
+
+    public int DefenseBoost
+    {
+        get => defenseBoost;
+        set => defenseBoost = value;
+    }
 
     public DamageDetails TakeDamage(Move move, Creature attacker)
     {
@@ -89,7 +104,8 @@ public class Creature
         
         float modifiers = UnityEngine.Random.Range(0.85f, 1f) * type * critical;
         float a = (2 * attacker.Level + 10) / 250f;
-        float d = a * move.Base.Power * ((float)attacker.Attack / Defense) + 2;
+        float d = a * move.Base.Power * (
+            (float)attacker.Attack + (float)attacker.AttackBoost / (Defense + DefenseBoost)) + 2;  // boosted formula
         int damage = Mathf.FloorToInt(d * modifiers);
 
         HP -= damage;
@@ -100,6 +116,15 @@ public class Creature
         }
 
         return damageDetails;
+    }
+
+    public void HealHPs(int amount)
+    {
+        HP += amount;
+        if (HP > MaxHp)
+        {
+            HP = MaxHp;
+        }
     }
 
     public Move GetRandomMove()

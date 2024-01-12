@@ -206,6 +206,15 @@ public class GameManager : MonoBehaviour
         }
     }
     
+    public static void UpdateCombatItems(List<InventoryItem> combatItems)
+    {
+        ordinaryItemsInInventory.RemoveAll(obj => obj.OnCombat == true);
+        foreach (var item in combatItems)
+        {
+            ordinaryItemsInInventory.Add(item);
+        }
+    }
+    
     public static void SaveGame()
     {
         humansInfoLoader.SaveHumans();

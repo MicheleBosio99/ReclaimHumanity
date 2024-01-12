@@ -80,6 +80,11 @@ public class InteractionHumanHandler : MonoBehaviour {
             GameManager.AddBuddy("OneWheelBoy");
             gameObject.SetActive(false);
         }
+        else if (humanID == "AAA_Buddy2")
+        {
+            GameManager.AddBuddy("FrancoTheDestroyer");
+            gameObject.SetActive(false);
+        }
     }
     
     public void ClickedGoOnButton() { clickedGoOnButton = true; }
