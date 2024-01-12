@@ -121,7 +121,7 @@ public class BattleDialogBox : MonoBehaviour
             }
         }
 
-        itemDescription.text = item.Description;
+        itemDescription.text = item.ItemEffect;
     }
 
     public void SetMoveNames(List<Move> moves)

@@ -18,3 +18,7 @@ MonoBehaviour:
   itemEnergyGenerated: 1
   itemDescription: These teeth are razor-blade sharp.
   isItemSpecial: 0
+  onCombat: 1
+  attributeBoosted: attack
+  boost: 4
+  itemEffect: Temporary boost your attack

@@ -18,4 +18,4 @@ MonoBehaviour:
   itemEnergyGenerated: 3
   itemDescription: Are you sure this thing is edible?
   isItemSpecial: 0
-  onCombat: 1
+  onCombat: 0
