@@ -154,8 +154,8 @@ public class BattleSystem : MonoBehaviour
     {
         state = BattleState.Busy;
         var move = playerUnits[currentCreature].Creature.Moves[currentMove];
-        yield return dialogBox.TypeDialog($"{playerUnits[currentCreature].Creature.Base.Name} used  {move.Base.Name} " +
-                                          $"against {enemyUnits[currentTarget].Creature.Base.Name}");
+        yield return dialogBox.TypeDialog($"{playerUnits[currentCreature].Creature.Base.CreatureName} used  {move.Base.Name} " +
+                                          $"against {enemyUnits[currentTarget].Creature.Base.CreatureName}");
         yield return new WaitForSeconds(1f);
         
         playerUnits[currentCreature].PlayAttackAnimation(enemyUnits[currentTarget].OriginalPos);
@@ -167,7 +167,7 @@ public class BattleSystem : MonoBehaviour
         yield return ShowDamageDetails(damageDetails);
         if (damageDetails.Fainted)
         {
-            yield return dialogBox.TypeDialog($"{enemyUnits[currentTarget].Creature.Base.Name} fainted");
+            yield return dialogBox.TypeDialog($"{enemyUnits[currentTarget].Creature.Base.CreatureName} fainted");
             yield return new WaitForSeconds(1f);
             
             enemyUnits[currentTarget].gameObject.SetActive(false);
@@ -217,8 +217,8 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.EnemyMove;
         currentTarget = UnityEngine.Random.Range(0, playerBases.Count);
         var move = enemyUnits[currentCreature].Creature.GetRandomMove();
-        yield return dialogBox.TypeDialog($"{enemyUnits[currentCreature].Creature.Base.Name} used  " +
-                                          $"{move.Base.Name} against {playerUnits[currentTarget].Creature.Base.Name}");
+        yield return dialogBox.TypeDialog($"{enemyUnits[currentCreature].Creature.Base.CreatureName} used  " +
+                                          $"{move.Base.Name} against {playerUnits[currentTarget].Creature.Base.CreatureName}");
         yield return new WaitForSeconds(1f);
         
         enemyUnits[currentCreature].PlayAttackAnimation(playerUnits[currentTarget].OriginalPos);
@@ -231,7 +231,7 @@ public class BattleSystem : MonoBehaviour
         
         if (damageDetails.Fainted)
         {
-            yield return dialogBox.TypeDialog($"{playerUnits[currentTarget].Creature.Base.Name} fainted");
+            yield return dialogBox.TypeDialog($"{playerUnits[currentTarget].Creature.Base.CreatureName} fainted");
             yield return new WaitForSeconds(1f);
             
             creaturesFainted.Add(playerUnits[currentTarget].Creature);
@@ -359,7 +359,7 @@ public class BattleSystem : MonoBehaviour
     IEnumerator PlayerAction()
     {
         state = BattleState.Busy;
-        string text = $"It's {playerUnits[currentCreature].Creature.Base.Name}'s turn, choose an action!";
+        string text = $"It's {playerUnits[currentCreature].Creature.Base.CreatureName}'s turn, choose an action!";
         yield return dialogBox.TypeDialog(text);
         yield return new WaitForSeconds(0.5f);
         dialogBox.EnableActionSelector(true);
@@ -428,26 +428,26 @@ public class BattleSystem : MonoBehaviour
     {
         state = BattleState.Busy;
         yield return dialogBox.TypeDialog($"You give {itemsToUse[currentItem].ItemName} to" +
-                                          $" {playerUnits[currentTarget].Creature.Base.Name}");
+                                          $" {playerUnits[currentTarget].Creature.Base.CreatureName}");
         yield return new WaitForSeconds(0.5f);
         if (itemsToUse[currentItem].AttributeBoosted == "health")
         {
             playerUnits[currentTarget].Creature.HealHPs(itemsToUse[currentItem].Boost);
             yield return playerHuds[currentTarget].UpdateHP();
             yield return new WaitForSeconds(0.8f);
-            yield return dialogBox.TypeDialog($"{playerUnits[currentTarget].Creature.Base.Name} says thank you <3");
+            yield return dialogBox.TypeDialog($"{playerUnits[currentTarget].Creature.Base.CreatureName} says thank you <3");
             yield return new WaitForSeconds(0.8f);
         }
         if (itemsToUse[currentItem].AttributeBoosted == "attack")
         {
             playerUnits[currentTarget].Creature.AttackBoost += itemsToUse[currentItem].Boost;
-            yield return dialogBox.TypeDialog($"{playerUnits[currentTarget].Creature.Base.Name} now feels unbeatable!");
+            yield return dialogBox.TypeDialog($"{playerUnits[currentTarget].Creature.Base.CreatureName} now feels unbeatable!");
             yield return new WaitForSeconds(0.8f);
         }
         if (itemsToUse[currentItem].AttributeBoosted == "defense")
         {
             playerUnits[currentTarget].Creature.DefenseBoost += itemsToUse[currentItem].Boost;
-            yield return dialogBox.TypeDialog($"{playerUnits[currentTarget].Creature.Base.Name} feels protected");
+            yield return dialogBox.TypeDialog($"{playerUnits[currentTarget].Creature.Base.CreatureName} feels protected");
             yield return new WaitForSeconds(0.8f);
         }
         itemsToUse[currentItem].ItemQuantity--;

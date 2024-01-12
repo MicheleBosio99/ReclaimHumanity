@@ -182,7 +182,7 @@ public class Enemy : MonoBehaviour
         var near = Physics2D.OverlapCircle(transform.position, radius+2, targetMask);
         Popup(near);
         
-        var seen = Physics2D.OverlapCircle(transform.position, radius, targetMask); 
+        var seen = Physics2D.OverlapCircle(transform.position, radius, targetMask);
         //returns a collider when the player comes close a certain radius, but the player is not "in sight" yet
 
         if (seen)

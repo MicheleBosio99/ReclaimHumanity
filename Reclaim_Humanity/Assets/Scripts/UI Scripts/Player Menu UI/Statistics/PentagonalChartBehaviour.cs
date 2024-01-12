@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,24 +12,29 @@ public class PentagonalChartBehaviour : MonoBehaviour {
     private const int numberOfVertex = 5;
     
     [SerializeField] private Color centerColor;
-    [SerializeField] private Color outerColor;
-    [SerializeField] private const float alphaLevel = 0.9f;
+    private Color outerColor;
+    private const float alphaLevel = 0.9f;
+    
+    private int indexInParty = 0;
 
 
     private void Awake() { radarMeshCanvasRenderer = radarMesh.GetComponent<CanvasRenderer>(); }
 
-    private void OnEnable() { if(GameManager.party != null) { UpdateStatsVisual(); } }
+    public void SetRadarChart(int index) {
+        indexInParty = index;
+        outerColor = GetOuterRingColor(index);
+        UpdateStatsVisual();
+    }
 
     private void UpdateStatsVisual() {
-        // For now is only Wollo
-
+        
         var mesh = new Mesh();
-        var wolloStats = new List<int>() {
-            GameManager.party[0].Attack,
-            GameManager.party[0].Defense,
-            GameManager.party[0].SpecialAttack,
-            GameManager.party[0].SpecialDefense,
-            GameManager.party[0].Speed
+        var memberStats = new List<int>() {
+            GameManager.party[indexInParty].Attack,
+            GameManager.party[indexInParty].Defense,
+            GameManager.party[indexInParty].SpecialAttack,
+            GameManager.party[indexInParty].SpecialDefense,
+            GameManager.party[indexInParty].Speed
         };
 
         var vertices = new Vector3[numberOfVertex + 1];
@@ -40,8 +44,8 @@ public class PentagonalChartBehaviour : MonoBehaviour {
 
         vertices[0] = Vector3.zero;
 
-        for (var i = 0; i < wolloStats.Count; i++) {
-            vertices[i + 1] = ComputeCoordinate(i, wolloStats[i]);
+        for (var i = 0; i < memberStats.Count; i++) {
+            vertices[i + 1] = ComputeCoordinate(i, memberStats[i]);
         }
 
         for (var i = 1; i < numberOfVertex + 1; i++) {
@@ -64,7 +68,6 @@ public class PentagonalChartBehaviour : MonoBehaviour {
             colors[i].a = alphaLevel;
         }
 
-
         mesh.vertices = vertices;
         mesh.uv = uv;
         mesh.triangles = triangles;
@@ -78,5 +81,14 @@ public class PentagonalChartBehaviour : MonoBehaviour {
         var angle = (vertex * (360f / 5) + 90.0f) * Mathf.Deg2Rad;
         var length = (stat / maxStats) * pentagonSideLength;
         return new Vector3(Mathf.Cos(angle) * length, Mathf.Sin(angle) * length, 0f);
+    }
+    
+    private static Color GetOuterRingColor(int numOfMembers) {
+        return numOfMembers switch {
+            0 => new Color(83.0f / 255.0f, 154.0f / 255.0f, 255.0f / 255.0f),
+            1 => new Color(97.0f / 255.0f, 191.0f / 255.0f, 30.0f / 255.0f),
+            2 => new Color(181.0f / 255.0f, 44.0f / 255.0f, 51.0f / 255.0f),
+            _ => Color.black
+        };
     }
 }

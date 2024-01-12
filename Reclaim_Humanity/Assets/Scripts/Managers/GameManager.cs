@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
         partyLevels = new List<int>();
         for (int i = 0; i < completeParty.party.Count; i++)
         {
-            if (completeParty.party[i].Name == "Wollo")
+            if (completeParty.party[i].CreatureName == "Wollo")
             {
                 party.Add(completeParty.party[i]);
                 partyLevels.Add(completeParty.partyLevels[i]);
@@ -197,7 +197,7 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < completeParty.party.Count; i++)
         {
-            if (completeParty.party[i].Name == buddyName)
+            if (completeParty.party[i].CreatureName == buddyName)
             {
                 party.Add(completeParty.party[i]);
                 partyLevels.Add(partyLevels[0]);

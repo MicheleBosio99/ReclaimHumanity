@@ -2,11 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "Creature", menuName = "Creature/Create new creature")]
 public class CreatureBase : ScriptableObject
 {
-    [SerializeField] private string name;
+    [FormerlySerializedAs("name")] [SerializeField] private string creatureName;
 
     [TextArea] [SerializeField] private string description;
 
@@ -28,9 +29,9 @@ public class CreatureBase : ScriptableObject
     
     [SerializeField] private List<ItemsSO> droppableObjects;
 
-    public string Name
+    public string CreatureName
     {
-        get { return name; }
+        get { return creatureName; }
     }
     
     public string Description

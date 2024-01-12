@@ -29,7 +29,7 @@ public class BattleHud : MonoBehaviour
         _creature = creature;
         
         gameObject.SetActive(true);
-        nameText.text = creature.Base.Name;
+        nameText.text = creature.Base.CreatureName;
         levelText.text = "Lvl " + creature.Level;
         hpBar.SetHP((float) creature.HP / creature.MaxHp);
         
