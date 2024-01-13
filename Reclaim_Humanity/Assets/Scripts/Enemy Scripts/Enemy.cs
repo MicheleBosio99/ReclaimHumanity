@@ -201,12 +201,12 @@ public class Enemy : MonoBehaviour
         else if (playerInSight)
             playerInSight = false;
 
-        if (playerInSight)
+        if (playerInSight && type != EnemyType.Chasing)
         {
             enem.SetActive(false);
             spawn.SetActive(false);
             spawnHandler.NumberOfSpawnsActiveDecrement();
-
+        
             GameManager.enemies = enemies;
             GameManager.enemiesLevels = levels;
             GameManager.EnterCombat();

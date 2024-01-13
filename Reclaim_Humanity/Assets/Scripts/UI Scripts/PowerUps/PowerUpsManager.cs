@@ -8,15 +8,12 @@ public class PowerUpsManager : MonoBehaviour {
     
     private List<PowerUp> powerUps;
 
-    private void Awake() {
-        powerUps = Resources.LoadAll<PowerUp>("PowerUps").ToList();
-        powerUps.Sort((powerUp1, powerUp2) => powerUp1.energyThreshold.CompareTo(powerUp2.energyThreshold));
-        UpdatePowerUps();
-    }
+    private void Awake() { UpdatePowerUps(); }
 
     public void UpdatePowerUps() {
-        foreach (var powUp in powerUps.Where(powUp =>
+        foreach (var powUp in GameManager.powerUps.Where(powUp =>
                      (GameManager.energyInLab >= powUp.energyThreshold) && powUp.enabled == false)) {
+            powUp.enabled = true;
             powUp.CallSelectedFunction();
             ShowPopupMessage(powUp.powerUpText);
         }

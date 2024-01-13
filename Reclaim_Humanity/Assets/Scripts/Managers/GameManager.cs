@@ -1,7 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public static bool buddy2;
     
     public static BonusMultiplier bonusMultiplier;
+    public static List<PowerUp> powerUps;
     
     void Awake()
     {
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour
         recipesInfoLoader = GameObject.Find("RecipesInfoLoader").GetComponent<RecipesInfoLoader>();
         volumeConfig = new VolumeConfiguration();
         bonusMultiplier = new BonusMultiplier();
+        LoadPowerUps();
     }
 
     public static void LoadFreshData()
@@ -188,6 +190,11 @@ public class GameManager : MonoBehaviour
     {
         sceneToLoad = "MainMenu";
         SceneManager.LoadScene("LoadingScene");
+    }
+
+    public static void LoadPowerUps() {
+        powerUps = Resources.LoadAll<PowerUp>("PowerUps").ToList();
+        powerUps.Sort((powerUp1, powerUp2) => powerUp1.energyThreshold.CompareTo(powerUp2.energyThreshold));
     }
     
     public static int GetPartyMemberHp(int index)

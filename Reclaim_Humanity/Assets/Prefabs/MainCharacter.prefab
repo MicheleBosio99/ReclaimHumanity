@@ -209,12 +209,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 5eb06030ad9784c2f9a218178b390c66, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 67ae6e42e2a3446aaa6a60c16ad84db0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -282,9 +282,9 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.28}
     oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 1, y: 2}
+    newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -426,7 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerMenu: {fileID: 3228247895186584737, guid: cdbf67154cfa1bd4bb6176b5a14243cf, type: 3}
-  OpenPlayerMenuButton: {fileID: 0}
+  OptionsOverlay: {fileID: 0}
   PlayerMenuSound: {fileID: 8300000, guid: 2263a3f6c7c574d298645850dfffd6b9, type: 3}
   isActive: 0
 --- !u!114 &6255717712013211218

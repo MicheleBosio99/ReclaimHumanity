@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -18,7 +17,14 @@ public class VisualizeUnlocked : MonoBehaviour {
         unlockedPanel.SetActive(false); unlockedText.text = "";
         powerUpsMessagesQueue = new Queue<string>();
     }
-    
+
+    private void OnDisable() {
+        powerUpsMessagesQueue = new Queue<string>();
+        StopAllCoroutines();
+        hasCoroutineDone = true;
+        unlockedPanel.SetActive(false);
+    }
+
     public void StartShowUnlockedRecipeMessage(string type, string reward) { StartCoroutine(ShowUnlockedRecipeMessage(type, reward)); }
 
     public void StartShowUnlockedPowerUpMessage(string message) {
@@ -32,7 +38,7 @@ public class VisualizeUnlocked : MonoBehaviour {
         var rewardMessage = $"Congratulations! You unlocked the new {type}: <u>{reward}</u>";
         
         //Play unlock sound
-        SoundFXManager.instance.PlaySoundFXClip(RecipeUnlock, transform,1f);
+        if(SoundFXManager.instance != null) SoundFXManager.instance.PlaySoundFXClip(RecipeUnlock, transform,1f);
         
         foreach (var letter in rewardMessage) { unlockedText.text += letter; }
         
@@ -50,11 +56,11 @@ public class VisualizeUnlocked : MonoBehaviour {
             unlockedPanel.SetActive(true);
         
             //Play unlock sound
-            SoundFXManager.instance.PlaySoundFXClip(RecipeUnlock, transform,1f);
+            if(SoundFXManager.instance != null) SoundFXManager.instance.PlaySoundFXClip(RecipeUnlock, transform,1f);
         
             unlockedText.text = message;
         
-            yield return new WaitForSeconds(powerUpsMessagesQueue.Count == 0 ? 5.0f : 3.0f);
+            yield return new WaitForSeconds(powerUpsMessagesQueue.Count == 0 ? 5.0f : 2.0f);
             
             unlockedText.text = "";
         }

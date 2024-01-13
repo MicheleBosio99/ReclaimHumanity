@@ -1,7 +1,6 @@
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
-using File = UnityEngine.Windows.File;
 
 public class LoadGameButton : MonoBehaviour {
     
