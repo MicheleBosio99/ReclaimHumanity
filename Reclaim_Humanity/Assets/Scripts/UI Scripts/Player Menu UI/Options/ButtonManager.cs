@@ -6,6 +6,7 @@ public class ButtonManager : MonoBehaviour {
     [SerializeField] private GameObject BackgroundPanel;
     [SerializeField] private GameObject FeedbackPanel;
     [SerializeField] private GameObject mainCharacter;
+    [SerializeField] private AudioClip saved_game;
 
     private void Start() {
         BackgroundPanel.SetActive(false);
@@ -13,7 +14,12 @@ public class ButtonManager : MonoBehaviour {
         FeedbackPanel.SetActive(false);
     }
 
-    public void OnSaveClick() { GameManager.SaveGame(); }
+    public void OnSaveClick()
+    {
+        GameManager.SaveGame();
+        //Play Save sound
+        SoundFXManager.instance.PlaySoundFXClip(saved_game, transform,1f);
+    }
 
     public void OnQuitGameClick() {
         BackgroundPanel.SetActive(true);
