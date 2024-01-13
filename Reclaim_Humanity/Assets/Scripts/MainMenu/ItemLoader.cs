@@ -17,7 +17,7 @@ public class ItemLoader : MonoBehaviour
         else
         {
             Destroy(transform.root.gameObject);
-            return; 
+            return;
         }
     }
 }

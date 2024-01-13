@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed75c63ef75350d45b60dd561eb5df15, type: 3}
   m_Name: UnlockWastelandsBiome
   m_EditorClassIdentifier: 
-  energyThreshold: 120
+  energyThreshold: 150
   selectedFunction: 5
   powerUpLevel: 3
   powerUpText: Unlocked wastelands teleport.

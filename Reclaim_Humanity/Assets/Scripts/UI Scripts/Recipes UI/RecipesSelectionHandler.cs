@@ -78,8 +78,7 @@ public class RecipesSelectionHandler : MonoBehaviour {
         // Set sprites, 40 % visible if not possible to craft them;
         handlerSlotItemReq1.SetImageWithTransparency(item1SO.ItemSprite, itemReq1Enough ? 1.0f : 0.4f);
         handlerSlotItemReq2.SetImageWithTransparency(item2SO.ItemSprite, itemReq2Enough ? 1.0f : 0.4f);
-        handlerSlotItemResult.SetImageWithTransparency(itemResSO.ItemSprite,
-            itemReq1Enough & itemReq2Enough ? 1.0f : 0.4f);
+        handlerSlotItemResult.SetImageWithTransparency(itemResSO.ItemSprite, itemReq1Enough & itemReq2Enough ? 1.0f : 0.4f);
         
         // Set quantities required;
         handlerSlotItemReq1.SetQuantityText(requiredQuantityItem1);

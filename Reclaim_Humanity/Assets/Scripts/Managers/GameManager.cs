@@ -227,8 +227,6 @@ public class GameManager : MonoBehaviour
     }
     
     public static void HealPartyMemberByIndex(int index, int cureAmount) {
-        Debug.Log($"cured: {partyHps[index] + cureAmount}, maxHp: {party[index].MaxHp}");
-        
         Creature partyMember = new Creature(party[index], partyLevels[index], partyHps[index]);
         partyMember.HealHPs(cureAmount);
         partyHps[index] = partyMember.HP;
