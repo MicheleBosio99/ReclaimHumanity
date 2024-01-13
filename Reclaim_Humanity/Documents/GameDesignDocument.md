@@ -92,7 +92,8 @@ ___
 * Sprites used as tilesets and items sprites have been found on Itch.io and here is a list:
     - LimeZu: "Modern Interiors", "Modern Exteriors";
     - ELVGames: "Rogue Adventure World!";
-* Characters and enemies (with thier relative animations) have been created using a graphic program that can manage pixel art.
+* Characters and enemies (with thier relative animations) _have been created specifically_ using a graphic program that 
+  can manage pixel art.
 ## MUSIC
 - Music in background are a selection of tracks from videogames "Days Gone" and "The last of us 2";
 - Sound effects are downloaded from https://www.zapsplat.com/ or from https://pixabay.com/sound-effects/ and they are all free license.
@@ -105,9 +106,15 @@ ___
     - LABORATORY:
         - **Energy Circles Status**: 5 circles are used to show the energy the lab has. The energy value is saved in a scriptable object called "LabEnergySO" which is under the "Scriptable Objects/General" folder. Every circle contains 100 energy points, and it is animated to change when the energy reaches 0/25/50/75/100 % of the circle. The animations for the 25/50/75 % are composed by 4 frames arranged in the Animation section, the animations for Full and Empty state are single sprites used as animation. I used for all an animation so that I could easily manage them in the Animator. In it I used a "AnimationToPlay" parameter to make the initial dispatcher (which has no animation) choose the right animation. Since energy can change when player is whithin the laboratory scene I put the parameter setter inside the Update function so that it is rightfully changed when needed. Last detail, there is a canvas near the energy circles which is not enabled until the player get close enough. This canvas shows the right amount of energy with a number which goes from 0 to 500.
 
-        - **Recipe Inventory Show**: in the lab, in the Laboratory scene, there is a platform that is animated to attract the player. This platform is where the player has to go to complete recipes. When the player stands on top of it an "animated" sprite show us to click the "F" button on the keyboard. If clicked the canvas with the recipes TODO: should show up and let the player see what recipes are already unlocked and which one are not, let the player get items from its inventory and let him cook those recipes. TODO: should recipes consume energy??;
+        - **Recipe Inventory Show**: in the lab, in the Laboratory scene, there is a platform that is animated to 
+          attract the player. This platform is where the player has to go to complete recipes. When the player 
+          stands on top of it an "animated" sprite show us to click the "F" button on the keyboard. If clicked the 
+          canvas with the recipes and it shows up and let the player see what recipes are already unlocked and which 
+          one are not, let the player get items from its inventory and let him crafts those recipes.
+        - **Restore energy point**: in the bedroom (near the bed) there is a special interaction that can restore all 
+          the healthy points (HP) of the main character
 
-        - Everything else it's in the Laboratory scene is there just as furniture, nothing else does something (FOR NOW);
+        - Everything else it's in the Laboratory scene is there just as furniture, nothing else does something special;
 
 - ## DETAILS ABOUT PROJECT ORGANIZATION:
 - Inside the project we can found many folders that are not managed directly by Unity:
@@ -135,10 +142,11 @@ ___
 - ## TECHNICAL DETAILS IMPLEMENTED:
     - Here are reported all technical details of the game:
 
-    - GENERAL DETAILS:
+    - **GENERAL DETAILS**:
         - MAIN CHARACTER: The main character is controlled by the player and is used to go around the game world. For a specific description of all its components see the Prefabs section below here;
 
-        - GRID AND TILEMAP &rarr; All scenes use grids to draw the map of their biome; this grids are composed by different tilemaps so that it is possible to have different behaviour with each one. To obtain the desired render results we used the property "Order in layer" inside the Tilemap Renderer component of each tilemap.Tilemaps are described below in order from the lowest order one to the highest rendered:
+        - GRID AND TILEMAP: All scenes use grids to draw the map of their biome; this grids are composed by 
+          different tilemaps so that it is possible to have different behaviour with each one. To obtain the desired render results we used the property "Order in layer" inside the Tilemap Renderer component of each tilemap.Tilemaps are described below in order from the lowest order one to the highest rendered:
             - BGBehind: a rectangular area all Black, used as "Out of the map" view.
 
             - Background: contains the drawings of the shape of the map with all the different pavements used. For example the Overgrown Forest uses this layer to draw the grass growing on, basically, all the map;
@@ -158,14 +166,12 @@ ___
 
             - Screen resolution is 16:9, no change and resize possible for now;
 
-        
         - SPRITES:
             - Sprites are graphic element of the biome / scene that are not drawn using tilemaps. Generally these are details that make the scene look better, like all the furniture in the laboratory, or that are particulary useful to player, like machinery or collectible items around the worlds;
             In each scene I used someempty game objects to organize all sprites present in the scene. Sprites are divided by the place they are put into;
 
             - Sprites have different pixel dimensions and generally are manually sliced from the sprite sheet they are taken from. Anyway all of them gameobjects have a certain position, sprite and order in layer to obtain the desired renderization and behaviour. Many of them have a Box Collider 2D so that the player cannot pass through them, such as trees or furniture. Some of them have even some script behaviour, like the battery we find in the laboratory that has attached a TextMeshPro component and a script that takes the energy of the lab from a scriptable object and shows it on the text, or the energy spheres that show, without a number, again the amount of energy contained in the lab;
 
-        
         - UI ELEMENTS: Note of a general detail, all UI elements that can appear while the player gameobject is istanciated have the property to block the player while they are opened, they do this by setting the player speed in the main character PlayerMovement script component to 0; once they get disabled they put the velocity back to the "Normal Speed" variable contained in the player script.
 
             - LABORATORY:
@@ -223,27 +229,27 @@ ___
       - [/V 2.0]
       - [V 1.0] contains main properties of the general enemy, like list of moves, health, damage, colliders 2D and ID. Will be used in spawners scripts to generate all enemies. There might be prefabs more specific for each enemy that will inherit from this one;
 
-                - BASE: The Base prefab is used everywhere a UI element is present but not enabled. It has a collider component, a sub gameObject component and a script component. The subobject is an animated sprite of the keyboard button F, but must b changed to change dynamically what it shows if the controller button X if one is used. The button F appears only if the player is standing on the base, triggering its collider. As last the script takes in update the distance from the player and uses it to augment brightness when the player gets closer and closer. Althought I think this might slow down a little the program,  while we don't use more than 2/3 of them for each scene I think it's negligible;
+        - BASE: The Base prefab is used everywhere a UI element is present but not enabled. It has a collider component, a sub gameObject component and a script component. The subobject is an animated sprite of the keyboard button F, but must b changed to change dynamically what it shows if the controller button X if one is used. The button F appears only if the player is standing on the base, triggering its collider. As last the script takes in update the distance from the player and uses it to augment brightness when the player gets closer and closer. Althought I think this might slow down a little the program,  while we don't use more than 2/3 of them for each scene I think it's negligible;
 
-                - INVENTORY SLOTS: an inventory slot in just a UI panel that contains an image and a text. There are 2 types of slots: ordinary and special:
-                    - ordinary slots have a simpler sprite that resembles the style used for every UI in the game;
-                    - special slots can only contain 1 type of item that is hardcoded into them;
-                The parent panel has attached a script to him that manages what is shown in the image and in the text. It can be of 2 types too: if the slot is empty then the image is fully transparent and the text quantity is an empty string, otherwise if the slot contains an InventoryItem then the sprite and the quantity of that item is passed to this script by the script in the "Inventory" panel and the image is fully visible while the quantity is just the one received showned;
-                Here below an example of a ordinary slot and of a special slot:
+        - INVENTORY SLOTS: an inventory slot in just a UI panel that contains an image and a text. There are 2 types of slots: ordinary and special:
+                     - ordinary slots have a simpler sprite that resembles the style used for every UI in the game;
+                     - special slots can only contain 1 type of item that is hardcoded into them;
+                 The parent panel has attached a script to him that manages what is shown in the image and in the text. It can be of 2 types too: if the slot is empty then the image is fully transparent and the text quantity is an empty string, otherwise if the slot contains an InventoryItem then the sprite and the quantity of that item is passed to this script by the script in the "Inventory" panel and the image is fully visible while the quantity is just the one received showned;
+                 Here below an example of a ordinary slot and of a special slot:
 
-                - - ![Slots Image](GDDImages/slots.png)
+        - ![Slots Image](GDDImages/slots.png)
 
-                - INVENTORY UI: just as described in the UI sections, it is used in every biome scene in the same way so I made it a prefab;
+        - INVENTORY UI: just as described in the UI sections, it is used in every biome scene in the same way so I made it a prefab;
 
-                - HUMANS: prefab that contains main properties of the humans, like its sprite, the json file linked to him that contains its dialogue, its ID which may be just his name and nothing else, their 2D collider and a trigger collider to use as trigger for dialogues. This will be used to create all humans;
+        - HUMANS: prefab that contains main properties of the humans, like its sprite, the json file linked to him that contains its dialogue, its ID which may be just his name and nothing else, their 2D collider and a trigger collider to use as trigger for dialogues. This will be used to create all humans;
         
 
-            - SCRIPTABLE OBJECTS SCRIPTS: (all scriptable object names finish with SO):
-                - InventoryItemsSO: contains the definition of InventoryItem class which defines an item as a triple of its ID, its sprite and its quantity, which is all it's needed to fill the inventory. Then the SO contains the 2 list of objects that are contained in both ordinary and special slots. It also has all getter (and sometimes setter) functions for the list of both slots and for the maximum slot variable, which containes how many slots are present in total. Finally the class has a boolean function that stores a new item to the right slot IFF there is enough space to store it. If there's then the function returns true otherwise it returns false.
+- SCRIPTABLE OBJECTS SCRIPTS: (all scriptable object names finish with SO):
+  - InventoryItemsSO: contains the definition of InventoryItem class which defines an item as a triple of its ID, its sprite and its quantity, which is all it's needed to fill the inventory. Then the SO contains the 2 list of objects that are contained in both ordinary and special slots. It also has all getter (and sometimes setter) functions for the list of both slots and for the maximum slot variable, which containes how many slots are present in total. Finally the class has a boolean function that stores a new item to the right slot IFF there is enough space to store it. If there's then the function returns true otherwise it returns false.
 
-                - EnergyLabSO: contains 2 floats number, one specifying the current energy contained in the lab anc the other the max energy possible to collect in the lab. >>SCRIPT?<<
+  - EnergyLabSO: contains 2 floats number, one specifying the current energy contained in the lab anc the other the max energy possible to collect in the lab. >>SCRIPT?<<
 
-                - ItemSO: contains the properties of an item like the sprite, the id, the quantity, the amount of energy it creates when destroyed and others too if we think they're useful;
+  - ItemSO: contains the properties of an item like the sprite, the id, the quantity, the amount of energy it creates when destroyed and others too if we think they're useful;
 
     
 
@@ -273,52 +279,8 @@ ___
 ## GROUP MEMBERS: TODO COMPLETE
 - MICHELE BOSIO: michele2.bosio@mail.polimi.it - Team Leader & Developer;
 - ANASTASIA FAVERO: anastasia.favero@mail.polimi.it - Developer;
-- ANDREA PESCI: andrea1.pesci@mail.polimi.it - Sound Engineer & Developer;
+- ANDREA PESCI: andrea1.pesci@mail.polimi.it - Sound Engineer, Animator & Developer;
 - RICCARDO MALPIEDI : riccardo.malpiedi@mail.polimi.it - Developer;
 - IACOPO ROBERTO FERRARIO : iacoporoberto.ferrario@mail.polimi.it - Developer;
 
 ## DEADLINES:
-- Before 20/10/23 > First Game Design Document Version: must contain most of the game main mechanics explained;
-- Before 24/10/23 > Initial game development divided among the group, must be finalized for what is possible (animations and other are not without final sprite). Splitting as follows:
-    - Michele: Finding tilesets, first map of biomes drawn, with collisions correctly set; -> X
-    - Iacopo: first main character implementation, his movements and collisions. Animations not possible until we don't have the final sprites to deal with; -> X
-    - Anastasia: first implementation of the prefab that will generate enemies, with main stats which are health, actions set and damage. Also enemies spawn rules could be defined; -> X
-    - Riccardo: Starting menu' implementation, with its scene. It should have a play button, an options one and a quit one. Those buttons must lead to the required scene/place they are designed for; -> X
-    - ?: Turn-based combat scene. It must have a menu where to choose the selected action (attack, run away, others ?) and a scene where it can be seen our character and the enemy found; TODO decide with the team how to deisgn this (main aspect I can think of: how to handle multiple enemies?, are there others things the player can do other that run away or attack??); It will almost surely take more time to do this, since a lot of thinking must be done about it, still, starting make the scene for it and some UI is a good idea; ->  X
-
-- Before 31/10/23 > New deadlines to complete:
-    - Michele: Finish loading sprites and tilesets we'll need, finish laboratory scene with details (but without animations for now), try to finish overgrown forest scene;
-    - Anastasia: Finish enemies prefab;
-    - Riccardo: Start (and possible finish) the scene used for combat;
-    - ?: Search/Start design of main character sprites and animations;
-    - ?: Complete GDD with all background decisions and structure it with the new discussed sections;
-
-- Before 06/11/23: Game Design Document first version MUST BE FINALIZED and shared with the prof.
-
-- Before 14/11/23 > New deadlines to complete:
-    - Make working inventory system;
-    - Make recipes and energy systems in the laboratory;
-    - Carry on combat system and scene;
-    - Try to complete biomes scenes with map configuration and some details;
-    - Tile sets for characters (and Animation?);
-
-- Before 25/11/23 > New deadlines to complete:
-    - Michele: work on Player Menu;
-    - Anastasia: work on enemies behaviour;
-    - Iacopo: work on enemies spawners and save game functionalities;
-    - Riccardo: continue work on combat system;
-    - Andrea: work on audio;
-
-- Before 30/11/23 > New deadlines to complete:
-    - Michele: design Forest biome and work on items + item spawners;
-    - Anastasia: design City biome;
-    - Iacopo: design Wastelands biome;
-    - Riccardo: finish working on combat system;
-    - Andrea: work on character sprites;
-
-- Before 07/12/23 > New deadlines to complete:
-    - Michele: work and complete humans;
-    - Anastasia: finish design City biome and work on enemies behaviour in spawners;
-    - Iacopo: finish design Wastelands biome and deploy enemies spawners in biomes;
-    - Riccardo: implement combat system inside biomes and link it to enemies;
-    - Andrea: work on enemies' sprites + in-game sounds;
