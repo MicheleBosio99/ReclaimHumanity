@@ -9,7 +9,7 @@ public class StatisticsManager : MonoBehaviour {
     private bool firstTime = false;
 
     private void OnEnable() {
-        if (!firstTime) { firstTime = true; return; }
+        // if (!firstTime) { firstTime = true; return; }
         
         var partyLength = GameManager.party.Count;
         var positions = GetPositions(partyLength);
