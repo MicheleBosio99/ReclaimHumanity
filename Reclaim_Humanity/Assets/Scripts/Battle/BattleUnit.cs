@@ -33,8 +33,6 @@ public class BattleUnit : MonoBehaviour
         if (Creature.Base.SpecialDefense == 19)  // identify wolves
         {
             transform.localScale = new Vector3(80f, 80f, 80f);
-            transform.localPosition += new Vector3(0f, 10f);
-            originalPos = image.transform.localPosition;
         }
 
         animator.runtimeAnimatorController = Creature.Base.AnimatorBattle;
