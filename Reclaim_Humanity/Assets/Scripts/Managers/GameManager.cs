@@ -189,6 +189,18 @@ public class GameManager : MonoBehaviour
         sceneToLoad = "MainMenu";
         SceneManager.LoadScene("LoadingScene");
     }
+    
+    public static int GetPartyMemberHp(int index)
+    {
+        Creature partyMember = new Creature(party[index], partyLevels[index], partyHps[index]);
+        return partyMember.HP;
+    }
+
+    public static int GetPartyMemberMaxHp(int index)
+    {
+        Creature partyMember = new Creature(party[index], partyLevels[index], partyHps[index]);
+        return partyMember.MaxHp;
+    }
 
     public static void IncreaseMinorHealingBonusMultiplier(int amount) { bonusMultiplier.minorHealingAmount += amount; }
 

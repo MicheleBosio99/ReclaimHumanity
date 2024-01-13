@@ -53,7 +53,7 @@ public class PartyMemberStatsManager : MonoBehaviour {
     }
 
     public void OnMinorHealButtonClick() {
-        if (GameManager.partyHps[indexInParty] >= GameManager.party[indexInParty].MaxHp) { return; }
+        if (GameManager.GetPartyMemberHp(indexInParty) >= GameManager.GetPartyMemberMaxHp(indexInParty)) { return; }
 
         inventoryItemsSO.RemoveTotOrdinaryItem(inventoryItemsSO.SearchOrdinaryItemByID("00_GoodMushroom"), 1);
         GameManager.HealPartyMemberByIndex(indexInParty, GameManager.bonusMultiplier.minorHealingAmount);
@@ -61,8 +61,7 @@ public class PartyMemberStatsManager : MonoBehaviour {
     }
     
     public void OnMajorHealButtonClick() {
-        Debug.Log(GameManager.partyHps[indexInParty]);
-        if (GameManager.partyHps[indexInParty] >= GameManager.party[indexInParty].MaxHp) { return; }
+        if (GameManager.GetPartyMemberHp(indexInParty) >= GameManager.GetPartyMemberMaxHp(indexInParty)) { return; }
         
         inventoryItemsSO.RemoveTotOrdinaryItem(inventoryItemsSO.SearchOrdinaryItemByID("06_ElectronicScrap"), 1);
         GameManager.HealPartyMemberByIndex(indexInParty, GameManager.bonusMultiplier.majorHealingAmount);

@@ -23,8 +23,8 @@ public class HealthBarBehaviour : MonoBehaviour {
     public void SetIndexInParty(int index) { indexInParty = index; }
 
     public void ShowHealth() {
-        var maxHP = GameManager.party[indexInParty].MaxHp;
-        var currentHps = GameManager.partyHps[indexInParty] == 1000 ? maxHP : GameManager.partyHps[indexInParty];
+        var maxHP = GameManager.GetPartyMemberMaxHp(indexInParty);
+        var currentHps = GameManager.GetPartyMemberHp(indexInParty);
         
         healthText.text = $"{currentHps} / {maxHP}";
         
