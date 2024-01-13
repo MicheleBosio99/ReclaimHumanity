@@ -15,6 +15,6 @@ MonoBehaviour:
   name: Hit but stronger
   description: Seems very reasonable
   type: 1
-  power: 400
+  power: 40
   accuracy: 100
   pp: 30

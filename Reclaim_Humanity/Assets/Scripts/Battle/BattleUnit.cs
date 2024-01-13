@@ -5,6 +5,7 @@ using System.Net.Mime;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEditor.Animations;
 
 public class BattleUnit : MonoBehaviour
 {
@@ -12,8 +13,9 @@ public class BattleUnit : MonoBehaviour
 
     public Creature Creature { get; set; }
 
-    private Image image;
+    private SpriteRenderer image;
     private Vector3 originalPos;
+    private Animator animator;
     
     public Vector3 OriginalPos
     {
@@ -22,7 +24,8 @@ public class BattleUnit : MonoBehaviour
 
     private void Awake()
     {
-        image = GetComponent<Image>();
+        image = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         originalPos = image.transform.localPosition;
     }
 
@@ -30,14 +33,26 @@ public class BattleUnit : MonoBehaviour
     {
         gameObject.SetActive(true);
         Creature = new Creature(creatureBase, level, HP);
+
+        animator.runtimeAnimatorController = Creature.Base.AnimatorBattle;
         if (isFriend)
+        {
+            animator.SetFloat("Horizontal", 1);
+            animator.SetFloat("Speed", 0);
+        }
+        else
+        {
+            animator.SetFloat("Horizontal", -1);
+            animator.SetFloat("Speed", 0);
+        }
+        /*if (isFriend)
         {
             image.sprite = Creature.Base.SpriteL;
         }
         else
         {
             image.sprite = Creature.Base.SpriteR;
-        }
+        }*/
         
         PlayEnterAnimation();
     }

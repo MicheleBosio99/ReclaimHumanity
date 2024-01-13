@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creatureName: OneWheelBoy
   description: Wallo's friend
-  spriteL: {fileID: 21300000, guid: 1f4ad5a9d76db4b78b0b80e4a8eef62b, type: 3}
+  spriteL: {fileID: 21300000, guid: 3aadc6f2cbeac254289e75a72639e5ec, type: 3}
   spriteR: {fileID: 0}
+  animatorBattle: {fileID: 9100000, guid: 5d29a5e3a004644c2bfb376037e1e81c, type: 2}
   type1: 3
   type2: 0
   maxHp: 90
@@ -32,5 +33,5 @@ MonoBehaviour:
   - moveBase: {fileID: 11400000, guid: e885bb0a7eaa7804490e794b62cffc6b, type: 2}
     level: 1
   - moveBase: {fileID: 11400000, guid: 81206dd1df0703547b95cb49b022e359, type: 2}
-    level: 1
+    level: 3
   droppableObjects: []

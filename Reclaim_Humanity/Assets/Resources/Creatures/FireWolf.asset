@@ -16,10 +16,11 @@ MonoBehaviour:
   description: A bad guy
   spriteL: {fileID: 21300000, guid: cc859b3e07f70fe46921842d680fcd46, type: 3}
   spriteR: {fileID: 21300000, guid: 3de7d3bb5e7cd42b287f96b0558b013d, type: 3}
+  animatorBattle: {fileID: 9100000, guid: 9b1d6cc451679497b814cbe72c20e2f1, type: 2}
   type1: 2
   type2: 0
   maxHp: 80
-  attack: 8
+  attack: 7
   defense: 8
   specialAttack: 12
   specialDefense: 12
