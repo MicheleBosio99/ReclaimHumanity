@@ -12,7 +12,7 @@ public class TeleportUIManager : MonoBehaviour {
     
     private const int minEnergyOvergrownForest = 0;
     private const int minEnergyRuinedCity = 50;
-    private const int minEnergyWastelands = 120;
+    private const int minEnergyWastelands = 150;
     
     private GameObject forestBlock;
     private GameObject cityBlock;
