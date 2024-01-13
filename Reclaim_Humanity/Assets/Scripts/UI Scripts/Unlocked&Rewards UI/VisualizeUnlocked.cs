@@ -56,7 +56,6 @@ public class VisualizeUnlocked : MonoBehaviour {
             unlockedPanel.SetActive(true);
         
             //Play unlock sound
-            Debug.Log(SoundFXManager.instance);
             if(SoundFXManager.instance != null) SoundFXManager.instance.PlaySoundFXClip(RecipeUnlock, transform,1f);
         
             unlockedText.text = message;

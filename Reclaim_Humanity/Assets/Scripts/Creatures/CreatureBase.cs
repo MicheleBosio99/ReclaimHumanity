@@ -1,7 +1,4 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -15,7 +12,7 @@ public class CreatureBase : ScriptableObject
     [SerializeField] private Sprite spriteL;
     [SerializeField] private Sprite spriteR;
 
-    [SerializeField] private AnimatorController animatorBattle;
+    [SerializeField] private RuntimeAnimatorController animatorBattle;
 
     [SerializeField] private CreatureType type1;
     [SerializeField] private CreatureType type2;
@@ -52,7 +49,7 @@ public class CreatureBase : ScriptableObject
         get { return spriteR; }
     }
     
-    public AnimatorController AnimatorBattle
+    public RuntimeAnimatorController AnimatorBattle
     {
         get { return animatorBattle; }
     }
