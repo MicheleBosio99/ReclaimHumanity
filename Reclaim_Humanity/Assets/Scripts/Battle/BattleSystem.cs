@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using System.Linq;
-using Microsoft.Unity.VisualStudio.Editor;
 using Unity.VisualScripting;
 
 public enum BattleState { Start, PlayerAction, PlayerMove, SelectTarget, EnemyMove, Busy, Item, SelectItemTarget }
@@ -189,7 +188,6 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         var damageDetails = enemyUnits[currentTarget].Creature.TakeDamage(move, playerUnits[currentCreature].Creature);
-        enemyUnits[currentTarget].FlashOnHit();
         yield return enemyHuds[currentTarget].UpdateHP();
         yield return ShowDamageDetails(damageDetails);
         if (damageDetails.Fainted)
@@ -252,7 +250,6 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         var damageDetails = playerUnits[currentTarget].Creature.TakeDamage(move, enemyUnits[currentCreature].Creature);
-        playerUnits[currentTarget].FlashOnHit2();
         yield return playerHuds[currentTarget].UpdateHP();
         yield return ShowDamageDetails(damageDetails);
         

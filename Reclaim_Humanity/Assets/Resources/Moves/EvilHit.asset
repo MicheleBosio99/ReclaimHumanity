@@ -15,6 +15,6 @@ MonoBehaviour:
   name: Evil Hit
   description: Yeah
   type: 1
-  power: 45
+  power: 40
   accuracy: 100
   pp: 20
