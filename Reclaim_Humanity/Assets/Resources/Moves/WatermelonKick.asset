@@ -15,6 +15,6 @@ MonoBehaviour:
   name: WatermelonKick
   description: No caption needed
   type: 4
-  power: 45
+  power: 40
   accuracy: 100
   pp: 20

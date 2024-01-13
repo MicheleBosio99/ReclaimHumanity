@@ -23,7 +23,7 @@ MonoBehaviour:
   attack: 5
   defense: 8
   specialAttack: 12
-  specialDefense: 12
+  specialDefense: 19
   speed: 9
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 355ff99f6bbb3b2478a12009fb6dbd06, type: 2}

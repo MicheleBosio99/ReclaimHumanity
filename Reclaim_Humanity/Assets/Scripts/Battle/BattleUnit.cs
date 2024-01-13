@@ -30,6 +30,13 @@ public class BattleUnit : MonoBehaviour
         gameObject.SetActive(true);
         Creature = new Creature(creatureBase, level, HP);
 
+        if (Creature.Base.SpecialDefense == 19)  // identify wolves
+        {
+            transform.localScale = new Vector3(80f, 80f, 80f);
+            transform.localPosition += new Vector3(0f, 10f);
+            originalPos = image.transform.localPosition;
+        }
+
         animator.runtimeAnimatorController = Creature.Base.AnimatorBattle;
         if (isFriend)
         {
@@ -70,6 +77,7 @@ public class BattleUnit : MonoBehaviour
     public void PlayAttackAnimation(Vector3 otherPos)
     {
         var sequence = DOTween.Sequence();
+        StartCoroutine(AttackAnimation());
         if (isFriend)
         {
             sequence.Append(image.transform.DOLocalMove(
@@ -84,41 +92,11 @@ public class BattleUnit : MonoBehaviour
         sequence.Append(image.transform.DOLocalMove(
             new Vector3(originalPos.x, originalPos.y), 0.3f));
     }
-    
-    public void FlashOnHit()
-    {
-        // Start the coroutine to perform the flash animation
-        StartCoroutine(FlashAnimation());
-    }
-    
-    public void FlashOnHit2()
-    {
-        // Start the coroutine to perform the flash animation
-        StartCoroutine(FlashAnimation2());
-    }
 
-    // Coroutine to perform the flash animation
-    IEnumerator FlashAnimation()
+    IEnumerator AttackAnimation()
     {
-        Color originalColor = GetComponent<Image>().color;
-        GetComponent<Image>().color = Color.white;
-        yield return new WaitForSeconds(0.1f);
-        GetComponent<Image>().color = originalColor;
-        yield return new WaitForSeconds(0.1f);
-        GetComponent<Image>().color = Color.white;
-        yield return new WaitForSeconds(0.1f);
-        GetComponent<Image>().color = originalColor;
-    }
-    
-    IEnumerator FlashAnimation2()
-    {
-        Color originalColor = GetComponent<Image>().color;
-        GetComponent<Image>().color = Color.black;
-        yield return new WaitForSeconds(0.1f);
-        GetComponent<Image>().color = originalColor;
-        yield return new WaitForSeconds(0.1f);
-        GetComponent<Image>().color = Color.black;
-        yield return new WaitForSeconds(0.1f);
-        GetComponent<Image>().color = originalColor;
+        animator.SetFloat("Attack", 1);
+        yield return new WaitForSeconds(1f);
+        animator.SetFloat("Attack", 0);
     }
 }
