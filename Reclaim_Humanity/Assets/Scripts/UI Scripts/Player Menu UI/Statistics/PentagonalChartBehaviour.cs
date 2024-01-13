@@ -87,7 +87,7 @@ public class PentagonalChartBehaviour : MonoBehaviour {
         return numOfMembers switch {
             0 => new Color(83.0f / 255.0f, 154.0f / 255.0f, 255.0f / 255.0f),
             1 => new Color(97.0f / 255.0f, 191.0f / 255.0f, 30.0f / 255.0f),
-            2 => new Color(181.0f / 255.0f, 44.0f / 255.0f, 51.0f / 255.0f),
+            2 => new Color(255.0f / 255.0f, 0.0f / 255.0f, 0.0f / 255.0f),
             _ => Color.black
         };
     }

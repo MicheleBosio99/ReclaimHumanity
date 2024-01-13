@@ -187,12 +187,17 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("LoadingScene");
     }
 
-    public static void RestoreHps()
+    public static void RestoreFullHps()
     {
         for (int i = 0; i < partyHps.Count; i++)
         {
             partyHps[i] = 1000;
         }
+    }
+    
+    public static void RestoreMemberHps(int index, int cureAmount) {
+        Debug.Log($"curead: {partyHps[index] + cureAmount}, maxHp: {party[index].MaxHp}");
+        partyHps[index] = Math.Min(partyHps[index] + cureAmount, party[index].MaxHp);
     }
     
     public static void HealPartyMember(string name, int amount)

@@ -13,8 +13,7 @@ public class HandleSlotSelectionGE : MonoBehaviour , IPointerClickHandler {
     private void Start() { slotImage = gameObject.GetComponent<Image>(); }
 
     public void OnPointerClick(PointerEventData eventData) {
-        var shift = false;
-        // if (Input.GetKey(KeyCode.LeftShift)) { shift = true; }
+        var shift = eventData.button != PointerEventData.InputButton.Left;
         handlerWithIndex.Item1.SlotGotClicked(handlerWithIndex.Item2, isInventory, shift);
     }
     

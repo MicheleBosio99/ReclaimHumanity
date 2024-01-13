@@ -9,13 +9,21 @@ public class PartyMemberStatsManager : MonoBehaviour {
     [SerializeField] private Image memberImage;
     [SerializeField] private GameObject healthBar;
     [SerializeField] private GameObject radarChart;
-    [SerializeField] private Button minorCureButton;
-    [SerializeField] private Button majorCureButton;
+    [SerializeField] private Button minorHealButton;
+    [SerializeField] private Button majorHealButton;
+    
+    [SerializeField] private Image minorHealImage;
+    [SerializeField] private Image majorHealImage;
     
     [SerializeField] private InventoryItemsSO inventoryItemsSO;
     
+    [SerializeField] private int minorAmountRestored;
+    [SerializeField] private int majorAmountRestored;
+    
     private HealthBarBehaviour healthBarBehaviour;
     private PentagonalChartBehaviour pentagonalChartBehaviour;
+    
+    private int indexInParty;
 
     private void Awake() {
         healthBarBehaviour = healthBar.GetComponent<HealthBarBehaviour>();
@@ -23,15 +31,53 @@ public class PartyMemberStatsManager : MonoBehaviour {
     }
 
     public void SetStatsParameters(int index) {
+        indexInParty = index;
+
         var member = GameManager.party[index];
         nameText.text = member.CreatureName.ToUpper();
         memberImage.sprite = member.SpriteL;
-        var c = memberImage.color; c.a = 1.0f; memberImage.color = c;
-        
+        var c = memberImage.color;
+        c.a = 1.0f;
+        memberImage.color = c;
+
         healthBarBehaviour.SetIndexInParty(index);
         pentagonalChartBehaviour.SetRadarChart(index);
+
+        SetButtonInteractability();
+    }
+
+    private void SetButtonInteractability() {
+        var minorHealActive = inventoryItemsSO.SearchOrdinaryItemByID("00_GoodMushroom").ItemID != "";
+        minorHealButton.interactable = minorHealActive;
+        var c = minorHealImage.color; c.a = minorHealActive ? 1.0f : 0.6f; minorHealImage.color = c;
         
-        minorCureButton.interactable = inventoryItemsSO.SearchOrdinaryItemByID("00_GoodMushroom").ItemID != "";
-        majorCureButton.interactable = inventoryItemsSO.SearchOrdinaryItemByID("06_ElectronicScrap").ItemID != "";
+        var majorHealActive = inventoryItemsSO.SearchOrdinaryItemByID("06_ElectronicScrap").ItemID != "";
+        majorHealButton.interactable = majorHealActive;
+        c = majorHealImage.color; c.a = majorHealActive ? 1.0f : 0.6f; majorHealImage.color = c;
+    }
+
+    public void OnMinorHealButtonClick() {
+        if (GameManager.partyHps[indexInParty] >= GameManager.party[indexInParty].MaxHp) { return; }
+
+        inventoryItemsSO.RemoveTotOrdinaryItem(inventoryItemsSO.SearchOrdinaryItemByID("00_GoodMushroom"), 1);
+        GameManager.RestoreMemberHps(indexInParty, minorAmountRestored);
+        ReSetParametersForAll();
+    }
+    
+    public void OnMajorHealButtonClick() {
+        Debug.Log(GameManager.partyHps[indexInParty]);
+        if (GameManager.partyHps[indexInParty] >= GameManager.party[indexInParty].MaxHp) { return; }
+        
+        inventoryItemsSO.RemoveTotOrdinaryItem(inventoryItemsSO.SearchOrdinaryItemByID("06_ElectronicScrap"), 1);
+        GameManager.RestoreMemberHps(indexInParty, majorAmountRestored);
+        ReSetParametersForAll();
+    }
+    
+    private void ReSetParametersForAll() {
+        foreach (Transform child in gameObject.transform.parent.transform) {
+            Debug.Log(child.name); 
+            child.GetComponentInChildren<PartyMemberStatsManager>().SetButtonInteractability();
+        }
+        healthBarBehaviour.ShowHealth();
     }
 }
