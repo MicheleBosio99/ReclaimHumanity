@@ -16,7 +16,7 @@ MonoBehaviour:
   description: This is Franco
   spriteL: {fileID: 21300000, guid: d840e3ccd82c5094da37184794965435, type: 3}
   spriteR: {fileID: 0}
-  animatorBattle: {fileID: 9100000, guid: 9b1d6cc451679497b814cbe72c20e2f1, type: 2}
+  animatorBattle: {fileID: 9100000, guid: 9b6f3e8b133394ff7884a9614c72c238, type: 2}
   type1: 2
   type2: 0
   maxHp: 100

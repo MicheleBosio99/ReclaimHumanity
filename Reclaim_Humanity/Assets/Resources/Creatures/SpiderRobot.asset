@@ -16,6 +16,7 @@ MonoBehaviour:
   description: Not a real spider, but still a robot
   spriteL: {fileID: 0}
   spriteR: {fileID: 21300000, guid: fcfcc662098b21647984e580a2794b03, type: 3}
+  animatorBattle: {fileID: 9100000, guid: 28cf5953a19224113bfd353cb6d6c220, type: 2}
   type1: 5
   type2: 0
   maxHp: 100
