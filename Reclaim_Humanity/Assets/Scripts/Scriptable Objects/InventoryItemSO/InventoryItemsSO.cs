@@ -50,7 +50,7 @@ public class InventoryItemsSO : ScriptableObject {
         return null;
     }
 
-    public void ChangeQuantityOrdinaryItem(InventoryItem item, int quantity) {
+    public void RemoveTotOrdinaryItem(InventoryItem item, int quantity) {
         if (item.ItemQuantity < quantity) { throw new NotEnoughItemsInInventoryException(); }
         if (item.ItemQuantity == quantity) { ordinaryItemsInInventory.Remove(item); }
         else { item.ItemQuantity -= quantity; }

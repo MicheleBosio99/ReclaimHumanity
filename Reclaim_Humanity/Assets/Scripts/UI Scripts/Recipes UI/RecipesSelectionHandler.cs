@@ -130,8 +130,8 @@ public class RecipesSelectionHandler : MonoBehaviour {
         }
 
         try {
-            inventoryItemsSo.ChangeQuantityOrdinaryItem(itemReq1Inventory, requiredQuantityItem1);
-            inventoryItemsSo.ChangeQuantityOrdinaryItem(itemReq2Inventory, requiredQuantityItem2);
+            inventoryItemsSo.RemoveTotOrdinaryItem(itemReq1Inventory, requiredQuantityItem1);
+            inventoryItemsSo.RemoveTotOrdinaryItem(itemReq2Inventory, requiredQuantityItem2);
         }
         catch (NotEnoughItemsInInventoryException e) { Debug.Log(e); return; }
         

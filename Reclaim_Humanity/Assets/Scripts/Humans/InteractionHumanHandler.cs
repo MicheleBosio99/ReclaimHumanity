@@ -17,6 +17,8 @@ public class InteractionHumanHandler : MonoBehaviour {
     [SerializeField] private GameObject numOfHumansLeftGO;
     private NumOfHumansLeft numOfHumansLeft;
     
+    [SerializeField] private bool isBuddy;
+    
     private Human human;
     private DialogueHandler dialogueHandler;
     private PlayerMovement playerMovement;
@@ -113,9 +115,9 @@ public class InteractionHumanHandler : MonoBehaviour {
 
         if (human.recipesUnlockedID != "") {
             var recipeEnabled = _recipesInfoLoader.UnlockRecipe(human.recipesUnlockedID);
-            if (!recipeEnabled.Item1) { visualizeUnlocked.StartShowUnlockedMessage("recipe", recipeEnabled.Item2); }
+            if (!recipeEnabled.Item1) { visualizeUnlocked.StartShowUnlockedRecipeMessage("recipe", recipeEnabled.Item2); }
         }
-        if(!human.spokenTo) { numOfHumansLeft.AddHumanTalkedTo(); }
+        if(!human.spokenTo && !isBuddy) { numOfHumansLeft.AddHumanTalkedTo(); }
         
         infoLoader.ToggleSpokenTo(human.humanID);
 

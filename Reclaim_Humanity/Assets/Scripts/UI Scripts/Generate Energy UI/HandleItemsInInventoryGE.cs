@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.XR;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -13,6 +14,7 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
     [SerializeField] private List<GameObject> chosenItemSlotsUI;
     
     [SerializeField] private GameObject PowerUpsManager;
+    [SerializeField] private GameObject GenerateCanvasManager;
     
     [SerializeField] private GameObject batteryEnergy;
     private ShowEnergyLab batteryEnergyText;
@@ -72,7 +74,7 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
     }
 
     private void InventorySlotGotClicked(int index, bool shift) {
-        var done = false;
+        Tuple<bool, int> resultTuple;
         if (index >= inventorySO.OrdinaryItemsInInventory.Count()) { return; }
 
         HoldSlotUI slot = null;
@@ -84,10 +86,10 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
             UpdateEnergyText();
             return;
         }
-            
+        
         // Not full list but slot already clicked
-        if (slot != null) { done = slot.Swap1InvTOCho(shift); }
-            
+        if (slot != null) { resultTuple = slot.Swap1InvTOCho(shift); }
+        
         // Still space in list and slot never clicked or emptied
         else {
             var itemInv = inventorySOItems[index];
@@ -98,11 +100,13 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
                 itemInv, itemCho, index, choIndex);
             
             holdingSlotsUIList.Add(slot);
-            done = slot.Swap1InvTOCho(shift);
+            resultTuple = slot.Swap1InvTOCho(shift);
         }
+        
+        var done = resultTuple.Item1;
 
         if (!done) return;
-        energyCreated += slot.ItemInInventory.EnergyGeneratedOnBurn;
+        energyCreated += (slot.ItemInInventory.EnergyGeneratedOnBurn) * resultTuple.Item2;
         UpdateEnergyText();
         UpdateDescriptionText(slot.ItemInInventory.Description, slot.ItemInInventory.EnergyGeneratedOnBurn.ToString());
     }
@@ -111,9 +115,11 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
         HoldSlotUI slot = null;
         foreach (var hsUI in holdingSlotsUIList) { if (hsUI.IndexChoSlot == index) { slot = hsUI; } }
         if (slot == null) { UpdateDescriptionText("", ""); return; }
-        if (!slot.Swap1ChoTOInv(shift)) { holdingSlotsUIList.Remove(slot); }
         
-        energyCreated -= slot.ItemInChosen.EnergyGeneratedOnBurn;
+        var resultTuple = slot.Swap1ChoTOInv(shift);
+        if (!resultTuple.Item1) { holdingSlotsUIList.Remove(slot); }
+        
+        energyCreated -= (slot.ItemInChosen.EnergyGeneratedOnBurn) * resultTuple.Item2;
         UpdateEnergyText();
         UpdateDescriptionText(slot.ItemInChosen.Description, slot.ItemInChosen.EnergyGeneratedOnBurn.ToString());
     }
@@ -136,6 +142,8 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
         energyCreated = 0.0f;
         
         inventorySOItems.RemoveAll(slot => slot.ItemQuantity == 0);
+        
+        GenerateCanvasManager.GetComponent<GenerateEnergyCanvasHandler>().OnCloseButtonClick();
     }
 }
 
@@ -174,14 +182,14 @@ public class HoldSlotUI {
         IndexChoSlot = indexChoSlot;
     }
 
-    public bool Swap1InvTOCho(bool shift) {
-        return Swap1InvToChoBody();
-        // if (!shift) { return Swap1InvToChoBody(); }
-        //
-        // var times = itemInInventory.ItemQuantity;
-        // for (var i = 0; i < times; i++) { var res = Swap1InvToChoBody(); }
-        //
-        // return true;
+    public Tuple<bool, int> Swap1InvTOCho(bool shift) {
+        // return Swap1InvToChoBody();
+        if (!shift) { return new Tuple<bool, int>(Swap1InvToChoBody(), 1); }
+        
+        var times = itemInInventory.ItemQuantity;
+        for (var i = 0; i < times; i++) { var res = Swap1InvToChoBody(); }
+        
+        return new Tuple<bool, int>(true, times);
     }
 
     private bool Swap1InvToChoBody() {
@@ -206,13 +214,14 @@ public class HoldSlotUI {
         }
     }
 
-    public bool Swap1ChoTOInv(bool shift) {
-        return Swap1ChoTOInvBody();
-        // if (!shift) { return Swap1ChoTOInvBody(); }
-        //
-        // var times = itemInChosen.ItemQuantity;
-        // for (var i = 0; i < times; i ++) { var res = Swap1ChoTOInvBody(); }
-        // return false;
+    public Tuple<bool, int> Swap1ChoTOInv(bool shift) {
+        // return Swap1InvToChoBody();
+        if (!shift) { return new Tuple<bool, int>(Swap1ChoTOInvBody(), 1); }
+        
+        var times = itemInInventory.ItemQuantity;
+        for (var i = 0; i < times; i++) { var res = Swap1ChoTOInvBody(); }
+        
+        return new Tuple<bool, int>(true, times);
     }
 
     private bool Swap1ChoTOInvBody() {

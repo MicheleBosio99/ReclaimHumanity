@@ -2512,14 +2512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81332d0b8ada5f4469f80bb88cb73330, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUps:
-  - {fileID: 11400000, guid: 2356e39e99261ce42abc3def3b70b501, type: 2}
-  - {fileID: 11400000, guid: cafd6ef4133b3b84ba8c9a0e7e216cab, type: 2}
-  - {fileID: 11400000, guid: 211ecb0fef269f94e98d8d600ee7287d, type: 2}
-  - {fileID: 11400000, guid: dc3f49be22e929e4c8a39994941ecf06, type: 2}
-  - {fileID: 11400000, guid: 9f297a08cd39d8747ad12ffc6d73275f, type: 2}
-  - {fileID: 11400000, guid: 7b5433858e6513449ac7827bb3a03668, type: 2}
-  - {fileID: 11400000, guid: cc3b6d7fa34456547b83d1db49873f77, type: 2}
+  unlockedANDReward: {fileID: 1711777101}
 --- !u!4 &197519889
 Transform:
   m_ObjectHideFlags: 0
@@ -10951,6 +10944,7 @@ MonoBehaviour:
   - {fileID: 2006112062}
   - {fileID: 445819846}
   PowerUpsManager: {fileID: 197519887}
+  GenerateCanvasManager: {fileID: 398916389}
   batteryEnergy: {fileID: 1103408260}
 --- !u!114 &750545378
 MonoBehaviour:
@@ -35228,6 +35222,7 @@ GameObject:
   - component: {fileID: 1083272651}
   - component: {fileID: 1083272650}
   - component: {fileID: 1083272654}
+  - component: {fileID: 1083272655}
   m_Layer: 5
   m_Name: TeleportToChoiceWorldSpace
   m_TagString: Untagged
@@ -35334,6 +35329,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2007496900}
+--- !u!114 &1083272655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083272649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03bd8f1f5a33f8042a37195883772692, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notEnoughEnergyPanel: {fileID: 2185828349951143712, guid: d40c4778a78a7284e9d0f3d48d79d09d, type: 3}
+  overgrownForestButton: {fileID: 1269789619}
+  ruinedCityButton: {fileID: 310968449}
+  wastelandsButton: {fileID: 673470698}
 --- !u!1 &1085274969
 GameObject:
   m_ObjectHideFlags: 0
@@ -84910,6 +84921,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 412600009}
+    - target: {fileID: 3959211767792227353, guid: aaaeb70a7ff15b0458df4f0feaf282b7, type: 3}
+      propertyPath: m_Name
+      value: UnlockedRewardText
+      objectReference: {fileID: 0}
     - target: {fileID: 5034556550351445393, guid: aaaeb70a7ff15b0458df4f0feaf282b7, type: 3}
       propertyPath: m_Name
       value: Unlocked&RewardsCanvas

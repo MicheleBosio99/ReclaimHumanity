@@ -99,9 +99,13 @@ MonoBehaviour:
   memberImage: {fileID: 7347236961461466401}
   healthBar: {fileID: 689824366617484802}
   radarChart: {fileID: 7092895224725039237}
-  minorCureButton: {fileID: 6348092846812753998}
-  majorCureButton: {fileID: 1077398975380159066}
+  minorHealButton: {fileID: 6348092846812753998}
+  majorHealButton: {fileID: 1077398975380159066}
+  minorHealImage: {fileID: 4595649033932320672}
+  majorHealImage: {fileID: 6162790056042588814}
   inventoryItemsSO: {fileID: 11400000, guid: fb3e977362a9ace4381d1e0cbaa8c1e3, type: 2}
+  minorAmountRestored: 4
+  majorAmountRestored: 8
 --- !u!1 &689824366617484802
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +514,7 @@ GameObject:
   - component: {fileID: 3248352549245856390}
   - component: {fileID: 1077398975380159066}
   m_Layer: 5
-  m_Name: MajorCureButton
+  m_Name: MajorHealButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -617,7 +621,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3248352549245856390}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4947975780135045413}
+        m_TargetAssemblyTypeName: PartyMemberStatsManager, Assembly-CSharp
+        m_MethodName: OnMajorHealButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1783915301499315801
 GameObject:
   m_ObjectHideFlags: 0
@@ -1678,7 +1694,6 @@ MonoBehaviour:
   meshMaterial: {fileID: 2100000, guid: 508d9f3f4ae9e9e41a9ed793d33b4f41, type: 2}
   radarMesh: {fileID: 8016258908120587659}
   centerColor: {r: 0, g: 0, b: 0, a: 1}
-  outerColor: {r: 0.3254717, g: 0.6049275, b: 1, a: 1}
 --- !u!1 &7288652976584512104
 GameObject:
   m_ObjectHideFlags: 0
@@ -2172,7 +2187,7 @@ GameObject:
   - component: {fileID: 6897053810188242956}
   - component: {fileID: 6348092846812753998}
   m_Layer: 5
-  m_Name: MinorCureButton
+  m_Name: MinorHealButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2279,4 +2294,16 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6897053810188242956}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4947975780135045413}
+        m_TargetAssemblyTypeName: PartyMemberStatsManager, Assembly-CSharp
+        m_MethodName: OnMinorHealButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

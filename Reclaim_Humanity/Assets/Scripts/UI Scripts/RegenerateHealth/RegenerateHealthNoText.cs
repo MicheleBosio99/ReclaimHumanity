@@ -43,7 +43,7 @@ public class RegenerateHealthNoText : MonoBehaviour {
 
     private IEnumerator SleepCoroutine()
     {
-        GameManager.RestoreHps();
+        GameManager.RestoreFullHps();
         invScript.Finished = false;
         var startColor = backgroundImage.color;
         var targetColor = backgroundImage.color; targetColor.a = 1.0f;
@@ -81,5 +81,5 @@ public class RegenerateHealthNoText : MonoBehaviour {
     
     private void ChangeText(string _text) { text.text = _text; }
     
-    private void RegenerateHealth() { GameManager.RestoreHps(); }
+    private void RegenerateHealth() { GameManager.RestoreFullHps(); }
 }
