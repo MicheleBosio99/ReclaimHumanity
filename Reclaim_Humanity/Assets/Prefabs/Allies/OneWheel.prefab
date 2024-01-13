@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 4754563326288330437}
   - component: {fileID: 6255717712013211218}
   m_Layer: 6
-  m_Name: MainCharacter
+  m_Name: OneWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -209,7 +209,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 67ae6e42e2a3446aaa6a60c16ad84db0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5dec5e775b4144ae39e28e385c479e67, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -282,8 +282,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28}
-    oldSize: {x: 0.64, y: 0.64}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -306,7 +306,7 @@ Animator:
   m_GameObject: {fileID: 1344862835144778464}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8df6ed8514131442bb41a7aef7dcf0c5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 859fac7ff11ee40ffa58b0cbf300f4c4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
