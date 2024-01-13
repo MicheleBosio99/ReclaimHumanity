@@ -58,6 +58,10 @@ public class Enemy : MonoBehaviour
 
     private Transform _spawnPoint;
     
+    private Animator animator;
+
+    private void Awake() { animator = GetComponent<Animator>(); }
+
     void Start()
     {
         spawnHandler = FindObjectOfType<SpawnHandler>();
@@ -67,6 +71,8 @@ public class Enemy : MonoBehaviour
         
         _spawnPoint = gameObject.transform;
         player = GameObject.FindGameObjectWithTag("Player");
+        
+        animator.SetFloat("Speed", 1.0f);
         
         EnemyRoutine();
     }
@@ -225,8 +231,10 @@ public class Enemy : MonoBehaviour
         if (playerInSight)
         {
             // To mirror enemy sprite if it's moving right or left
-            _spriteR.flipX = _isSpriteFrontToRight ? !(direction.x >= 0f) : direction.x >= 0f;
-
+            // _spriteR.flipX = _isSpriteFrontToRight ? !(direction.x >= 0f) : direction.x >= 0f;
+            
+            animator.SetFloat("Horizontal", - direction.x);
+            
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position,
                 speed * Time.deltaTime);
             distance = Vector2.Distance(transform.position, player.transform.position);

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9032300963863179006}
   - component: {fileID: -7890246739450926732}
   - component: {fileID: 5950438564812822882}
+  - component: {fileID: 7863439445207765149}
   - component: {fileID: 6166735886852353375}
   m_Layer: 0
   m_Name: EnemyWolf
@@ -174,6 +175,27 @@ PolygonCollider2D:
       - {x: 0.19331872, y: 0.12455303}
       - {x: 0.1946142, y: 0.16090588}
   m_UseDelaunayMesh: 0
+--- !u!95 &7863439445207765149
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920323430812193134}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8c9c88e393f8b43cebcceda789edb4aa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &6166735886852353375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +211,7 @@ MonoBehaviour:
   enemies: []
   levels: 
   maxHP: 7
+  type: 0
   player: {fileID: 0}
   speed: 6
   _isSpriteFrontToRight: 0
@@ -199,7 +222,8 @@ MonoBehaviour:
   obstructionMask:
     serializedVersion: 2
     m_Bits: 128
-  type: 0
+  _sightDirection: 0
+  popupIcon: {fileID: 0}
+  angle: 0
   enem: {fileID: 1920323430812193134}
   spawn: {fileID: 0}
-  colliding: 0
