@@ -15,11 +15,12 @@ MonoBehaviour:
   creatureName: Water Wolf
   description: A bad guy that likes water
   spriteL: {fileID: 21300000, guid: cc859b3e07f70fe46921842d680fcd46, type: 3}
-  spriteR: {fileID: 21300000, guid: 05f2d40da9ac9214f90a9e7996ab0f44, type: 3}
+  spriteR: {fileID: 21300000, guid: b60ceb567c0824bfc834f5b234eac534, type: 3}
+  animatorBattle: {fileID: 9100000, guid: 5d29a5e3a004644c2bfb376037e1e81c, type: 2}
   type1: 3
   type2: 0
   maxHp: 80
-  attack: 8
+  attack: 7
   defense: 8
   specialAttack: 12
   specialDefense: 12

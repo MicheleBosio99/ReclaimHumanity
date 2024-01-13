@@ -1240,7 +1240,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 053d1b986ad973049a2fecb1459540b6, type: 2}
   - {fileID: 11400000, guid: e16135f163d076944980b04b4e9bb939, type: 2}
   - {fileID: 11400000, guid: 77f02a5c3f1f8e04bb663f273a7ec7c6, type: 2}
-  partyLevels: 030000000300000003000000
+  partyLevels: 010000000100000001000000
   enemies:
   - {fileID: 11400000, guid: 97134be230c71194db1dbabadbf44219, type: 2}
   - {fileID: 11400000, guid: 8c9a937caedbae949808b246a03734af, type: 2}

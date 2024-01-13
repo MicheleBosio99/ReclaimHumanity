@@ -81,13 +81,13 @@ public class InteractionHumanHandler : MonoBehaviour {
         {
             GameManager.AddBuddy("OneWheelBoy");
             GameManager.buddy1 = true;
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
         else if (humanID == "AAA_Buddy2")
         {
             GameManager.AddBuddy("FireFranco");
             GameManager.buddy2 = true;
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
     

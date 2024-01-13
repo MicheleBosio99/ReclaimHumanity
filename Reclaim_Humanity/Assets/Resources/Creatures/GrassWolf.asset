@@ -16,10 +16,11 @@ MonoBehaviour:
   description: A bad guy with green thumb
   spriteL: {fileID: 21300000, guid: cc859b3e07f70fe46921842d680fcd46, type: 3}
   spriteR: {fileID: 21300000, guid: c80f75ba13fba489dbe936dacf9d3c06, type: 3}
+  animatorBattle: {fileID: 9100000, guid: da3573e6451854d10a98a9976759524b, type: 2}
   type1: 4
   type2: 0
   maxHp: 80
-  attack: 8
+  attack: 7
   defense: 8
   specialAttack: 12
   specialDefense: 12
