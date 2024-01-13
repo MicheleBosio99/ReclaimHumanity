@@ -3423,6 +3423,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HumanInfoLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 3822568085924278116, guid: 89fac4b26a8686f498fc4af2ce5620f3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4127602674537189697, guid: 89fac4b26a8686f498fc4af2ce5620f3, type: 3}
       propertyPath: biome
       value: OvergrownForest
@@ -5771,6 +5775,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RecipesInfoLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 6230265904524795650, guid: e71f0e2d058bbd240a067d882ea5b90d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6674047011933594404, guid: e71f0e2d058bbd240a067d882ea5b90d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 34.201057
@@ -6804,7 +6812,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1371263211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7433,7 +7441,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1406888296
 MonoBehaviour:
   m_ObjectHideFlags: 0
