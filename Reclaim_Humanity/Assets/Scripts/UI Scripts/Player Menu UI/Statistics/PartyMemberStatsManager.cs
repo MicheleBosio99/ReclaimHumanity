@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Random = UnityEngine.Random;
 
 public class PartyMemberStatsManager : MonoBehaviour {
     
@@ -17,9 +16,6 @@ public class PartyMemberStatsManager : MonoBehaviour {
     
     [SerializeField] private InventoryItemsSO inventoryItemsSO;
     
-    [SerializeField] private int minorAmountRestored;
-    [SerializeField] private int majorAmountRestored;
-    
     private HealthBarBehaviour healthBarBehaviour;
     private PentagonalChartBehaviour pentagonalChartBehaviour;
     
@@ -34,7 +30,7 @@ public class PartyMemberStatsManager : MonoBehaviour {
         indexInParty = index;
 
         var member = GameManager.party[index];
-        nameText.text = member.CreatureName.ToUpper();
+        nameText.text = $"{member.CreatureName.ToUpper()}";
         memberImage.sprite = member.SpriteL;
         var c = memberImage.color;
         c.a = 1.0f;
@@ -60,7 +56,7 @@ public class PartyMemberStatsManager : MonoBehaviour {
         if (GameManager.partyHps[indexInParty] >= GameManager.party[indexInParty].MaxHp) { return; }
 
         inventoryItemsSO.RemoveTotOrdinaryItem(inventoryItemsSO.SearchOrdinaryItemByID("00_GoodMushroom"), 1);
-        GameManager.RestoreMemberHps(indexInParty, minorAmountRestored);
+        GameManager.HealPartyMemberByIndex(indexInParty, GameManager.bonusMultiplier.minorHealingAmount);
         ReSetParametersForAll();
     }
     
@@ -69,7 +65,7 @@ public class PartyMemberStatsManager : MonoBehaviour {
         if (GameManager.partyHps[indexInParty] >= GameManager.party[indexInParty].MaxHp) { return; }
         
         inventoryItemsSO.RemoveTotOrdinaryItem(inventoryItemsSO.SearchOrdinaryItemByID("06_ElectronicScrap"), 1);
-        GameManager.RestoreMemberHps(indexInParty, majorAmountRestored);
+        GameManager.HealPartyMemberByIndex(indexInParty, GameManager.bonusMultiplier.majorHealingAmount);
         ReSetParametersForAll();
     }
     

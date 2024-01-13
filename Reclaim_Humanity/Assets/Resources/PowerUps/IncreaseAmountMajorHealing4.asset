@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed75c63ef75350d45b60dd561eb5df15, type: 3}
+  m_Name: IncreaseAmountMajorHealing4
+  m_EditorClassIdentifier: 
+  energyThreshold: 240
+  selectedFunction: 7
+  powerUpLevel: 4
+  powerUpText: Electronic Scraps are now healing more health!
+  enabled: 0

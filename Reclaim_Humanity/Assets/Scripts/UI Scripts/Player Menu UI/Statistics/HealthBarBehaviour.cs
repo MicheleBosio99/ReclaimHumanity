@@ -1,10 +1,13 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthBarBehaviour : MonoBehaviour {
     
     [SerializeField] private Image greenBarImage;
+    [SerializeField] private TextMeshProUGUI healthText;
+    
     private const float minValue = 0.214f;
     private const float maxValue = 1.0f;
     
@@ -22,6 +25,8 @@ public class HealthBarBehaviour : MonoBehaviour {
     public void ShowHealth() {
         var maxHP = GameManager.party[indexInParty].MaxHp;
         var currentHps = GameManager.partyHps[indexInParty] == 1000 ? maxHP : GameManager.partyHps[indexInParty];
+        
+        healthText.text = $"{currentHps} / {maxHP}";
         
         greenBarImage.fillAmount = Mathf.Lerp(minValue, maxValue, (float) currentHps / maxHP);
     }

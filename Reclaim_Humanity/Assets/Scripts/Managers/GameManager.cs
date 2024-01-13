@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
     public static bool buddy1;
     public static bool buddy2;
     
+    public static BonusMultiplier bonusMultiplier;
+    
     void Awake()
     {
         if (instance == null)
@@ -50,6 +52,7 @@ public class GameManager : MonoBehaviour
         humansInfoLoader = GameObject.Find("HumanInfoLoader").GetComponent<HumansInfoLoader>();
         recipesInfoLoader = GameObject.Find("RecipesInfoLoader").GetComponent<RecipesInfoLoader>();
         volumeConfig = new VolumeConfiguration();
+        bonusMultiplier = new BonusMultiplier();
     }
 
     public static void LoadFreshData()
@@ -187,6 +190,15 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("LoadingScene");
     }
 
+    public static void IncreaseMinorHealingBonusMultiplier(int amount) { bonusMultiplier.minorHealingAmount += amount; }
+
+    public static void IncreaseMajorHealingBonusMultiplier(int amount) { bonusMultiplier.majorHealingAmount += amount; }
+
+    public static void IncreaseStatsBonusMultiplier(float bonusIncrease) {
+        bonusMultiplier.attackIncreaseMultiplier += bonusIncrease;
+        bonusMultiplier.defenseIncreaseMultiplier += bonusIncrease;
+    }
+
     public static void RestoreFullHps()
     {
         for (int i = 0; i < partyHps.Count; i++)
@@ -195,9 +207,12 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    public static void RestoreMemberHps(int index, int cureAmount) {
-        Debug.Log($"curead: {partyHps[index] + cureAmount}, maxHp: {party[index].MaxHp}");
-        partyHps[index] = Math.Min(partyHps[index] + cureAmount, party[index].MaxHp);
+    public static void HealPartyMemberByIndex(int index, int cureAmount) {
+        Debug.Log($"cured: {partyHps[index] + cureAmount}, maxHp: {party[index].MaxHp}");
+        
+        Creature partyMember = new Creature(party[index], partyLevels[index], partyHps[index]);
+        partyMember.HealHPs(cureAmount);
+        partyHps[index] = partyMember.HP;
     }
     
     public static void HealPartyMember(string name, int amount)
@@ -486,4 +501,12 @@ public class SaveNumOfHumansTalkedTo {
             default : { SetAllToZero(); break; }
         }
     }
+}
+
+public class BonusMultiplier {
+    public int minorHealingAmount = 4;
+    public int majorHealingAmount = 8;
+    
+    public float attackIncreaseMultiplier = 1.0f;
+    public float defenseIncreaseMultiplier = 1.0f;
 }

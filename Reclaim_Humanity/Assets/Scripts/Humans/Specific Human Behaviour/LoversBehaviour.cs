@@ -89,8 +89,6 @@ public class LoversBehaviour : MonoBehaviour
         loverGirl.GetComponent<SpriteRenderer>().sprite = loverGirlRightSight;
         loverBoy.GetComponent<SpriteRenderer>().sprite = loverBoyLeftSight;
         
-        
-        
         loverGirl.transform.position = loverGirlNewPosition;
         loverBoy.transform.position = loverBoyNewPosition;
 

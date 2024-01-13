@@ -14,6 +14,7 @@ public class HandleItemsInInventoryInv : MonoBehaviour {
 
     [SerializeField] private GameObject DescriptionText;
     [SerializeField] private GameObject EnergyText;
+    [SerializeField] private GameObject EnergyIcon;
 
     [SerializeField] private InventoryItemsSO inventorySlotsSO;
 
@@ -110,11 +111,13 @@ public class HandleItemsInInventoryInv : MonoBehaviour {
             itemInSlotSelected.EnergyGeneratedOnBurn == 0.0f
                 ? " "
                 : itemInSlotSelected.EnergyGeneratedOnBurn.ToString();
+        EnergyIcon.SetActive(true);
     }
 
     public void UnShowDescriptionSelectedObject() {
         DescriptionText.GetComponent<TextMeshProUGUI>().text = " ";
         EnergyText.GetComponent<TextMeshProUGUI>().text = " ";
+        EnergyIcon.SetActive(false);
     }
 
     public void SetCurrentSelectedSlotByIndex(int index, bool isSlotSpecial) {

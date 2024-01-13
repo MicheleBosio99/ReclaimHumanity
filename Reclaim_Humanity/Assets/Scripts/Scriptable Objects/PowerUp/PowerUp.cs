@@ -16,7 +16,10 @@ public class PowerUp : ScriptableObject {
         EnlargeMapShowed,
         UnlockMove,
         UnlockFinalRecipe,
-        UnlockBiome,
+        UnlockNewBiome,
+        IncreaseHealingFromMushrooms,
+        IncreaseHealingFromElectronicScraps,
+        IncreaseStatsBonus,
     }
 
     public void CallSelectedFunction() {
@@ -27,7 +30,10 @@ public class PowerUp : ScriptableObject {
             case FunctionsCallable.EnlargeMapShowed: EnlargeMapShowed(powerUpLevel); break;
             case FunctionsCallable.UnlockMove: UnlockMove(powerUpLevel); break;
             case FunctionsCallable.UnlockFinalRecipe: UnlockFinalRecipe(powerUpLevel); break;
-            case FunctionsCallable.UnlockBiome: UnlockNewBiome(powerUpLevel); break;
+            case FunctionsCallable.UnlockNewBiome: UnlockNewBiome(powerUpLevel); break;
+            case FunctionsCallable.IncreaseHealingFromMushrooms: IncreaseHealingFromMushrooms(powerUpLevel); break;
+            case FunctionsCallable.IncreaseHealingFromElectronicScraps: IncreaseHealingFromElectronicScraps(powerUpLevel); break;
+            case FunctionsCallable.IncreaseStatsBonus: IncreaseStatsBonus(powerUpLevel); break;
             default: throw new ArgumentOutOfRangeException();
         }
     }
@@ -35,6 +41,12 @@ public class PowerUp : ScriptableObject {
     private void IncreasePartyLevel(int level) { Debug.Log($"Increase Party Level by: {level};"); GameManager.IncreasePartyLevel(); }
     
     private void IncreaseItemsDropped(int level) { Debug.Log($"Increase Items Dropped by: {level};"); }
+
+    private void IncreaseHealingFromMushrooms(int level) { GameManager.IncreaseMinorHealingBonusMultiplier(level); }
+    
+    private void IncreaseHealingFromElectronicScraps(int level) { GameManager.IncreaseMajorHealingBonusMultiplier(level); }
+    
+    private void IncreaseStatsBonus(int level) { GameManager.IncreaseStatsBonusMultiplier(0.2f * level); }
 
     private void EnlargeMapShowed(int level) { Debug.Log($"Increase Map Showed by: {level};"); }
 

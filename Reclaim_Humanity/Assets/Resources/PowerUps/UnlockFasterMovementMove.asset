@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed75c63ef75350d45b60dd561eb5df15, type: 3}
   m_Name: UnlockFasterMovementMove
   m_EditorClassIdentifier: 
-  energyThreshold: 20
+  energyThreshold: 200
   selectedFunction: 4
   powerUpLevel: 1
   powerUpText: Unlock 'Faster Movement' Move
+  enabled: 0
