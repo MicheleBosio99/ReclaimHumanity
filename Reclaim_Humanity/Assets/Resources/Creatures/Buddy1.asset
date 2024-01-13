@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creatureName: OneWheelBoy
   description: Wallo's friend
-  spriteL: {fileID: 21300000, guid: 3aadc6f2cbeac254289e75a72639e5ec, type: 3}
+  spriteL: {fileID: 21300000, guid: 5dec5e775b4144ae39e28e385c479e67, type: 3}
   spriteR: {fileID: 0}
   animatorBattle: {fileID: 9100000, guid: 859fac7ff11ee40ffa58b0cbf300f4c4, type: 2}
   type1: 3
