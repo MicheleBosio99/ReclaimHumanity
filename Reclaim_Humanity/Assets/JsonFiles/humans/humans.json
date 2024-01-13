@@ -402,5 +402,137 @@
                 "Back for more wisdom from this old guy, eh?\nRemember, progress is about more than just gears turning — it's about what we learn along the way.\nKeep those gears turning, adventurer!"
             ]
         }
+    },
+
+
+
+
+
+
+
+
+
+    {
+        "humanID" : "12_WL_StrangePolicemanHuman",
+        "humanName" : "Paul Iziotto",
+        "biome" : "Wastelands",
+        "recipesUnlockedID" : "",
+        "spokenTo" : false,
+        "firstDialogue" :
+        {
+            "phrases" :
+            [
+                "Hello there, I am the policeman charged to oversee these desolate lands.\nThe wastelands, witness to a nuclear disaster that left us untouched but forever changed.",
+                "Everything was fine before this illness changed everything.\nSome time after it, the nuclear reactor blown up and destroyed everything...\nEverything but that pool North-West, whoever created it is a genius...",
+                "Now, navigating this eerie aftermath is no easy task, but I can tell you what I know...\nThere were some guys keeping the reactor going right.\nThey should be around here, I think one is straight West from here.",
+                "Check it out, and pay attention to the multiple strange beasts that roam around here.\nThey must have been mutated by the dense radiation floating here."
+            ]
+        },
+        "generalDialogue" :
+        {
+            "phrases" :
+            [
+                "Found anyone? Good, but still, continue searching.\nThere could be anything, anywere...      ",
+                "Good luck :D"
+            ]
+        }
+    },
+    {
+        "humanID" : "13_WL_ExhaustedSupercondictorHuman",
+        "humanName" : "Dr. Lorn Quantum",
+        "biome" : "Wastelands",
+        "recipesUnlockedID" : "08_ExhaustedSuperconductor",
+        "spokenTo" : false,
+        "firstDialogue" :
+        {
+            "phrases" :
+            [
+                "Greetings, fellow survivor (circa). I am Dr. Lorn Quantum, maestro of nanomaterials.\nThe reactor explosion depleted my a superconductors.\nIts power, lost to the fallout.",
+                "If you find the remnants of my lab you might discover the exhausted recipe for that superconductor.\nI am jocking, I have it pressed inside my mind\n<i>Shishishishishishi</i>",
+                "Once, it was the epitome of conductivity. Now, it's yours to explore."
+            ]
+        },
+        "generalDialogue" :
+        {
+            "phrases" :
+            [
+                "Back again, are you? In this timeless void, we are but echoes of the past.\nReflect on the choices ahead, for even the most durable materials can break.",
+                "A lesson learned from nanomaterials and life alike."
+            ]
+        }
+    },
+    {
+        "humanID" : "14_WL_ChargedSupercondictorHuman",
+        "humanName" : "Dr. Volt Argen",
+        "biome" : "Wastelands",
+        "recipesUnlockedID" : "09_ChargedSuperconductor",
+        "spokenTo" : false,
+        "firstDialogue" :
+        {
+            "phrases" :
+            [
+                "Greetings, stranger. I am Dr. Volt Argen, master of electricity.\nAmidst the desolation, I harnessed the remnants of Adenityst, a rare mineral strewn about.\nWith its energy, I've charged up Dr. Quantum's superconductor.",
+                "I would like to say it was my geniousness that got it...\nThe truth being some day (I still were here) and a lightning hit the water you see up here.",
+                "I got much scared, then I remembered I am immortal...\nHowever, the Superconductor was charged by the lightning and gave me the idea on how to make it myself.",
+                "Here, take the recipe for the <b>Charged Superconductor</b> and let the sparks of Adenityst guide your way."
+            ]
+        },
+        "generalDialogue" :
+        {
+            "phrases" :
+            [
+                "Ah, you return. Adenityst holds the potential to rekindle the brilliance lost to nuclear shadows.\nAs you venture forth, harness its power wisely—it might just light the path to a brighter future."
+            ]
+        }
+    },
+    {
+        "humanID" : "15_WL_EnrichedGemstoneHuman",
+        "humanName" : "Dr. Seraphina Gemheart",
+        "biome" : "Wastelands",
+        "recipesUnlockedID" : "10_EnrichedGemstone",
+        "spokenTo" : false,
+        "firstDialogue" :
+        {
+            "phrases" :
+            [
+                "<i>Who is this little guy?\nHave I already met him?? I have no idea...              ",
+                "Hellooo. I am Dr. Seraphina Gemheart, a gemstone aficionado.\nThe Adenityst you hold... its essence resonates with my gemstones.",
+                "With it, I've crafted an <b>Enriched Gemstone</b>, a beacon of untapped potential.\nThe enriched gemstone is more than a mere jewel.\nIt holds the radiant essence of Adenityst, a reminder that even in the harshest environments, beauty and strength can coexist.",
+                "The recipe, here, my gift to you."
+            ]
+        },
+        "generalDialogue" :
+        {
+            "phrases" :
+            [
+                "<i>Who is this little guy?\nHave I already met him?? I have no idea...              ",
+                "Hellooo. I am Dr. Seraphina Gemheart, a gemstone aficionado.\nThe Adenityst you hold... its essence resonates with my gemstones.",
+                "With it, I've crafted an <b>Enriched Gemstone</b>, a beacon of untapped potential.\nThe enriched gemstone is more than a mere jewel.\nIt holds the radiant essence of Adenityst, a reminder that even in the harshest environments, beauty and strength can coexist.",
+                "The recipe, here, my gift to you."
+            ]
+        }
+    },
+    {
+        "humanID" : "16_WL_NuclearFuelHuman",
+        "humanName" : "Dr. Neutron Blaze",
+        "biome" : "Wastelands",
+        "recipesUnlockedID" : "11_NuclearFuel",
+        "spokenTo" : false,
+        "firstDialogue" :
+        {
+            "phrases" :
+            [
+                "Hey you! Are you not the perfect creation of my friend, Dr.IDK?\nI am Dr. Neutron Blaze, master of nuclear fusion.\nTell me, how is IDK?               \nI understand... He's stuck just as us...",
+                "Listen, tell him this:\nI've concocted a recipe for nuclear fuel, a source of boundless energy.\nHere's the recipe: use it wisely, for which in it lies both creation and destruction.",
+                "Go, complete your mission, Wollo, you're almost there!"
+            ]
+        },
+        "generalDialogue" :
+        {
+            "phrases" :
+            [
+                "Have you not completed the final recipe yet?\nI don't want to rush you, still, you're so close to free us all!"
+            ]
+        }
     }
 ]

@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -14,6 +12,8 @@ public class DialogueHandler : MonoBehaviour {
     [SerializeField] private AudioClip DialogueDown;
     
     private InteractionHumanHandler activeHuman;
+
+    // private void Awake() { gameObject.SetActive(false); }
 
     public void WriteFastText(string phrase) { dialogueUItext.text = phrase; }
 

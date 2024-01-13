@@ -215,13 +215,14 @@ public class HoldSlotUI {
     }
 
     public Tuple<bool, int> Swap1ChoTOInv(bool shift) {
-        // return Swap1InvToChoBody();
-        if (!shift) { return new Tuple<bool, int>(Swap1ChoTOInvBody(), 1); }
+        return new Tuple<bool, int>(Swap1ChoTOInvBody(), 1);
         
-        var times = itemInInventory.ItemQuantity;
-        for (var i = 0; i < times; i++) { var res = Swap1ChoTOInvBody(); }
-        
-        return new Tuple<bool, int>(true, times);
+        // if (!shift) { return new Tuple<bool, int>(Swap1ChoTOInvBody(), 1); }
+        //
+        // var times = itemInInventory.ItemQuantity;
+        // for (var i = 0; i < times; i++) { var res = Swap1ChoTOInvBody(); }
+        //
+        // return new Tuple<bool, int>(true, times);
     }
 
     private bool Swap1ChoTOInvBody() {

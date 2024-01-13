@@ -64,6 +64,11 @@
     
     
     
+    
+    
+    
+    
+    
     {
         "recipeID" : "04_ResilientGears",
         "recipeName" : "Resilient Gears",
@@ -131,10 +136,13 @@
     
     
     
+    
+    
+    
 
     {
-        "recipeID" : "08_ExhaustSuperconductor",
-        "recipeName" : "Exhaust Superconductor",
+        "recipeID" : "08_ExhaustedSuperconductor",
+        "recipeName" : "Exhausted Superconductor",
         "recipeDescription" : "Make stronger gears that last longer.",
         "item1ID" : "07_NuclearWaste",
         "item1Name" : "Nuclear Waste",
@@ -142,8 +150,8 @@
         "item2ID" : "08_Adenityst",
         "item2Name" : "Adenityst",
         "item2QuantityReq" : 1,
-        "itemResultID" : "20_ExhaustSuperconductor",
-        "itemResultName" : "Exhaust Superconductor",
+        "itemResultID" : "20_ExhaustedSuperconductor",
+        "itemResultName" : "Exhausted Superconductor",
         "itemResultQuantity" : 2,
         "enabled" : false
     },
@@ -151,8 +159,8 @@
         "recipeID" : "09_ChargedSuperconductor",
         "recipeName" : "Charged Superconductor",
         "recipeDescription" : "Make stronger gears that last longer.",
-        "item1ID" : "20_ExhaustSuperconductor",
-        "item1Name" : "Exhaust Superconductor",
+        "item1ID" : "20_ExhaustedSuperconductor",
+        "item1Name" : "Exhausted Superconductor",
         "item1QuantityReq" : 1,
         "item2ID" : "08_Adenityst",
         "item2Name" : "Adenityst",

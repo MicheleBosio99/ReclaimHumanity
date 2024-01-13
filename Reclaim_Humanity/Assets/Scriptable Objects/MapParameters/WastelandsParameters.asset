@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e07c77e17d55f5d428753d06a0ce676b, type: 3}
   m_Name: WastelandsParameters
   m_EditorClassIdentifier: 
-  mapWidthInSquares: 0
-  mapHeightInSquares: 0
-  originalTextureWidth: 0
-  originalTextureHeight: 0
+  mapWidthInSquares: 145
+  mapHeightInSquares: 140
+  originalTextureWidth: 1210
+  originalTextureHeight: 1180
   displayedImageWidth: 564
   displayedImageHeight: 282
-  textureOffsetX: 0
-  textureOffsetY: 0
+  textureOffsetX: 660
+  textureOffsetY: 150
