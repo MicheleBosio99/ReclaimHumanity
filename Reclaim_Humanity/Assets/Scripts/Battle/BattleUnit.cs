@@ -38,16 +38,6 @@ public class BattleUnit : MonoBehaviour
         {
             image.sprite = Creature.Base.SpriteR;
         }
-
-        if (Creature.Base.Type1 == CreatureType.Fire)
-        {
-            GetComponent<Image>().color = Color.red;
-        }
-        
-        if (Creature.Base.Type1 == CreatureType.Grass)
-        {
-            GetComponent<Image>().color = Color.green;
-        }
         
         PlayEnterAnimation();
     }

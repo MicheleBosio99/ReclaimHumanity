@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11dec5c540c107047bb6d7089ff6fd82, type: 3}
   m_Name: Enemy1
   m_EditorClassIdentifier: 
-  name: Enemy1
+  creatureName: Mushroom
   description: A bad guy
   spriteL: {fileID: -1292961517, guid: 50730f50668656749afc93ebb8040965, type: 3}
-  spriteR: {fileID: -1292961517, guid: 50730f50668656749afc93ebb8040965, type: 3}
+  spriteR: {fileID: 21300000, guid: 790562919800040c9a1f2c991460fa04, type: 3}
   type1: 2
   type2: 0
   maxHp: 80
@@ -26,6 +26,8 @@ MonoBehaviour:
   speed: 9
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: ab55a9566ad37594ea7d5b9954806748, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: e40cba6b7dd84b6489703ea8edebd2c6, type: 2}
     level: 1
   droppableObjects:
   - {fileID: 11400000, guid: 114dc195e6ec6fa4a92885bb65e908e9, type: 2}

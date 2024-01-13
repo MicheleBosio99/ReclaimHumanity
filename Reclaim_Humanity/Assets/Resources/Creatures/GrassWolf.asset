@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11dec5c540c107047bb6d7089ff6fd82, type: 3}
   m_Name: GrassWolf
   m_EditorClassIdentifier: 
-  name: Grass Wolf
-  description: A bad guy
+  creatureName: Grass Wolf
+  description: A bad guy with green thumb
   spriteL: {fileID: 21300000, guid: cc859b3e07f70fe46921842d680fcd46, type: 3}
-  spriteR: {fileID: 21300000, guid: 05f2d40da9ac9214f90a9e7996ab0f44, type: 3}
+  spriteR: {fileID: 21300000, guid: c80f75ba13fba489dbe936dacf9d3c06, type: 3}
   type1: 4
   type2: 0
   maxHp: 80

@@ -29,6 +29,7 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private GameObject handR;
     [SerializeField] private AudioClip Attack_switch;
     [SerializeField] private AudioClip Target_switch;
+    [SerializeField] private List<string> curiosities;
 
     private BattleState state;
     private int currentAction;
@@ -55,6 +56,7 @@ public class BattleSystem : MonoBehaviour
         creaturesFainted = new List<Creature>();
         creaturesFaintedPosition = new List<int>();
         itemsToUse = new List<InventoryItem>();
+        curiosities = new List<string>();
         
         itemsDropped = new List<InventoryItem>();
         foreach (var enemy in GameManager.enemies) {
@@ -83,6 +85,30 @@ public class BattleSystem : MonoBehaviour
         }
         
         SetUpItems();
+        curiosities.Add("Honey never spoils; archaeologists have found pots of honey in ancient " +
+                        "Egyptian tombs that are over 3,000 years old and still edible.");
+        curiosities.Add("The inventor of the frisbee was turned into a frisbee. Walter Morrison, the inventor of" +
+                        " the frisbee, was cremated, and his ashes were turned into a limited edition frisbee.");
+        curiosities.Add("The shortest war in history lasted only 38 to 45 minutes between Britain and Zanzibar " +
+                        "in 1896.");
+        curiosities.Add("Octopuses have three hearts: two pump blood to the gills, and one pumps it to the " +
+                        "rest of the body.");
+        curiosities.Add("The Great Wall of China is not visible from space with the naked eye, contrary " +
+                        "to popular belief.");
+        curiosities.Add("The Eiffel Tower can be 15 cm taller during the summer due to the expansion of the " +
+                        "iron in the heat.");
+        curiosities.Add("Wearing headphones for just an hour increases the bacteria in your ear by 700 times.");
+        curiosities.Add("In Switzerland, it is illegal to own just one guinea pig because they are considered " +
+                        "social animals.");
+        curiosities.Add("The average person will spend six months of their life waiting for red lights " +
+                        "to turn green.");
+        curiosities.Add("The popular game \"Doom\" (1993) has been installed on various unconventional " +
+                        "devices, including pregnancy tests and digital cameras.");
+        curiosities.Add(" Bananas contain potassium-40, a radioactive isotope of potassium, making them slightly " +
+                        "radioactive. You'd need to eat about 10,000,000 bananas at once to die of radiation poisoning.");
+        curiosities.Add("Statistically, you are more likely to be killed by a vending machine than a shark. " +
+                        "Vending machines falling over cause a handful of deaths each year.");
+        curiosities.Add("You Can't Hum While Holding Your Nose: try it by yourself.");
         
         yield return dialogBox.TypeDialog("Oh no, some enemies :(");
         yield return new WaitForSeconds(0.5f);
@@ -141,6 +167,7 @@ public class BattleSystem : MonoBehaviour
             handL.transform.position = playerUnits[currentCreature].transform.position + new Vector3(1,0,0);
             handL.SetActive(true);
             handR.SetActive(false);
+            
             StartCoroutine(PlayerAction());
         }
         else
@@ -374,9 +401,8 @@ public class BattleSystem : MonoBehaviour
         dialogBox.EnableActionSelector(false);
         dialogBox.EnableDialogText(false);
         dialogBox.EnableCuriosityText(true);
-        yield return dialogBox.TypeCuriosity("Honey never spoils; archaeologists have found pots of honey in ancient " +
-                                          "Egyptian tombs that are over 3,000 years old and still edible.");
-        yield return new WaitForSeconds(1f);
+        yield return dialogBox.TypeCuriosity(curiosities[UnityEngine.Random.Range(0, curiosities.Count)]);
+        yield return new WaitForSeconds(1.4f);
         dialogBox.EnableActionSelector(true);
         dialogBox.EnableDialogText(true);
         dialogBox.EnableCuriosityText(false);

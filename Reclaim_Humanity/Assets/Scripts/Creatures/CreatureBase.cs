@@ -122,18 +122,20 @@ public enum CreatureType
     Normal,
     Fire,
     Water,
-    Grass
+    Grass,
+    Electric
 }
 
 public class TypeChart
 {
     static float[][] chart =
     {
-        //                    NOR   FIR   WAT   GRS
-        /*NOR*/ new float[] { 1f,   1f,   1f,   1f   },
-        /*FIR*/ new float[] { 1f,   0.5f, 0.5f, 2f   },
-        /*WAT*/ new float[] { 1f,   2f,   0.5f, 0.5f },
-        /*GRS*/ new float[] { 1f,   0.5f, 2f,   0.5f }
+        //                    NOR   FIR   WAT   GRS   ELE
+        /*NOR*/ new float[] { 1f,   1f,   1f,   1f,   1f   },
+        /*FIR*/ new float[] { 1f,   0.5f, 0.5f, 2f,   1f   },
+        /*WAT*/ new float[] { 1f,   2f,   0.5f, 0.5f, 1f   },
+        /*GRS*/ new float[] { 1f,   0.5f, 2f,   0.5f, 1f   },
+        /*ELE*/ new float[] { 1f,   1f,   2f,   0.5f, 0.5f }
     };
 
     public static float GetEffectiveness(CreatureType attackType, CreatureType defenseType)
