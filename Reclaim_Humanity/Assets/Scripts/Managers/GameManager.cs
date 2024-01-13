@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
     public static VolumeConfiguration volumeConfig;
     
     public static SaveNumOfHumansTalkedTo humansTalkedTo;
+    public static bool buddy1;
+    public static bool buddy2;
     
     void Awake()
     {
@@ -63,6 +65,11 @@ public class GameManager : MonoBehaviour
                 party.Add(completeParty.party[i]);
                 partyLevels.Add(completeParty.partyLevels[i]);
             }
+            
+            //
+            /*party.Add(completeParty.party[i]);
+            partyLevels.Add(completeParty.partyLevels[i]);*/
+            //
         }
         
         partyHps = new List<int>();
@@ -85,6 +92,9 @@ public class GameManager : MonoBehaviour
         
         humansTalkedTo ??= new SaveNumOfHumansTalkedTo();
         humansTalkedTo.SetAllToZero();
+
+        buddy1 = false;
+        buddy2 = false;
     }
     
     public static void NewGame()
@@ -185,6 +195,19 @@ public class GameManager : MonoBehaviour
         }
     }
     
+    public static void HealPartyMember(string name, int amount)
+    {
+        for (int i = 0; i < partyHps.Count; i++)
+        {
+            if (party[i].CreatureName == name)
+            {
+                Creature partyMember = new Creature(party[i], partyLevels[i], partyHps[i]);
+                partyMember.HealHPs(amount);
+                partyHps[i] = partyMember.HP;
+            }
+        }
+    }
+    
     public static void IncreasePartyLevel()
     {
         for (int i = 0; i < partyLevels.Count; i++)
@@ -262,6 +285,9 @@ public class GameManager : MonoBehaviour
         
         data.energyInLab = energyInLab;
         data.savedHumansTalkedTo = humansTalkedTo;
+
+        data.buddy1 = buddy1;
+        data.buddy2 = buddy2;
         
         previousPosition = Vector3.zero;
         
@@ -322,7 +348,9 @@ public class GameManager : MonoBehaviour
                     
                     energyInLab = data.energyInLab;
                     humansTalkedTo = data.savedHumansTalkedTo;
-                    
+
+                    buddy1 = data.buddy1;
+                    buddy2 = data.buddy2;
 
                     List<string> itemsIds = data.itemIds;
                     List<int> itemQuantities = data.itemQuantities;
@@ -361,9 +389,7 @@ public class GameManager : MonoBehaviour
                         specialItemsInInventory.Add(specialItemsSos[i].
                             ToInventoryItem(itemQuantities[i+ordinaryItemsSos.Count]));
                     }
-                    print(ordinaryItemsInInventory.Count);
                     GoToScene(currentSceneName);
-                    print(ordinaryItemsInInventory.Count);
                     Debug.Log("Game data loaded successfully.");
                     fileStream.Close();
                 }
@@ -393,6 +419,8 @@ public class GameData
     
     public float energyInLab;
     public SaveNumOfHumansTalkedTo savedHumansTalkedTo;
+    public bool buddy1;
+    public bool buddy2;
 }
 
 public class VolumeConfiguration {

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11dec5c540c107047bb6d7089ff6fd82, type: 3}
   m_Name: Buddy2
   m_EditorClassIdentifier: 
-  name: FrancoTheDestroyer
+  creatureName: FireFranco
   description: This is Franco
   spriteL: {fileID: 21300000, guid: a924a9ffbef0649fb898b6b073c4d095, type: 3}
   spriteR: {fileID: 0}
@@ -26,6 +26,10 @@ MonoBehaviour:
   speed: 8
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 95dc3b20e5f64b44495f3fd4d0cf998e, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: b0df95609b4546c4d93029d7df2064ad, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: df08ac32c8a45474385df1029dc46186, type: 2}
     level: 1
   - moveBase: {fileID: 11400000, guid: b0df95609b4546c4d93029d7df2064ad, type: 2}
     level: 1

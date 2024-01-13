@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11dec5c540c107047bb6d7089ff6fd82, type: 3}
+  m_Name: WaterWolf
+  m_EditorClassIdentifier: 
+  creatureName: Water Wolf
+  description: A bad guy that likes water
+  spriteL: {fileID: 21300000, guid: cc859b3e07f70fe46921842d680fcd46, type: 3}
+  spriteR: {fileID: 21300000, guid: 05f2d40da9ac9214f90a9e7996ab0f44, type: 3}
+  type1: 3
+  type2: 0
+  maxHp: 80
+  attack: 8
+  defense: 8
+  specialAttack: 12
+  specialDefense: 12
+  speed: 9
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: ab55a9566ad37594ea7d5b9954806748, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: e40cba6b7dd84b6489703ea8edebd2c6, type: 2}
+    level: 1
+  droppableObjects:
+  - {fileID: 11400000, guid: aaf57d900e7bee44986c3aac30c60d0c, type: 2}
+  - {fileID: 11400000, guid: a848f52966ebe3747a84392d5261873e, type: 2}
