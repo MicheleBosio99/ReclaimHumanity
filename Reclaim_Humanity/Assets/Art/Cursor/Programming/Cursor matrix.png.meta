@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 8ad1e26ac3cca4f6ba77c19ca9e409af
+<<<<<<<< HEAD:Reclaim_Humanity/Assets/Art/Robots/One_wheel_128x.png.meta
+guid: 3aadc6f2cbeac254289e75a72639e5ec
+========
+guid: 5733584ebedbf444991407d5a199ed10
+>>>>>>>> 12fc5d1a2823ad845b5b6fa352a1ca77b54ede75:Reclaim_Humanity/Assets/Art/Cursor/Programming/Cursor matrix.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -21,7 +25,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -34,7 +38,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -54,7 +58,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 7
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -72,7 +76,9 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+<<<<<<<< HEAD:Reclaim_Humanity/Assets/Art/Robots/One_wheel_128x.png.meta
+========
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -85,6 +91,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
+>>>>>>>> 12fc5d1a2823ad845b5b6fa352a1ca77b54ede75:Reclaim_Humanity/Assets/Art/Cursor/Programming/Cursor matrix.png.meta
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
