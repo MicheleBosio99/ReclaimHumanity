@@ -111,7 +111,7 @@ public class VolumeManager : MonoBehaviour {
         soundVolSlider.value = volConfig[2];
     }
     
-    private const float minDifferenceUpdate = 0.2f;
+    private const float minDifferenceUpdate = 0.01f;
     private const float minTimeUpdate = 0.25f;
     private float lastTimeChanged;
 
@@ -119,14 +119,20 @@ public class VolumeManager : MonoBehaviour {
         if (Time.time - lastTimeChanged < minTimeUpdate) { return; }
 
         var volumes = GameManager.volumeConfig.GetAllVolumes();
-        if ((Mathf.Abs(volumes[0] - masterVolSlider.value) > minDifferenceUpdate) ||
-                (Mathf.Abs(volumes[1] - musicVolSlider.value) > minDifferenceUpdate) ||
-                (Mathf.Abs(volumes[2] - soundVolSlider.value) > minDifferenceUpdate)) {
-            GameManager.volumeConfig.SetAllVolumes(new List<float>() {
-                masterVolSlider.value,
-                musicVolSlider.value,
-                soundVolSlider.value
-            });
-        }
+        
+        GameManager.volumeConfig.SetAllVolumes(new List<float>() {
+            masterVolSlider.value,
+            musicVolSlider.value,
+            soundVolSlider.value});
+        // if ((Mathf.Abs(volumes[0] - masterVolSlider.value) > minDifferenceUpdate) ||
+        //         (Mathf.Abs(volumes[1] - musicVolSlider.value) > minDifferenceUpdate) ||
+        //         (Mathf.Abs(volumes[2] - soundVolSlider.value) > minDifferenceUpdate)) {
+        //     GameManager.volumeConfig.SetAllVolumes(new List<float>() {
+        //         masterVolSlider.value,
+        //         musicVolSlider.value,
+        //         soundVolSlider.value
+        //     });
+        // }
+        lastTimeChanged = 0.0f;
     }
 }
