@@ -97958,6 +97958,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1103804297233988698, guid: cdbf67154cfa1bd4bb6176b5a14243cf, type: 3}
+      propertyPath: mainCharacter
+      value: 
+      objectReference: {fileID: 2007496900}
+    - target: {fileID: 1103804297233988698, guid: cdbf67154cfa1bd4bb6176b5a14243cf, type: 3}
       propertyPath: mainCharachter
       value: 
       objectReference: {fileID: 2007496900}

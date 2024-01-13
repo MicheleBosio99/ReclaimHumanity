@@ -328,7 +328,10 @@ public class GameManager : MonoBehaviour
         data.buddy1 = buddy1;
         data.buddy2 = buddy2;
         
+        data.volumeConfiguration = volumeConfig;
+        
         previousPosition = Vector3.zero;
+        
         
         BinaryFormatter formatter = new BinaryFormatter();
 
@@ -387,6 +390,8 @@ public class GameManager : MonoBehaviour
                     
                     energyInLab = data.energyInLab;
                     humansTalkedTo = data.savedHumansTalkedTo;
+                    
+                    volumeConfig = data.volumeConfiguration;
 
                     buddy1 = data.buddy1;
                     buddy2 = data.buddy2;
@@ -458,10 +463,12 @@ public class GameData
     
     public float energyInLab;
     public SaveNumOfHumansTalkedTo savedHumansTalkedTo;
+    public VolumeConfiguration volumeConfiguration;
     public bool buddy1;
     public bool buddy2;
 }
 
+[Serializable]
 public class VolumeConfiguration {
     private float masterVolume = 1.0f;
     private float musicVolume = 1.0f;

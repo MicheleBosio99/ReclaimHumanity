@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ButtonManager : MonoBehaviour {
@@ -8,7 +5,7 @@ public class ButtonManager : MonoBehaviour {
     [SerializeField] private GameObject YouSureQuitView;
     [SerializeField] private GameObject BackgroundPanel;
     [SerializeField] private GameObject FeedbackPanel;
-    [SerializeField] private GameObject mainCharachter;
+    [SerializeField] private GameObject mainCharacter;
 
     private void Start() {
         BackgroundPanel.SetActive(false);
@@ -35,7 +32,7 @@ public class ButtonManager : MonoBehaviour {
     }
 
     public void OnReallyQuitGameClick() {
-        mainCharachter.GetComponent<OpenInventoryScript>().OpenInventoryBody("close");
+        mainCharacter.GetComponent<OpenInventoryScript>().OpenInventoryBody("close");
         GameManager.GoToMainMenu();
     }
 }
