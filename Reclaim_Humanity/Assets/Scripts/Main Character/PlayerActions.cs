@@ -73,12 +73,16 @@ public class PlayerMovement : MonoBehaviour {
         var oldSpeed = currentSpeed; currentSpeed = normalSpeed;
         
         var position = gameObject.transform.position;
-        var direction = ((Vector3) endPos - position).normalized;
         var distance = Vector3.Distance(position, endPos);
     
         while (distance > 0.1f) {
-            movingDirection = direction;
-            distance = Vector3.Distance(gameObject.transform.position, endPos);
+            movingDirection = ((Vector3) endPos - position).normalized;
+            var step = currentSpeed * Time.deltaTime;
+            
+            Transform transform1;
+            (transform1 = transform).position = Vector3.MoveTowards(transform.position, endPos, step);
+            distance = Vector3.Distance(transform1.position, endPos);
+            
             yield return null;
         }
         movingDirection = Vector2.zero;

@@ -51,7 +51,6 @@ public class EasterEgg : MonoBehaviour {
         Debug.Log("Activated Item Easter Egg");
         GameManager.hasAll3SpecialItems.hasAll3Items = true;
         inventoryItemSO.AddOrdinaryItemToInventory(casualItem.ToInventoryItem(1));
-        inventoryItemSO.AddOrdinaryItemToInventory(casualItem.ToInventoryItem(1));
         inventoryItemSO.AddSpecialItemToInventory(casualItem.ToInventoryItem(1));
         inventoryItemSO.AddSpecialItemToInventory(casualItem.ToInventoryItem(1));
         inventoryItemSO.AddSpecialItemToInventory(casualItem.ToInventoryItem(1));
