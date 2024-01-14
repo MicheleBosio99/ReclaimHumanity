@@ -1423,6 +1423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFriend: 1
+  hit_sound: {fileID: 0}
 --- !u!212 &351404714
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1896,6 +1897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFriend: 1
+  hit_sound: {fileID: 8300000, guid: 0bb50e8d29a9649668f98b164bb2610a, type: 3}
 --- !u!1 &529626165
 GameObject:
   m_ObjectHideFlags: 0
@@ -2016,6 +2018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFriend: 0
+  hit_sound: {fileID: 8300000, guid: 0bb50e8d29a9649668f98b164bb2610a, type: 3}
 --- !u!1 &539150705
 GameObject:
   m_ObjectHideFlags: 0
@@ -2714,6 +2717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFriend: 1
+  hit_sound: {fileID: 8300000, guid: 0bb50e8d29a9649668f98b164bb2610a, type: 3}
 --- !u!1 &731351917
 GameObject:
   m_ObjectHideFlags: 0
@@ -4000,6 +4004,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFriend: 1
+  hit_sound: {fileID: 0}
 --- !u!1 &954666682
 GameObject:
   m_ObjectHideFlags: 0
@@ -4380,6 +4385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFriend: 0
+  hit_sound: {fileID: 0}
 --- !u!114 &993850931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5323,6 +5329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFriend: 0
+  hit_sound: {fileID: 8300000, guid: 0bb50e8d29a9649668f98b164bb2610a, type: 3}
 --- !u!1 &1112971921
 GameObject:
   m_ObjectHideFlags: 0
@@ -7861,6 +7868,8 @@ MonoBehaviour:
   handR: {fileID: 1114970849}
   Attack_switch: {fileID: 8300000, guid: 561463c08e8f4457aa8071d4b61a76dc, type: 3}
   Target_switch: {fileID: 8300000, guid: 52e48bb5b53194b6ea0f4e9feaed8ce3, type: 3}
+  Death_sound: {fileID: 8300000, guid: 4bdb06ba297e84b49bb6d4140d35a70f, type: 3}
+  Win_sound: {fileID: 8300000, guid: 8d0742bf786d54ebc8fca8448f8204e9, type: 3}
   curiosities: []
 --- !u!4 &1541214258
 Transform:
@@ -7978,6 +7987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFriend: 1
+  hit_sound: {fileID: 8300000, guid: 0bb50e8d29a9649668f98b164bb2610a, type: 3}
 --- !u!95 &1552262117
 Animator:
   serializedVersion: 5
@@ -8358,6 +8368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFriend: 1
+  hit_sound: {fileID: 0}
 --- !u!1 &1637701194
 GameObject:
   m_ObjectHideFlags: 0
@@ -8506,6 +8517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFriend: 0
+  hit_sound: {fileID: 0}
 --- !u!114 &1641952384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8664,6 +8676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFriend: 0
+  hit_sound: {fileID: 8300000, guid: 0bb50e8d29a9649668f98b164bb2610a, type: 3}
 --- !u!1 &1694897363
 GameObject:
   m_ObjectHideFlags: 0
@@ -9930,6 +9943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFriend: 0
+  hit_sound: {fileID: 0}
 --- !u!114 &1900253926
 MonoBehaviour:
   m_ObjectHideFlags: 0

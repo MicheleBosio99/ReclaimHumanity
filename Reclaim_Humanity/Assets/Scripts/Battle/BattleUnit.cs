@@ -7,11 +7,14 @@ public class BattleUnit : MonoBehaviour
 {
     [SerializeField] private bool isFriend;
 
+    [SerializeField] private AudioClip hit_sound;
+
     public Creature Creature { get; set; }
 
     private SpriteRenderer image;
     private Vector3 originalPos;
     private Animator animator;
+    
     
     public Vector3 OriginalPos
     {
@@ -75,7 +78,9 @@ public class BattleUnit : MonoBehaviour
     public void PlayAttackAnimation(Vector3 otherPos)
     {
         var sequence = DOTween.Sequence();
+       
         StartCoroutine(AttackAnimation());
+        
         if (isFriend)
         {
             sequence.Append(image.transform.DOLocalMove(
@@ -93,8 +98,9 @@ public class BattleUnit : MonoBehaviour
 
     IEnumerator AttackAnimation()
     {
+        SoundFXManager.instance.PlaySoundFXClip(hit_sound, transform,1f);
         animator.SetFloat("Attack", 1);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         animator.SetFloat("Attack", 0);
     }
 }

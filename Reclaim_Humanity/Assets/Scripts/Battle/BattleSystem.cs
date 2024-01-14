@@ -27,6 +27,9 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private GameObject handR;
     [SerializeField] private AudioClip Attack_switch;
     [SerializeField] private AudioClip Target_switch;
+    [SerializeField] private AudioClip Death_sound;
+    [SerializeField] private AudioClip Win_sound;
+    
     [SerializeField] private List<string> curiosities;
 
     private BattleState state;
@@ -191,6 +194,10 @@ public class BattleSystem : MonoBehaviour
         yield return ShowDamageDetails(damageDetails);
         if (damageDetails.Fainted)
         {
+            //SOund of death
+            yield return new WaitForSeconds(1f);
+            SoundFXManager.instance.PlaySoundFXClip(Death_sound, transform,1f);
+            
             yield return dialogBox.TypeDialog($"{enemyUnits[currentTarget].Creature.Base.CreatureName} fainted");
             yield return new WaitForSeconds(1f);
             
@@ -254,6 +261,10 @@ public class BattleSystem : MonoBehaviour
         
         if (damageDetails.Fainted)
         {
+            yield return new WaitForSeconds(1f);
+            //SOund of death
+            SoundFXManager.instance.PlaySoundFXClip(Death_sound, transform,1f);
+            
             yield return dialogBox.TypeDialog($"{playerUnits[currentTarget].Creature.Base.CreatureName} fainted");
             yield return new WaitForSeconds(1f);
             
@@ -302,6 +313,9 @@ public class BattleSystem : MonoBehaviour
     }
 
     IEnumerator WinFight() {
+        
+        SoundFXManager.instance.PlaySoundFXClip(Win_sound, transform,1f);
+
         yield return dialogBox.TypeDialog("Congratulations, you won :)");
         yield return new WaitForSeconds(1f);
         
