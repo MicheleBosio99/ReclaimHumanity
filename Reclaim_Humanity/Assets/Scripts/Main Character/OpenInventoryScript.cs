@@ -14,6 +14,7 @@ public class OpenInventoryScript : MonoBehaviour {
     private bool finished;
     
     public bool Finished { set => finished = value; }
+    public bool InventoryIsOpen { set => inventoryIsOpen = value; }
 
     private void Awake() {
         playerMov = gameObject.GetComponent<PlayerMovement>();

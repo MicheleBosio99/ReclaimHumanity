@@ -57,6 +57,9 @@ public class InventoryItemsSO : ScriptableObject {
     }
 
     public void Delete0QuantityElement() { ordinaryItemsInInventory.RemoveAll(item => item.ItemQuantity == 0); }
+    
+    public void EmptySpecialItemSlots() { specialItemsInInventory = new List<InventoryItem>(); }
+    public void RemoveLastOrdinaryItem() { ordinaryItemsInInventory.Remove(ordinaryItemsInInventory.Last()); }
 
     public string OrdinaryItemToString() {
         return $"Ordinary Items: [" +

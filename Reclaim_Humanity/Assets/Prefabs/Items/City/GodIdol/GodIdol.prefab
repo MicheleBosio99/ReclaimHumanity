@@ -203,3 +203,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemQuantity: 1
   itemSO: {fileID: 11400000, guid: 371c22fff61b28e409ecd61b6cb9d3d9, type: 2}
+  SpecialItemSound: {fileID: 8300000, guid: f9d4add2a9e284d73b49c4c8753c74ea, type: 3}

@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: S2_NuclearReactor
   m_EditorClassIdentifier: 
   itemID: S2_NuclearReactor
-  itemName: NuclearReactor
+  itemName: Nuclear Reactor
   itemSprite: {fileID: 21300000, guid: b833b47fb70a5ac488d7dcb151e283a9, type: 3}
   itemEnergyGenerated: 0
   itemDescription: The nuclear reactor of what was one time a big power plant.
   isItemSpecial: 1
+  onCombat: 0
+  attributeBoosted: 
+  boost: 0
+  itemEffect: 

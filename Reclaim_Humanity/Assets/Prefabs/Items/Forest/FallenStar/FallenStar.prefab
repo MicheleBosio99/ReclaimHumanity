@@ -201,6 +201,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58bab640e0204a44a91791ef24c00891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   itemQuantity: 1
   itemSO: {fileID: 11400000, guid: 5e3689c07bd160445a32a800662476fd, type: 2}
+  SpecialItemSound: {fileID: 8300000, guid: f9d4add2a9e284d73b49c4c8753c74ea, type: 3}

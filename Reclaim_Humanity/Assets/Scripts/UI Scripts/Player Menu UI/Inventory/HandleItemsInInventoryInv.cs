@@ -2,9 +2,6 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 public class HandleItemsInInventoryInv : MonoBehaviour {
     
@@ -124,7 +121,4 @@ public class HandleItemsInInventoryInv : MonoBehaviour {
         CurrentSelectedSlot.GetComponent<HandleSlotSelectionInv>().ExitHover();
         CurrentSelectedSlot = isSlotSpecial ? specialInventorySlotsUI[index] : ordinaryInventorySlotsUI[index];
     }
-    
-    
-    
 }

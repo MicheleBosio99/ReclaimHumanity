@@ -25,22 +25,21 @@ public class VisualizeUnlocked : MonoBehaviour {
         unlockedPanel.SetActive(false);
     }
 
-    public void StartShowUnlockedRecipeMessage(string type, string reward) { StartCoroutine(ShowUnlockedRecipeMessage(type, reward)); }
+    public void StartShowUnlockedRecipeMessage(string message) { StartCoroutine(ShowUnlockedRecipeMessage(message)); }
 
     public void StartShowUnlockedPowerUpMessage(string message) {
         powerUpsMessagesQueue.Enqueue(message);
         if(hasCoroutineDone) { StartCoroutine(ShowUnlockedPowerUpMessage()); }
     }
 
-    private IEnumerator ShowUnlockedRecipeMessage(string type, string reward) {
+    private IEnumerator ShowUnlockedRecipeMessage(string message) {
 
 		unlockedPanel.SetActive(true);
-        var rewardMessage = $"Congratulations! You unlocked the new {type}: <u>{reward}</u>";
-        
+
         //Play unlock sound
-        if(SoundFXManager.instance != null) SoundFXManager.instance.PlaySoundFXClip(RecipeUnlock, transform,1f);
+        if(SoundFXManager.instance != null) { SoundFXManager.instance.PlaySoundFXClip(RecipeUnlock, transform,1f); }
         
-        foreach (var letter in rewardMessage) { unlockedText.text += letter; }
+        foreach (var letter in message) { unlockedText.text += letter; }
         
         yield return new WaitForSeconds(5.0f);
         

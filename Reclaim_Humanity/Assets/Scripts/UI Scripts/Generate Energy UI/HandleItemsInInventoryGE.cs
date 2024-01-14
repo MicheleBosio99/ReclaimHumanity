@@ -14,6 +14,7 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
     
     [SerializeField] private GameObject PowerUpsManager;
     [SerializeField] private GameObject GenerateCanvasManager;
+    [SerializeField] private GameObject unlockUI;
     
     [SerializeField] private GameObject batteryEnergy;
     private ShowEnergyLab batteryEnergyText;
@@ -27,6 +28,8 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
     private int maxLengthHoldingSlotsUIList;
     
     private PowerUpsManager powerUpsManager;
+    
+    private bool isFinalPotionIn = false;
 
     private void Start() {
         textsHandler = gameObject.GetComponent<TextsHandler>();
@@ -40,6 +43,8 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
     }
 
     public void OnEnable() {
+        if (inventorySO.SpecialItemsInInventory.Any((item) => item.ItemID == "S_FinalPotion")) { isFinalPotionIn = true; }
+
         inventorySOItems = inventorySO.OrdinaryItemsInInventory;
         energyCreated = 0.0f;
         SetHandler();
@@ -136,13 +141,21 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
         batteryEnergyText.UpdateEnergy(energySoSetter.GetCurrentEnergy().ToString());
         
         PowerUpsManager.GetComponent<PowerUpsManager>().UpdatePowerUps();
-        
+
         textsHandler.UpdateEnergy("");
         energyCreated = 0.0f;
         
         inventorySOItems.RemoveAll(slot => slot.ItemQuantity == 0);
         
         GenerateCanvasManager.GetComponent<GenerateEnergyCanvasHandler>().OnCloseButtonClick();
+        
+        if (isFinalPotionIn && inventorySO.SpecialItemsInInventory.All(item => item.ItemID != "S_FinalPotion")) {
+            FinalPotionHasBeenBurned();
+        }
+    }
+
+    private void FinalPotionHasBeenBurned() {
+        unlockUI.GetComponent<VisualizeUnlocked>().StartShowUnlockedPowerUpMessage("You ************. You burned the Final Potion. How are you gonna finish the game now??");
     }
 }
 

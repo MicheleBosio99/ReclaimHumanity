@@ -165,7 +165,7 @@
         "item2ID" : "08_Adenityst",
         "item2Name" : "Adenityst",
         "item2QuantityReq" : 1,
-        "itemResultID" : "20_ChargedSuperconductor",
+        "itemResultID" : "21_ChargedSuperconductor",
         "itemResultName" : "Charged Superconductor",
         "itemResultQuantity" : 2,
         "enabled" : false
@@ -189,15 +189,69 @@
         "recipeID" : "11_NuclearFuel",
         "recipeName" : "Nuclear Fuel",
         "recipeDescription" : "Merge all gear types and create this technological beauty.",
-        "item1ID" : "20_ChargedSuperconductor",
+        "item1ID" : "21_ChargedSuperconductor",
         "item1Name" : "Charged Superconductor",
         "item1QuantityReq" : 1,
-        "item2ID" : "17_AutomaticGear",
-        "item2Name" : "Automatic Gear",
+        "item2ID" : "22_EnrichedGemstone",
+        "item2Name" : "Enriched Gemstone",
         "item2QuantityReq" : 2,
-        "itemResultID" : "22_EnrichedGemstone",
-        "itemResultName" : "Enriched Gemstone",
-        "itemResultQuantity" : 2,
+        "itemResultID" : "23_NuclearFuel",
+        "itemResultName" : "Nuclear Fuel",
+        "itemResultQuantity" : 1,
+        "enabled" : false
+    },
+
+
+
+
+
+    {
+        "recipeID" : "12_KyneticEnergyGenerator",
+        "recipeName" : "Kynetic Energy Generator",
+        "recipeDescription" : "The final generator, with it we can create the final potion.",
+        "item1ID" : "12_OrganicSoftTerracotta",
+        "item1Name" : "Soft Organic Terracotta",
+        "item1QuantityReq" : 1,
+        "item2ID" : "18_Gearbox",
+        "item2Name" : "Gearbox",
+        "item2QuantityReq" : 1,
+        "itemResultID" : "24_KyneticEnergyGenerator",
+        "itemResultName" : "Kynetic Energy Generator",
+        "itemResultQuantity" : 1,
+        "enabled" : false
+    },
+    {
+        "recipeID" : "13_NuclearHeatingSystem",
+        "recipeName" : "Nuclear Heating System",
+        "recipeDescription" : "The kinetic energy generator is now fueled by nuclear power!",
+        "item1ID" : "21_ChargedSuperconductor",
+        "item1Name" : "Charged Superconductor",
+        "item1QuantityReq" : 1,
+        "item2ID" : "24_KyneticEnergyGenerator",
+        "item2Name" : "Kynetic Energy Generator",
+        "item2QuantityReq" : 1,
+        "itemResultID" : "25_NuclearHeatingSystem",
+        "itemResultName" : "Nuclear Heating System",
+        "itemResultQuantity" : 1,
+        "enabled" : false
+    },
+    
+    
+    
+    
+    {
+        "recipeID" : "14_FinalPotion",
+        "recipeName" : "Final Potion",
+        "recipeDescription" : "Finally! The potion to cure 'em all!",
+        "item1ID" : "S_CompoundSpecial",
+        "item1Name" : "Special Compound",
+        "item1QuantityReq" : 1,
+        "item2ID" : "25_NuclearHeatingSystem",
+        "item2Name" : "Nuclear Heating System",
+        "item2QuantityReq" : 1,
+        "itemResultID" : "S_FinalPotion",
+        "itemResultName" : "Final Potion",
+        "itemResultQuantity" : 1,
         "enabled" : false
     }
 ]

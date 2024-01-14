@@ -2,7 +2,7 @@
     {
         "humanID" : "AAA_Dr-IDK_Lab",
         "humanName" : "Dr. IDK",
-        "biome" : "OvergrownForest",
+        "biome" : "Laboratory",
         "recipesUnlockedID" : "",
         "spokenTo" : false,
         "firstDialogue" :
@@ -12,7 +12,8 @@
                 "Hello Wollo, I see you finally found my <u>TranceSmitter</u>! Good job, Wollo!",
                 "Now, I'll tell you what to do. Search for the <u>Final Recipe</u>, the one which will cure humanity from this long going desease.",
                 "However, I don't know all the details, so you will have to use the TS to talk to everyone out there.\nLet's hope to find someone who knows something, even the smaller detail.",
-                "Thinking about it, there is something I know... In the world you will find 3 special items, come back to me when you'll find them all.",
+                "Thinking about it, there is something I know...\nIn the world you will find 3 special items that are fundamental to complete the mission.",
+                "A Star fallen eras ago.\nAn ancient God Idol, praised by people of an ancient culture.\nThe Nuclear Generator my friend Dr. Neutron Blaze created.",
                 "Did you understand everything?                   \nGood!\nYou know, I hate to load you with this burden...",
                 "Still you're the only one who can do it. I believe in you!",
                 "Now go, complete your quest. Good luck Wollo!"
@@ -28,6 +29,35 @@
             ]
         }
     },
+    {
+        "humanID" : "AAA_Dr-IDK_Lab-3SpecialItems",
+        "humanName" : "Dr. IDK",
+        "biome" : "Laboratory",
+        "recipesUnlockedID" : "14_FinalPotion",
+        "spokenTo" : false,
+        "firstDialogue" :
+        {
+            "phrases" :
+            [
+                "Finally Wollo!! You found all the special items!!!\nI knew you would be able to complete your quest!",
+                "Now, listen to me.\nI'll explain how to combine the special items to you and how to create the Special Compound!",
+                "Here:...\nPsss pss, psssssssssss\n... and then...\nPsssssss psss psssss pssss.           \nUnderstood everything?                 ",
+                "                                          \nWow, you've done it! You completed the Special Compound!\nLast thing, put it inside the Recipe UI, use this recipe!"
+                
+            ]
+        },
+        "generalDialogue" :
+        {
+            "phrases" :
+            [
+                "Go, use the recipe UI to create the final potion.\nBe quick! I really want to party with you right now."
+            ]
+        }
+    },
+    
+    
+    
+    
 
     {
         "humanID" : "AAA_Buddy1",
@@ -533,6 +563,54 @@
             "phrases" :
             [
                 "Have you not completed the final recipe yet?\nI don't want to rush you, still, you're so close to free us all!"
+            ]
+        }
+    },
+
+
+
+
+
+
+    {
+        "humanID" : "ZZZ_WL_KineticEnergyGeneratorHuman",
+        "humanName" : "- Agent 012 -",
+        "biome" : "Wastelands",
+        "recipesUnlockedID" : "12_KyneticEnergyGenerator",
+        "spokenTo" : false,
+        "firstDialogue" :
+        {
+            "phrases" :
+            [
+                "You arrived.\nA seer predicted it.\nWe're here to give you this last recipes, don't waste them."
+            ]
+        },
+        "generalDialogue" :
+        {
+            "phrases" :
+            [
+                "Pardon my colleague, he doesn't speak that much..."
+            ]
+        }
+    },
+    {
+        "humanID" : "ZZZ_WL_NuclearHeatingSystemHuman",
+        "humanName" : "- Agent 013 -",
+        "biome" : "Wastelands",
+        "recipesUnlockedID" : "13_NuclearHeatingSystem",
+        "spokenTo" : false,
+        "firstDialogue" :
+        {
+            "phrases" :
+            [
+                "..."
+            ]
+        },
+        "generalDialogue" :
+        {
+            "phrases" :
+            [
+                "..."
             ]
         }
     }

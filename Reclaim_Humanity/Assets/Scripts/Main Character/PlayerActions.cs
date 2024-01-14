@@ -69,11 +69,9 @@ public class PlayerMovement : MonoBehaviour {
 
     public void WalkPlayerToPosition(Vector2 endPos) { StartCoroutine(WalkPlayer(endPos)); }
     
-    private IEnumerator WalkPlayer(Vector2 endPos) {
-        var initSpeed = currentSpeed; currentSpeed = normalSpeed;
+    public IEnumerator WalkPlayer(Vector2 endPos) {
+        var oldSpeed = currentSpeed; currentSpeed = normalSpeed;
         
-        // TODO Player facing direction should be up, not as last used.
-    
         var position = gameObject.transform.position;
         var direction = ((Vector3) endPos - position).normalized;
         var distance = Vector3.Distance(position, endPos);
@@ -83,7 +81,8 @@ public class PlayerMovement : MonoBehaviour {
             distance = Vector3.Distance(gameObject.transform.position, endPos);
             yield return null;
         }
-        currentSpeed = initSpeed;
         movingDirection = Vector2.zero;
+        
+        currentSpeed = oldSpeed;
     }
 }

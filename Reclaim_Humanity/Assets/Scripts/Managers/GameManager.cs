@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour
     public static BonusMultiplier bonusMultiplier;
     public static List<PowerUp> powerUps;
     
+    public static HasAll3SpecialItems hasAll3SpecialItems;
+    
     void Awake()
     {
         if (instance == null)
@@ -54,6 +56,7 @@ public class GameManager : MonoBehaviour
         recipesInfoLoader = GameObject.Find("RecipesInfoLoader").GetComponent<RecipesInfoLoader>();
         volumeConfig = new VolumeConfiguration();
         bonusMultiplier = new BonusMultiplier();
+        hasAll3SpecialItems = new HasAll3SpecialItems();
         LoadPowerUps();
     }
 
@@ -328,6 +331,9 @@ public class GameManager : MonoBehaviour
         
         data.volumeConfiguration = volumeConfig;
         
+        data.bonusMultiplier = bonusMultiplier;
+        data.hasAll3SpecialItems = hasAll3SpecialItems;
+        
         previousPosition = Vector3.zero;
         
         
@@ -385,6 +391,8 @@ public class GameManager : MonoBehaviour
                     position.y = data.previousPosition[1];
                     position.z = data.previousPosition[2];
                     previousPosition = position;
+                    bonusMultiplier = data.bonusMultiplier;
+                    hasAll3SpecialItems = data.hasAll3SpecialItems;
                     
                     energyInLab = data.energyInLab;
                     humansTalkedTo = data.savedHumansTalkedTo;
@@ -464,6 +472,8 @@ public class GameData
     public VolumeConfiguration volumeConfiguration;
     public bool buddy1;
     public bool buddy2;
+    public BonusMultiplier bonusMultiplier;
+    public HasAll3SpecialItems hasAll3SpecialItems;
 }
 
 [Serializable]
@@ -527,10 +537,17 @@ public class SaveNumOfHumansTalkedTo {
     }
 }
 
+[Serializable]
 public class BonusMultiplier {
     public int minorHealingAmount = 4;
     public int majorHealingAmount = 8;
     
     public float attackIncreaseMultiplier = 1.0f;
     public float defenseIncreaseMultiplier = 1.0f;
+}
+
+[Serializable]
+public class HasAll3SpecialItems {
+    public bool hasAll3Items = false;
+    public bool hasAlreadyTalkedToIDK = false;
 }

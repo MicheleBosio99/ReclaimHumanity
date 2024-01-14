@@ -37,6 +37,8 @@ public class InteractionHumanHandler : MonoBehaviour {
 
     public bool GetIsTyping() { return isTyping; }
     public void SetIsTyping(bool _isTyping) { isTyping = _isTyping; }
+    public string HumanID { get => humanID; set => humanID = value; }
+    
 
     public Human Human {
         get => human;
@@ -117,7 +119,9 @@ public class InteractionHumanHandler : MonoBehaviour {
 
         if (human.recipesUnlockedID != "") {
             var recipeEnabled = _recipesInfoLoader.UnlockRecipe(human.recipesUnlockedID);
-            if (!recipeEnabled.Item1) { visualizeUnlocked.StartShowUnlockedRecipeMessage("recipe", recipeEnabled.Item2); }
+            if (!recipeEnabled.Item1) {
+                visualizeUnlocked.StartShowUnlockedRecipeMessage($"Congratulations! You unlocked a new recipe: <u>{recipeEnabled.Item2}</u>");
+            }
         }
         if(!human.spokenTo && !isBuddy) { numOfHumansLeft.AddHumanTalkedTo(); }
         

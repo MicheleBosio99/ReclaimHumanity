@@ -7,7 +7,7 @@ public class SpecialObjectSpawner : MonoBehaviour {
     [SerializeField] private InventoryItemsSO inventorySO;
     [SerializeField] private GameObject specialItem;
     [SerializeField] private GameObject playerInventory;
-    [SerializeField] private AudioClip SpecialItemSound;
+    [SerializeField] private GameObject UnlockedUI;
 
     private void Start() {
         if (inventorySO.SearchSpecialItemByID(specialItem.GetComponent<SpecialItemBehaviour>().ItemSo.ItemID) == null) { SpawnSpecialItem(); }
@@ -19,10 +19,10 @@ public class SpecialObjectSpawner : MonoBehaviour {
         
         var itemBehaviour = newItem.GetComponent<SpecialItemBehaviour>();
         itemBehaviour.SetPlayerInventoryInstance(playerInventory);
+        itemBehaviour.SetUnlockedUI(UnlockedUI);
     }
 
-    private void ItemGotPickedUp()
-    {
-        SoundFXManager.instance.PlaySoundFXClip(SpecialItemSound, transform,1f);
+    private void ItemGotPickedUp() {
+        
     }
 }

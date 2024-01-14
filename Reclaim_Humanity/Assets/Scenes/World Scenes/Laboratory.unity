@@ -1179,6 +1179,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1643418826}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &84136247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 84136248}
+  m_Layer: 0
+  m_Name: StartEndGameScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &84136248
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84136247}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.5843232, y: 11.138648, z: -2.5720162}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &94487636
 GameObject:
   m_ObjectHideFlags: 0
@@ -2011,6 +2042,14 @@ PrefabInstance:
     - target: {fileID: 6255717712013211218, guid: f7ad302aac4072c4b9ba222f39dcc7f4, type: 3}
       propertyPath: labInitPosition.y
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255717712013211218, guid: f7ad302aac4072c4b9ba222f39dcc7f4, type: 3}
+      propertyPath: cityInitPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255717712013211218, guid: f7ad302aac4072c4b9ba222f39dcc7f4, type: 3}
+      propertyPath: cityInitPosition.y
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 8971213465213072287, guid: f7ad302aac4072c4b9ba222f39dcc7f4, type: 3}
       propertyPath: m_SortingOrder
@@ -2898,6 +2937,11 @@ PrefabInstance:
 --- !u!1 &216921842 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2772832254044280318, guid: 963fb05a21459ff49bec92fc17c75bc8, type: 3}
+  m_PrefabInstance: {fileID: 216921841}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &216921843 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 789232655210352369, guid: 963fb05a21459ff49bec92fc17c75bc8, type: 3}
   m_PrefabInstance: {fileID: 216921841}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &222482862
@@ -9131,6 +9175,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 824651397}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &619867791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 619867792}
+  - component: {fileID: 619867793}
+  m_Layer: 0
+  m_Name: HasAll3SpecialItems
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &619867792
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619867791}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.115814, y: 7.541421, z: -9.256316}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &619867793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619867791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c102113ac39ab9c449515b7d001d9d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2007496900}
+  DrIDKHuman: {fileID: 216921843}
+  finalRecipeItem: {fileID: 11400000, guid: b8b12c7f854cd9747aead8b0b4467721, type: 2}
+  inventoryItemSO: {fileID: 11400000, guid: fb3e977362a9ace4381d1e0cbaa8c1e3, type: 2}
+  unlockUI: {fileID: 1711777101}
 --- !u!1 &633240926
 GameObject:
   m_ObjectHideFlags: 0
@@ -10857,6 +10950,7 @@ MonoBehaviour:
   - {fileID: 445819846}
   PowerUpsManager: {fileID: 197519887}
   GenerateCanvasManager: {fileID: 398916389}
+  unlockUI: {fileID: 1711777101}
   batteryEnergy: {fileID: 1103408260}
 --- !u!114 &750545378
 MonoBehaviour:
@@ -82581,7 +82675,7 @@ GameObject:
   - component: {fileID: 1582587197}
   - component: {fileID: 1582587196}
   m_Layer: 0
-  m_Name: EasterEggEnergy
+  m_Name: EasterEgg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82599,6 +82693,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 793c27ff6e2d1ec4b86c0f51ed00b804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryItemSO: {fileID: 11400000, guid: fb3e977362a9ace4381d1e0cbaa8c1e3, type: 2}
+  casualItem: {fileID: 11400000, guid: 94b148625209e934d81e46b94a32f5aa, type: 2}
 --- !u!4 &1582587197
 Transform:
   m_ObjectHideFlags: 0
@@ -83879,11 +83975,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6546353684141880002, guid: 93df7aea88ec659479594bee898edb25, type: 3}
       propertyPath: m_fontSize
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546353684141880002, guid: 93df7aea88ec659479594bee898edb25, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546353684141880002, guid: 93df7aea88ec659479594bee898edb25, type: 3}
+      propertyPath: m_fontSizeMin
       value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 6546353684141880002, guid: 93df7aea88ec659479594bee898edb25, type: 3}
       propertyPath: m_fontSizeBase
-      value: 36
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546353684141880002, guid: 93df7aea88ec659479594bee898edb25, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6609415881666637403, guid: 93df7aea88ec659479594bee898edb25, type: 3}
       propertyPath: m_text
@@ -98940,4 +99048,6 @@ SceneRoots:
   - {fileID: 567952827}
   - {fileID: 8514065432416927408}
   - {fileID: 197519889}
+  - {fileID: 619867792}
+  - {fileID: 84136248}
   - {fileID: 1582587197}
