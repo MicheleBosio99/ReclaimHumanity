@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -141,10 +142,11 @@ public class Enemy : MonoBehaviour
     
     private IEnumerator FOVRoutine()
     {
-        angle = 10;
+        angle = 5;
         while (true)
         {
             yield return new WaitForSeconds(0.02f);
+            TraceLaserSight();
             FieldOfViewCheck();
         }
     }
@@ -171,7 +173,7 @@ public class Enemy : MonoBehaviour
 
     public Vector3 FOVDirection()
     {
-        var toReturn = _sightDirection switch
+        return _sightDirection switch
         {
             SightDirection.up => transform.up,
             SightDirection.down => -transform.up,
@@ -179,8 +181,6 @@ public class Enemy : MonoBehaviour
             SightDirection.right => transform.right,
             _ => transform.up
         };
-
-        return toReturn;
     }
     
     private void FieldOfViewCheck() //Triangular fov (angle based)
@@ -218,7 +218,31 @@ public class Enemy : MonoBehaviour
             GameManager.EnterCombat();
         }
     }
-    
+
+    private void TraceLaserSight() {
+        var laserSight = GetComponent<LineRenderer>();
+        var sightDirection = GetLookingDirection(_sightDirection);
+        var sightEndPoint = transform.position + sightDirection * radius;
+        
+        laserSight.startColor = Color.red;
+        laserSight.endColor = Color.red;
+        laserSight.startWidth = 0.05f;
+        laserSight.endWidth = 0.05f;
+        
+        laserSight.SetPosition(0, transform.position + sightDirection);
+        laserSight.SetPosition(1, sightEndPoint);
+    }
+
+    private Vector3 GetLookingDirection(SightDirection dir) {
+        return dir switch {
+            SightDirection.up => Vector3.up,
+            SightDirection.down => Vector3.down,
+            SightDirection.left => Vector3.left,
+            SightDirection.right => Vector3.right,
+            _ => Vector3.up
+        };
+    }
+
     void AiChase()
     {
         distance = Vector2.Distance(transform.position, player.transform.position);
