@@ -82693,6 +82693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 793c27ff6e2d1ec4b86c0f51ed00b804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unlockUI: {fileID: 1711777101}
   PowerUpsManager: {fileID: 197519887}
   inventoryItemSO: {fileID: 11400000, guid: fb3e977362a9ace4381d1e0cbaa8c1e3, type: 2}
   casualItem: {fileID: 11400000, guid: 94b148625209e934d81e46b94a32f5aa, type: 2}

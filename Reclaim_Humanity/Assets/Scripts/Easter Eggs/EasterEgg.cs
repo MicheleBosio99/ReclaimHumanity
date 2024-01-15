@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class EasterEgg : MonoBehaviour {
     
+    [SerializeField] private GameObject unlockUI;
+    
     [SerializeField] private GameObject PowerUpsManager;
     private bool doneEnergy;
     private bool doneItem;
@@ -12,7 +14,7 @@ public class EasterEgg : MonoBehaviour {
         if (doneItem && doneEnergy) { Destroy(gameObject); }
     }
     
-    private const string desiredEnergyCombination = "bosio";
+    private const string desiredEnergyCombination = "energy";
     private string currentEnergyInput = "";
 
     private void CheckEnergyEasterEgg() {
@@ -28,7 +30,7 @@ public class EasterEgg : MonoBehaviour {
     }
 
     private void ActivateEnergyEasterEgg() {
-        Debug.Log("Activated Energy Easter Egg");
+        unlockUI.GetComponent<VisualizeUnlocked>().StartShowUnlockedRecipeMessage("Activated Energy Easter Egg.\nYou were given 50 energy.");
         PowerUpsManager.GetComponent<PowerUpsManager>().UpdatePowerUps();
         GameManager.energyInLab += 50;
     }
@@ -37,7 +39,7 @@ public class EasterEgg : MonoBehaviour {
     [SerializeField] private InventoryItemsSO inventoryItemSO;
     [SerializeField] private ItemsSO casualItem;
     
-    private const string desiredItemCombination = "item";
+    private const string desiredItemCombination = "items";
     private string currentItemInput = "";
 
     private void CheckItemEasterEgg() {
@@ -53,7 +55,7 @@ public class EasterEgg : MonoBehaviour {
     }
 
     private void ActivateItemEasterEgg() {
-        Debug.Log("Activated Item Easter Egg");
+        unlockUI.GetComponent<VisualizeUnlocked>().StartShowUnlockedRecipeMessage("Activated Item Easter Egg.\nYou were given 4 Final Potions.");
         GameManager.hasAll3SpecialItems.hasAll3Items = true;
         inventoryItemSO.AddOrdinaryItemToInventory(casualItem.ToInventoryItem(1));
         inventoryItemSO.AddSpecialItemToInventory(casualItem.ToInventoryItem(1));
