@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EasterEgg : MonoBehaviour {
     
+    [SerializeField] private GameObject PowerUpsManager;
     private bool doneEnergy;
     private bool doneItem;
     
@@ -25,8 +26,12 @@ public class EasterEgg : MonoBehaviour {
         ActivateEnergyEasterEgg();
         currentEnergyInput = "";
     }
-    
-    private void ActivateEnergyEasterEgg() { Debug.Log("Activated Energy Easter Egg"); GameManager.energyInLab += 50; }
+
+    private void ActivateEnergyEasterEgg() {
+        Debug.Log("Activated Energy Easter Egg");
+        PowerUpsManager.GetComponent<PowerUpsManager>().UpdatePowerUps();
+        GameManager.energyInLab += 50;
+    }
     
     
     [SerializeField] private InventoryItemsSO inventoryItemSO;
