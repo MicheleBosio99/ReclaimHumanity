@@ -32,7 +32,7 @@ public class EasterEgg : MonoBehaviour {
     private void ActivateEnergyEasterEgg() {
         unlockUI.GetComponent<VisualizeUnlocked>().StartShowUnlockedRecipeMessage("Activated Energy Easter Egg.\nYou were given 50 energy.");
         PowerUpsManager.GetComponent<PowerUpsManager>().UpdatePowerUps();
-        GameManager.energyInLab += 50;
+        GameManager.energyInLab += 150;
     }
     
     

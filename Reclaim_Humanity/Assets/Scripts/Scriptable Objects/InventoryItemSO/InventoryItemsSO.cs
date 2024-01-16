@@ -61,6 +61,11 @@ public class InventoryItemsSO : ScriptableObject {
     public void EmptySpecialItemSlots() { specialItemsInInventory = new List<InventoryItem>(); }
     public void RemoveLastOrdinaryItem() { ordinaryItemsInInventory.Remove(ordinaryItemsInInventory.Last()); }
 
+    public void RemoveItemByID(string itemID) {
+        ordinaryItemsInInventory.RemoveAll((item) => item.ItemID == itemID);
+        specialItemsInInventory.RemoveAll((item) => item.ItemID == itemID);
+    }
+
     public string OrdinaryItemToString() {
         return $"Ordinary Items: [" +
                string.Join(",\n\t", ordinaryItemsInInventory.Select(obj => obj.ToString()).ToList())

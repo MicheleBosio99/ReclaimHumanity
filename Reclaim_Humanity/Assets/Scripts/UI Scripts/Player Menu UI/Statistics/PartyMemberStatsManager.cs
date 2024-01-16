@@ -70,7 +70,6 @@ public class PartyMemberStatsManager : MonoBehaviour {
     
     private void ReSetParametersForAll() {
         foreach (Transform child in gameObject.transform.parent.transform) {
-            Debug.Log(child.name); 
             child.GetComponentInChildren<PartyMemberStatsManager>().SetButtonInteractability();
         }
         healthBarBehaviour.ShowHealth();

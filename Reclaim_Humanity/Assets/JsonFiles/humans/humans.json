@@ -54,6 +54,33 @@
             ]
         }
     },
+    {
+        "humanID" : "AAA_Dr-IDK_Lab-EndGame",
+        "humanName" : "Dr. IDK",
+        "biome" : "Laboratory",
+        "recipesUnlockedID" : "",
+        "spokenTo" : false,
+        "firstDialogue" :
+        {
+            "phrases" :
+            [
+                "My dear Wollo.... THANK YOU SO MUCH.\nFinally, I can move again, it is such a nice feeling!",
+                "Let's create dozens of this potions, you have to free all the friends you made along the way!",
+                "And remember, invite each one of them here.\nTonight we're throwing a partyyy!"
+
+            ]
+        },
+        "generalDialogue" :
+        {
+            "phrases" :
+            [
+                "I will never thank you enough, my little loyal friend!"
+            ]
+        }
+    },
+    
+    
+    
     
     
     

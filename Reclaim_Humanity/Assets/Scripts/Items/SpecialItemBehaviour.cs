@@ -1,12 +1,15 @@
 using UnityEngine;
+
+
 public class SpecialItemBehaviour : MonoBehaviour {
     
-    private HandleItemsInInventoryInv inventory;
     [SerializeField] private int itemQuantity;
-    
     [SerializeField] private ItemsSO itemSO;
     [SerializeField] private AudioClip SpecialItemSound;
+    
+    private HandleItemsInInventoryInv inventory;
     private GameObject unlockedUI;
+    private InventoryItemsSO inventoryItemsSO;
 
     public ItemsSO ItemSo {
         get => itemSO;
@@ -16,7 +19,10 @@ public class SpecialItemBehaviour : MonoBehaviour {
     private GameObject parent;
     private ObjectSpawner parentSpawnerReference;
 
-    public void SetPlayerInventoryInstance(GameObject _playerInventory) { inventory = _playerInventory.GetComponent<HandleItemsInInventoryInv>(); }
+    public void SetPlayerInventoryInstance(GameObject _playerInventory, InventoryItemsSO _inventoryItemsSo) {
+        inventory = _playerInventory.GetComponent<HandleItemsInInventoryInv>();
+        inventoryItemsSO = _inventoryItemsSo;
+    }
 
     public void OnMouseDown() { AddToInventory(); }
 
@@ -24,8 +30,8 @@ public class SpecialItemBehaviour : MonoBehaviour {
 
     private void AddToInventory() {
         SoundFXManager.instance.PlaySoundFXClip(SpecialItemSound, transform,1f);
-        if (inventory.SpecialInventorySlotsUI.Count == 3) { PopupFoundAll3SpecialItems(); }
         inventory.AddNewItemToInventory(itemSO.ToInventoryItem(itemQuantity));
+        if (inventoryItemsSO.SpecialItemsInInventory.Count == 3) { PopupFoundAll3SpecialItems(); }
         Destroy(gameObject);
     }
 

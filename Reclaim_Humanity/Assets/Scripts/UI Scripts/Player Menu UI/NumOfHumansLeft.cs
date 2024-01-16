@@ -19,7 +19,8 @@ public class NumOfHumansLeft : MonoBehaviour {
     }
     
     public void AddHumanTalkedTo() {
-        numOfHumansAlready = Mathf.Min(numOfHumansAlready ++, numOfHumansTotal);
+        numOfHumansAlready ++;
+        numOfHumansAlready = Mathf.Min(numOfHumansAlready, numOfHumansTotal);
         
         numOfHumansText.text = $"{numOfHumansAlready}/{numOfHumansTotal}";
         

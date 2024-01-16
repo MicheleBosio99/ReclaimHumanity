@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -77,7 +76,7 @@ public class HandleItemsInInventoryInv : MonoBehaviour {
     }
 
     private void UpdateOrdinarySlots() {
-        var i = 0;
+        int i;
         for (i = 0; i < inventorySlotsSO.OrdinaryItemsInInventory.Count; i ++) {
             ordinaryInventorySlotsUI[i].GetComponent<HandleItemInSlotInv>()
                 .FillSlotWithItem(inventorySlotsSO.OrdinaryItemsInInventory[i]);
@@ -88,7 +87,7 @@ public class HandleItemsInInventoryInv : MonoBehaviour {
     }
     
     private void UpdateSpecialSlots() {
-        var i = 0;
+        int i;
         for (i = 0; i < inventorySlotsSO.SpecialItemsInInventory.Count; i ++) {
             specialInventorySlotsUI[i].GetComponent<HandleItemInSlotInv>()
                 .FillSlotWithItem(inventorySlotsSO.SpecialItemsInInventory[i]);

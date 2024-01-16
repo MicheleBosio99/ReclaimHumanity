@@ -156,6 +156,7 @@ public class Enemy : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(0.02f);
+            TraceCircleSight();
             FieldOfViewCheck();
         }
     }
@@ -231,6 +232,25 @@ public class Enemy : MonoBehaviour
         
         laserSight.SetPosition(0, transform.position + sightDirection);
         laserSight.SetPosition(1, sightEndPoint);
+    }
+
+    private void TraceCircleSight() {
+        const int vertexCount = 360;
+        var lineRenderer = GetComponent<LineRenderer>();
+        
+        lineRenderer.positionCount = vertexCount + 1;
+        lineRenderer.useWorldSpace = false;
+        
+        lineRenderer.startColor = Color.red;
+        lineRenderer.endColor = Color.red;
+        
+        for (var i = 0; i <= vertexCount; i++) {
+            var thisAngle = (float) i / vertexCount * 2 * Mathf.PI;
+            var x = Mathf.Cos(thisAngle) * radius;
+            var y = Mathf.Sin(thisAngle) * radius;
+
+            lineRenderer.SetPosition(i, new Vector3(x, y, 0f));
+        }
     }
 
     private Vector3 GetLookingDirection(SightDirection dir) {

@@ -18,7 +18,7 @@ public class SpecialObjectSpawner : MonoBehaviour {
         var newItem = Instantiate(specialItem, parent.transform.position, Quaternion.identity, parent.transform);
         
         var itemBehaviour = newItem.GetComponent<SpecialItemBehaviour>();
-        itemBehaviour.SetPlayerInventoryInstance(playerInventory);
+        itemBehaviour.SetPlayerInventoryInstance(playerInventory, inventorySO);
         itemBehaviour.SetUnlockedUI(UnlockedUI);
     }
 

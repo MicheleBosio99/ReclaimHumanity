@@ -56,6 +56,13 @@ public class InteractionHumanHandler : MonoBehaviour {
         dialogueUI.SetActive(false);
         
         numOfHumansLeft = numOfHumansLeftGO.GetComponent<NumOfHumansLeft>();
+        
+        if(humanID == "AAA_Dr-IDK_Lab" && GameManager.hasAll3SpecialItems.hasAlreadyTalkedToIDK) { humanID = "AAA_Dr-IDK_Lab-3SpecialItems"; }
+        if(humanID == "AAA_Dr-IDK_Lab-3SpecialItems" && GameManager.gameEnded) { humanID = "AAA_Dr-IDK_Lab-3EndGame"; }
+    }
+
+    public void ChangeHumanID(string newHumanID) {
+        humanID = newHumanID;
     }
 
     public void InitiateDialogue() {

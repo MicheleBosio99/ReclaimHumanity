@@ -25,7 +25,10 @@ public class VisualizeUnlocked : MonoBehaviour {
         unlockedPanel.SetActive(false);
     }
 
-    public void StartShowUnlockedRecipeMessage(string message) { StartCoroutine(ShowUnlockedRecipeMessage(message)); }
+    public void StartShowUnlockedRecipeMessage(string message) {
+        unlockedPanel.SetActive(true);
+        StartCoroutine(ShowUnlockedRecipeMessage(message));
+    }
 
     public void StartShowUnlockedPowerUpMessage(string message) {
         powerUpsMessagesQueue.Enqueue(message);

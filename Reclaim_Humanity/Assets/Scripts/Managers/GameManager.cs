@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour
     
     public static HasAll3SpecialItems hasAll3SpecialItems;
     
+    public static bool gameEnded;
+    
     void Awake()
     {
         if (instance == null)
@@ -333,6 +335,7 @@ public class GameManager : MonoBehaviour
         
         data.bonusMultiplier = bonusMultiplier;
         data.hasAll3SpecialItems = hasAll3SpecialItems;
+        data.gameEnded = gameEnded;
         
         previousPosition = Vector3.zero;
         
@@ -398,6 +401,7 @@ public class GameManager : MonoBehaviour
                     humansTalkedTo = data.savedHumansTalkedTo;
                     
                     volumeConfig = data.volumeConfiguration;
+                    gameEnded = data.gameEnded;
 
                     buddy1 = data.buddy1;
                     buddy2 = data.buddy2;
@@ -474,6 +478,7 @@ public class GameData
     public bool buddy2;
     public BonusMultiplier bonusMultiplier;
     public HasAll3SpecialItems hasAll3SpecialItems;
+    public bool gameEnded;
 }
 
 [Serializable]
