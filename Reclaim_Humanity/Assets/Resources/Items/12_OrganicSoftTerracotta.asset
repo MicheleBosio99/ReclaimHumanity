@@ -15,6 +15,10 @@ MonoBehaviour:
   itemID: 12_OrganicSoftTerracotta
   itemName: Organic Soft Terracotta
   itemSprite: {fileID: 21300000, guid: 5472f819d3844514f99d8bcd30e47f4c, type: 3}
-  itemEnergyGenerated: 2
+  itemEnergyGenerated: 16
   itemDescription: A soft and malleable material.
   isItemSpecial: 0
+  onCombat: 0
+  attributeBoosted: 
+  boost: 0
+  itemEffect: 

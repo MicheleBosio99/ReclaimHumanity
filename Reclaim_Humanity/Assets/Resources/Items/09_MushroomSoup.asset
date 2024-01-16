@@ -19,3 +19,7 @@ MonoBehaviour:
   itemDescription: 'Combine different mushrooms, cook them and ta-dah: A beautiful
     soup.'
   isItemSpecial: 0
+  onCombat: 0
+  attributeBoosted: 
+  boost: 0
+  itemEffect: 

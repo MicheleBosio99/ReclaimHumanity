@@ -19,7 +19,7 @@ MonoBehaviour:
   animatorBattle: {fileID: 9100000, guid: 8df6ed8514131442bb41a7aef7dcf0c5, type: 2}
   type1: 5
   type2: 0
-  maxHp: 100
+  maxHp: 400
   attack: 10
   defense: 10
   specialAttack: 15

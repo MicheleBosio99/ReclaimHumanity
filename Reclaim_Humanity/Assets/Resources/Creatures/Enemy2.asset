@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11dec5c540c107047bb6d7089ff6fd82, type: 3}
   m_Name: Enemy2
   m_EditorClassIdentifier: 
-  name: Enemy2
+  creatureName: Enemy2
   description: Another bad guy
   spriteL: {fileID: 1007437343, guid: 50730f50668656749afc93ebb8040965, type: 3}
   spriteR: {fileID: 1007437343, guid: 50730f50668656749afc93ebb8040965, type: 3}
+  animatorBattle: {fileID: 0}
   type1: 4
   type2: 0
-  maxHp: 70
+  maxHp: 400
   attack: 9
   defense: 9
   specialAttack: 14

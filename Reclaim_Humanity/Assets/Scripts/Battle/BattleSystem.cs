@@ -29,6 +29,7 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private AudioClip Target_switch;
     [SerializeField] private AudioClip Death_sound;
     [SerializeField] private AudioClip Win_sound;
+    [SerializeField] private MixerManager mixerManager;
     
     [SerializeField] private List<string> curiosities;
 
@@ -65,8 +66,18 @@ public class BattleSystem : MonoBehaviour
             var quantity = UnityEngine.Random.Range(1, 4);
             itemsDropped.Add(itemDropped.ToInventoryItem(quantity));
         }
+
+        LoadAudioConfiguration();
         
         StartCoroutine(SetupBattle());
+    }
+    
+    private void LoadAudioConfiguration()
+    {
+        var volConfig = GameManager.volumeConfig.GetAllVolumes();
+        mixerManager.SetMasterVolume(volConfig[0]);
+        mixerManager.SetMusicVolume(volConfig[1]);
+        mixerManager.SetSoundFXVolume(volConfig[2]);
     }
 
     public IEnumerator SetupBattle()

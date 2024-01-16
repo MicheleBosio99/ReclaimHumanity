@@ -15,6 +15,10 @@ MonoBehaviour:
   itemID: 11_PoisonousDough
   itemName: Poisonous Dough
   itemSprite: {fileID: 21300000, guid: 8244c9b49d9db394699f38c2b2b6c9a3, type: 3}
-  itemEnergyGenerated: 4
+  itemEnergyGenerated: 6
   itemDescription: If you try bake this, it only will take the fumes to kill you.
   isItemSpecial: 0
+  onCombat: 0
+  attributeBoosted: 
+  boost: 0
+  itemEffect: 
