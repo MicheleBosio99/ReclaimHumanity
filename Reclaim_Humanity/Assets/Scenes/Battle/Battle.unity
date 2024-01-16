@@ -3704,6 +3704,17 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 6842158338786297614, guid: 83eb18ad3db24463dac692ca45001acb, type: 3}
   m_PrefabInstance: {fileID: 826048842}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &826048844 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5764573492968724405, guid: 83eb18ad3db24463dac692ca45001acb, type: 3}
+  m_PrefabInstance: {fileID: 826048842}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74d7e4f3382de4c3ebe79d7293355932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &852712906
 GameObject:
   m_ObjectHideFlags: 0
@@ -7870,6 +7881,7 @@ MonoBehaviour:
   Target_switch: {fileID: 8300000, guid: 52e48bb5b53194b6ea0f4e9feaed8ce3, type: 3}
   Death_sound: {fileID: 8300000, guid: 4bdb06ba297e84b49bb6d4140d35a70f, type: 3}
   Win_sound: {fileID: 8300000, guid: 8d0742bf786d54ebc8fca8448f8204e9, type: 3}
+  mixerManager: {fileID: 826048844}
   curiosities: []
 --- !u!4 &1541214258
 Transform:

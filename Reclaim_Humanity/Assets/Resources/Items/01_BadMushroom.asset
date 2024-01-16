@@ -15,7 +15,10 @@ MonoBehaviour:
   itemID: 01_BadMushroom
   itemName: Mushrooms
   itemSprite: {fileID: 1984663684, guid: 78722bdfb24befc458752fe1ff7b4234, type: 3}
-  itemEnergyGenerated: 3
+  itemEnergyGenerated: 2
   itemDescription: Are you sure this thing is edible?
   isItemSpecial: 0
   onCombat: 0
+  attributeBoosted: 
+  boost: 0
+  itemEffect: 
