@@ -98,17 +98,20 @@ public class VolumeManager : MonoBehaviour {
 
     private void LoadAudioConfiguration() {
         if (GameManager.volumeConfig == null) { masterValue = 1.0f; musicValue = 1.0f; soundsValue = 1.0f; return; }
-
+        
         var volConfig = GameManager.volumeConfig.GetAllVolumes();
         
         masterVolToggle.isOn = volConfig[0] > TOLERANCE;
         masterVolSlider.value = volConfig[0];
+        _audioMixer.SetFloat("MasterVolume", Mathf.Log10(masterVolSlider.value)*20f);
         
         musicVolToggle.isOn = volConfig[1] > TOLERANCE;
         musicVolSlider.value = volConfig[1];
+        _audioMixer.SetFloat("MusicVolume", Mathf.Log10(masterVolSlider.value)*20f);
         
         soundVolToggle.isOn = volConfig[2] > TOLERANCE;
         soundVolSlider.value = volConfig[2];
+        _audioMixer.SetFloat("SoundsVolume", Mathf.Log10(masterVolSlider.value)*20f);
     }
     
     private const float minDifferenceUpdate = 0.01f;

@@ -42,7 +42,7 @@ public class VisualizeUnlocked : MonoBehaviour {
         //Play unlock sound
         if(SoundFXManager.instance != null) { SoundFXManager.instance.PlaySoundFXClip(RecipeUnlock, transform,1f); }
         
-        foreach (var letter in message) { unlockedText.text += letter; }
+        unlockedText.text = message;
         
         yield return new WaitForSeconds(5.0f);
         

@@ -17,7 +17,7 @@ MonoBehaviour:
   itemSprite: {fileID: 21300000, guid: d62c9969c6e8a8e49990507b104e9b92, type: 3}
   itemEnergyGenerated: 500
   itemDescription: A special compound, used to create the final potion.
-  isItemSpecial: 1
+  isItemSpecial: 0
   onCombat: 0
   attributeBoosted: 
   boost: 0

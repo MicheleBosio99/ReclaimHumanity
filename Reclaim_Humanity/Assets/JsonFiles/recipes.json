@@ -158,7 +158,7 @@
     {
         "recipeID" : "09_ChargedSuperconductor",
         "recipeName" : "Charged Superconductor",
-        "recipeDescription" : "Make stronger gears that last longer.",
+        "recipeDescription" : "You managed to charge it!? How?.",
         "item1ID" : "20_ExhaustedSuperconductor",
         "item1Name" : "Exhausted Superconductor",
         "item1QuantityReq" : 1,
@@ -173,7 +173,7 @@
     {
         "recipeID" : "10_EnrichedGemstone",
         "recipeName" : "Enriched Gemstone",
-        "recipeDescription" : "Automate your gears with a CPU.",
+        "recipeDescription" : "When rock and eletricity come together.",
         "item1ID" : "19_UraniumScrap",
         "item1Name" : "Uranium Scrap",
         "item1QuantityReq" : 2,
@@ -188,7 +188,7 @@
     {
         "recipeID" : "11_NuclearFuel",
         "recipeName" : "Nuclear Fuel",
-        "recipeDescription" : "Merge all gear types and create this technological beauty.",
+        "recipeDescription" : "Be careful, this is power in pure form.",
         "item1ID" : "21_ChargedSuperconductor",
         "item1Name" : "Charged Superconductor",
         "item1QuantityReq" : 1,

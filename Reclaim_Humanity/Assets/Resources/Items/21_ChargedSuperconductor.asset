@@ -10,11 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7890fa46cbc6b8e4f806b716dc230e48, type: 3}
-  m_Name: 21_ChardgedSuperconductor
+  m_Name: 21_ChargedSuperconductor
   m_EditorClassIdentifier: 
   itemID: 21_ChardgedSuperconductor
   itemName: Charged Superconductor
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 65058951d97c31545a8454b136584059, type: 3}
   itemEnergyGenerated: 18
   itemDescription: Finally charged to the full. And now?
   isItemSpecial: 0
+  onCombat: 0
+  attributeBoosted: 
+  boost: 0
+  itemEffect: 

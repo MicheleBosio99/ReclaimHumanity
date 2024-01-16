@@ -35,6 +35,7 @@ public class RecipesLoaderHandler : MonoBehaviour {
         // recipesList = JsonConvert.DeserializeObject<List<Recipe>>(recipesJson);
         
         recipesList = GameManager.recipesInfoLoader.GetRecipeList();
+        noRecipesEnabledPanel.SetActive(false);
         
         handler = handlerGO.GetComponent<RecipesSelectionHandler>();
         InitializeRecipesButtons();
@@ -54,7 +55,7 @@ public class RecipesLoaderHandler : MonoBehaviour {
             recipeButtons.Add(buttonRecipe);
         }
         
-        if (recipeButtons.Count != 0) { noRecipesEnabledPanel.SetActive(false); }
+        if (recipeButtons.Count == 0) { noRecipesEnabledPanel.SetActive(true); }
     }
 }
 

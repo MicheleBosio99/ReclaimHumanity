@@ -241,13 +241,13 @@ public class Enemy : MonoBehaviour
         lineRenderer.positionCount = vertexCount + 1;
         lineRenderer.useWorldSpace = false;
         
-        lineRenderer.startColor = Color.red;
-        lineRenderer.endColor = Color.red;
+        lineRenderer.startColor = Color.green;
+        lineRenderer.endColor = Color.green;
         
         for (var i = 0; i <= vertexCount; i++) {
             var thisAngle = (float) i / vertexCount * 2 * Mathf.PI;
-            var x = Mathf.Cos(thisAngle) * radius;
-            var y = Mathf.Sin(thisAngle) * radius;
+            var x = Mathf.Cos(thisAngle) * radius / 4f;
+            var y = Mathf.Sin(thisAngle) * radius / 4f;
 
             lineRenderer.SetPosition(i, new Vector3(x, y, 0f));
         }

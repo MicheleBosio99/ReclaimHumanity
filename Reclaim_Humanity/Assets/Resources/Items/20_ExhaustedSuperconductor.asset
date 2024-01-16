@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 20_ExhaustSuperconductor
   itemName: Exhaust Superconductor
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: fa854045f72fef14bb5e7d9e1225c0b6, type: 3}
   itemEnergyGenerated: 4
   itemDescription: Definitely useless, unless... Can you recharge it?
   isItemSpecial: 0
+  onCombat: 0
+  attributeBoosted: 
+  boost: 0
+  itemEffect: 
