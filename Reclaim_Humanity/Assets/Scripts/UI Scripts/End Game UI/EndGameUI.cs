@@ -39,12 +39,12 @@ public class EndGameUI : MonoBehaviour {
         yield return new WaitForSeconds(3.5f);
         messageText.text = "Still, you can visit what you left unexplored of this fantastic world.\nNow, thanks to you, everything is regaining its long time lost life.";
         yield return new WaitForSeconds(3.5f);
-        messageText.text = "Thanks for playing, that really means a lot to us!\n You are now going to the main menu.\nDon't worry, all progress have been saved.";
+        messageText.text = "Thanks for playing, that really means a lot to us!\nAll progress have been saved.";
         yield return new WaitForSeconds(3.5f);
         messageText.text = "";
         
         GameManager.SaveGame();
         GameManager.gameEnded = true;
-        GameManager.GoToMainMenu();
+        Destroy(gameObject);
     }
 }

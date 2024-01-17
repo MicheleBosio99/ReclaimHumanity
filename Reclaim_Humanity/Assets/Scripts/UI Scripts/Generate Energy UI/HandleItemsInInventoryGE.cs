@@ -79,7 +79,9 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
 
     private void InventorySlotGotClicked(int index, bool shift) {
         Tuple<bool, int> resultTuple;
-        if (index >= inventorySO.OrdinaryItemsInInventory.Count()) { return; }
+        if (index >= inventorySO.OrdinaryItemsInInventory.Count()) { textsHandler.UpdateDescriptionAndEnergy("", ""); return; }
+        
+        Debug.Log("Here");
 
         HoldSlotUI slot = null;
         foreach (var hsUI in holdingSlotsUIList) { if (hsUI.IndexInvSlot == index) { slot = hsUI; } } // search if slot already clicked
@@ -147,6 +149,7 @@ public class HandleItemsInInventoryGE : MonoBehaviour {
         
         inventorySOItems.RemoveAll(slot => slot.ItemQuantity == 0);
         
+        textsHandler.UpdateDescriptionAndEnergy("", "");
         GenerateCanvasManager.GetComponent<GenerateEnergyCanvasHandler>().OnCloseButtonClick();
         
         if (isFinalPotionIn && inventorySO.SpecialItemsInInventory.All(item => item.ItemID != "S_FinalPotion")) {

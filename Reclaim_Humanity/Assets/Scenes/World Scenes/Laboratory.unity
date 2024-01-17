@@ -32486,8 +32486,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -75, y: 0}
-  m_SizeDelta: {x: 590, y: 60}
+  m_AnchoredPosition: {x: -49.54, y: -0.63}
+  m_SizeDelta: {x: 599.08, y: 37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &946602997
 MonoBehaviour:
@@ -32509,7 +32509,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'Use right-click to send whole stack from inventory to burner. Doesn''t
+    still work the other way D:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -32536,12 +32537,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
+  m_fontSize: 16
   m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 16
+  m_fontSizeMax: 22
   m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -32572,7 +32573,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 31.022858, y: 2.1361885, z: -17.024628, w: 2.6701984}
+  m_margin: {x: 13.797852, y: 2.1361885, z: 9.928223, w: 2.6701984}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -98673,6 +98674,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6158664083213807098, guid: cdbf67154cfa1bd4bb6176b5a14243cf, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6620324751388008718, guid: cdbf67154cfa1bd4bb6176b5a14243cf, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6620324751388008718, guid: cdbf67154cfa1bd4bb6176b5a14243cf, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6701150198748189607, guid: cdbf67154cfa1bd4bb6176b5a14243cf, type: 3}
