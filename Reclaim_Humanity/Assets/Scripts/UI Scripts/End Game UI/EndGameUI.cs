@@ -35,12 +35,14 @@ public class EndGameUI : MonoBehaviour {
             yield return null;
         }
         
-        messageText.text = "You did it! You finished the game! Congratulations!";
-        yield return new WaitForSeconds(3.5f);
-        messageText.text = "Still, you can visit what you left unexplored of this fantastic world.\nNow, thanks to you, everything is regaining its long time lost life.";
-        yield return new WaitForSeconds(3.5f);
-        messageText.text = "Thanks for playing, that really means a lot to us!\nAll progress have been saved.";
-        yield return new WaitForSeconds(3.5f);
+        messageText.text = "Thank you for playing the game.\nIt means really much to us that you've completed it.";
+        yield return new WaitForSeconds(4.0f);
+        messageText.text = "All your files have been saved. You can continue play this save and explore the rest of the world you didn't see already.";
+        yield return new WaitForSeconds(4.0f);
+        messageText.text = "Mind that it could be still bugged since we didn't test the aftergame too much :) ";
+        yield return new WaitForSeconds(3.0f);
+        messageText.text = "Thanks again.\nGoodbye.";
+        yield return new WaitForSeconds(4.0f);
         messageText.text = "";
         
         GameManager.SaveGame();
