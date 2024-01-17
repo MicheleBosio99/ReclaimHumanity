@@ -11,6 +11,7 @@ public class EasterEgg : MonoBehaviour {
     private void Update() {
         CheckEnergyEasterEgg();
         CheckItemEasterEgg();
+        CheckRecipesEasterEgg();
         if (doneItem && doneEnergy) { Destroy(gameObject); }
     }
     
@@ -61,5 +62,26 @@ public class EasterEgg : MonoBehaviour {
         inventoryItemSO.AddSpecialItemToInventory(casualItem.ToInventoryItem(1));
         inventoryItemSO.AddSpecialItemToInventory(casualItem.ToInventoryItem(1));
         inventoryItemSO.AddSpecialItemToInventory(casualItem.ToInventoryItem(1));
+    }
+    
+    
+    private const string desiredRecipesCombination = "recipe";
+    private string currentRecipesInput = "";
+    
+    private void CheckRecipesEasterEgg() {
+        if (!Input.anyKeyDown) return;
+            
+        if (!desiredRecipesCombination.Contains(Input.inputString)) { currentRecipesInput = ""; return; }
+        currentRecipesInput += Input.inputString;
+
+        if (!currentRecipesInput.Equals(desiredRecipesCombination, System.StringComparison.OrdinalIgnoreCase)) return;
+        
+        ActivateRecipesEasterEgg();
+        currentRecipesInput = "";
+    }
+
+    private void ActivateRecipesEasterEgg() {
+        unlockUI.GetComponent<VisualizeUnlocked>().StartShowUnlockedRecipeMessage("Activated Recipes Easter Egg.\nYou unlocked all recipes.");
+        GameManager.recipesInfoLoader.UnlockAllRecipes();
     }
 }

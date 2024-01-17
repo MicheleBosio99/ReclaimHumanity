@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11dec5c540c107047bb6d7089ff6fd82, type: 3}
-  m_Name: Mushroom
+  m_Name: NuclearMushroom
   m_EditorClassIdentifier: 
-  creatureName: Mushroom
+  creatureName: Nuclear Mushroom
   description: aa
   spriteL: {fileID: 21300000, guid: af5a2d4eae2cb4f6a8772408b950aead, type: 3}
   spriteR: {fileID: 21300000, guid: af5a2d4eae2cb4f6a8772408b950aead, type: 3}
@@ -34,4 +34,4 @@ MonoBehaviour:
     level: 1
   droppableObjects:
   - {fileID: 11400000, guid: 114dc195e6ec6fa4a92885bb65e908e9, type: 2}
-  - {fileID: 11400000, guid: 3414926b4a6d7cc49b1e4776914b1578, type: 2}
+  - {fileID: 11400000, guid: 13382d88a4b86e048bd1f17294b9cc6d, type: 2}

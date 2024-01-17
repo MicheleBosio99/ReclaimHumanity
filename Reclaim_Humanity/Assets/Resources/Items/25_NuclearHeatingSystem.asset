@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 25_NuclearHeatingSystem
   itemName: Nuclear Heating System
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 14dc3432d4f38c44b8eb11efa1f616a9, type: 3}
   itemEnergyGenerated: 200
   itemDescription: There it is, a fully funcitonal nuclear engine.
   isItemSpecial: 0

@@ -71,5 +71,8 @@ public class RecipesInfoLoader : MonoBehaviour {
         
         return new Tuple<bool, string>(_enabled, recipe.recipeName);
     }
+
+    public void UnlockAllRecipes() { foreach (var recipe in recipesList) { recipe.enabled = true; }
+   }
     
 }
