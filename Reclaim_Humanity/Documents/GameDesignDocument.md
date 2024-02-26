@@ -243,22 +243,21 @@ ___
     - #### MAIN CHARACTER: 
       - Main character prefab has a fixed sprite with the components Animator and Animation that handle it. Has a Rigidbody 2D in dynamic mode with gravity 0 and a Polygon Collider 2D, not trigger, to simulate collisions with other objects. Has a PlayerInput component that is linked to the MainCharacterInputAction InputAction. This merge both controller and keyboard inputs as the same inputs and lets us developers code all game with a single object to take player inputs from. This PlayerInput has as behaviour property the "Invoke Unity Events" and functions of the script that manages input are linked to this gameobject in the "Events" property below. Finally the player has a PlayerMovement script that manages inputs for the movement and transforms them into the RigidBody.velocity, and a OpenInventoryScript script that handles the inout for opening the inventory;
 
-    - #### ENEMY:
-      - [v 2.0] this prefab contains the RigidBody2D component, the Capsule Collider 2D component and the "Enemy" script;
-      - Enemy Script contains the logic for all 3 type of enemies: *chasing*, *spotting* and *detecting*
-      - Every type of enemy has its own Coroutine, but their cores share the same method: _FieldOfViewCheck()_, that sets to true the boolean *playerInSIght* whenever the enemy can see the player
-        - **Chasing enemies**: they follow the player from the moment it is in sight till they reach it; the battle starts when collision is detected between the enemy and the player; their coroutine is _ChaseRoutine_, and it includes also the method _AiChase()_ that controls the movement towards the player
-        - **Spotting enemies**: they don't move, but have a larger field of view to spot the player; battle starts when the player is in sight; their coroutine is _FOVRoutine_ ("Field Of View Routine")
-        - **Detecting enemies**: they don't have a restricted field of view, they detect the player in the exact moment it is near them; battle starts when the player is closer than the detecting range; their coroutine is _AOVRoutine_ ("Area Of View Routine")
-      - The enemy script contains also some of the logic that controls the spawn in the world maps, which is randomically in time and in place in specific spawn spots --this is connected with _SpawnHandler_ and _Spawn_ scripts
+    - #### ENEMY: [v2.0]
+      - This prefab contains the RigidBody2D component, the Capsule Collider 2D component and the "Enemy" script;
+          - Enemy Script contains the logic for all 3 type of enemies: *chasing*, *spotting* and *detecting*, and also some of the logic that controls the spawn in the world maps, which is randomically in time and in place in specific spawn spots --this is connected with _SpawnHandler_ and _Spawn_ scripts
+          - Every type of enemy has its own Coroutine, but their cores share the same method: _FieldOfViewCheck()_, that sets to true the boolean *playerInSIght* whenever the enemy can see the player
+            - **Chasing enemies**: they follow the player from the moment it is in sight till they reach it; the battle starts when collision is detected between the enemy and the player; their coroutine is _ChaseRoutine_, and it includes also the method _AiChase()_ that controls the movement towards the player
+            - **Spotting enemies**: they don't move, but have a larger field of view to spot the player; battle starts when the player is in sight; their coroutine is _FOVRoutine_ ("Field Of View Routine")
+            - **Detecting enemies**: they don't have a restricted field of view, they detect the player in the exact moment it is near them; battle starts when the player is closer than the detecting range; their coroutine is _AOVRoutine_ ("Area Of View Routine")
       - **Spawn script** defines what is a spawn point and it connects with the Enemy Script to activate the enemy
-      - **SpawnHandler script** handles all the spawn points simultaneously
-      - [/V 2.0]
+      - **SpawnHandler script** handles all the spawn points simultaneously [/V 2.0]
       - [V 1.0] contains main properties of the general enemy, like list of moves, health, damage, colliders 2D and ID. Will be used in spawners scripts to generate all enemies. There might be prefabs more specific for each enemy that will inherit from this one;
 
-        - BASE: The Base prefab is used everywhere a UI element is present but not enabled. It has a collider component, a sub gameObject component and a script component. The subobject is an animated sprite of the keyboard button F, but must b changed to change dynamically what it shows if the controller button X if one is used. The button F appears only if the player is standing on the base, triggering its collider. As last the script takes in update the distance from the player and uses it to augment brightness when the player gets closer and closer. Althought I think this might slow down a little the program,  while we don't use more than 2/3 of them for each scene I think it's negligible;
+    - #### BASE:
+      - The Base prefab is used everywhere a UI element is present but not enabled. It has a collider component, a sub gameObject component and a script component. The subobject is an animated sprite of the keyboard button F, but must b changed to change dynamically what it shows if the controller button X if one is used. The button F appears only if the player is standing on the base, triggering its collider. As last the script takes in update the distance from the player and uses it to augment brightness when the player gets closer and closer. Althought I think this might slow down a little the program,  while we don't use more than 2/3 of them for each scene I think it's negligible;
 
-        - INVENTORY SLOTS: an inventory slot in just a UI panel that contains an image and a text. There are 2 types of slots: ordinary and special:
+      - INVENTORY SLOTS: an inventory slot is just a UI panel that contains an image and a text. There are 2 types of slots: ordinary and special:
                      - ordinary slots have a simpler sprite that resembles the style used for every UI in the game;
                      - special slots can only contain 1 type of item that is hardcoded into them;
                  The parent panel has attached a script to him that manages what is shown in the image and in the text. It can be of 2 types too: if the slot is empty then the image is fully transparent and the text quantity is an empty string, otherwise if the slot contains an InventoryItem then the sprite and the quantity of that item is passed to this script by the script in the "Inventory" panel and the image is fully visible while the quantity is just the one received showned;
@@ -271,7 +270,7 @@ ___
         - HUMANS: prefab that contains main properties of the humans, like its sprite, the json file linked to him that contains its dialogue, its ID which may be just his name and nothing else, their 2D collider and a trigger collider to use as trigger for dialogues. This will be used to create all humans;
         
 
-- SCRIPTABLE OBJECTS SCRIPTS: (all scriptable object names finish with SO):
+- ### SCRIPTABLE OBJECTS SCRIPTS: (all scriptable object names finish with SO):
   - InventoryItemsSO: contains the definition of InventoryItem class which defines an item as a triple of its ID, its sprite and its quantity, which is all it's needed to fill the inventory. Then the SO contains the 2 list of objects that are contained in both ordinary and special slots. It also has all getter (and sometimes setter) functions for the list of both slots and for the maximum slot variable, which containes how many slots are present in total. Finally the class has a boolean function that stores a new item to the right slot IFF there is enough space to store it. If there's then the function returns true otherwise it returns false.
 
   - EnergyLabSO: contains 2 floats number, one specifying the current energy contained in the lab anc the other the max energy possible to collect in the lab. >>SCRIPT?<<
