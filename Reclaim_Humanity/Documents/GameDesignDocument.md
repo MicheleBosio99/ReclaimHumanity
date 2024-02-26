@@ -12,7 +12,7 @@
 
     - **EXPLORATION**: go around the world, search in every corner and find all the things you need to go on on your adventure, may these be items to generate energy or some knowledge about recipes you heard about a long time ago;
     
-    - Whenever you find a human use your main tool, the **TRANCESMITTER** (KEYCODE.T), to speak to them. This will help you unlock more recipes which will lead, at the end, to the final cure;
+    - Whenever you find a human use your main tool, the **TRANCESMITTER**, to speak to them. This will help you unlock more recipes which will lead, at the end, to the final cure;
 
     - Crafting is not easy, you must first find the correct **RECIPE** that generate that **ITEM** and second find all the ingredients you'll need for it. You will find items laying all around the map, but sometimes it will not be so easy and you'll have to fight to obtain them;
 
@@ -95,7 +95,8 @@ ___
 * Characters and enemies (with thier relative animations) _have been created specifically_ using a graphic program that 
   can manage pixel art.
 ## MUSIC
-- Music in background are a selection of tracks from videogames "Days Gone" and "The last of us 2";
+- Music in background are a selection of tracks from videogames "Days Gone", "The last of us 2" and "Microsof Flight 
+  Simulator";
 - Sound effects are downloaded from https://www.zapsplat.com/ or from https://pixabay.com/sound-effects/ and they are all free license.
 ___
 ___
@@ -125,17 +126,21 @@ ___
 - Inside the project there is the most important folder, the Assets one. Inside we can find:
     - Animations: contains sprite sheets for special animations that can be find in the world;
     - Art: contains every sprite sheet, tileset, tilemap that the game includes. Contains also smaller animations that are not so important;
-    - Audio Files: contains everything related to audio and game musics;
+    - Audio Files: contains background musics;
+    - Editor: contains the transversal variables of the game;
+    - Fonts: the fonts which are used;
     - Images: images used in UI, such the one of the menu;
     - InputActions: contains the files created from the InputActions package. Used to divide this particular files from the scripts;
+    - Materials: has material for physical objects;
     - JsonFiles: contains all JSONs used for saves, dialogues and fixed properties of the game;
     - Mixers: contains the audio mixers;
-    - Others: could contain files that were used as tests and not deleted, but that shouldn't compare in the final game;
+    - Plugins: has the extra plug-ins used;
     - Prefabs: contains all prefabs created;
+    - Resources: contains the resources for power-ups of the creatures in the games;
     - Scenes: divided into World scenes and UI scenes, contains every scene used fot the game;
     - ScriptableObjects: contains all instances of scriptable objects used in the game;
     - Scripts: all C# scripts are stored inside here, divided based on their behaviour and what GameObjects / Scenes they affect;
-    - Sounds: as same as Audio folder, must be merged one with the other;
+    - Sounds: contains files for sound effects;
     - TextMeshPro: contains files related to the TextMeshPro package used for the UIs;
     - URP: contains assets file that make the game use the URP render pipeline;
 
@@ -276,11 +281,11 @@ ___
 ___
 
 
-## GROUP MEMBERS: TODO COMPLETE
+## GROUP MEMBERS:
 - MICHELE BOSIO: michele2.bosio@mail.polimi.it - Team Leader & Developer;
 - ANASTASIA FAVERO: anastasia.favero@mail.polimi.it - Developer;
 - ANDREA PESCI: andrea1.pesci@mail.polimi.it - Sound Engineer, Animator & Developer;
 - RICCARDO MALPIEDI : riccardo.malpiedi@mail.polimi.it - Developer;
 - IACOPO ROBERTO FERRARIO : iacoporoberto.ferrario@mail.polimi.it - Developer;
 
-## DEADLINES:
+
