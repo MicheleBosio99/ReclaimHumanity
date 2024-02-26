@@ -148,9 +148,9 @@ ___
     - Here are reported all technical details of the game:
 
     - **GENERAL DETAILS**:
-        - MAIN CHARACTER: The main character is controlled by the player and is used to go around the game world. For a specific description of all its components see the Prefabs section below here;
+        - _MAIN CHARACTER_: The main character is controlled by the player and is used to go around the game world. For a specific description of all its components see the Prefabs section below here;
 
-        - GRID AND TILEMAP: All scenes use grids to draw the map of their biome; this grids are composed by 
+        - _GRID AND TILEMAP_: All scenes use grids to draw the map of their biome; this grids are composed by 
           different tilemaps so that it is possible to have different behaviour with each one. To obtain the desired render results we used the property "Order in layer" inside the Tilemap Renderer component of each tilemap.Tilemaps are described below in order from the lowest order one to the highest rendered:
             - BGBehind: a rectangular area all Black, used as "Out of the map" view.
 
@@ -164,56 +164,70 @@ ___
 
         Order of this tilemaps starts from negative number and goes up 2 by 2, to allow the insertion of another tilemap if needed without changing all the others. AbvBehCollisionObjs tilemap has the same order in layer of the main character which is 0;
 
-        - GRAPHICS:
-            - The game uses the URP rendering pipeline of Unity; in this the only property changed is the "Transparency Sort Mode" which is set to "Custom Axis" and the "Transparency Sort Axis" that follows is put to (0, 1, 0). With this the main axis is the Y one and rendering of objects will be computed based on their Y position. Be aware that ALL sprites that follow this rule have their pivot not in their center but moved down more or less where it would be the center of the area the sprite would stand over if it was a 3D obkect;
+    - **GRAPHICS**:
+        - The game uses the URP rendering pipeline of Unity; in this the only property changed is the "Transparency Sort Mode" which is set to "Custom Axis" and the "Transparency Sort Axis" that follows is put to (0, 1, 0). With this the main axis is the Y one and rendering of objects will be computed based on their Y position. Be aware that ALL sprites that follow this rule have their pivot not in their center but moved down more or less where it would be the center of the area the sprite would stand over if it was a 3D obkect;
 
-            - All sprites and tilesets use a Pixel Per Unit of 32, since most of them are made of 32x32 pixels. Some of them are made by 48x48 pixels, but since it is a better quality shrinked then the difference isn't spottable. Being in pixel art ALL sprites, multiple and single, have property "Filter Mode" to "Point (no filter)" and "Compression" to "None";
+        - All sprites and tilesets use a Pixel Per Unit of 32, since most of them are made of 32x32 pixels. Some of them are made by 48x48 pixels, but since it is a better quality shrinked then the difference isn't spottable. Being in pixel art ALL sprites, multiple and single, have property "Filter Mode" to "Point (no filter)" and "Compression" to "None";
 
-            - Screen resolution is 16:9, no change and resize possible for now;
+        - Screen resolution is 16:9, no change and resize possible for now;
 
-        - SPRITES:
-            - Sprites are graphic element of the biome / scene that are not drawn using tilemaps. Generally these are details that make the scene look better, like all the furniture in the laboratory, or that are particulary useful to player, like machinery or collectible items around the worlds;
-            In each scene I used someempty game objects to organize all sprites present in the scene. Sprites are divided by the place they are put into;
+    - **SPRITES**:
+        - Sprites are graphic element of the biome / scene that are not drawn using tilemaps. Generally these are details that make the scene look better, like all the furniture in the laboratory, or that are particulary useful to player, like machinery or collectible items around the worlds;
+        In each scene we use some empty game objects to organize all sprites present in the scene. Sprites are 
+          divided by the place they are put into;
 
-            - Sprites have different pixel dimensions and generally are manually sliced from the sprite sheet they are taken from. Anyway all of them gameobjects have a certain position, sprite and order in layer to obtain the desired renderization and behaviour. Many of them have a Box Collider 2D so that the player cannot pass through them, such as trees or furniture. Some of them have even some script behaviour, like the battery we find in the laboratory that has attached a TextMeshPro component and a script that takes the energy of the lab from a scriptable object and shows it on the text, or the energy spheres that show, without a number, again the amount of energy contained in the lab;
+        - Sprites have different pixel dimensions and generally are manually sliced from the sprite sheet they are taken from. Anyway all of them gameobjects have a certain position, sprite and order in layer to obtain the desired renderization and behaviour. Many of them have a Box Collider 2D so that the player cannot pass through them, such as trees or furniture. Some of them have even some script behaviour, like the battery we find in the laboratory that has attached a TextMeshPro component and a script that takes the energy of the lab from a scriptable object and shows it on the text, or the energy spheres that show, without a number, again the amount of energy contained in the lab;
 
-        - UI ELEMENTS: Note of a general detail, all UI elements that can appear while the player gameobject is istanciated have the property to block the player while they are opened, they do this by setting the player speed in the main character PlayerMovement script component to 0; once they get disabled they put the velocity back to the "Normal Speed" variable contained in the player script.
+    - **AUDIO MIXER**: [v. 2.0] The Audio Mixer of the video-game has 3 different channels:
+      - _Master_: The principal channel, lowing down or increasing its level, has consequences on the volume of 
+        the child channels.
+      - _Music_: The channel for background music. Audio Source with audio files for background outputs the signal 
+        to this channel.
+      - SoundFX: Output channel for sound effect music.  Every sound effect is reproduced instantiating a new 
+        game object and then destroying it.
+    
+      The volume of all these channel is settable in the option UI panel.
+      
+      [v. 1.0] Every sound effect is reproduced using function "PlayClipAtPoint" and background music just with an 
+        audio source
 
-            - LABORATORY:
-                - Recipe UI: Recipe UI contains everything needed for creating recipes, from the slots used to contain items to the panel showing the player inventory so that he can take what ingredients he wants from it. This is still in the process of making;
+    - **UI ELEMENTS**: Note of a general detail, all UI elements that can appear while the player gameobject is istanciated have the property to block the player while they are opened, they do this by setting the player speed in the main character PlayerMovement script component to 0; once they get disabled they put the velocity back to the "Normal Speed" variable contained in the player script.
 
-                ![Recipes UI](GDDImages/recipe.png)
+        - _LABORATORY_:
+            - Recipe UI: Recipe UI contains everything needed for creating recipes, from the slots used to contain items to the panel showing the player inventory so that he can take what ingredients he wants from it. This is still in the process of making;
 
-                - Energy UI: in here the inventory of the player is shown in another way, with a big button below and a description panel on the side. This is used to let the player choose the items he wants to burn directly from the inventory, burn those selected with the big button "Generate enery" and they can see how much energy each item generates and how much energy is generated by all item selected plus how much energy is currently in the lab. A view of this UI:
+            ![Recipes UI](GDDImages/recipe.png)
 
-                ![Energy UI](GDDImages/energy.png)
+            - Energy UI: in here the inventory of the player is shown in another way, with a big button below and a description panel on the side. This is used to let the player choose the items he wants to burn directly from the inventory, burn those selected with the big button "Generate enery" and they can see how much energy each item generates and how much energy is generated by all item selected plus how much energy is currently in the lab. A view of this UI:
 
-            - GENERAL: all this menus are contained in the same canvas and are controlled by a script and some buttons present in the same canvas. When the specific menu input gets recorder the related menu is enabled while all others remain disabled. To change menu form the canvas itself we can press on the right button and the current panel gets disabled while the wanted one is enabled. When the menu is completely closed it's just the parent canvas disabled.
+            ![Energy UI](GDDImages/energy.png)
 
-                - Inventory Menu: contains all the items that the player has on him. This menu shows a 3 panel view with, from top to bottom: the title, the inventory slots and the description panel. The inventory slots are prefabs, see there for more info, and they are divided in 2 typologies: the ordinary slots are 15 and contain all ordinary items, while the special slots are 3 and can are coded so they can contain ONLY the specific special item of each biome. The title is static while the description changes based on which inventory slot is currently selected. The slots can contain some items or be empty, and the inventory also shows the quantity related to each item right below the item sprite. The inventory has a script component called "Handle Items In Inventory" that stores the list of the inventory slots and a reference to the scriptable object used to store the inventory among the scenes. This script has some functions (*** stands for both ordinary and special):
-                    - AddNew***OrdinaryItemToInventory(item): when an item is picked up this function is called that stores the new item in the sriptable object if there is space in the inventory;
+        - GENERAL: all this menus are contained in the same canvas and are controlled by a script and some buttons present in the same canvas. When the specific menu input gets recorder the related menu is enabled while all others remain disabled. To change menu form the canvas itself we can press on the right button and the current panel gets disabled while the wanted one is enabled. When the menu is completely closed it's just the parent canvas disabled.
 
-                    - Update***Slots(): for each full slot in the scriptable object it calls the FillSlotWithItem() function of the right InventorySlots from its list;
+            - Inventory Menu: contains all the items that the player has on him. This menu shows a 3 panel view with, from top to bottom: the title, the inventory slots and the description panel. The inventory slots are prefabs, see there for more info, and they are divided in 2 typologies: the ordinary slots are 15 and contain all ordinary items, while the special slots are 3 and can are coded so they can contain ONLY the specific special item of each biome. The title is static while the description changes based on which inventory slot is currently selected. The slots can contain some items or be empty, and the inventory also shows the quantity related to each item right below the item sprite. The inventory has a script component called "Handle Items In Inventory" that stores the list of the inventory slots and a reference to the scriptable object used to store the inventory among the scenes. This script has some functions (*** stands for both ordinary and special):
+                - AddNew***OrdinaryItemToInventory(item): when an item is picked up this function is called that stores the new item in the sriptable object if there is space in the inventory;
 
-                    - Start(): in start it calls both Update***Slots() functions so that the inventory starts full of the right items (for example in case the game is saved and the restored);
+                - Update***Slots(): for each full slot in the scriptable object it calls the FillSlotWithItem() function of the right InventorySlots from its list;
 
-                - - ![Inventory Image](GDDImages/inventory.png)
+                - Start(): in start it calls both Update***Slots() functions so that the inventory starts full of the right items (for example in case the game is saved and the restored);
 
-                - Options Menu: contains some settings the player might want to change like the music volume, the general game volume, maybe some bindings of the controller/keyboard. Also contains the buttons for saving the game and for loading a previous save, and last there is the quit button to close the game;
+            - - ![Inventory Image](GDDImages/inventory.png)
+
+            - Options Menu: contains some settings the player might want to change like the music volume, the general game volume, maybe some bindings of the controller/keyboard. Also contains the buttons for saving the game and for loading a previous save, and last there is the quit button to close the game;
                 
-                - Statistics Menu: contains information about Wollo and his abilities, that, as he goes on in the game, are unlocked creating enough energy. Here we will also find his companions and their abilities. This menu hasn't still be finished but will be subject of a brainstorming on how to graphically create it and what more it should contain. Below a first example:
+            - Statistics Menu: contains information about Wollo and his abilities, that, as he goes on in the game, are unlocked creating enough energy. Here we will also find his companions and their abilities. This menu hasn't still be finished but will be subject of a brainstorming on how to graphically create it and what more it should contain. Below a first example:
 
-                - - ![Inventory Image](GDDImages/statistics.png)
+            - - ![Inventory Image](GDDImages/statistics.png)
 
-                - MOREOVER: There is still a space for one more menu if we come up with something we need to put here (will be in the empty spot there's in the above images);
+            - MOREOVER: There is still a space for one more menu if we come up with something we need to put here (will be in the empty spot there's in the above images);
 
-                - Teleportation Menu: Here the player can choose where to go next. From the laboratory the menu will let him choose which biome to go while the simpler teleportation menu in each biome will only let him return to the lab; This menu just have N buttons that represent the number of places the player can choose to go and when one of those is clicked the scene changes to the one choosed. Below is the example of menu that the players will find in the lab:
+            - Teleportation Menu: Here the player can choose where to go next. From the laboratory the menu will let him choose which biome to go while the simpler teleportation menu in each biome will only let him return to the lab; This menu just have N buttons that represent the number of places the player can choose to go and when one of those is clicked the scene changes to the one choosed. Below is the example of menu that the players will find in the lab:
 
-                - - ![Teleporter image](GDDImages/teleporter.png)
+            - - ![Teleporter image](GDDImages/teleporter.png)
 
-            - MAIN MENU: it's an UI canvas that has an image for background and a "Start Game" and a "Quit" buttons for now;
+        - MAIN MENU: it's an UI canvas that has an image for background and a "Start Game" and a "Quit" buttons for now;
 
-            - PAUSE PANEL: it's an UI canvas that stops the flow of the game. It can be called in every scene pressing "p" or "Esc" button. Pause Menu consist in: 2 buttons ("Resume": disable PausePanel and continue to play; "Main Menu": load MainMenu scene and interrupt game) and 3 sliders ("Master Volume", "Music Volume", "Sounds Volume" that sets the volumes during the game);
+        - PAUSE PANEL: it's an UI canvas that stops the flow of the game. It can be called in every scene pressing "p" or "Esc" button. Pause Menu consist in: 2 buttons ("Resume": disable PausePanel and continue to play; "Main Menu": load MainMenu scene and interrupt game) and 3 sliders ("Master Volume", "Music Volume", "Sounds Volume" that sets the volumes during the game);
 
         
 
