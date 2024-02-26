@@ -1,33 +1,33 @@
 # RECLAIM;HUMANITY  
 
-### Game Design Document V0.0
+### Game Design Document V1.1
 
 - # OVERVIEW
-    RECLAIM;HUMANITY is a top down 2D RPG game in pixel art, in it gamers will play as Wollo, a cute little robot, which has to overcome the most difficult mission he has ever accomplished: save the whole humainty!
+    RECLAIM;HUMANITY is a top down 2D RPG game in pixel art, where gamers will play as Wollo, a cute little robot, who has to overcome the most difficult mission he has ever accomplished: *save the whole humainty!*
     ___
     ___
 
 - # GAMEPLAY: An Exploration Adventure
-    Humans has been affected by a terrible virus, which has paralyzed all of them, your mission will be to find the cure against this virus. Here are listed the main mechanics that the player will use to fulfill the task:
+    Humans has been affected by a terrible virus, which has paralyzed all of them. Your mission is to find the cure against this virus. Here are listed the main mechanics that the player will use to fulfill the task:
 
     - **EXPLORATION**: go around the world, search in every corner and find all the things you need to go on on your adventure, may these be items to generate energy or some knowledge about recipes you heard about a long time ago;
     
-    - Whenever you find a human use your main tool, the **TRANCESMITTER**, to speak to them. This will help you unlock more recipes which will lead, at the end, to the final cure;
+    - **INTERACTIONS**: Whenever you find a human use your main tool, the **TRANCESMITTER**, to speak to them. This will help you unlock more recipes which will lead, at the end, to the final cure;
 
-    - Crafting is not easy, you must first find the correct **RECIPE** that generate that **ITEM** and second find all the ingredients you'll need for it. You will find items laying all around the map, but sometimes it will not be so easy and you'll have to fight to obtain them;
+    - **CRAFTING** is not easy, you must first find the correct **RECIPE** that generates that **ITEM** and second find all the ingredients you'll need for it. You will find items laying all around the map, but sometimes it will not be so easy and you'll have to fight to obtain them;
 
     - **COMBAT**: may it be that you need some items for your new recipes or that you need access to some mysterious place, sometimes combat will be necessary to advance in the adventure. Just pay attention not to die, otherwise who will save humanity? Combat will be TURN-BASED, most similar to a pokemon style, where Wollo will face enemies one action at a time;
 
-    - There won't be a player **LEVEL** to carry on, but a "Laboratory" one, in form of **ENERGY** accumulated in the Lab. Every time you find yourself with an inventory full of useless items don't just drop them! Use those to generate energy in the laboratory in order to unlock POWER-UPS, new WEAPONS and many other things. Moreover recipes will need a certain amount of energy to be completed (they won't consumeit though) so be careful to this aspect of the game too;
+    - **LEVELLING**: There won't be a player level to carry on, but a "Laboratory" one, in form of **ENERGY** accumulated in the Lab. Every time you find yourself with an inventory full of useless items don't just drop them! Use those to generate energy in the laboratory in order to unlock **POWER-UPS**, new **WEAPONS** and many other things. Moreover recipes will need a certain amount of energy to be completed (they won't consume it though) so be careful to this aspect of the game too;
 
     ___
     ___
 
 - # CHARACTERS
-    - MAIN CHARACTER: **Wollo**, a lonely robot which whishes to wake up his master; has the possibility of waking up humanity by beginning a trip which will lead him to many items. However he doesn't know the recipes for creating the final drug which will awake people, so must use the TranceSmitter to connect to paralyzed humans and read their mind hoping to find the recipes he needs;
-    - HUMANS: All around the world will be placed humans, which are unfortunately paralyzed. You can interact with them only with the Trancesmitter, and they will contribute to your addventure as they can.
-    - ENEMIES: There will be enemies scattered everywhere, so pay attention to where you go. Try not to face powerful creatures if you are not preapered to. Technically speaking we can add as many enemies as we want / have time to, but for starters one typology for each biome I think will be enough. These first enemies' drops will be used in recipes too, while possible future enemies will just have their drops used to generate energy in the lab.
-    - DR.IDK: your creator, as all other humans, has been affected by the virus and now stands still in his room in the laboratory. When you'll finally complete your mission and have the cure use that on him to complete the game;
+    - MAIN CHARACTER: you will play as **Wollo**, a lonely robot who whishes to wake up his master. He (you) has the possibility of saving humanity by starting a trip that will lead him to some rare and special items. However he doesn't know the recipe of the drug that can awake people, but there must be someone who knows it! In order to find it, he will use the TranceSmitter, his master's invention, to connect to paralyzed humans and read their minds hoping to find the recipe he needs.
+    - HUMANS: They will be all around the world, unfortunately paralyzed. Nevertheless, thanks to the TranceSmitter in your possession, you can interact with them and they will contribute to your adventure as they can. Since one of them knows the final recipe, you are encouraged to talk to as many humans you find while exploring the desolate lands.
+    - ENEMIES: There will be enemies scattered everywhere, so pay attention to where you go. Try not to face powerful creatures if you are not preapered to. [v2.0] Each biome has a specific type of enemy, which has its own specific behaviour. Enemies' drops will be very useful, since it's necessary to craft items and to level up the lab. [v1.0] Technically speaking we can add as many enemies as we want / have time to, but for starters one typology for each biome I think will be enough. These first enemies' drops will be used in recipes too, while possible future enemies will just have their drops used to generate energy in the lab.
+    - DR.IDK: your creator, as all other humans, has been affected by the virus and now stands still in his room in the laboratory. When you'll finally complete your mission and have the cure, use it to awaken him and complete the game;
     - COMPANIONS: Along the way you may find companions (2 MAX) which will travel with you. They will be more than happy to help you, but they're shy and will come out only when you need the most: during fights;
 
 ___
