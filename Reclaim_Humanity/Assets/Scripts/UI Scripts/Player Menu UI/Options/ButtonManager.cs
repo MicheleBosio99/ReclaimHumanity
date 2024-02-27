@@ -5,6 +5,7 @@ public class ButtonManager : MonoBehaviour {
     [SerializeField] private GameObject YouSureQuitView;
     [SerializeField] private GameObject BackgroundPanel;
     [SerializeField] private GameObject FeedbackPanel;
+    [SerializeField] private GameObject CreditsPanel;
     [SerializeField] private GameObject mainCharacter;
     [SerializeField] private AudioClip saved_game;
 
@@ -12,6 +13,7 @@ public class ButtonManager : MonoBehaviour {
         BackgroundPanel.SetActive(false);
         YouSureQuitView.SetActive(false);
         FeedbackPanel.SetActive(false);
+        CreditsPanel.SetActive(false);
     }
 
     public void OnSaveClick()
@@ -30,11 +32,17 @@ public class ButtonManager : MonoBehaviour {
         BackgroundPanel.SetActive(true);
         FeedbackPanel.SetActive(true);
     }
+    
+    public void OnCreditsButtonClick() {
+        BackgroundPanel.SetActive(true);
+        CreditsPanel.SetActive(true);
+    }
 
     public void OnGoBackClick() {
         BackgroundPanel.SetActive(false);
         YouSureQuitView.SetActive(false);
         FeedbackPanel.SetActive(false);
+        CreditsPanel.SetActive(false);
     }
 
     public void OnReallyQuitGameClick() {
