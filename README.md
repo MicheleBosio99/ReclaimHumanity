@@ -1,2 +1,1 @@
-# ReclaimHumanity
-Repo For Reclaim Humanity Game - VDP 2023
+Humanity has been paralyzed! Help Wollo, a cute little robot, to save everyone.
