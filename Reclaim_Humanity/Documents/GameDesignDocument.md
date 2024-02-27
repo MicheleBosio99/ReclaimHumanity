@@ -258,9 +258,6 @@ ___
     - Note that these are definitive but other ones could still be added if needed;
     - KEYBOARD:
     - ![Keyboard Bindings](GDDImages/keyboard.png)
-
-    - CONTROLER:
-    - ![Controller Bindings](GDDImages/controller.png)
     
 
 - ## POST GAME IDEAS:
